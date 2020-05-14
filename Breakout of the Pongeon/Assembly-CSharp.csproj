@@ -58,7 +58,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MyAssets\Scripts\BallBehaviour.cs" />
+     <Compile Include="Assets\MyAssets\Scripts\DebugMenu.cs" />
+     <Compile Include="Assets\MyAssets\Scripts\DestroyableBlockBehaviour.cs" />
      <Compile Include="Assets\MyAssets\Scripts\Game\TestScript.cs" />
+     <Compile Include="Assets\MyAssets\Scripts\KillPlaneBehavior.cs" />
+     <Compile Include="Assets\MyAssets\Scripts\MouseMovement.cs" />
      <Compile Include="Assets\MyAssets\Scripts\UI\TestScript2.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Kanri/Documents/Code Projects/Semesterprojekte/Breakout of the Pongeon (GD I)/Breakout of the Pongeon/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
