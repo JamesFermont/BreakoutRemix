@@ -4,6 +4,7 @@ using UnityEngine;
 public class BallBehaviour : MonoBehaviour {
 	public float baseSpeed = 200.0f;
 	public float paddleSpeedIncreaseIncrement = 1.0f;
+	public float deflectionStrength = 1.0f;
 	private float speed;
 
 	private void Awake() {
@@ -22,7 +23,7 @@ public class BallBehaviour : MonoBehaviour {
 				other.collider.bounds.size.x);
 			
 			// ball will always move up, therefore y is always 1, normalized to keep the ball speed the same
-			Vector2 newDirection = new Vector2(newX, 1).normalized;
+			Vector2 newDirection = new Vector2(newX * deflectionStrength, 1).normalized;
 
 			GetComponent<Rigidbody2D>().velocity = newDirection * speed * Time.deltaTime;
 		}

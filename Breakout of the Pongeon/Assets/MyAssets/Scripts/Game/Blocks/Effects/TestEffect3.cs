@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TestEffect : MonoBehaviour {
+public class TestEffect3 : MonoBehaviour {
 	public EffectType effectType = EffectType.ON_DAMAGED;
 	private void OnEnable() {
 		if (effectType == EffectType.ON_DAMAGED) {
@@ -14,6 +14,6 @@ public class TestEffect : MonoBehaviour {
 	}
 
 	public void PerformEffect() {
-		Debug.Log("Balls deep!");
+		Debug.Log("Balls to the Wall!");
 	}
 }
