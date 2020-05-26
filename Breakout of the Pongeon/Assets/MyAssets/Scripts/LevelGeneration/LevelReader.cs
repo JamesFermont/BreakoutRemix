@@ -3,12 +3,15 @@ using System.IO;
 using System.Collections.Generic;
 
 public class LevelReader {
-    private BinaryReader reader = new BinaryReader(File.Open("", FileMode.Open));
 
+    private string filePath;
+    BinaryReader reader;
+    public LevelReader (string path) {
+        filePath = path;
+        
+}
 
-
-
-    public Level readLevel(string filePath)
+    public Level readLevel()
     {
         Level loadedLevel = null;
         try
