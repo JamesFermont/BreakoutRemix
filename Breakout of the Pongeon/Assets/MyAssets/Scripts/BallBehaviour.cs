@@ -7,15 +7,20 @@ public class BallBehaviour : MonoBehaviour {
 	public float deflectionStrength = 1.0f;
 	private float speed;
 
+	private AudioManager audioManager;
+
 	private void Awake() {
 		speed = baseSpeed;
+		audioManager = FindObjectOfType<AudioManager>();
 	}
 
-	private void Start() {
-		GetComponent<Rigidbody2D>().velocity = Vector2.up * speed * Time.deltaTime;
+	public void Launch() {
+		GetComponent<Rigidbody2D>().velocity = Vector2.up * (speed * Time.fixedDeltaTime);
 	}
 
-	private void OnCollisionEnter2D(Collision2D other) { //To do: Absolute angle determination does not feel good.
+	private void OnCollisionEnter2D(Collision2D other) {
+		audioManager.Play("bounce");
+		
 		if (other.gameObject.CompareTag("Paddle")) {
 			speed += paddleSpeedIncreaseIncrement;
 			
@@ -23,9 +28,9 @@ public class BallBehaviour : MonoBehaviour {
 				other.collider.bounds.size.x);
 			
 			// ball will always move up, therefore y is always 1, normalized to keep the ball speed the same
+			// deflectionStrength will influence how far X can vary from 1 to create steeper deflection angles after normalization
 			Vector2 newDirection = new Vector2(newX * deflectionStrength, 1).normalized;
-
-			GetComponent<Rigidbody2D>().velocity = newDirection * speed * Time.deltaTime;
+			GetComponent<Rigidbody2D>().velocity = newDirection * (speed * Time.fixedDeltaTime);
 		}
 	}
 

@@ -2,11 +2,10 @@
 using UnityEngine;
 
 public class BlockManager : MonoBehaviour {
-    public int maxHealth = 3;
-    private int health;
+    public float maxHealth = 3;
+    private float health;
 
-    private Color[] blockColours = new Color[3];
-
+    private AudioManager audioManager;
     private SpriteRenderer spriteRenderer;
     
     public delegate void OnDamaged();
@@ -15,36 +14,37 @@ public class BlockManager : MonoBehaviour {
     public event OnDestroyed onDestroyed;
 
     private void Awake() {
-        blockColours[0] = Color.red;
-        blockColours[1] = Color.yellow;
-        blockColours[2] = Color.green;
         health = maxHealth;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void OnEnable() {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.material.color = blockColours[health-1];
+        if (GetComponent<BlockColours>() != null) spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour( health/maxHealth);
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
         health -= 1;
+
+        audioManager.Play("blockhit");
+        
         if (health <= 0) {
             onDestroyed?.Invoke();
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         } else {
             onDamaged?.Invoke();
-            spriteRenderer.material.color = blockColours[health - 1];
+            if (GetComponent<BlockColours>() != null) spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health/maxHealth);
         }
     }
 
-    public void ReceiveEffectDamage() {
-        health -= 1;
+    public void ReceiveEffectDamage(int amount) {
+        health -= amount;
         if (health <= 0) {
             onDestroyed?.Invoke();
             Destroy(this.gameObject);
         } else {
             onDamaged?.Invoke();
-            spriteRenderer.material.color = blockColours[health - 1];
+            if (GetComponent<BlockColours>() != null) spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health/maxHealth);
         }
     }
 }

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class KillPlaneBehavior : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other) {
-        Destroy(other.gameObject);
+        other.gameObject.GetComponent<BallStart>().isBallStart = true;
+        FindObjectOfType<AudioManager>().Play("death");
     }
 }
