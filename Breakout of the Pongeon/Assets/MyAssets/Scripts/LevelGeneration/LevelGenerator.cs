@@ -65,6 +65,7 @@ public class LevelGenerator : MonoBehaviour
 
         } else if(Input.GetKeyDown(KeyCode.L)) {
             currentLevel = LevelIO.instance.LoadLevel("Hello Ball");
+
             Generate(currentLevel);
         }
     }

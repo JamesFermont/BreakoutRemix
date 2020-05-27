@@ -13,8 +13,8 @@ public class Level
     {
         this.name = name;
         this.grid = grid;
-        this.width = grid.GRID_WIDTH;
-        this.height = grid.GRID_HEIGHT;
+        this.width = grid.width;
+        this.height = grid.height;
     }
 
 

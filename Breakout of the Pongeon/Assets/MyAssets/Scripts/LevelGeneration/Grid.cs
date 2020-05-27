@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Grid {
-    public int GRID_WIDTH;
-    public int GRID_HEIGHT;
+    public int width;
+    public int height;
     float cellWidth;
     float cellHeight;
-    private Dictionary<int, string> levelObjects;
-    private int[,] levelMap;
+    public Dictionary<int, string> levelObjects { get; private set; }
+    public int[,] levelMap {get; private set;}
     private Vector2 positionOffset;
 
 
     public Grid(int width, int height, int[,] map, Dictionary<int, string> objects) {
-        GRID_WIDTH = width;
-        GRID_HEIGHT = height;
-        cellWidth = 12.8f / width;
-        cellHeight = 7.2f / height;
+        this.width = width;
+        this.height = height;
+        cellWidth = Constants.LEVEL_WIDTH / width;
+        cellHeight = Constants.LEVEL_HEIGHT / height;
         positionOffset = new Vector2((width / 2 * -1f + 0.5f) * cellWidth, (height / 2 * -1f + 0.5f) * cellHeight);
         levelMap = map;
         //TODO: String to LevelObject Conversion
@@ -35,7 +35,7 @@ public class Grid {
     }
 
     public bool isOnGrid(Vector2Int position) {
-        return position.x >= 0 && position.x < GRID_WIDTH && position.y >= 0 && position.y < GRID_HEIGHT;
+        return position.x >= 0 && position.x < width && position.y >= 0 && position.y < height;
     }
 
     public string getLevelObject(int key) {
