@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour {
             sound.source = gameObject.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
             sound.source.volume = sound.volume;
+            sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
         }
     }
@@ -45,5 +46,16 @@ public class AudioManager : MonoBehaviour {
             return;
         }
         soundToPlay.source.Stop();
+    }
+
+    public void UpdatePitch(string name, float pitch) {
+        Sound soundToPlay = Array.Find(sounds, sound => sound.name == name);
+        if (soundToPlay == null) {
+            Debug.LogWarning("Sound: " + name + " was not found!");
+            return;
+        }
+        if (pitch < 0.1f) pitch = 0.1f;
+        if (pitch > 3f) pitch = 3f;
+        soundToPlay.source.pitch = pitch;
     }
 }

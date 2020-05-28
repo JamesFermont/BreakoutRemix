@@ -1,11 +1,16 @@
 ﻿using System;
+using System.Net.Configuration;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BallBehaviour : MonoBehaviour {
 	public float baseSpeed = 200.0f;
 	public float paddleSpeedIncreaseIncrement = 1.0f;
 	public float deflectionStrength = 1.0f;
 	private float speed;
+
+	[HideInInspector]
+	public bool hasBouncedThisFrame = false;
 
 	private AudioManager audioManager;
 
@@ -18,8 +23,16 @@ public class BallBehaviour : MonoBehaviour {
 		GetComponent<Rigidbody2D>().velocity = Vector2.up * (speed * Time.fixedDeltaTime);
 	}
 
+	private void LateUpdate() {
+		hasBouncedThisFrame = false;
+	}
+
 	private void OnCollisionEnter2D(Collision2D other) {
 		audioManager.Play("bounce");
+
+		GetComponent<ParticleSystem>().Play();
+
+		hasBouncedThisFrame = true;
 		
 		if (other.gameObject.CompareTag("Paddle")) {
 			speed += paddleSpeedIncreaseIncrement;

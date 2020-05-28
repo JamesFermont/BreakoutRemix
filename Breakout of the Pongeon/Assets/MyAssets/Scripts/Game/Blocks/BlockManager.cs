@@ -1,9 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BlockManager : MonoBehaviour {
     public float maxHealth = 3;
-    private float health;
+    
+    [HideInInspector]
+    public float health;
 
     private AudioManager audioManager;
     private SpriteRenderer spriteRenderer;
@@ -27,10 +28,12 @@ public class BlockManager : MonoBehaviour {
         health -= 1;
 
         audioManager.Play("blockhit");
+        audioManager.UpdatePitch("blockhit", Random.Range(0.3f, 1.5f));
         
         if (health <= 0) {
             onDestroyed?.Invoke();
-            gameObject.SetActive(false);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         } else {
             onDamaged?.Invoke();
             if (GetComponent<BlockColours>() != null) spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health/maxHealth);
@@ -41,7 +44,8 @@ public class BlockManager : MonoBehaviour {
         health -= amount;
         if (health <= 0) {
             onDestroyed?.Invoke();
-            Destroy(this.gameObject);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         } else {
             onDamaged?.Invoke();
             if (GetComponent<BlockColours>() != null) spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health/maxHealth);

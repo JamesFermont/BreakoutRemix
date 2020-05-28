@@ -7,11 +7,9 @@ public class CircleExplosion : MonoBehaviour {
     public int explosionDamage = 3;
 
     private AudioManager audioManager;
-    private new ParticleSystem particleSystem;
 
     private void Awake() {
         audioManager = FindObjectOfType<AudioManager>();
-        particleSystem = GetComponentInChildren<ParticleSystem>();
     }
 
     private void OnEnable() {
@@ -23,15 +21,11 @@ public class CircleExplosion : MonoBehaviour {
             gameObject.GetComponent<BlockManager>().onDamaged += PerformEffect;
             gameObject.GetComponent<BlockManager>().onDestroyed += PerformEffect;
         }
-
-        var particleSystemMain = particleSystem.main;
-        particleSystemMain.startSpeed = explosionRadius * 10f;
     }
 
     public void PerformEffect() {
         audioManager.Play("cbomb");
-        particleSystem.Play();
-        
+
         Collider2D[] hit = Physics2D.OverlapCircleAll(gameObject.transform.position, explosionRadius, 1<<8);
         foreach (Collider2D target in hit) {
             if (target.gameObject == this.gameObject) continue;
