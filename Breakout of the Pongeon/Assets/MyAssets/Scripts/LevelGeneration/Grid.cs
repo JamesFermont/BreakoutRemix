@@ -8,7 +8,7 @@ public class Grid {
     float cellWidth;
     float cellHeight;
     public Dictionary<int, string> levelObjects { get; private set; }
-    public int[,] levelMap {get; private set;}
+    public int[,] levelMap { get; private set; }
     private Vector2 positionOffset;
 
 
@@ -22,6 +22,8 @@ public class Grid {
         //TODO: String to LevelObject Conversion
         levelObjects = objects;
     }
+
+    public Grid(int width, int height) : this(width, height, new int[width, height], new Dictionary<int, string>()) { }
 
 
     public int IDAtPosition(Vector2Int position) {
@@ -51,5 +53,9 @@ public class Grid {
         return new Vector3(positionOffset.x + gridPosition.x * cellWidth, positionOffset.y + gridPosition.y * cellHeight, 0f);
     }
 
-
+    public Vector2Int toGridPosition (Vector3 position) {
+        //-6.4 => +6.4
+        //-3.6 => +3.6 mouseposition + offset/2
+        return new Vector2Int(Mathf.FloorToInt((position.x + positionOffset.x/2f)), Mathf.FloorToInt((position.y + positionOffset.y/2f)/Constants.GRID_HEIGHT));
+    }
 }

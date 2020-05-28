@@ -26,9 +26,15 @@ public class BlockDictionary : MonoBehaviour {
         if (instance == null) {
             instance = this;
         }
-            
-    }
 
+    }
+#if UNITY_EDITOR
+    public void LateUpdate() {
+        if (instance == null) {
+            instance = this;
+        }
+    }
+#endif
     public GameObject getBlock(string key) {
         foreach (dictionaryEntry entry in dict) {
             if (string.Compare(entry.key, key) == 0) {
