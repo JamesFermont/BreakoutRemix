@@ -4,7 +4,7 @@ using UnityEngine;
 public class ReviveBlock : MonoBehaviour {
 	public int reviveCountMin = 30;
 	public int reviveCountMax = 50;
-	public int reviveHPAmount;
+	public int reviveHpAmount;
 	public UnitType unitType;
 	
 	private BlockManager blockManager;
@@ -32,7 +32,7 @@ public class ReviveBlock : MonoBehaviour {
 			yield return null;
 		}
 		
-		blockManager.health = reviveHPAmount;
+		blockManager.health = reviveHpAmount;
 		gameObject.GetComponent<SpriteRenderer>().enabled = true;
 		gameObject.GetComponent<BoxCollider2D>().enabled = true;
 	}
@@ -48,7 +48,7 @@ public class ReviveBlock : MonoBehaviour {
 			yield return null;
 		}
 		
-		blockManager.health = reviveHPAmount;
+		blockManager.health = reviveHpAmount;
 		gameObject.GetComponent<SpriteRenderer>().enabled = true;
 		gameObject.GetComponent<BoxCollider2D>().enabled = true;
 	}

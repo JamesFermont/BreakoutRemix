@@ -22,7 +22,7 @@ public class HorizontalLineExplosion : MonoBehaviour {
         }
     }
 
-    public void PerformEffect() {
+    private void PerformEffect() {
         audioManager.Play("hlinebomb");
         
         Collider2D[] hit = Physics2D.OverlapBoxAll(this.transform.position,new Vector2(25.6f, 0.1f), 0f, 1<<8);

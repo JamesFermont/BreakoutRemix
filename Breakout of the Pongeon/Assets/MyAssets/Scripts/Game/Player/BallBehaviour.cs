@@ -1,7 +1,4 @@
-﻿using System;
-using System.Net.Configuration;
-using UnityEngine;
-using Random = UnityEngine.Random;
+﻿using UnityEngine;
 
 public class BallBehaviour : MonoBehaviour {
 	public float baseSpeed = 200.0f;
@@ -18,11 +15,7 @@ public class BallBehaviour : MonoBehaviour {
 		speed = baseSpeed;
 		audioManager = FindObjectOfType<AudioManager>();
 	}
-
-	public void Launch() {
-		GetComponent<Rigidbody2D>().velocity = Vector2.up * (speed * Time.fixedDeltaTime);
-	}
-
+	
 	private void LateUpdate() {
 		hasBouncedThisFrame = false;
 	}
@@ -47,6 +40,10 @@ public class BallBehaviour : MonoBehaviour {
 		}
 	}
 
+	public void Launch() {
+		GetComponent<Rigidbody2D>().velocity = Vector2.up * (speed * Time.fixedDeltaTime);
+	}
+	
 	private float GetDeflectedX(Vector2 ballPosition, Vector2 paddlePosition, float paddleWidth) {
 		// will return a float from -1 to +1 depending on where the ball hits the paddle (-1 for left edge, +1 for right edge)
 		return (ballPosition.x - paddlePosition.x) / paddleWidth;

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8516372011260927148}
   - component: {fileID: 2453962259634941684}
   - component: {fileID: 8793654428488698923}
+  - component: {fileID: 1129702944206614931}
   m_Layer: 8
   m_Name: TestBlockDestroyable
   m_TagString: Untagged
@@ -124,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  isImmune: 0
   health: 0
 --- !u!114 &2453962259634941684
 MonoBehaviour:
@@ -158,6 +160,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e30eed38686a344b0299bcac0d7571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reviveCount: 10
+  reviveCountMin: 30
+  reviveCountMax: 50
   reviveHPAmount: 1
   unitType: 0
+--- !u!114 &1129702944206614931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6578917519125903080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a99bbe9a58f7e34aa5cd12b6ff05bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  isImmune: 1
+  health: 0

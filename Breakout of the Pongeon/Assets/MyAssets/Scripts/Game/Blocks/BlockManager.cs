@@ -2,6 +2,7 @@
 
 public class BlockManager : MonoBehaviour {
     public float maxHealth = 3;
+    public bool isImmune = false;
     
     [HideInInspector]
     public float health;
@@ -25,22 +26,25 @@ public class BlockManager : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        if (isImmune) return;
         health -= 1;
 
         audioManager.Play("blockhit");
         audioManager.UpdatePitch("blockhit", Random.Range(0.3f, 1.5f));
-        
+
         if (health <= 0) {
             onDestroyed?.Invoke();
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         } else {
             onDamaged?.Invoke();
-            if (GetComponent<BlockColours>() != null) spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health/maxHealth);
+            if (GetComponent<BlockColours>() != null)
+                spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health / maxHealth);
         }
     }
 
     public void ReceiveEffectDamage(int amount) {
+        if (isImmune) return;
         health -= amount;
         if (health <= 0) {
             onDestroyed?.Invoke();

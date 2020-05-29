@@ -751,6 +751,7 @@ MonoBehaviour:
   drainCount: 60
   unitType: 0
   targetManager: {fileID: 297762926}
+  hasNoCollision: 1
   isActivated: 0
 --- !u!61 &209125460
 BoxCollider2D:
@@ -1451,6 +1452,7 @@ MonoBehaviour:
   drainCount: 20
   unitType: 0
   targetManager: {fileID: 297762926}
+  hasNoCollision: 1
   isActivated: 0
 --- !u!61 &486563126
 BoxCollider2D:
@@ -8000,6 +8002,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestBlockDestroyable
       objectReference: {fileID: 0}
+    - target: {fileID: 8516372011260927148, guid: a186ac6c90a45974391b77fab970655e,
+        type: 3}
+      propertyPath: isImmune
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8793654428488698923, guid: a186ac6c90a45974391b77fab970655e,
         type: 3}
       propertyPath: unitType
@@ -8386,6 +8393,7 @@ MonoBehaviour:
   drainCount: 80
   unitType: 0
   targetManager: {fileID: 297762926}
+  hasNoCollision: 0
   isActivated: 0
 --- !u!61 &2143840062
 BoxCollider2D:
@@ -8571,7 +8579,7 @@ PrefabInstance:
     - target: {fileID: 3514288725349267478, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
         type: 3}
       propertyPath: sounds.Array.data[1].pitch
-      value: 0.57
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3514288725349267479, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
         type: 3}

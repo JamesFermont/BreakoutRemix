@@ -30,28 +30,28 @@ public class AudioManager : MonoBehaviour {
         Play("testbgm");
     }
 
-    public void Play(string name) {
-        Sound soundToPlay = Array.Find(sounds, sound => sound.name == name);
+    public void Play(string soundName) {
+        Sound soundToPlay = Array.Find(sounds, sound => sound.name == soundName);
         if (soundToPlay == null) {
-            Debug.LogWarning("Sound: " + name + " was not found!");
+            Debug.LogWarning("Sound: " + soundName + " was not found!");
             return;
         }
         soundToPlay.source.Play();
     }
 
-    public void Stop(string name) {
-        Sound soundToPlay = Array.Find(sounds, sound => sound.name == name);
+    public void Stop(string soundName) {
+        Sound soundToPlay = Array.Find(sounds, sound => sound.name == soundName);
         if (soundToPlay == null) {
-            Debug.LogWarning("Sound: " + name + " was not found!");
+            Debug.LogWarning("Sound: " + soundName + " was not found!");
             return;
         }
         soundToPlay.source.Stop();
     }
 
-    public void UpdatePitch(string name, float pitch) {
-        Sound soundToPlay = Array.Find(sounds, sound => sound.name == name);
+    public void UpdatePitch(string soundName, float pitch) {
+        Sound soundToPlay = Array.Find(sounds, sound => sound.name == soundName);
         if (soundToPlay == null) {
-            Debug.LogWarning("Sound: " + name + " was not found!");
+            Debug.LogWarning("Sound: " + soundName + " was not found!");
             return;
         }
         if (pitch < 0.1f) pitch = 0.1f;

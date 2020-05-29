@@ -5,6 +5,7 @@ public class TargetArea : MonoBehaviour {
 	public int drainCount = 30;
 	public UnitType unitType;
 	public TargetManager targetManager;
+	public bool hasNoCollision = true;
 
 	private BallBehaviour ball;
 	private SpriteRenderer spriteRenderer;
@@ -18,9 +19,24 @@ public class TargetArea : MonoBehaviour {
 		ball = GameObject.FindWithTag("Ball").GetComponent<BallBehaviour>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		baseColor = spriteRenderer.material.color;
+		GetComponent<BoxCollider2D>().isTrigger = hasNoCollision;
 	}
 
 	private void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.CompareTag("Ball")) {
+			if (!isActivated) {
+				isActivated = true;
+				spriteRenderer.material.color = Color.green;
+				targetManager.CheckCompleted();
+				if (!targetManager.isCompleted) {
+					if (unitType == UnitType.UNIT_TIME) drain = StartCoroutine(DrainEnergyOverTime(drainCount));
+					if (unitType == UnitType.UNIT_BOUNCE) drain = StartCoroutine(DrainEnergyOverBounces(drainCount));
+				}
+			}
+		}
+	}
+	
+	private void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag("Ball")) {
 			if (!isActivated) {
 				isActivated = true;
@@ -56,7 +72,7 @@ public class TargetArea : MonoBehaviour {
 		spriteRenderer.material.color = baseColor;
 	}
 
-	public IEnumerator DrainEnergyOverBounces(int bounces) {
+	private IEnumerator DrainEnergyOverBounces(int bounces) {
 		int bouncesCounted = 0;
 		
 		while (bouncesCounted<bounces) {
