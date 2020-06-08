@@ -11,9 +11,10 @@ public class ReviveBlock : MonoBehaviour {
 	private BallBehaviour ball;
 
 	private void OnEnable() {
-		blockManager = gameObject.GetComponent<BlockManager>();
+		if (!blockManager) blockManager = gameObject.GetComponent<BlockManager>();
+		if (!ball) ball = GameObject.FindWithTag("Ball").GetComponent<BallBehaviour>();
+		blockManager.onDestroyed -= PerformEffect;
 		blockManager.onDestroyed += PerformEffect;
-		ball = GameObject.FindWithTag("Ball").GetComponent<BallBehaviour>();
 	}
 
 	public void PerformEffect() {

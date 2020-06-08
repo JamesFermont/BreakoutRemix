@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class BallBehaviour : MonoBehaviour {
 	public float baseSpeed = 200.0f;
@@ -12,10 +13,13 @@ public class BallBehaviour : MonoBehaviour {
 	private AudioManager audioManager;
 
 	private void Awake() {
-		speed = baseSpeed;
 		audioManager = FindObjectOfType<AudioManager>();
 	}
-	
+
+	private void OnEnable() {
+		speed = baseSpeed;
+	}
+
 	private void LateUpdate() {
 		hasBouncedThisFrame = false;
 	}
