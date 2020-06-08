@@ -21,6 +21,12 @@ public class LevelManager {
         MakeLevel(new Level("New Level", new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT)));
     }
 
+
+    public void ResetCurrentLevel() {
+        Object.DestroyImmediate(currentLevelGO);
+        MakeLevel(new Level(currentLevel.name, new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT)));
+    }
+
     public void LoadLevel(string levelName) {
         if (currentLevelGO != null) {
             Object.DestroyImmediate(currentLevelGO);

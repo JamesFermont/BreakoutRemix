@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LevelObject : MonoBehaviour
 {
-    public int width { get; private set; }
-    public int height { get; private set; }
+    public int width;
+    public int height;
 
 
     public Vector2Int getDimensions() {

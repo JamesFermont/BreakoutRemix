@@ -8,15 +8,15 @@ public class EditorPalette : EditorWindow {
         window.Show();
     }
 
-    [MenuItem("GameObject/3D Object/Create Block")]
+    /*[MenuItem("GameObject/3D Object/Create Block")]
     private static void LoadAdditiveScene() {
         Debug.Log("Hello World!");
-    }
+    }*/
 
 
     Vector2 scrollPos;
     Vector2 otherScrollPos;
-    string selectedBlock = "";
+    public static string selectedBlock = "";
 
     void OnGUI() {
         string currentBlock = "";
@@ -44,17 +44,12 @@ public class EditorPalette : EditorWindow {
     }
 
     public void SelectBlock(string blockID) {
-        selectedBlock = blockID;
-        Debug.Log(blockID + " selected!");
-    }
-
-    public void myUpdate() {
-        //Debug.Log(HandleUtility.GUIPointToWorldRay(Event.current.mousePosition).origin);
-        //Debug.Log("Hello");
-        //Debug.Log(Event.current.mousePosition);
-        //Debug.Log(Event.current);
-    }
-    
-
+        
+            selectedBlock = blockID;
+            EditorMousePosition.instance.SelectNewBlock(blockID);
+            Debug.Log(blockID + " selected!");
+        
+        
+    }   
 
 }

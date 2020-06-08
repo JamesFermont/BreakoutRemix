@@ -35,6 +35,7 @@ public class LevelIO {
         LevelReader reader = new LevelReader(Application.dataPath + levelFilesPath + name + levelFilesEnding);
         Level level;
         if(!File.Exists(Application.dataPath + levelFilesPath + name + levelFilesEnding)) {
+            Debug.Log(Application.dataPath + levelFilesPath + name + levelFilesEnding);
             Debug.Log("A Level of such name, doesn't exist!");
             return null;
         }

@@ -19,7 +19,7 @@ public class Grid {
         cellHeight = Constants.LEVEL_HEIGHT / height;
         positionOffset = new Vector2((width / 2 * -1f + 0.5f) * cellWidth, (height / 2 * -1f + 0.5f) * cellHeight);
         levelMap = map;
-        //TODO: String to LevelObject Conversion
+
         levelObjects = objects;
     }
 
@@ -56,6 +56,6 @@ public class Grid {
     public Vector2Int toGridPosition (Vector3 position) {
         //-6.4 => +6.4
         //-3.6 => +3.6 mouseposition + offset/2
-        return new Vector2Int(Mathf.FloorToInt((position.x + positionOffset.x/2f)), Mathf.FloorToInt((position.y + positionOffset.y/2f)/Constants.GRID_HEIGHT));
+        return new Vector2Int(Mathf.FloorToInt((position.x - positionOffset.x + cellWidth/2f)/ cellWidth), Mathf.FloorToInt((position.y - positionOffset.y + cellHeight/2f) / cellHeight));
     }
 }

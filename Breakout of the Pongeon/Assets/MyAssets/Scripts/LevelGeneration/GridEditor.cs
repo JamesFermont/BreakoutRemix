@@ -83,6 +83,11 @@ public class GridEditor {
     private bool ObjectHasSpaceAt(Vector2Int position, string objectID, int key) {
         LevelObject obj = BlockDictionary.instance.getBlock(objectID).GetComponent<LevelObject>();
         Vector2Int currentPosition;
+        if(obj != null) {
+            obj = new LevelObject();
+            obj.width = 1;
+            obj.height = 1;
+        }
         for (int x = 0; x < obj.width; x++) {
             for (int y = 0; y < obj.height; y++) {
                 currentPosition = position + new Vector2Int(x, y);
