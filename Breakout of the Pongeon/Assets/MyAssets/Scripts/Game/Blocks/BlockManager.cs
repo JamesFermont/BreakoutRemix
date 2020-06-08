@@ -36,9 +36,9 @@ public class BlockManager : MonoBehaviour {
         audioManager.UpdatePitch("blockhit", Random.Range(0.3f, 1.5f));
 
         if (health <= 0) {
-            onDestroyed?.Invoke();
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            onDestroyed?.Invoke(); // onDestroyed has to be invoked AFTER the collider is disabled to avoid a StackOverflowError
         } else {
             onDamaged?.Invoke();
             if (GetComponent<BlockColours>() != null)
@@ -54,9 +54,9 @@ public class BlockManager : MonoBehaviour {
         if (isImmune) return;
         health -= amount;
         if (health <= 0) {
-            onDestroyed?.Invoke();
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            onDestroyed?.Invoke();
         } else {
             onDamaged?.Invoke();
             if (GetComponent<BlockColours>() != null) spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health/maxHealth);
