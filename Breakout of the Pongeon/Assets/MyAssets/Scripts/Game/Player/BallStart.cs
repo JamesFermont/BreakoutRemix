@@ -7,8 +7,8 @@ public class BallStart : MonoBehaviour {
     public bool isBallStart;
 
     private void OnEnable() {
-        if (paddle == null) paddle = GameObject.FindWithTag("Paddle").transform;
-        if (ball == null) ball = GameObject.FindWithTag("Ball").transform;
+        if (!paddle) paddle = GameObject.FindWithTag("Paddle").transform;
+        if (!ball) ball = GameObject.FindWithTag("Ball").transform;
         isBallStart = true;
     }
 

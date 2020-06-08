@@ -3,6 +3,7 @@
 public class TargetManager : MonoBehaviour {
     private TargetArea[] targetAreas;
     public bool isCompleted;
+    
     private void OnEnable() {
         targetAreas = FindObjectsOfType<TargetArea>();
     }

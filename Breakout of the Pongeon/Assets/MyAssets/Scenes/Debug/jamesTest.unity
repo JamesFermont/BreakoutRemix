@@ -8581,6 +8581,16 @@ PrefabInstance:
       propertyPath: sounds.Array.data[1].pitch
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 3514288725349267478, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
+        type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514288725349267478, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
+        type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3514288725349267479, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
         type: 3}
       propertyPath: m_LocalPosition.x
