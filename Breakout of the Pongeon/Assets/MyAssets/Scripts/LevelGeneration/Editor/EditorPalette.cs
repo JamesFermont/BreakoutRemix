@@ -8,15 +8,10 @@ public class EditorPalette : EditorWindow {
         window.Show();
     }
 
-    /*[MenuItem("GameObject/3D Object/Create Block")]
-    private static void LoadAdditiveScene() {
-        Debug.Log("Hello World!");
-    }*/
-
-
     Vector2 scrollPos;
     Vector2 otherScrollPos;
     public static string selectedBlock = "";
+    private int columns = 2;
 
     void OnGUI() {
 
@@ -34,30 +29,24 @@ public class EditorPalette : EditorWindow {
                 currentBlock = BlockDictionary.instance.dict[i].key;
                 if (currentBlock == selectedBlock)
                     GUI.enabled = false;
-                if (GUI.Button(nextPrefabPosition(i, 2, new Vector2(1, 1), new Vector2(128, 72)), new GUIContent(BlockDictionary.instance.getBlock(currentBlock).GetComponent<SpriteRenderer>().sprite.texture)))
+                if (GUI.Button(nextPrefabPosition(i, Vector2.one, new Vector2(128, 72)), new GUIContent(BlockDictionary.instance.getBlock(currentBlock).GetComponent<SpriteRenderer>().sprite.texture)))
                     SelectBlock(currentBlock);
                 if (!GUI.enabled)
                     GUI.enabled = true;
             }     
         EditorGUILayout.EndScrollView();
         }
-        else {
-            GUILayout.Label("Hello World!");
-        }
+        else 
+            GUILayout.Label("Block Dictionary is empty!");
     }
 
-    private Rect nextPrefabPosition (int index, int columns, Vector2 offset, Vector2 dimensions) {
-        return new Rect(new Vector2(index % columns * dimensions.x,Mathf.FloorToInt(index/(float)columns)*dimensions.y) + offset,
-                        dimensions);
+    private Rect nextPrefabPosition (int index, Vector2 offset, Vector2 dimensions) {
+        return new Rect(new Vector2(index % columns * dimensions.x,Mathf.FloorToInt(index/(float)columns)*dimensions.y) + offset, dimensions);
     }
 
     public void SelectBlock(string blockID) {
-        
             selectedBlock = blockID;
             EditorMousePosition.instance.SelectNewBlock(blockID);
-            Debug.Log(blockID + " selected!");
-        
-        
     }   
 
 }
