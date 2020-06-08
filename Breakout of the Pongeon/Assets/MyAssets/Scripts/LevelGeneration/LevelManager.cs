@@ -18,7 +18,10 @@ public class LevelManager {
     public GameObject currentLevelGO;
 
     public void CreateNewLevel() {
-        MakeLevel(new Level("New Level", new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT)));
+        CreateNewLevel("New Level");
+    }
+    public void CreateNewLevel(string name) {
+        MakeLevel(new Level(name, new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT)));
     }
 
 

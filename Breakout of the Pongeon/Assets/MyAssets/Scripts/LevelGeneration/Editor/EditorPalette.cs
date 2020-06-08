@@ -19,6 +19,14 @@ public class EditorPalette : EditorWindow {
     public static string selectedBlock = "";
 
     void OnGUI() {
+
+        if (EditorApplication.isPlaying) {
+            GUILayout.Label("YOU ARE IN PLAY MODE");
+            return;
+        }
+
+
+
         string currentBlock = "";
         if (BlockDictionary.instance != null) {
             scrollPos = EditorGUILayout.BeginScrollView(scrollPos, true, false, GUILayout.Width(300));

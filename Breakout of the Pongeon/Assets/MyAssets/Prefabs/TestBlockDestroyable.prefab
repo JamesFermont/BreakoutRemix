@@ -126,6 +126,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   isImmune: 0
+  width: 1
+  height: 1
   health: 0
 --- !u!114 &2453962259634941684
 MonoBehaviour:
@@ -162,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reviveCountMin: 30
   reviveCountMax: 50
-  reviveHPAmount: 1
+  reviveHpAmount: 0
   unitType: 0
 --- !u!114 &1129702944206614931
 MonoBehaviour:
@@ -178,4 +180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   isImmune: 1
+  width: 1
+  height: 1
   health: 0

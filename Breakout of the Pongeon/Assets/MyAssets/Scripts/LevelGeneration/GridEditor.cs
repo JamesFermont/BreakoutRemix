@@ -48,10 +48,12 @@ public class GridEditor {
         return PaintIDInMap(objectKey, newPosition, blockDimensions);
     }
     public bool TryPlaceObjectInGrid(string objectID, Vector2Int position) {
+        Debug.Log(ObjectHasSpaceAt(position, objectID) + " - has Space");
         if (!ObjectHasSpaceAt(position, objectID))
             return false;
-        int newID = LevelManager.instance.currentLevel.grid.levelObjects.Count;
+        int newID = LevelManager.instance.currentLevel.grid.levelObjects.Count+1;
         LevelManager.instance.currentLevel.grid.levelObjects.Add(newID, objectID);
+        LevelGenerator.instance.AddSingleID(position, objectID);
         PaintIDInMap(newID, position, BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>().getDimensions());
         return true;
     }
@@ -83,15 +85,14 @@ public class GridEditor {
     private bool ObjectHasSpaceAt(Vector2Int position, string objectID, int key) {
         BlockManager obj = BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>();
         Vector2Int currentPosition;
-        if(obj != null) {
-            obj = BlockDictionary.instance.getBlock(objectID).AddComponent<BlockManager>();
-            obj.width = 1;
-            obj.height = 1;
+        if(obj == null) {
+            Debug.LogError("Trying to add a Block without a Block Manager!");
+            
         }
         for (int x = 0; x < obj.width; x++) {
             for (int y = 0; y < obj.height; y++) {
                 currentPosition = position + new Vector2Int(x, y);
-                if (LevelManager.instance.currentLevel.grid.isOnGrid(currentPosition) || (LevelManager.instance.currentLevel.grid.IDAtPosition(currentPosition) != 0 ^ LevelManager.instance.currentLevel.grid.IDAtPosition(currentPosition) != key)) {
+                if (!LevelManager.instance.currentLevel.grid.isOnGrid(currentPosition) || (LevelManager.instance.currentLevel.grid.IDAtPosition(currentPosition) != 0 ^ LevelManager.instance.currentLevel.grid.IDAtPosition(currentPosition) != key)) {
                     return false;
                 }
             }

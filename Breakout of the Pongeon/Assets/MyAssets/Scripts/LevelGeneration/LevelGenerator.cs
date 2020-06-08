@@ -34,10 +34,15 @@ public class LevelGenerator : MonoBehaviour {
                     currentLevelObject = level.grid.getLevelObject(level.grid.IDAtPosition(currentPointerPosition));
                     currentLevelGameObject = Instantiate(BlockDictionary.instance.getBlock(currentLevelObject), level.grid.toWorldPosition(currentPointerPosition), Quaternion.identity, levelObject.transform);
                     currentLevelGameObject.name = level.grid.IDAtPosition(currentPointerPosition) + "-" + currentLevelObject;
-
+                    currentLevelGameObject.transform.SetSiblingIndex(level.grid.IDAtPosition(currentPointerPosition)-1);
                 }
             }
         }
         return levelObject;
     }
+
+    public void AddSingleID (Vector2Int position, string objectID) {
+        Instantiate(BlockDictionary.instance.getBlock(objectID), LevelManager.instance.currentLevelGO.transform).transform.position = LevelManager.instance.currentLevel.grid.toWorldPosition(position);
+    }
+
 }
