@@ -44,7 +44,7 @@ public class GridEditor {
                 }
             }
         }
-        Vector2Int blockDimensions = BlockDictionary.instance.getBlock(LevelManager.instance.currentLevel.grid.levelObjects[objectKey]).GetComponent<LevelObject>().getDimensions();
+        Vector2Int blockDimensions = BlockDictionary.instance.getBlock(LevelManager.instance.currentLevel.grid.levelObjects[objectKey]).GetComponent<BlockManager>().getDimensions();
         return PaintIDInMap(objectKey, newPosition, blockDimensions);
     }
     public bool TryPlaceObjectInGrid(string objectID, Vector2Int position) {
@@ -52,7 +52,7 @@ public class GridEditor {
             return false;
         int newID = LevelManager.instance.currentLevel.grid.levelObjects.Count;
         LevelManager.instance.currentLevel.grid.levelObjects.Add(newID, objectID);
-        PaintIDInMap(newID, position, BlockDictionary.instance.getBlock(objectID).GetComponent<LevelObject>().getDimensions());
+        PaintIDInMap(newID, position, BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>().getDimensions());
         return true;
     }
     public bool TryDeleteObjectAtPosition(Vector2Int position) {
@@ -81,10 +81,10 @@ public class GridEditor {
         return ObjectHasSpaceAt(position, objectID, 0);
     }
     private bool ObjectHasSpaceAt(Vector2Int position, string objectID, int key) {
-        LevelObject obj = BlockDictionary.instance.getBlock(objectID).GetComponent<LevelObject>();
+        BlockManager obj = BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>();
         Vector2Int currentPosition;
         if(obj != null) {
-            obj = new LevelObject();
+            obj = BlockDictionary.instance.getBlock(objectID).AddComponent<BlockManager>();
             obj.width = 1;
             obj.height = 1;
         }

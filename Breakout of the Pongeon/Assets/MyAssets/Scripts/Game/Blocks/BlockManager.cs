@@ -4,6 +4,9 @@ public class BlockManager : MonoBehaviour {
     public float maxHealth = 3;
     public bool isImmune = false;
     
+    public int width;
+    public int height;
+
     [HideInInspector]
     public float health;
 
@@ -41,6 +44,10 @@ public class BlockManager : MonoBehaviour {
             if (GetComponent<BlockColours>() != null)
                 spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health / maxHealth);
         }
+    }
+    
+    public Vector2Int getDimensions() {
+        return new Vector2Int(width, height);
     }
 
     public void ReceiveEffectDamage(int amount) {

@@ -2,6 +2,8 @@
 
 public enum UnitType {UNIT_TIME, UNIT_BOUNCE}
 
+public enum SoundType {SOUND_BGM, SOUND_SFX}
+
 public class Constants
 {
     public static int GRID_WIDTH = 20;

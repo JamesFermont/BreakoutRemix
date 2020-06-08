@@ -55,7 +55,7 @@ public class EditorMousePosition : Editor
             DestroyImmediate(HoverObject.transform.GetChild(0));
         }
         GameObject newBlock = BlockDictionary.instance.getBlock(block);
-        Instantiate(newBlock, new Vector3 ((newBlock.GetComponent<LevelObject>().width - 1) * Constants.LEVEL_WIDTH/Constants.GRID_WIDTH,(newBlock.GetComponent<LevelObject>().height -1)*Constants.LEVEL_HEIGHT / Constants.GRID_HEIGHT,0f), Quaternion.identity, HoverObject.transform);
+        Instantiate(newBlock, new Vector3 ((newBlock.GetComponent<BlockManager>().width - 1) * Constants.LEVEL_WIDTH/Constants.GRID_WIDTH,(newBlock.GetComponent<BlockManager>().height -1)*Constants.LEVEL_HEIGHT / Constants.GRID_HEIGHT,0f), Quaternion.identity, HoverObject.transform);
 
 
         Debug.Log("Hey");

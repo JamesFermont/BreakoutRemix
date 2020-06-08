@@ -54,8 +54,14 @@ public class AudioManager : MonoBehaviour {
             Debug.LogWarning("Sound: " + soundName + " was not found!");
             return;
         }
-        if (pitch < 0.1f) pitch = 0.1f;
-        if (pitch > 3f) pitch = 3f;
+        Mathf.Clamp(pitch, 0.1f, 3f);
         soundToPlay.source.pitch = pitch;
+    }
+
+    public void UpdateVolumeOfType(SoundType type, float volume) {
+        Mathf.Clamp(volume, 0.1f, 1f);
+        foreach (Sound sound in sounds) {
+            if (sound.type == type) sound.volume = volume;
+        }
     }
 }
