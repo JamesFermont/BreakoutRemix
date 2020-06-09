@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-public class LevelOverviewEditor : EditorWindow {
+public class EditorLevelInfo : EditorWindow {
 
 
     private Vector2 buttonDimension = new Vector2(100, 30);
@@ -12,7 +12,7 @@ public class LevelOverviewEditor : EditorWindow {
 
     [MenuItem("Window/BOP/LevelInfo")]
     public static void Init() {
-        LevelOverviewEditor window = GetWindow<LevelOverviewEditor>(false, "Level", true);
+        EditorLevelInfo window = GetWindow<EditorLevelInfo>(false, "Level", true);
         window.Show();
     }
 
