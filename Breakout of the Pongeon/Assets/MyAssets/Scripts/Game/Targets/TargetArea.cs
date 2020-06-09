@@ -20,6 +20,7 @@ public class TargetArea : MonoBehaviour {
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		baseColor = spriteRenderer.material.color;
 		GetComponent<BoxCollider2D>().isTrigger = hasNoCollision;
+		if (!targetManager) targetManager = GameObject.FindWithTag("TargetManager").GetComponent<TargetManager>();
 	}
 
 	private void OnCollisionEnter2D(Collision2D other) {

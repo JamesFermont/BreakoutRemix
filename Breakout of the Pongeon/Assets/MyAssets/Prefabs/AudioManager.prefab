@@ -46,14 +46,14 @@ MonoBehaviour:
   sounds:
   - name: blockhit
     type: 1
-    clip: {fileID: 8300000, guid: 1532d7ee31c0a064a820621c824d6686, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: ed4c57b6752726b48a6f9cd98c5cc4ab, type: 3}
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: death
     type: 1
-    clip: {fileID: 8300000, guid: d7d02c13a95ee9b4595c4c247ca57a3f, type: 3}
+    clip: {fileID: 8300000, guid: 265c5e2023c94534fa7c9dd1bb1ecc6c, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: bounce
     type: 1
-    clip: {fileID: 8300000, guid: 5b84310302a491747875974fada3e722, type: 3}
-    volume: 0.1
+    clip: {fileID: 8300000, guid: bef86f2644c480e408f6f85ad82acd15, type: 3}
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -82,7 +82,14 @@ MonoBehaviour:
   - name: testbgm
     type: 0
     clip: {fileID: 8300000, guid: 9dc48963830b6bf47a4b9de8cd9f09dd, type: 3}
-    volume: 0.05
+    volume: 0
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: paddle_bounce
+    type: 1
+    clip: {fileID: 8300000, guid: bef86f2644c480e408f6f85ad82acd15, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
     source: {fileID: 0}

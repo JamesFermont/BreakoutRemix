@@ -25,15 +25,11 @@ public class BallBehaviour : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter2D(Collision2D other) {
-		audioManager.Play("bounce");
-
-		GetComponent<ParticleSystem>().Play();
-
 		hasBouncedThisFrame = true;
 		
 		if (other.gameObject.CompareTag("Paddle")) {
 			speed += paddleSpeedIncreaseIncrement;
-			
+
 			float newX = GetDeflectedX(this.transform.position, other.transform.position,
 				other.collider.bounds.size.x);
 			
@@ -41,6 +37,14 @@ public class BallBehaviour : MonoBehaviour {
 			// deflectionStrength will influence how far X can vary from 1 to create steeper deflection angles after normalization
 			Vector2 newDirection = new Vector2(newX * deflectionStrength, 1).normalized;
 			GetComponent<Rigidbody2D>().velocity = newDirection * (speed * Time.fixedDeltaTime);
+
+			audioManager.UpdatePitch("paddle_bounce", Mathf.Abs(newX) + 0.5f);
+			audioManager.Play("paddle_bounce");
+			GetComponent<ParticleSystem>().Play();
+		} else {
+			audioManager.UpdatePitch("bounce", 1f + 0.01f * (speed - baseSpeed));
+			audioManager.Play("bounce");
+			GetComponent<ParticleSystem>().Play();
 		}
 	}
 

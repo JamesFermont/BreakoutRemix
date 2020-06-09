@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class BlockManager : MonoBehaviour {
     public float maxHealth = 3;
@@ -25,7 +26,7 @@ public class BlockManager : MonoBehaviour {
     }
 
     private void OnEnable() {
-        if (GetComponent<BlockColours>() != null) spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour( health/maxHealth);
+        UpdateVisuals();
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -41,13 +42,21 @@ public class BlockManager : MonoBehaviour {
             onDestroyed?.Invoke(); // onDestroyed has to be invoked AFTER the collider is disabled to avoid a StackOverflowError
         } else {
             onDamaged?.Invoke();
-            if (GetComponent<BlockColours>() != null)
-                spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health / maxHealth);
+            UpdateVisuals();
         }
     }
     
     public Vector2Int getDimensions() {
         return new Vector2Int(width, height);
+    }
+
+    public void UpdateVisuals() {
+        if (GetComponent<BlockColours>()) 
+            spriteRenderer.material.color = 
+                GetComponent<BlockColours>().ReturnBlockColour(health / maxHealth);
+        if (GetComponent<BlockTextures>())
+            spriteRenderer.sprite =
+                GetComponent<BlockTextures>().ReturnBlockSprite(health / maxHealth);
     }
 
     public void ReceiveEffectDamage(int amount) {
@@ -59,7 +68,7 @@ public class BlockManager : MonoBehaviour {
             onDestroyed?.Invoke();
         } else {
             onDamaged?.Invoke();
-            if (GetComponent<BlockColours>() != null) spriteRenderer.material.color = GetComponent<BlockColours>().ReturnBlockColour(health/maxHealth);
+            UpdateVisuals();
         }
     }
 }

@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 1836093080074710044}
   m_Layer: 0
   m_Name: TargetManager
-  m_TagString: Untagged
+  m_TagString: TargetManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 200
-  paddleSpeedIncreaseIncrement: 1
+  paddleSpeedIncreaseIncrement: 5
   deflectionStrength: 1.5
   hasBouncedThisFrame: 0
 --- !u!114 &1836093081007677561

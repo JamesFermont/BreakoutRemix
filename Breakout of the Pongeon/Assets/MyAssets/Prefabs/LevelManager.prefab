@@ -390,6 +390,21 @@ MonoBehaviour:
   - key: NextPrefab
     myGameObject: {fileID: 7211323355245870806, guid: 879fd2cb134cf0a46afbe3605056fc16,
       type: 3}
+  - key: BLOCK_BASIC
+    myGameObject: {fileID: 8186645009006404991, guid: 4faeee8b3f1d32b42ab23ef8656d412c,
+      type: 3}
+  - key: BLOCK_BASIC_CBOMB_2
+    myGameObject: {fileID: 1960040785801160890, guid: 07e1dd1ea376aa040a617d546a6e8f75,
+      type: 3}
+  - key: BLOCK_BASIC_IMMUNE
+    myGameObject: {fileID: 7562916164767934426, guid: 800ac412456de5e459fe5bce7a2b30dc,
+      type: 3}
+  - key: TARGET_BASIC
+    myGameObject: {fileID: 315153490943719853, guid: 353d7cf1293b72b44bff7672b84e3fbc,
+      type: 3}
+  - key: BLOCK_BASIC_RESPAWN
+    myGameObject: {fileID: 7538123818115473606, guid: 09b174cefa0043649a3140534f462cab,
+      type: 3}
 --- !u!1 &5281650162940865993
 GameObject:
   m_ObjectHideFlags: 0

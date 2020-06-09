@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8516372011260927148}
   - component: {fileID: 2453962259634941684}
   - component: {fileID: 8793654428488698923}
-  - component: {fileID: 1129702944206614931}
+  - component: {fileID: 7467430323670544299}
   m_Layer: 8
   m_Name: TestBlockDestroyable
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a99bbe9a58f7e34aa5cd12b6ff05bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 4
   isImmune: 0
   width: 1
   height: 1
@@ -144,9 +144,9 @@ MonoBehaviour:
   blockColours:
   - maxHpPercentage: 30
     blockColour: {r: 0.5471698, g: 0, b: 0, a: 1}
-  - maxHpPercentage: 50
+  - maxHpPercentage: 60
     blockColour: {r: 0.7830189, g: 0.46536142, b: 0, a: 1}
-  - maxHpPercentage: 70
+  - maxHpPercentage: 80
     blockColour: {r: 1, g: 0.99671394, b: 0.23113209, a: 1}
   - maxHpPercentage: 100
     blockColour: {r: 0, g: 0.6509434, b: 0.030067246, a: 1}
@@ -162,11 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e30eed38686a344b0299bcac0d7571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reviveCountMin: 30
-  reviveCountMax: 50
-  reviveHpAmount: 0
+  reviveCountMin: 10
+  reviveCountMax: 30
+  reviveHpAmount: 1
   unitType: 0
---- !u!114 &1129702944206614931
+--- !u!114 &7467430323670544299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,11 +175,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6578917519125903080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a99bbe9a58f7e34aa5cd12b6ff05bbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f7fa409b89d9d14cb03cf387afd6c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  isImmune: 1
-  width: 1
-  height: 1
-  health: 0
+  blockTextures:
+  - maxHpPercentage: 30
+    blockTexture: {fileID: 21300000, guid: 23a6e53584a14514aaf3a44f30e731a5, type: 3}
+  - maxHpPercentage: 60
+    blockTexture: {fileID: 21300000, guid: 2a122ebd77cd5374a8ef0bf60f008957, type: 3}
+  - maxHpPercentage: 80
+    blockTexture: {fileID: 21300000, guid: 021710e8f0bf2f547b41a23d3bd3f07d, type: 3}
+  - maxHpPercentage: 100
+    blockTexture: {fileID: 21300000, guid: 4168157cfe07c404597200cc4c7e949e, type: 3}

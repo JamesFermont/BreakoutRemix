@@ -4,7 +4,7 @@ using UnityEngine;
 public class ReviveBlock : MonoBehaviour {
 	public int reviveCountMin = 30;
 	public int reviveCountMax = 50;
-	public int reviveHpAmount;
+	public int reviveHpAmount = 1;
 	public UnitType unitType;
 	
 	private BlockManager blockManager;
@@ -15,6 +15,10 @@ public class ReviveBlock : MonoBehaviour {
 		if (!ball) ball = GameObject.FindWithTag("Ball").GetComponent<BallBehaviour>();
 		blockManager.onDestroyed -= PerformEffect;
 		blockManager.onDestroyed += PerformEffect;
+
+		if (reviveCountMax < 1) reviveCountMax = 1;
+		if (reviveCountMin < 1) reviveCountMin = 1;
+		if (reviveHpAmount < 1) reviveHpAmount = 1;
 	}
 
 	public void PerformEffect() {
@@ -50,6 +54,7 @@ public class ReviveBlock : MonoBehaviour {
 		}
 		
 		blockManager.health = reviveHpAmount;
+		blockManager.UpdateVisuals();
 		gameObject.GetComponent<SpriteRenderer>().enabled = true;
 		gameObject.GetComponent<BoxCollider2D>().enabled = true;
 	}
