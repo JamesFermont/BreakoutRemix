@@ -2,58 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager {
+public static class LevelManager {
 
-    private static LevelManager Instance = null;
-    public static LevelManager instance {
-        get {
-            if (Instance == null)
-                Instance = new LevelManager();
-            return Instance;
-        }
-    }
+    public static Level currentLevel;
+    public static GameObject currentLevelGO;
 
-
-    public Level currentLevel;
-    public GameObject currentLevelGO;
-
-    public void CreateNewLevel() {
+    public static void CreateNewLevel() {
         CreateNewLevel("New Level");
     }
-    public void CreateNewLevel(string name) {
+    public static void CreateNewLevel(string name) {
         MakeLevel(new Level(name, new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT)));
     }
 
 
-    public void ResetCurrentLevel() {
+    public static void ResetCurrentLevel() {
         Object.DestroyImmediate(currentLevelGO);
         MakeLevel(new Level(currentLevel.name, new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT)));
     }
 
-    public void LoadLevel(string levelName) {
+    public static void LoadLevel(string levelName) {
         if (currentLevelGO != null) {
             Object.DestroyImmediate(currentLevelGO);
         }
-
-        MakeLevel(LevelIO.instance.LoadLevel(levelName));
+            MakeLevel(LevelIO.LoadLevel(levelName));
         Debug.Log(currentLevelGO);
     }
 
-    private void MakeLevel(Level level) {
+    private static void MakeLevel(Level level) {
         currentLevel = level;
         currentLevelGO = LevelGenerator.instance.Generate(currentLevel);
     }
 
-    public void SaveCurrentLevel() {
-        LevelIO.instance.SaveLevel(currentLevel);
+    public static void SaveCurrentLevel() {
+        LevelIO.SaveLevel(currentLevel);
     }
 
-    public void UpdateGrid(Grid newGrid) {
+    public static void UpdateGrid(Grid newGrid) {
         currentLevel.grid = newGrid;
         currentLevelGO = LevelGenerator.instance.Generate(currentLevel);
     }
 
-    public void UpdateName(string newName) {
+    public static void UpdateName(string newName) {
         currentLevel.name = newName;
         currentLevelGO.name = newName;
     }

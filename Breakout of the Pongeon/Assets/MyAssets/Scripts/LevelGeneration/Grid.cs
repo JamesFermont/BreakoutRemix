@@ -54,8 +54,6 @@ public class Grid {
     }
 
     public Vector2Int toGridPosition (Vector3 position) {
-        //-6.4 => +6.4
-        //-3.6 => +3.6 mouseposition + offset/2
         return new Vector2Int(Mathf.FloorToInt((position.x - positionOffset.x + cellWidth/2f)/ cellWidth), Mathf.FloorToInt((position.y - positionOffset.y + cellHeight/2f) / cellHeight));
     }
 }

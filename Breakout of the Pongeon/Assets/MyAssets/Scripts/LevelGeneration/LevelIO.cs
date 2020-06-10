@@ -2,24 +2,16 @@
 using System.IO;
 using System;
 
-public class LevelIO {
-    public const string levelFilesPath = "/";
-    public const string levelFilesEnding = ".bop";
+public static class LevelIO {
+    public static string levelFilesPath = "/";
+    public static string levelFilesEnding = ".bop";
 
-    private static LevelIO Instance = null;
-    public static LevelIO instance {
-        get {
-            if (Instance == null)
-                Instance = new LevelIO();
-            return Instance;
-        }
-    }
-
-    public void printLevelPath() {
+    
+    public static void printLevelPath() {
         Debug.Log(Application.dataPath + levelFilesPath);
     }
 
-    public bool SaveLevel(Level level) {
+    public static bool SaveLevel(Level level) {
         LevelWriter writer = new LevelWriter(level, Application.dataPath + levelFilesPath + level.name + levelFilesEnding);
         try {
             writer.WriteLevel();
@@ -31,7 +23,7 @@ public class LevelIO {
         return true;
     }
 
-    public Level LoadLevel(string name) {
+    public static Level LoadLevel(string name) {
         LevelReader reader = new LevelReader(Application.dataPath + levelFilesPath + name + levelFilesEnding);
         Level level;
         if(!File.Exists(Application.dataPath + levelFilesPath + name + levelFilesEnding)) {
@@ -39,7 +31,6 @@ public class LevelIO {
             Debug.Log("A Level of such name, doesn't exist!");
             return null;
         }
-        Debug.Log("Let's continue!");
         try {
             level = reader.readLevel();
         } catch (Exception ex) {

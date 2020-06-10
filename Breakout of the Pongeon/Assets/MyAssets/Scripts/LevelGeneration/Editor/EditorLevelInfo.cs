@@ -9,15 +9,12 @@ public class EditorLevelInfo : EditorWindow {
     private bool isDisabled = false;
     private string currentLevelName = "name";
 
-
     [MenuItem("Window/BOP/LevelInfo")]
     public static void Init() {
         EditorLevelInfo window = GetWindow<EditorLevelInfo>(false, "Level", true);
         window.Show();
     }
 
-
-    LevelManager levelManager = LevelManager.instance;
 
     public void OnGUI() {
         if (EditorApplication.isPlaying) {
@@ -26,30 +23,30 @@ public class EditorLevelInfo : EditorWindow {
         }
 
 
-        if (levelManager.currentLevel != null) {
-            currentLevelName = EditorGUILayout.TextField("Name: ", levelManager.currentLevel.name);
-            GUILayout.Label("Object Count:\t" + GridEditor.instance.getObjectCount());
+        if (LevelManager.currentLevel != null) {
+            currentLevelName = EditorGUILayout.TextField("Name: ", LevelManager.currentLevel.name);
+            GUILayout.Label("Object Count:\t" + GridEditor.getObjectCount());
 
-            if (levelManager.currentLevelGO != null)
-                levelManager.UpdateName(currentLevelName);
+            if (LevelManager.currentLevelGO != null)
+                LevelManager.UpdateName(currentLevelName);
         } else
             currentLevelName = EditorGUILayout.TextField("Create or Load a Level: ", currentLevelName);
         if (GUI.Button(new Rect(getButtonPosition(1, 0), buttonDimension), "Load"))
-            levelManager.LoadLevel(currentLevelName);
+            LevelManager.LoadLevel(currentLevelName);
 
         if (GUI.Button(new Rect(getButtonPosition(0, 1), buttonDimension), "Create New"))
-            levelManager.CreateNewLevel();
+            LevelManager.CreateNewLevel();
 
-        if (levelManager.currentLevel == null) {
+        if (LevelManager.currentLevel == null) {
             isDisabled = true;
             EditorGUI.BeginDisabledGroup(isDisabled);
         }
 
         if (GUI.Button(new Rect(getButtonPosition(0, 0), buttonDimension), "Save"))
-            levelManager.SaveCurrentLevel();
+            LevelManager.SaveCurrentLevel();
 
         if (GUI.Button(new Rect(getButtonPosition(1, 1), buttonDimension), "Clear"))
-            levelManager.ResetCurrentLevel();
+            LevelManager.ResetCurrentLevel();
 
         if (isDisabled)
             EditorGUI.EndDisabledGroup();

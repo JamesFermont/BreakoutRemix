@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class LevelReader {
 
@@ -46,7 +47,7 @@ public class LevelReader {
             }
         } catch (Exception ex)
         {
-            //uh oh;
+            Debug.Log(ex.ToString());
         }
 
         return loadedLevel;
