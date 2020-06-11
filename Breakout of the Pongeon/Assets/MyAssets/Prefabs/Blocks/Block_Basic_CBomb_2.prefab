@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5856950766104818672}
   - component: {fileID: 7148038679143446479}
   - component: {fileID: 4363025577916494164}
-  - component: {fileID: 4445327368795993833}
   - component: {fileID: 7589426109086584419}
   - component: {fileID: 4782386139397459696}
   - component: {fileID: 7921803731271533058}
@@ -78,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: faaad1a5e0530ec43b7e814e9743b7d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c514f9b7a1428d478ea93cfff1e9762, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,28 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a99bbe9a58f7e34aa5cd12b6ff05bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 3
   isImmune: 0
   width: 1
   height: 1
   health: 0
---- !u!114 &4445327368795993833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960040785801160890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a467178b36d65224ebac0e01cb27a38e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockColours:
-  - maxHpPercentage: 50
-    blockColour: {r: 1, g: 0, b: 0.6666665, a: 1}
-  - maxHpPercentage: 100
-    blockColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &7589426109086584419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,10 +144,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockTextures:
-  - maxHpPercentage: 50
-    blockTexture: {fileID: 21300000, guid: 66c3e05cee55eac4085c2abf6d01ca7a, type: 3}
+  - maxHpPercentage: 40
+    blockTexture: {fileID: 21300000, guid: 5c1cb93e2a70abe479d8a6ae79b37ea0, type: 3}
+  - maxHpPercentage: 70
+    blockTexture: {fileID: 21300000, guid: d62f5734af3e3da489c4d0704bcd4330, type: 3}
   - maxHpPercentage: 100
-    blockTexture: {fileID: 21300000, guid: f265f005b5b9b584590ac9fca8bd1c09, type: 3}
+    blockTexture: {fileID: 21300000, guid: 0c514f9b7a1428d478ea93cfff1e9762, type: 3}
 --- !u!114 &4782386139397459696
 MonoBehaviour:
   m_ObjectHideFlags: 0

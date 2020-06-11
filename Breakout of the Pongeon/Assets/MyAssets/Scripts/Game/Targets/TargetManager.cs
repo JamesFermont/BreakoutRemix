@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TargetManager : MonoBehaviour {
     private TargetArea[] targetAreas;
@@ -16,7 +17,10 @@ public class TargetManager : MonoBehaviour {
 
         if (targetsHit == targetAreas.Length) {
             isCompleted = true;
-            Debug.Log("Congratulations!!! You are the winner!");
+
+            LevelStatistics.instance.EndTracker();
+            SceneManager.LoadSceneAsync("UITest", LoadSceneMode.Additive);
+            Time.timeScale = 0;
         }
     }
 }

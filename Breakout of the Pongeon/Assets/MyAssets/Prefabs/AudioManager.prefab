@@ -68,7 +68,7 @@ MonoBehaviour:
   - name: bounce
     type: 1
     clip: {fileID: 8300000, guid: bef86f2644c480e408f6f85ad82acd15, type: 3}
-    volume: 0.3
+    volume: 0.15
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -89,7 +89,7 @@ MonoBehaviour:
   - name: paddle_bounce
     type: 1
     clip: {fileID: 8300000, guid: bef86f2644c480e408f6f85ad82acd15, type: 3}
-    volume: 0.3
+    volume: 0.15
     pitch: 1
     loop: 0
     source: {fileID: 0}

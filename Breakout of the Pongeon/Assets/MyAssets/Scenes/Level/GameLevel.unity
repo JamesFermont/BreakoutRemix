@@ -1828,6 +1828,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1486536883915377702, guid: 9ab1a385740e6d24e87c4905be6e6684,
+        type: 3}
+      propertyPath: tracks.Array.data[1].alpha
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2628020138519780987, guid: 9ab1a385740e6d24e87c4905be6e6684,
         type: 3}
       propertyPath: m_BackGroundColor.r

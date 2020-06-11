@@ -21,7 +21,8 @@ public class BackgroundManager : MonoBehaviour {
     }
 
     private void Start() {
-        Play("testbg");
+        //Play("testbg");
+        Play("AI_1");
     }
 
     public void Play(string bgName) {

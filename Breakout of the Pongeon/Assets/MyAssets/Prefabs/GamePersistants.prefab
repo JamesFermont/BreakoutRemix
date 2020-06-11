@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tracks:
+  - name: AI_1
+    track: {fileID: 32900000, guid: ceb6c4b490a39aa448c78f565d024a2b, type: 3}
+    loop: 1
+    waitForFirstFrame: 1
+    alpha: 1
+    source: {fileID: 0}
   - name: testbg
     track: {fileID: 32900000, guid: 11c900ae752576a45a2c81734f8495e1, type: 3}
     loop: 1

@@ -7,6 +7,9 @@ public class TargetArea : MonoBehaviour {
 	public TargetManager targetManager;
 	public bool hasNoCollision = true;
 
+	public Sprite open;
+	public Sprite closed;
+	
 	private BallBehaviour ball;
 	private SpriteRenderer spriteRenderer;
 	private Color baseColor;
@@ -27,7 +30,7 @@ public class TargetArea : MonoBehaviour {
 		if (other.gameObject.CompareTag("Ball")) {
 			if (!isActivated) {
 				isActivated = true;
-				spriteRenderer.material.color = Color.green;
+				spriteRenderer.sprite = open;
 				targetManager.CheckCompleted();
 				if (!targetManager.isCompleted) {
 					if (unitType == UnitType.UNIT_TIME) drain = StartCoroutine(DrainEnergyOverTime(drainCount));
@@ -70,7 +73,7 @@ public class TargetArea : MonoBehaviour {
 		}
 
 		isActivated = false;
-		spriteRenderer.material.color = baseColor;
+		spriteRenderer.sprite = closed;
 	}
 
 	private IEnumerator DrainEnergyOverBounces(int bounces) {

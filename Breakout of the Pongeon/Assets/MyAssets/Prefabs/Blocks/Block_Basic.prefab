@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4316604893861822005}
   - component: {fileID: 692806373689358858}
   - component: {fileID: 6206853446362889361}
-  - component: {fileID: 2646108644372698473}
   - component: {fileID: 1893505041977308224}
   m_Layer: 8
   m_Name: Block_Basic
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 177669361f76cda44b38aafd6e9c00dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea4730fdf0efb9f4d9a20931dddb90bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,27 +127,6 @@ MonoBehaviour:
   width: 1
   height: 1
   health: 0
---- !u!114 &2646108644372698473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8186645009006404991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a467178b36d65224ebac0e01cb27a38e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockColours:
-  - maxHpPercentage: 30
-    blockColour: {r: 1, g: 0, b: 0, a: 1}
-  - maxHpPercentage: 60
-    blockColour: {r: 1, g: 0.5261963, b: 0, a: 1}
-  - maxHpPercentage: 80
-    blockColour: {r: 0.8679245, g: 0.80775297, b: 0, a: 1}
-  - maxHpPercentage: 100
-    blockColour: {r: 0, g: 0.5943396, b: 0.000013036548, a: 1}
 --- !u!114 &1893505041977308224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,11 +140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockTextures:
-  - maxHpPercentage: 30
-    blockTexture: {fileID: 21300000, guid: 23a6e53584a14514aaf3a44f30e731a5, type: 3}
-  - maxHpPercentage: 60
-    blockTexture: {fileID: 21300000, guid: 2a122ebd77cd5374a8ef0bf60f008957, type: 3}
-  - maxHpPercentage: 80
-    blockTexture: {fileID: 21300000, guid: 021710e8f0bf2f547b41a23d3bd3f07d, type: 3}
+  - maxHpPercentage: 40
+    blockTexture: {fileID: 21300000, guid: f6887cdc9376f4f4c94c525c15708e7d, type: 3}
+  - maxHpPercentage: 70
+    blockTexture: {fileID: 21300000, guid: 78b2114ba253ddc499da7a14b29ae0a4, type: 3}
   - maxHpPercentage: 100
-    blockTexture: {fileID: 21300000, guid: 4168157cfe07c404597200cc4c7e949e, type: 3}
+    blockTexture: {fileID: 21300000, guid: ea4730fdf0efb9f4d9a20931dddb90bd, type: 3}

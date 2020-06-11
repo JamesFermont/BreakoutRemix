@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyAssets/Scenes/Debug/jamesTest.unity
     guid: 4e104e094ae0f3a408e3e748b87637fa
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/Level/GameLevel.unity
+    guid: 4184f9f32052f524689c4d37e590db0e
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/UI/UITest.unity
+    guid: 29ea1a39fd8e3c445a151303a1252256
   m_configObjects: {}

@@ -37,18 +37,18 @@ public class BallBehaviour : MonoBehaviour {
 			// deflectionStrength will influence how far X can vary from 1 to create steeper deflection angles after normalization
 			Vector2 newDirection = new Vector2(newX * deflectionStrength, 1).normalized;
 			GetComponent<Rigidbody2D>().velocity = newDirection * (speed * Time.fixedDeltaTime);
-
-			audioManager.UpdatePitch("paddle_bounce", Mathf.Abs(newX) + 0.5f);
+			
 			audioManager.Play("paddle_bounce");
 			GetComponent<ParticleSystem>().Play();
 		} else {
-			audioManager.UpdatePitch("bounce", 1f + 0.01f * (speed - baseSpeed));
+			audioManager.UpdatePitch("bounce", 1f + 0.005f * (speed - baseSpeed));
 			audioManager.Play("bounce");
 			GetComponent<ParticleSystem>().Play();
 		}
 	}
 
 	public void Launch() {
+		LevelStatistics.instance.StartTracker();
 		GetComponent<Rigidbody2D>().velocity = Vector2.up * (speed * Time.fixedDeltaTime);
 	}
 	
