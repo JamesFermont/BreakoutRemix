@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [ExecuteInEditMode]
 public class LevelGenerator : MonoBehaviour {
@@ -20,8 +21,8 @@ public class LevelGenerator : MonoBehaviour {
     }
 #endif
     //Generate a Level
+    LevelStorage storage;
     public GameObject Generate(Level level) {
-        Debug.Log(level);
         GameObject levelObject = new GameObject(level.name);
         Vector2Int currentPointerPosition;
         string currentLevelObject;
@@ -37,7 +38,14 @@ public class LevelGenerator : MonoBehaviour {
                 }
             }
         }
+        if (storage == null)
+            storage = GameObject.FindGameObjectWithTag("EditorHover").GetComponent<LevelStorage>();
+        storage.level = level;
+        storage.levelGO = levelObject;
+        
+
         return levelObject;
+
     }
 
     public void AddSingleID (Vector2Int position, string objectID) {

@@ -5,7 +5,7 @@ using UnityEngine;
 public static class GridEditor {
 
     public static bool CreateEditorGrid() {
-        return CreateEditorGrid(new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT, new int[Constants.GRID_WIDTH, Constants.GRID_HEIGHT], new Dictionary<int, string>()));
+        return CreateEditorGrid(new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT, new int[Constants.GRID_WIDTH, Constants.GRID_HEIGHT], new GridList()));
     }
     public static bool CreateEditorGrid(Grid newGrid) {
         LevelManager.currentLevel.grid = newGrid;
@@ -18,30 +18,30 @@ public static class GridEditor {
         return CreateEditorGrid();
     }
     public static int getObjectCount() {
-        if (LevelManager.currentLevel.grid != null)
+        if (LevelManager.currentLevel.grid.levelObjects != null)
             return LevelManager.currentLevel.grid.levelObjects.Count;
         return -1;
     }
 
     public static bool TryUpdateObjectPosition(int objectKey, Vector2Int newPosition) {
-        if (!ObjectHasSpaceAt(newPosition, LevelManager.currentLevel.grid.levelObjects[objectKey]))
+        if (!ObjectHasSpaceAt(newPosition, LevelManager.currentLevel.grid.getLevelObject(objectKey)))
             return false;
 
         for (int x = 0; x < LevelManager.currentLevel.grid.width; x++) {
             for (int y = 0; y < LevelManager.currentLevel.grid.height; y++) {
                 if (LevelManager.currentLevel.grid.IDAtPosition(new Vector2Int(x, y)) == objectKey) {
-                    LevelManager.currentLevel.grid.levelMap[x, y] = 0;
+                    LevelManager.currentLevel.grid.levelMap[x].col[y] = 0;
                 }
             }
         }
-        Vector2Int blockDimensions = BlockDictionary.instance.getBlock(LevelManager.currentLevel.grid.levelObjects[objectKey]).GetComponent<BlockManager>().getDimensions();
+        Vector2Int blockDimensions = BlockDictionary.instance.getBlock(LevelManager.currentLevel.grid.getLevelObject(objectKey)).GetComponent<BlockManager>().getDimensions();
         return PaintIDInMap(objectKey, newPosition, blockDimensions);
     }
     public static bool TryPlaceObjectInGrid(string objectID, Vector2Int position) {
         if (!ObjectHasSpaceAt(position, objectID))
             return false;
         int newID = LevelManager.currentLevel.grid.levelObjects.Count + 1;
-        LevelManager.currentLevel.grid.levelObjects.Add(newID, objectID);
+        LevelManager.currentLevel.grid.levelObjects.Add( newID, objectID);
         LevelGenerator.instance.AddSingleID(position, objectID);
         PaintIDInMap(newID, position, BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>().getDimensions());
         return true;
@@ -65,7 +65,7 @@ public static class GridEditor {
     private static bool PaintIDInMap(int id, Vector2Int position, Vector2Int dimensions) {
         for (int x = 0; x < dimensions.x; x++) {
             for (int y = 0; y < dimensions.y; y++) {
-                LevelManager.currentLevel.grid.levelMap[position.x + x, position.y + y] = id;
+                LevelManager.currentLevel.grid.levelMap[position.x + x].col[position.y + y] = id;
             }
         }
         return true;
@@ -93,7 +93,7 @@ public static class GridEditor {
     private static bool RemoveObjectAndUpdateGrid(int objectID) {
         int[,] ObjectIDTranslation = new int[LevelManager.currentLevel.grid.levelObjects.Count, 2];
         int[,] translatedGridMap = new int[LevelManager.currentLevel.grid.width, LevelManager.currentLevel.grid.height];
-        Dictionary<int, string> translatedDictionary = new Dictionary<int, string>();
+        GridList translatedDictionary = new GridList();
 
         for (int i = 1; i <= LevelManager.currentLevel.grid.levelObjects.Count; i++) {
             if (i == objectID) {
@@ -110,11 +110,11 @@ public static class GridEditor {
 
         Debug.Log(objectID + "/" + LevelManager.currentLevel.grid.levelObjects.Count);
 
-        for (int i = 0; i < LevelManager.currentLevel.grid.levelObjects.Keys.Count; i++) {
+        for (int i = 0; i < LevelManager.currentLevel.grid.levelObjects.Count; i++) {
             for (int u = 0; u < ObjectIDTranslation.GetLength(0); u++) {
 
                 if (ObjectIDTranslation[u, 0] == i && ObjectIDTranslation[u, 1] != 0) {
-                    translatedDictionary.Add(ObjectIDTranslation[u, 1], LevelManager.currentLevel.grid.levelObjects[i]);
+                    translatedDictionary.Add(ObjectIDTranslation[u, 1], LevelManager.currentLevel.grid.getLevelObject(i));
                 }
             }
         }

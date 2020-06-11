@@ -9,6 +9,9 @@ public class EditorLevelInfo : EditorWindow {
     private bool isDisabled = false;
     private string currentLevelName = "name";
 
+
+
+
     [MenuItem("Window/BOP/LevelInfo")]
     public static void Init() {
         EditorLevelInfo window = GetWindow<EditorLevelInfo>(false, "Level", true);

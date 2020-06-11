@@ -34,7 +34,7 @@ public class LevelReader {
                 }
                 int key = 1;
                 string blockID;
-                Dictionary<int, string> levelObjects = new Dictionary<int, string>();
+                GridList levelObjects = new GridList();
 
                 while (!endOfFile())
                 {

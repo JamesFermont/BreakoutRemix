@@ -1,29 +1,13 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-
 [CustomEditor(typeof(GameObject))]
 public class EditorMousePosition : Editor {
     private bool isPainting = false;
-    private GameObject HoverObject = null;
+    public GameObject HoverObject = null;
     public static EditorMousePosition instance = null;
     private Vector2Int mousePosition;
 
-
-    private void Awake() {
-        if (instance == null) {
-            instance = this;
-        }
-
-    }
-    [InitializeOnLoadMethod]
-    private void myLoad() {
-        EditorApplication.playModeStateChanged += myfunc;
-    }
-
-    private void myfunc(PlayModeStateChange state) {
-        Debug.Log(state + ": " + LevelManager.currentLevel);
-    }
 
     public void OnSceneGUI() {
         if (EditorApplication.isPlaying)
@@ -32,10 +16,11 @@ public class EditorMousePosition : Editor {
         if (instance == null) {
             instance = this;
         }
-        if (Event.current != null && LevelManager.currentLevel != null)
+        if (Event.current != null && LevelManager.currentLevel != null) {
             mousePosition = LevelManager.currentLevel.grid.toGridPosition(HandleUtility.GUIPointToWorldRay(Event.current.mousePosition).origin);
-
-
+            //Debug.Log(HandleUtility.GUIPointToWorldRay(Event.current.mousePosition).origin + "/" + LevelManager.currentLevel.grid.toGridPosition(HandleUtility.GUIPointToWorldRay(Event.current.mousePosition).origin));
+            //Debug.Log(LevelManager.currentLevel.name + ":" + LevelManager.currentLevel.grid.width + "x" + LevelManager.currentLevel.grid.height);
+        }
 
         if (HoverObject == null && UnityEngine.SceneManagement.SceneManager.GetActiveScene() != null) {
             GameObject[] sceneObjects = UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects();
@@ -48,7 +33,7 @@ public class EditorMousePosition : Editor {
         }
 
         if (Event.current != null && LevelManager.currentLevel != null) {
-            if (HoverObject != null) {
+            if (HoverObject != null && mousePosition != null) {
                 HoverObject.transform.position = LevelManager.currentLevel.grid.toWorldPosition(mousePosition);
             }
 

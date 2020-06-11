@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEditor;
 
 public static class LevelManager {
 
@@ -24,8 +23,7 @@ public static class LevelManager {
         if (currentLevelGO != null) {
             Object.DestroyImmediate(currentLevelGO);
         }
-            MakeLevel(LevelIO.LoadLevel(levelName));
-        Debug.Log(currentLevelGO);
+        MakeLevel(LevelIO.LoadLevel(levelName));
     }
 
     private static void MakeLevel(Level level) {
