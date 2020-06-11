@@ -863,21 +863,6 @@ PrefabInstance:
       propertyPath: tracks.Array.data[1].alpha
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 2628020138519780987, guid: 9ab1a385740e6d24e87c4905be6e6684,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2628020138519780987, guid: 9ab1a385740e6d24e87c4905be6e6684,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2628020138519780987, guid: 9ab1a385740e6d24e87c4905be6e6684,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7455776695919064255, guid: 9ab1a385740e6d24e87c4905be6e6684,
         type: 3}
       propertyPath: m_Name
@@ -3148,45 +3133,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1836093079562736225, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836093079562736225, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836093079562736225, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.atime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836093079562736225, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.atime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836093079562736225, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.m_NumAlphaKeys
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836093079562736225, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.a
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836093079562736225, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.atime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836093079562736225, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.a
+      value: 0.50980395
+      objectReference: {fileID: 0}
     - target: {fileID: 1836093081595936878, guid: 733542a65132dc84891041e198d3ab70,
         type: 3}
       propertyPath: m_Name
       value: Volatiles
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836093081595936879, guid: 733542a65132dc84891041e198d3ab70,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0045940597
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836093081595936879, guid: 733542a65132dc84891041e198d3ab70,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0007432215
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836093081595936879, guid: 733542a65132dc84891041e198d3ab70,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.7197266
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836093081595936879, guid: 733542a65132dc84891041e198d3ab70,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836093081595936879, guid: 733542a65132dc84891041e198d3ab70,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836093081595936879, guid: 733542a65132dc84891041e198d3ab70,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836093081595936879, guid: 733542a65132dc84891041e198d3ab70,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1836093081595936879, guid: 733542a65132dc84891041e198d3ab70,
         type: 3}
