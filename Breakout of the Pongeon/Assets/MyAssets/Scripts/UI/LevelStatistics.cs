@@ -14,7 +14,7 @@ public class LevelStatistics {
     public int blocksDestroyed;
 
     public void StartTracker() {
-        time = Time.fixedTime;
+        if (time < 1f) time = Time.fixedTime;
     }
 
     public void EndTracker() {
