@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public static class LevelManager {
 
@@ -45,5 +46,10 @@ public static class LevelManager {
         currentLevelGO.name = newName;
     }
 
-
+    public static void EndLevel() {
+        LevelStatistics.instance.EndTracker();
+        SceneManager.LoadSceneAsync("UITest", LoadSceneMode.Additive);
+        Time.timeScale = 0;
+        GameObject.FindWithTag("Paddle").GetComponent<MouseMovement>().enabled = false;
+    }
 }

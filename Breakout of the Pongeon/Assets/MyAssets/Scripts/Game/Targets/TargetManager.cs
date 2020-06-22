@@ -18,9 +18,7 @@ public class TargetManager : MonoBehaviour {
         if (targetsHit == targetAreas.Length) {
             isCompleted = true;
 
-            LevelStatistics.instance.EndTracker();
-            SceneManager.LoadSceneAsync("UITest", LoadSceneMode.Additive);
-            Time.timeScale = 0;
+            LevelManager.EndLevel();
         }
     }
 }

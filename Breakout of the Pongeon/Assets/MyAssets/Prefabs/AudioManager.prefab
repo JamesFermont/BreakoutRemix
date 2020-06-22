@@ -61,7 +61,7 @@ MonoBehaviour:
   - name: cbomb
     type: 1
     clip: {fileID: 8300000, guid: 2f0755788d0908944825a0a4cf0ae4e7, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -75,14 +75,14 @@ MonoBehaviour:
   - name: hlinebomb
     type: 1
     clip: {fileID: 8300000, guid: cde88c0ff3a6a2d4da53e384b1a4397a, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: testbgm
     type: 0
     clip: {fileID: 8300000, guid: 9dc48963830b6bf47a4b9de8cd9f09dd, type: 3}
-    volume: 0
+    volume: 0.03
     pitch: 1
     loop: 1
     source: {fileID: 0}

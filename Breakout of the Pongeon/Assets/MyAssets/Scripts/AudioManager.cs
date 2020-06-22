@@ -48,7 +48,7 @@ public class AudioManager : MonoBehaviour {
     }
 
     public void UpdateVolumeOfType(SoundType type, float volume) {
-        Mathf.Clamp(volume, 0.1f, 1f);
+        Mathf.Clamp(volume, 0.01f, 1f);
         foreach (Sound sound in sounds) {
             if (sound.type == type) sound.volume = volume;
         }
