@@ -6,7 +6,10 @@ public class TargetArea : MonoBehaviour {
 	public UnitType unitType;
 	public TargetManager targetManager;
 	public bool hasNoCollision = true;
-
+	
+	[Range(1, 10000)]
+	public int scoreOnTag;
+	
 	public Sprite open;
 	public Sprite closed;
 	
@@ -31,6 +34,7 @@ public class TargetArea : MonoBehaviour {
 			if (!isActivated) {
 				isActivated = true;
 				spriteRenderer.sprite = open;
+				LevelStatistics.instance.AddScore(scoreOnTag);
 				targetManager.CheckCompleted();
 				if (!targetManager.isCompleted) {
 					if (unitType == UnitType.UNIT_TIME) drain = StartCoroutine(DrainEnergyOverTime(drainCount));
@@ -74,6 +78,7 @@ public class TargetArea : MonoBehaviour {
 
 		isActivated = false;
 		spriteRenderer.sprite = closed;
+		LevelStatistics.instance.AddScore(-scoreOnTag);
 	}
 
 	private IEnumerator DrainEnergyOverBounces(int bounces) {
@@ -90,5 +95,6 @@ public class TargetArea : MonoBehaviour {
 
 		isActivated = false;
 		spriteRenderer.material.color = baseColor;
+		LevelStatistics.instance.AddScore(-scoreOnTag);
 	}
 }

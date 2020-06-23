@@ -5,7 +5,10 @@ public class BallBehaviour : MonoBehaviour {
 	public float baseSpeed = 200.0f;
 	public float paddleSpeedIncreaseIncrement = 1.0f;
 	public float deflectionStrength = 1.0f;
-	private float speed;
+	
+	public float speedMod = 0.5f;
+	
+	public float speed;
 
 	[HideInInspector]
 	public bool hasBouncedThisFrame = false;
@@ -17,7 +20,7 @@ public class BallBehaviour : MonoBehaviour {
 	}
 
 	private void OnEnable() {
-		speed = baseSpeed;
+		speed = baseSpeed * speedMod;
 	}
 
 	private void LateUpdate() {

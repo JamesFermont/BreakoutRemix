@@ -126,6 +126,7 @@ MonoBehaviour:
   unitType: 0
   targetManager: {fileID: 0}
   hasNoCollision: 0
+  scoreOnTag: 1000
   open: {fileID: 21300000, guid: 989c7ddeb58c69a4a9ccac9f6f919b4c, type: 3}
   closed: {fileID: 21300000, guid: 1c8b15d988fdaaa44a9537c5cf8ede1f, type: 3}
   isActivated: 0
@@ -143,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   isImmune: 1
+  scoreOnDestroy: 0
   width: 1
   height: 1
   health: 0

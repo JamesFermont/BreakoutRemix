@@ -4,6 +4,8 @@ public enum UnitType {UNIT_TIME, UNIT_BOUNCE}
 
 public enum SoundType {SOUND_BGM, SOUND_SFX}
 
+public enum SwitchColor {SWITCH_RED, SWITCH_GREEN, SWITCH_BLUE}
+
 public class Constants
 {
     public static int GRID_WIDTH = 20;

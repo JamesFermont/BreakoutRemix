@@ -7,7 +7,6 @@ public class CircleExplosion : MonoBehaviour {
     public int explosionDamage = 3;
     public ParticleSystem subEmitter;
     
-    
     private AudioManager audioManager;
 
     private void Awake() {

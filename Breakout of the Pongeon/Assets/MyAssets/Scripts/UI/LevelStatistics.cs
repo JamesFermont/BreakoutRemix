@@ -12,6 +12,7 @@ public class LevelStatistics {
     
     public float time;
     public int blocksDestroyed;
+    public int score;
 
     public void StartTracker() {
         if (time < 1f) time = Time.fixedTime;
@@ -27,5 +28,16 @@ public class LevelStatistics {
             }
         }
         blocksDestroyed = deadBlocks;
+    }
+    
+    public void AddScore(int delta) {
+        score += delta;
+    }
+
+    public int ReturnScore() {
+        var ball = GameObject.FindWithTag("Ball").GetComponent<BallBehaviour>();
+        float ballSpeedMod = ball.speedMod;
+        float result = score * (1 / (blocksDestroyed + (time*ballSpeedMod))) * 100;
+        return (int)result;
     }
 }

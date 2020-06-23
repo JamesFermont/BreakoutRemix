@@ -34,7 +34,7 @@ public static class GridEditor {
                 }
             }
         }
-        Vector2Int blockDimensions = BlockDictionary.instance.getBlock(LevelManager.currentLevel.grid.getLevelObject(objectKey)).GetComponent<BlockManager>().getDimensions();
+        Vector2Int blockDimensions = BlockDictionary.instance.getBlock(LevelManager.currentLevel.grid.getLevelObject(objectKey)).GetComponent<BlockManager>().GetDimensions();
         return PaintIDInMap(objectKey, newPosition, blockDimensions);
     }
     public static bool TryPlaceObjectInGrid(string objectID, Vector2Int position) {
@@ -43,7 +43,7 @@ public static class GridEditor {
         int newID = LevelManager.currentLevel.grid.levelObjects.Count + 1;
         LevelManager.currentLevel.grid.levelObjects.Add( newID, objectID);
         LevelGenerator.instance.AddSingleID(position, objectID);
-        PaintIDInMap(newID, position, BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>().getDimensions());
+        PaintIDInMap(newID, position, BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>().GetDimensions());
         return true;
     }
     public static bool TryDeleteObjectAtPosition(Vector2Int position) {

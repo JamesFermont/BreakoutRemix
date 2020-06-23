@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   isImmune: 0
+  scoreOnDestroy: 10
   width: 1
   height: 1
   health: 0
