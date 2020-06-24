@@ -11,6 +11,15 @@ public static class LevelIO {
         Debug.Log(Application.dataPath + levelFilesPath);
     }
 
+    public static  string[] getLevelsInDirectory () {
+        try {
+            return Directory.GetFiles(Application.dataPath + levelFilesPath, "*.bop");
+        } catch (Exception ex){
+            return null;
+        }
+    }
+
+
     public static bool SaveLevel(Level level) {
         LevelWriter writer = new LevelWriter(level, Application.dataPath + levelFilesPath + level.name + levelFilesEnding);
         try {
