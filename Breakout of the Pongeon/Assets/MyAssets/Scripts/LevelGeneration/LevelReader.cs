@@ -22,11 +22,16 @@ public class LevelReader {
 
                 reader = new BinaryReader(File.Open(filePath, FileMode.Open));
                 string name = reader.ReadString();
+                int width = reader.ReadInt16();
+                int height = reader.ReadInt16();
+
                 int[,] map = new int[Constants.GRID_WIDTH, Constants.GRID_HEIGHT];
                 for (int x = 0; x < Constants.GRID_WIDTH; x++)
                 {
                     for (int y = 0; y < Constants.GRID_HEIGHT; y++)
                     {
+                        if (x * height + y >= width * height)
+                            break;
                         map[x, y] = reader.ReadInt16();
                     }
                 }

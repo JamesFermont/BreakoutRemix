@@ -12,7 +12,10 @@ public class LevelWriter {
 
     public void WriteLevel() {
         writer.Write(level.name);
-        
+
+        writer.Write((short)Grid.width);
+        writer.Write((short)Grid.height);
+
         for (int x = 0; x < Grid.width; x++) {
             for (int y = 0; y < Grid.height; y++) {
                 writer.Write((short)level.grid.IDAtPosition(x, y));

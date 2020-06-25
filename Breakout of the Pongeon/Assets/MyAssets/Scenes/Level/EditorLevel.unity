@@ -2469,7 +2469,7 @@ RectTransform:
   - {fileID: 1823381352}
   - {fileID: 1170905949}
   m_Father: {fileID: 1073816459}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2491,6 +2491,7 @@ MonoBehaviour:
   exitButton: {fileID: 205461346}
   confirmButton: {fileID: 1823381353}
   input: {fileID: 1170905950}
+  editorNavigation: {fileID: 1073816460}
 --- !u!1 &932200688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,10 +3019,10 @@ RectTransform:
   m_Children:
   - {fileID: 1869621214}
   - {fileID: 83601877}
+  - {fileID: 1731460072}
   - {fileID: 872760684}
   - {fileID: 1511616188}
   - {fileID: 1390511646}
-  - {fileID: 1731460072}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3485,7 +3486,7 @@ RectTransform:
   - {fileID: 956424775}
   - {fileID: 463280740}
   m_Father: {fileID: 1073816459}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3505,6 +3506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitButton: {fileID: 956424776}
+  editorNavigation: {fileID: 1073816460}
   levelList: {fileID: 40362257}
   levelListPrefab: {fileID: 7823304375523840782, guid: ff0e2feed38ac4f41b1583d02466b90f,
     type: 3}
@@ -4029,7 +4031,7 @@ RectTransform:
   - {fileID: 483656197}
   - {fileID: 640567198}
   m_Father: {fileID: 1073816459}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4051,6 +4053,7 @@ MonoBehaviour:
   exitButton: {fileID: 2070121636}
   confirmButton: {fileID: 483656198}
   input: {fileID: 640567199}
+  editorNavigation: {fileID: 1073816460}
 --- !u!1001 &1554827420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4648,7 +4651,7 @@ RectTransform:
   m_Children:
   - {fileID: 1471957250}
   m_Father: {fileID: 1073816459}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}

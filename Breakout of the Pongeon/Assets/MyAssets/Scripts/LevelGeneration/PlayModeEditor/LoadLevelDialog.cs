@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class LoadLevelDialog : MonoBehaviour
 {
     public Button exitButton;
-
+    public EditorNavigation editorNavigation;
     public Transform levelList;
     public Object levelListPrefab;
+
     int numberOfLevels = 0;
     private void OnEnable() {
+        editorNavigation.HidePreviewCursor(true);
+
         string[] levels = LevelIO.getLevelsInDirectory();
 
         GameObject currentLevelButton;
@@ -23,13 +26,18 @@ public class LoadLevelDialog : MonoBehaviour
             currentLevelButton.name = level;
             currentLevelButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = level;
             currentLevelButton.transform.localPosition = new Vector3(450f, -32f - 64f * numberOfLevels++, 0f);
-            currentLevelButton.GetComponent<Button>().onClick.AddListener(delegate { LevelManager.LoadLevel(s); gameObject.SetActive(false);});
+            currentLevelButton.GetComponent<Button>().onClick.AddListener(delegate { LevelManager.LoadLevel(s); Hide(); });
 
         }
 
     }
 
     private void Start() {
-        exitButton.onClick.AddListener(delegate { gameObject.SetActive(false); });
+        exitButton.onClick.AddListener(delegate { Hide(); });
+    }
+
+    private void Hide() {
+        editorNavigation.HidePreviewCursor(false);
+        gameObject.SetActive(false);
     }
 }

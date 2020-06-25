@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class EditorNavigation : MonoBehaviour {
 
-
-
-
     public EditorMode currentMode = EditorMode.PLAY;
     public GameObject previewCursor;
     private GameObject volatiles;
@@ -26,9 +23,6 @@ public class EditorNavigation : MonoBehaviour {
     private Camera camera;
     private Vector3 mousePosition;
 
-
-
-    // Start is called before the first frame update
     void Start() {
         blockSelection = transform.GetComponentInChildren<BlockSelection>();
         volatiles = GameObject.Find("Volatiles");
@@ -51,17 +45,18 @@ public class EditorNavigation : MonoBehaviour {
             if (!loadDialog.activeSelf && !saveDialog.activeSelf && !createDialog.activeSelf) {
                 if (Input.GetMouseButtonDown(0)) {
                     if (blockSelection.currentBlock != "ERASE")
-                        GridEditor.TryPlaceObjectInGrid(blockSelection.currentBlock, Grid.toGridPosition(mousePosition));
-                    else if (blockSelection.currentBlock == "ERASE")
-                        if (GridEditor.TryDeleteObjectAtPosition(Grid.toGridPosition(mousePosition)))
+                        if (GridEditor.TryPlaceObjectInGrid(blockSelection.currentBlock, Grid.toGridPosition(mousePosition), true))
                             LevelManager.ResetCurrentLevel();
+                        else if (blockSelection.currentBlock == "ERASE")
+                            if (GridEditor.TryDeleteObjectAtPosition(Grid.toGridPosition(mousePosition)))
+                                LevelManager.ResetCurrentLevel();
                 }
             }
-            
+
         }
         if (Grid.toGridPosition(mousePosition).y < Constants.PROTECTED_ROWS)
             HidePreviewCursor(true);
-        else if (!previewCursor.activeSelf)
+        else if (!createDialog.activeSelf &&!saveDialog.activeSelf &&!loadDialog.activeSelf)
             HidePreviewCursor(false);
 
     }
@@ -76,6 +71,9 @@ public class EditorNavigation : MonoBehaviour {
             SetBallAndPaddle(true);
         }
         SetEditorUI(false);
+
+        LevelStatistics.instance.ResetTracker();
+
         if (LevelManager.currentLevelGO != null)
             LevelManager.ResetCurrentLevel();
     }
@@ -102,8 +100,10 @@ public class EditorNavigation : MonoBehaviour {
     private void SetBallAndPaddle(bool hidden) {
         volatiles.transform.GetChild(0).GetComponent<MouseMovement>().isHidden = hidden;
         volatiles.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = !hidden;
+        volatiles.transform.GetChild(1).GetComponent<BallStart>().enabled = true;
         volatiles.transform.GetChild(1).GetComponent<BallStart>().isHidden = hidden;
         volatiles.transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = !hidden;
+        
     }
 
     private void SetPreviewCursorPosition() {

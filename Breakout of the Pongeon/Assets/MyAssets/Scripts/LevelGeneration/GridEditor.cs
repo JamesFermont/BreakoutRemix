@@ -5,20 +5,29 @@ using UnityEngine;
 public static class GridEditor {
 
     public static bool TryPlaceObjectInGrid(string objectID, Vector2Int position) {
+        return TryPlaceObjectInGrid(objectID, position, false);
+    }
+
+    public static bool TryPlaceObjectInGrid(string objectID, Vector2Int position, bool overrideBlocks) {
         if (!BlockDictionary.hasBlock(objectID))
             return false;
 
         if (!Grid.isOnGrid(position) || position.y < Constants.PROTECTED_ROWS)
             return false;
-
-        if (!ObjectHasSpaceAt(position, objectID))
+        if (overrideBlocks) {
+            if (!ObjectHasSpaceAt(position, objectID, LevelManager.currentLevel.grid.IDAtPosition(position)))
+                return false;
+            TryDeleteObjectAtPosition(position);
+        } else if (!ObjectHasSpaceAt(position, objectID))
             return false;
+
 
         int newID = LevelManager.currentLevel.grid.levelObjects.Count + 1;
         LevelManager.currentLevel.grid.levelObjects.Add(newID, objectID);
         LevelGenerator.instance.AddSingleID(position, objectID);
         return PaintIDInMap(newID, position, BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>().GetDimensions());
     }
+
     private static bool PaintIDInMap(int id, Vector2Int position, Vector2Int dimensions) {
         for (int x = 0; x < dimensions.x; x++) {
             for (int y = 0; y < dimensions.y; y++) {
@@ -43,6 +52,10 @@ public static class GridEditor {
     }
 
     private static bool ObjectHasSpaceAt(Vector2Int position, string objectID) {
+        return ObjectHasSpaceAt(position, objectID, 0);
+    }
+
+        private static bool ObjectHasSpaceAt(Vector2Int position, string objectID, int key) {
         BlockManager obj = BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>();
         Vector2Int currentPosition;
         if (obj == null) {
@@ -55,7 +68,8 @@ public static class GridEditor {
                 if (!Grid.isOnGrid(currentPosition))
                     return false;
                 if (LevelManager.currentLevel.grid.IDAtPosition(currentPosition) != 0)
-                    return false;
+                    if(LevelManager.currentLevel.grid.IDAtPosition(currentPosition) != key)
+                        return false;
             }
         }
         return true;
