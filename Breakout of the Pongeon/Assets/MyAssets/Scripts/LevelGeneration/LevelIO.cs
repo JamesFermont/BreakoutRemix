@@ -13,7 +13,17 @@ public static class LevelIO {
 
     public static  string[] getLevelsInDirectory () {
         try {
-            return Directory.GetFiles(Application.dataPath + levelFilesPath, "*.bop");
+            string[] allPaths = Directory.GetFiles(Application.dataPath + levelFilesPath, "*.bop");
+            string[] returnString = new string[allPaths.Length];
+            for(int i = 0; i < allPaths.Length; i++) {
+                returnString[i] = allPaths[i].Substring(Application.dataPath.Length + levelFilesPath.Length, allPaths[i].Length - Application.dataPath.Length - levelFilesPath.Length - ".bop".Length);
+            }
+
+
+
+
+            return returnString;
+
         } catch (Exception ex){
             return null;
         }

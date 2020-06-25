@@ -28,13 +28,15 @@ public class BlockDictionary : MonoBehaviour {
         }
 
     }
-#if UNITY_EDITOR
-    public void LateUpdate() {
-        if (instance == null) {
-            instance = this;
-        }
+
+    public static bool hasBlock(string blockName) {
+        foreach (dictionaryEntry entry in instance.dict)
+            if (entry.key == blockName)
+                return true;
+        return false;
     }
-#endif
+
+
     public GameObject getBlock(string key) {
         foreach (dictionaryEntry entry in dict) {
             if (string.Compare(entry.key, key) == 0) {

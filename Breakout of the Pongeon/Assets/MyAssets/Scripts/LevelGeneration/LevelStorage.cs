@@ -21,13 +21,13 @@ public class LevelStorage : MonoBehaviour {
     public void Update() {
 #if UNITY_EDITOR
         if(!EditorApplication.isPlaying) {
-            if (LevelManager.currentLevel != null && LevelManager.currentLevel.grid.toGridPosition(new Vector3(4f, 4f)) == Vector2Int.zero) {
+            if (LevelManager.currentLevel != null && Grid.toGridPosition(new Vector3(4f, 4f)) == Vector2Int.zero) {
                 LevelManager.currentLevel = level;
                 LevelManager.currentLevelGO = levelGO;
             }
         }
 #endif
-        if (((LevelManager.currentLevel == null || LevelManager.currentLevel.grid.width == 0 )&& level != null) || (LevelManager.currentLevelGO == null && levelGO != null)) {
+        if (((LevelManager.currentLevel == null || Grid.width == 0 )&& level != null) || (LevelManager.currentLevelGO == null && levelGO != null)) {
             LevelManager.currentLevel = level;
             LevelManager.currentLevelGO = levelGO;
 

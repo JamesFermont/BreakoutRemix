@@ -22,12 +22,10 @@ public class LevelReader {
 
                 reader = new BinaryReader(File.Open(filePath, FileMode.Open));
                 string name = reader.ReadString();
-                short width = reader.ReadInt16();
-                short height = reader.ReadInt16();
-                int[,] map = new int[width, height];
-                for (int x = 0; x < width; x++)
+                int[,] map = new int[Constants.GRID_WIDTH, Constants.GRID_HEIGHT];
+                for (int x = 0; x < Constants.GRID_WIDTH; x++)
                 {
-                    for (int y = 0; y < height; y++)
+                    for (int y = 0; y < Constants.GRID_HEIGHT; y++)
                     {
                         map[x, y] = reader.ReadInt16();
                     }
@@ -43,7 +41,7 @@ public class LevelReader {
                     key++;
                 }
 
-                loadedLevel = new Level(name, new Grid(width, height, map, levelObjects));
+                loadedLevel = new Level(name, new Grid(map, levelObjects));
             }
         } catch (Exception ex)
         {

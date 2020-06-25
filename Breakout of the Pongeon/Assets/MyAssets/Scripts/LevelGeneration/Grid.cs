@@ -5,14 +5,14 @@ using UnityEngine;
 
 [Serializable]
 public class Grid {
-    public int width;
-    public int height;
-    float cellWidth;
-    float cellHeight;
+    public static int width = Constants.GRID_WIDTH;
+    public static int height = Constants.GRID_HEIGHT;
+    static float cellWidth = Constants.LEVEL_WIDTH/ width;
+    static float cellHeight = Constants.LEVEL_HEIGHT/ height;
     [SerializeField] public GridColumn[] levelMap;
     [SerializeField] public GridList levelObjects;
     
-    private Vector2 positionOffset;
+    private static Vector2 positionOffset;
 
     [Serializable]
     public class GridColumn {
@@ -24,11 +24,7 @@ public class Grid {
 }
 
 
-    public Grid(int width, int height, int[,] map, GridList objects) {
-        this.width = width;
-        this.height = height;
-        cellWidth = Constants.LEVEL_WIDTH / width;
-        cellHeight = Constants.LEVEL_HEIGHT / height;
+    public Grid(int[,] map, GridList objects) {
         positionOffset = new Vector2((width / 2 * -1f + 0.5f) * cellWidth, (height / 2 * -1f + 0.5f) * cellHeight);
         levelMap = new GridColumn[map.GetLength(0)];
         
@@ -43,7 +39,7 @@ public class Grid {
         levelObjects = objects;
     }
 
-    public Grid(int width, int height) : this(width, height, new int[width, height], new GridList()) { }
+    public Grid() : this(new int[width, height], new GridList()) { }
 
     public int IDAtPosition(Vector2Int position) {
         if (isOnGrid(position))
@@ -55,7 +51,7 @@ public class Grid {
         return IDAtPosition(new Vector2Int(x, y));
     }
 
-    public bool isOnGrid(Vector2Int position) {
+    public static bool isOnGrid(Vector2Int position) {
         return position.x >= 0 && position.x < width && position.y >= 0 && position.y < height;
     }
 
@@ -72,10 +68,21 @@ public class Grid {
         return new Vector3(positionOffset.x + gridPosition.x * cellWidth, positionOffset.y + gridPosition.y * cellHeight, 0f);
     }
 
-    public Vector2Int toGridPosition(Vector3 position) {
-        if (this.cellHeight == 0 || this.cellWidth == 0)
-            return Vector2Int.zero;
-        
+    public static Vector2Int toGridPosition(Vector3 position) {
         return new Vector2Int(Mathf.FloorToInt((position.x - positionOffset.x + cellWidth / 2f) / cellWidth), Mathf.FloorToInt((position.y - positionOffset.y + cellHeight / 2f) / cellHeight));
     }
+
+    //DEBUG Function
+    public string PrintMap () {
+        string returnString = "";
+        for(int y = height - 1; y >= 0; y--) {
+            for (int x = 0; x < width; x++) {
+                returnString += levelMap[x].col[y];
+            }
+            returnString += "\n";
+        }
+
+        return returnString;
+    }
+
 }

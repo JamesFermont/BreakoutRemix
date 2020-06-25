@@ -11,13 +11,16 @@ public static class LevelManager {
         CreateNewLevel("New Level");
     }
     public static void CreateNewLevel(string name) {
-        MakeLevel(new Level(name, new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT)));
+        if (currentLevelGO != null)
+            Object.Destroy(currentLevelGO);
+        MakeLevel(new Level(name, new Grid()));
+
     }
 
 
     public static void ResetCurrentLevel() {
-        Object.DestroyImmediate(currentLevelGO);
-        MakeLevel(new Level(currentLevel.name, new Grid(Constants.GRID_WIDTH, Constants.GRID_HEIGHT)));
+        Object.Destroy(currentLevelGO);
+        currentLevelGO = LevelGenerator.instance.Generate(currentLevel);
     }
 
     public static void LoadLevel(string levelName) {
@@ -33,6 +36,8 @@ public static class LevelManager {
     }
 
     public static void SaveCurrentLevel() {
+        if (currentLevel.name.Contains(" "))
+            currentLevel.name = currentLevel.name.Replace(' ', '_');
         LevelIO.SaveLevel(currentLevel);
     }
 

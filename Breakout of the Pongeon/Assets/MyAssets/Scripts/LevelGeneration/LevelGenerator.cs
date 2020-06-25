@@ -27,8 +27,8 @@ public class LevelGenerator : MonoBehaviour {
         Vector2Int currentPointerPosition;
         string currentLevelObject;
         GameObject currentLevelGameObject;
-        for (int x = 0; x < level.grid.width; x++) {
-            for (int y = 0; y < level.grid.height; y++) {
+        for (int x = 0; x < Grid.width; x++) {
+            for (int y = 0; y < Grid.height; y++) {
                 currentPointerPosition = new Vector2Int(x, y);
 
                 if (level.grid.IDAtPosition(currentPointerPosition) > 0) {
@@ -38,12 +38,6 @@ public class LevelGenerator : MonoBehaviour {
                 }
             }
         }
-        if (storage == null)
-            storage = GameObject.FindGameObjectWithTag("EditorHover").GetComponent<LevelStorage>();
-        storage.level = level;
-        storage.levelGO = levelObject;
-        
-
         return levelObject;
 
     }
