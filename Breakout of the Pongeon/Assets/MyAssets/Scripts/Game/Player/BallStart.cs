@@ -15,9 +15,10 @@ public class BallStart : MonoBehaviour {
     }
 
     private void LateUpdate() {
-        if (!isHidden) {
-            if (isBallStart) {
-                ball.position = paddle.position + new Vector3(0f, 0.5f, 0f);
+
+        if (isBallStart) {
+            ball.position = paddle.position + new Vector3(0f, 0.5f, 0f);
+            if (!isHidden) {
                 if (Input.GetMouseButtonDown(0)) {
                     ball.GetComponent<BallBehaviour>().Launch();
                     isBallStart = false;

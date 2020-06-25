@@ -17,8 +17,8 @@ public class LoadLevelDialog : MonoBehaviour
         string[] levels = LevelIO.getLevelsInDirectory();
 
         GameObject currentLevelButton;
-        
-        foreach(string level in levels) {
+        ((RectTransform)levelList).sizeDelta = new Vector2(0, levels.Length * 64);
+        foreach (string level in levels) {
             if (levelList.Find(level))
                 continue;
             currentLevelButton = (GameObject)Instantiate(levelListPrefab, levelList);
