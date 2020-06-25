@@ -12,10 +12,16 @@ public class LevelStatistics {
     
     public float time;
     public int blocksDestroyed;
-    public int score;
+    private int score;
 
     public void StartTracker() {
         if (time < 1f) time = Time.fixedTime;
+    }
+
+    public void ResetTracker() {
+        time = 0;
+        blocksDestroyed = 0;
+        score = 0;
     }
 
     public void EndTracker() {
