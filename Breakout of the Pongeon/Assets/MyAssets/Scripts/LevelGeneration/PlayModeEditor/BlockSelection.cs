@@ -18,7 +18,7 @@ public class BlockSelection : MonoBehaviour {
 
         //Create A Button for every Block in the Dictionary
         GameObject currentBlockGameObject;
-        ((RectTransform)ContentTransform).sizeDelta = new Vector2((BlockDictionary.instance.dict.Count - 2) * 240, 0);
+        ((RectTransform)ContentTransform).sizeDelta = new Vector2((BlockDictionary.instance.dict.Count - 2) * 170, 0);
 
 
         currentBlockGameObject = (GameObject)Instantiate(ButtonPrefab, ContentTransform);
@@ -34,7 +34,7 @@ public class BlockSelection : MonoBehaviour {
                 continue;
             currentBlockGameObject = (GameObject)Instantiate(ButtonPrefab, ContentTransform);
             currentBlockGameObject.name = BlockDictionary.instance.dict[i].key;
-            currentBlockGameObject.transform.localPosition = new Vector3(120 + 240 * (i - 2), currentBlockGameObject.transform.position.y, currentBlockGameObject.transform.position.z);
+            currentBlockGameObject.transform.localPosition = new Vector3(120 + 170 * (i - 2), currentBlockGameObject.transform.position.y, currentBlockGameObject.transform.position.z);
             currentBlockGameObject.GetComponent<Button>().image.sprite = BlockDictionary.instance.dict[i].myGameObject.GetComponent<SpriteRenderer>().sprite;
             myButtons.Add(currentBlockGameObject.GetComponent<Button>());
             string nameCopy = currentBlockGameObject.name;

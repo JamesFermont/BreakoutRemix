@@ -56,7 +56,7 @@ public class EditorNavigation : MonoBehaviour {
         }
         if (Grid.toGridPosition(mousePosition).y < Constants.PROTECTED_ROWS)
             HidePreviewCursor(true);
-        else if (!createDialog.activeSelf &&!saveDialog.activeSelf &&!loadDialog.activeSelf)
+        else if (!createDialog.activeSelf &&!saveDialog.activeSelf &&!loadDialog.activeSelf && currentMode == EditorMode.EDIT)
             HidePreviewCursor(false);
 
     }
@@ -88,7 +88,7 @@ public class EditorNavigation : MonoBehaviour {
             SetBallAndPaddle(false);
         }
         SetEditorUI(true);
-
+        volatiles.transform.GetChild(2).GetComponent<TargetManager>().FindTargetAreas();
     }
 
     private void SetEditorUI(bool hidden) {
@@ -100,7 +100,8 @@ public class EditorNavigation : MonoBehaviour {
     private void SetBallAndPaddle(bool hidden) {
         volatiles.transform.GetChild(0).GetComponent<MouseMovement>().isHidden = hidden;
         volatiles.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = !hidden;
-        volatiles.transform.GetChild(1).GetComponent<BallStart>().enabled = true;
+        volatiles.transform.GetChild(1).GetComponent<BallStart>().isBallStart = true;
+        volatiles.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
         volatiles.transform.GetChild(1).GetComponent<BallStart>().isHidden = hidden;
         volatiles.transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = !hidden;
         

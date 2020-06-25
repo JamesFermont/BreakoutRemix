@@ -6,7 +6,7 @@ public class TargetManager : MonoBehaviour {
     public bool isCompleted;
     
     private void OnEnable() {
-        targetAreas = FindObjectsOfType<TargetArea>();
+        FindTargetAreas();
     }
 
     public void CheckCompleted() {
@@ -20,5 +20,9 @@ public class TargetManager : MonoBehaviour {
 
             LevelManager.EndLevel();
         }
+    }
+
+    public void FindTargetAreas () {
+        targetAreas = FindObjectsOfType<TargetArea>();
     }
 }
