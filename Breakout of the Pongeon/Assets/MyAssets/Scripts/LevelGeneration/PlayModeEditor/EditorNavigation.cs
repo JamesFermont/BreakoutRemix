@@ -44,19 +44,21 @@ public class EditorNavigation : MonoBehaviour {
         if (currentMode == EditorMode.EDIT) {
             if (!loadDialog.activeSelf && !saveDialog.activeSelf && !createDialog.activeSelf) {
                 if (Input.GetMouseButtonDown(0)) {
-                    if (blockSelection.currentBlock != "ERASE")
+                    if (blockSelection.currentBlock != "ERASE") {
                         if (GridEditor.TryPlaceObjectInGrid(blockSelection.currentBlock, Grid.toGridPosition(mousePosition), true))
                             LevelManager.ResetCurrentLevel();
-                        else if (blockSelection.currentBlock == "ERASE")
-                            if (GridEditor.TryDeleteObjectAtPosition(Grid.toGridPosition(mousePosition)))
-                                LevelManager.ResetCurrentLevel();
+                    } else if (blockSelection.currentBlock == "ERASE") {
+                        if (GridEditor.TryDeleteObjectAtPosition(Grid.toGridPosition(mousePosition)))
+                            LevelManager.ResetCurrentLevel();
+                    }
+
                 }
             }
 
         }
         if (Grid.toGridPosition(mousePosition).y < Constants.PROTECTED_ROWS)
             HidePreviewCursor(true);
-        else if (!createDialog.activeSelf &&!saveDialog.activeSelf &&!loadDialog.activeSelf && currentMode == EditorMode.EDIT)
+        else if (!createDialog.activeSelf && !saveDialog.activeSelf && !loadDialog.activeSelf && currentMode == EditorMode.EDIT)
             HidePreviewCursor(false);
 
     }
@@ -104,7 +106,7 @@ public class EditorNavigation : MonoBehaviour {
         volatiles.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
         volatiles.transform.GetChild(1).GetComponent<BallStart>().isHidden = hidden;
         volatiles.transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = !hidden;
-        
+
     }
 
     private void SetPreviewCursorPosition() {
