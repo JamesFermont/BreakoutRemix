@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0c514f9b7a1428d478ea93cfff1e9762, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 390e18f62e92961449768edec4eb928d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.4}
+    oldSize: {x: 0.64, y: 0.36}
     newSize: {x: 0.64, y: 0.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -146,11 +146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockTextures:
   - maxHpPercentage: 40
-    blockTexture: {fileID: 21300000, guid: 5c1cb93e2a70abe479d8a6ae79b37ea0, type: 3}
+    blockTexture: {fileID: 21300000, guid: 667e5c2665d039c4a9d76d90cdec3e46, type: 3}
   - maxHpPercentage: 70
-    blockTexture: {fileID: 21300000, guid: d62f5734af3e3da489c4d0704bcd4330, type: 3}
+    blockTexture: {fileID: 21300000, guid: 3d00b49b077e91d4bab42f83c670f78d, type: 3}
   - maxHpPercentage: 100
-    blockTexture: {fileID: 21300000, guid: 0c514f9b7a1428d478ea93cfff1e9762, type: 3}
+    blockTexture: {fileID: 21300000, guid: 390e18f62e92961449768edec4eb928d, type: 3}
 --- !u!114 &4782386139397459696
 MonoBehaviour:
   m_ObjectHideFlags: 0
