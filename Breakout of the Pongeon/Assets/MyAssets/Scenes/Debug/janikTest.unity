@@ -10134,6 +10134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   isImmune: 0
+  scoreOnDestroy: 0
   width: 0
   height: 0
   health: 0
@@ -10453,7 +10454,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1772922127967467719, guid: 8c8843e593da6cd4fb81ad4468f1d713, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8c8843e593da6cd4fb81ad4468f1d713, type: 3}
 --- !u!1001 &4298632098686802864
 PrefabInstance:

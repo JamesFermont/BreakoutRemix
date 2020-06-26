@@ -1,20 +1,46 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Settings : MonoBehaviour {
     public AudioMixer audioMixer;
-
+    public Slider masterVolumeSlider;
+    public Slider bgmVolumeSlider;
+    public Slider sfxVolumeSlider;
+    public Slider ballSpeedSlider;
+    public TMP_Text valueText;
+    
     private void OnEnable() {
-        if (PlayerPrefs.HasKey("masVolume")) audioMixer.SetFloat("masVolume", PlayerPrefs.GetFloat("masVolume"));
-        if (PlayerPrefs.HasKey("bgmVolume")) audioMixer.SetFloat("bgmVolume", PlayerPrefs.GetFloat("bgmVolume"));
-        if (PlayerPrefs.HasKey("sfxVolume")) audioMixer.SetFloat("sfxVolume", PlayerPrefs.GetFloat("sfxVolume"));
+        if (PlayerPrefs.HasKey("masVolume")) {
+            audioMixer.SetFloat("masVolume", PlayerPrefs.GetFloat("masVolume"));
+            if (masterVolumeSlider) masterVolumeSlider.value = PlayerPrefs.GetFloat("masVolume");
+        }
+
+        if (PlayerPrefs.HasKey("bgmVolume")) {
+            audioMixer.SetFloat("bgmVolume", PlayerPrefs.GetFloat("bgmVolume"));
+            if (bgmVolumeSlider) bgmVolumeSlider.value = PlayerPrefs.GetFloat("bgmVolume");
+        }
+
+        if (PlayerPrefs.HasKey("sfxVolume")) {
+            audioMixer.SetFloat("sfxVolume", PlayerPrefs.GetFloat("sfxVolume"));
+            if (sfxVolumeSlider) sfxVolumeSlider.value = PlayerPrefs.GetFloat("sfxVolume");
+        }
+
+        if (PlayerPrefs.HasKey("ballSpeed")) {
+            if (ballSpeedSlider) ballSpeedSlider.value = PlayerPrefs.GetFloat("ballSpeed");
+            if (valueText) valueText.text = "x" + PlayerPrefs.GetFloat("ballSpeed");
+        }
+        
         if (PlayerPrefs.HasKey("width") && PlayerPrefs.HasKey("height")) 
             Screen.SetResolution(PlayerPrefs.GetInt("width"), PlayerPrefs.GetInt("height"), Screen.fullScreen);
     }
 
     public void UpdateBallSpeed(float mod) {
-        PlayerPrefs.SetFloat("ballSpeed", mod);
+        PlayerPrefs.SetFloat("ballSpeed", (float) Math.Round(mod, 2));
+        if (valueText) valueText.text = "x" + PlayerPrefs.GetFloat("ballSpeed");
     }
 
     public void UpdatePlayMode(bool isNormal) {
@@ -59,6 +85,14 @@ public class Settings : MonoBehaviour {
                 PlayerPrefs.SetInt("height", 720);
                 break;
         }
+    }
+
+    public void ReturnToTitle() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ExitGame() {
+        Application.Quit();
     }
 
     private void OnApplicationQuit() {

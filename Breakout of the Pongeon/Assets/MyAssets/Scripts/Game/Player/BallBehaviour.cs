@@ -21,11 +21,6 @@ public class BallBehaviour : MonoBehaviour {
 		audioManager = FindObjectOfType<AudioManager>();
 	}
 
-	private void OnEnable() {
-		speedMod = PlayerPrefs.HasKey("ballSpeed") ? PlayerPrefs.GetInt("ballSpeed") : 1;
-		speed = baseSpeed * speedMod;
-	}
-
 	private void LateUpdate() {
 		hasBouncedThisFrame = false;
 	}
@@ -56,6 +51,8 @@ public class BallBehaviour : MonoBehaviour {
 
 	public void Launch() {
 		LevelStatistics.instance.StartTracker();
+		speedMod = PlayerPrefs.HasKey("ballSpeed") ? PlayerPrefs.GetFloat("ballSpeed") : 1;
+		speed = baseSpeed * speedMod;
 		GetComponent<Rigidbody2D>().velocity = Vector2.up * (speed * Time.fixedDeltaTime);
 	}
 	

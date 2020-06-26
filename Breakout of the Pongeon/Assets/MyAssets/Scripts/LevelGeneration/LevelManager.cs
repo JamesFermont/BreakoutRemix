@@ -17,7 +17,6 @@ public static class LevelManager {
 
     }
 
-
     public static void ResetCurrentLevel() {
         Object.Destroy(currentLevelGO);
         currentLevelGO = LevelGenerator.instance.Generate(currentLevel);
@@ -55,6 +54,5 @@ public static class LevelManager {
         LevelStatistics.instance.EndTracker();
         SceneManager.LoadSceneAsync("UITest", LoadSceneMode.Additive);
         Time.timeScale = 0;
-        GameObject.FindWithTag("Paddle").GetComponent<MouseMovement>().enabled = false;
     }
 }

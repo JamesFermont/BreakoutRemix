@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class MouseMovement : MonoBehaviour
 {
@@ -27,7 +28,8 @@ public class MouseMovement : MonoBehaviour
 
             switch (currentMode) {
                 case MovementMode.DIRECT:
-                    newPosition.x = mainCamera.ScreenToWorldPoint(Input.mousePosition).x;
+                    if (Time.timeScale >= Mathf.Epsilon)
+                        newPosition.x = mainCamera.ScreenToWorldPoint(Input.mousePosition).x;
                     break;
                 case MovementMode.SMOOTH:
                     if (Mathf.Abs(mousePositionInWorld.x - transform.position.x) <= Time.deltaTime * movementSpeed) {
@@ -42,6 +44,5 @@ public class MouseMovement : MonoBehaviour
 
             transform.position = newPosition;
         }
-        
     }
 }
