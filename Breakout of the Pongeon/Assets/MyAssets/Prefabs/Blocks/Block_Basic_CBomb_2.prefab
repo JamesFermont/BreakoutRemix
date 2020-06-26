@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectType: 1
-  explosionRadius: 2
-  explosionDamage: 3
+  explosionRadius: 1
+  explosionDamage: 2
   subEmitter: {fileID: 5027367228627453535}
 --- !u!199 &7921803731271533058
 ParticleSystemRenderer:

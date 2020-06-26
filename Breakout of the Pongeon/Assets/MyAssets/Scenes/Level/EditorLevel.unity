@@ -384,7 +384,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2079518489}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.62937504
+  m_Size: 0.629375
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1006540510}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3904,6 +3904,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1836093080391337377, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: currentMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836093081007677562, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: baseSpeed
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836093081007677562, guid: 733542a65132dc84891041e198d3ab70,
+        type: 3}
+      propertyPath: speedMod
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1836093081595936878, guid: 733542a65132dc84891041e198d3ab70,
         type: 3}
       propertyPath: m_Name

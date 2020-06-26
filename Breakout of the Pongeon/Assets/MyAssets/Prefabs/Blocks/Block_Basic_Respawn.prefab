@@ -125,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   isImmune: 0
+  scoreOnDestroy: 0
   width: 1
   height: 1
   health: 0
@@ -159,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e30eed38686a344b0299bcac0d7571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reviveCountMin: 15
-  reviveCountMax: 25
+  reviveCountMin: 10
+  reviveCountMax: 15
   reviveHpAmount: 1
   unitType: 0
