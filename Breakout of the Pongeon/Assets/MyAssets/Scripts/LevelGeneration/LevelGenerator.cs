@@ -23,7 +23,9 @@ public class LevelGenerator : MonoBehaviour {
     //Generate a Level
     LevelStorage storage;
     public GameObject Generate(Level level) {
+        Debug.Log("Hey!");
         GameObject levelObject = new GameObject(level.name);
+        Debug.Log(levelObject);
         Vector2Int currentPointerPosition;
         string currentLevelObject;
         GameObject currentLevelGameObject;
