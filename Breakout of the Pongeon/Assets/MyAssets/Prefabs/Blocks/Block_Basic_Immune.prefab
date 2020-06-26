@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1222016832637057199}
   - component: {fileID: 5713663020251364916}
   - component: {fileID: 229466573284816613}
-  - component: {fileID: 1066249692145194285}
   m_Layer: 8
   m_Name: Block_Basic_Immune
   m_TagString: Untagged
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 216141216188927880, guid: dff305bfeef53ed40b9bf9762602f318, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05ed68c6a9c11a44ca90a77445c141f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +101,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.36}
+    oldSize: {x: 0.64, y: 0.4}
     newSize: {x: 0.64, y: 0.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -125,7 +124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   isImmune: 1
-  scoreOnDestroy: 0
   width: 1
   height: 1
   health: 0
@@ -148,22 +146,3 @@ MonoBehaviour:
     blockTexture: {fileID: 21300000, guid: 730c26c7c304af942b11e937b91fb87e, type: 3}
   - maxHpPercentage: 100
     blockTexture: {fileID: 21300000, guid: 05ed68c6a9c11a44ca90a77445c141f1, type: 3}
---- !u!95 &1066249692145194285
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7562916164767934426}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e1d2f88974f44c948b7e288c95884dbb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
