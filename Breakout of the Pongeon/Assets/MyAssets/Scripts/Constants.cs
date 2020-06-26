@@ -2,7 +2,7 @@
 
 public enum UnitType {UNIT_TIME, UNIT_BOUNCE}
 
-public enum SoundType {SOUND_BGM, SOUND_SFX}
+public enum SoundType {BGM, SFX}
 
 public enum SwitchColor {SWITCH_RED, SWITCH_GREEN, SWITCH_BLUE}
 

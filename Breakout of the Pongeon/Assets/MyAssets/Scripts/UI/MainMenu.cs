@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
@@ -39,6 +40,10 @@ public class MainMenu : MonoBehaviour {
 
     public void toMainMenu() {
         TransitionToMenu(Menu.MAIN);
+    }
+
+    public void OpenOptionsMenu() {
+        SceneManager.LoadSceneAsync("OptionsMenu", LoadSceneMode.Additive);
     }
 
     private Transform toTransform(Menu menu) {

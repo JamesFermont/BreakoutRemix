@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour {
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
+            sound.source.outputAudioMixerGroup = sound.type;
         }
     }
 
@@ -45,12 +46,5 @@ public class AudioManager : MonoBehaviour {
         }
         Mathf.Clamp(pitch, 0.1f, 3f);
         soundToPlay.source.pitch = pitch;
-    }
-
-    public void UpdateVolumeOfType(SoundType type, float volume) {
-        Mathf.Clamp(volume, 0.01f, 1f);
-        foreach (Sound sound in sounds) {
-            if (sound.type == type) sound.volume = volume;
-        }
     }
 }

@@ -6,8 +6,10 @@ public class BallBehaviour : MonoBehaviour {
 	public float paddleSpeedIncreaseIncrement = 1.0f;
 	public float deflectionStrength = 1.0f;
 	
-	public float speedMod = 0.5f;
+	[HideInInspector]
+	public float speedMod;
 	
+	[HideInInspector]
 	public float speed;
 
 	[HideInInspector]
@@ -20,6 +22,7 @@ public class BallBehaviour : MonoBehaviour {
 	}
 
 	private void OnEnable() {
+		speedMod = PlayerPrefs.HasKey("ballSpeed") ? PlayerPrefs.GetInt("ballSpeed") : 1;
 		speed = baseSpeed * speedMod;
 	}
 
@@ -31,7 +34,8 @@ public class BallBehaviour : MonoBehaviour {
 		hasBouncedThisFrame = true;
 		
 		if (other.gameObject.CompareTag("Paddle")) {
-			speed += paddleSpeedIncreaseIncrement;
+			if (PlayerPrefs.HasKey("playMode") && PlayerPrefs.GetInt("playMode") == 1)
+				speed += paddleSpeedIncreaseIncrement;
 
 			float newX = GetDeflectedX(this.transform.position, other.transform.position,
 				other.collider.bounds.size.x);

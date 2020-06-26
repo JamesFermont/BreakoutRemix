@@ -1331,11 +1331,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePersistants
       objectReference: {fileID: 0}
-    - target: {fileID: 7509498972634131424, guid: 9ab1a385740e6d24e87c4905be6e6684,
-        type: 3}
-      propertyPath: sounds.Array.data[6].loop
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8330589115262871953, guid: 9ab1a385740e6d24e87c4905be6e6684,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19989,8 +19984,6 @@ MonoBehaviour:
   level:
     name: Level_Test1
     grid:
-      width: 20
-      height: 18
       levelMap:
       - col: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
       - col: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
