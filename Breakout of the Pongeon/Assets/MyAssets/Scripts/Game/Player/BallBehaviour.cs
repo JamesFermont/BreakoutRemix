@@ -5,6 +5,11 @@ public class BallBehaviour : MonoBehaviour {
 	public float baseSpeed = 200.0f;
 	public float paddleSpeedIncreaseIncrement = 1.0f;
 	public float deflectionStrength = 1.0f;
+
+	[Range(10, 10000)]
+	public int scoreForPerfectGame;
+	[Range(-10000, -10)]
+	public int scoreForBallLost;
 	
 	[HideInInspector]
 	public float speedMod;
@@ -17,8 +22,10 @@ public class BallBehaviour : MonoBehaviour {
 
 	private AudioManager audioManager;
 
-	private void Awake() {
-		audioManager = FindObjectOfType<AudioManager>();
+	private void OnEnable() {
+		audioManager = (AudioManager)FindObjectOfType(typeof(AudioManager));
+		Mathf.Clamp(scoreForBallLost, -10000, -10);
+		Mathf.Clamp(scoreForPerfectGame, 10, 10000);
 	}
 
 	private void LateUpdate() {
@@ -40,11 +47,11 @@ public class BallBehaviour : MonoBehaviour {
 			Vector2 newDirection = new Vector2(newX * deflectionStrength, 1).normalized;
 			GetComponent<Rigidbody2D>().velocity = newDirection * (speed * Time.fixedDeltaTime);
 			
-			audioManager.Play("paddle_bounce");
+			FindObjectOfType<AudioManager>().Play("paddle_bounce");
 			GetComponent<ParticleSystem>().Play();
 		} else {
-			audioManager.UpdatePitch("bounce", 1f + 0.005f * (speed - baseSpeed));
-			audioManager.Play("bounce");
+			FindObjectOfType<AudioManager>().UpdatePitch("bounce", 1f + 0.005f * (speed - baseSpeed));
+			FindObjectOfType<AudioManager>().Play("bounce");
 			GetComponent<ParticleSystem>().Play();
 		}
 	}

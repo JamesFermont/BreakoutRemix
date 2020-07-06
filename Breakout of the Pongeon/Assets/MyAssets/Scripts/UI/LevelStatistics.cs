@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class LevelStatistics {
     private static LevelStatistics Instance = null;
@@ -12,7 +13,8 @@ public class LevelStatistics {
     
     public float time;
     public int blocksDestroyed;
-    private int score;
+    public int ballsDropped;
+    public int score;
 
     public void StartTracker() {
         if (time < 1f) time = Time.fixedTime;
@@ -22,6 +24,7 @@ public class LevelStatistics {
         time = 0;
         blocksDestroyed = 0;
         score = 0;
+        ballsDropped = 0;
     }
 
     public void EndTracker() {
@@ -40,10 +43,27 @@ public class LevelStatistics {
         score += delta;
     }
 
-    public int ReturnScore() {
+    public float[] CalculateScore() {
+        float[] result = new float[2];
         var ball = GameObject.FindWithTag("Ball").GetComponent<BallBehaviour>();
+        var scoreMods = GameObject.FindWithTag("LevelManager").GetComponent<ScoreModifiers>();
         float ballSpeedMod = ball.speedMod;
-        float result = score * (1 / (blocksDestroyed + (time*ballSpeedMod))) * 100;
-        return (int)result;
+        float levelTime = time * ballSpeedMod;
+        float targetTime = time * ballSpeedMod; // Example value until target time is implemented
+
+        if (ballsDropped == 0) {
+            score += scoreMods.scoreForPerfectGame;
+        }
+
+        score -= ballsDropped * scoreMods.penaltyForDroppedBall;
+        
+        // Time Mod = 1 + (+/- 0.1 for every secondsPerTimeModInterval seconds that the level time is below/above the target time, limited to between minTimeMod and maxTimeMod)
+        float timeMod = Mathf.Clamp(1 + (float)Math.Round(((int)levelTime-(int)targetTime)*(1f/scoreMods.secondsPerTimeModInterval))*0.1f, scoreMods.minTimeMod, scoreMods.maxTimeMod);
+        float finalScore = score * timeMod;
+
+        result[0] = timeMod;
+        result[1] = finalScore;
+
+        return result;
     }
 }

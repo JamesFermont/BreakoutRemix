@@ -415,6 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5281650162940865999}
   - component: {fileID: 8638081207277133500}
+  - component: {fileID: 4622651235137043500}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: LevelManager
@@ -450,6 +451,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beeeaa8f583338346beb32985ff4a427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4622651235137043500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5281650162940865993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fa1f10e090c1e418777867d464e9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreForPerfectGame: 1000
+  penaltyForDroppedBall: -200
+  secondsPerTimeModInterval: 3
+  minTimeMod: 0.5
+  maxTimeMod: 1.5
 --- !u!1 &9000533566652579356
 GameObject:
   m_ObjectHideFlags: 0

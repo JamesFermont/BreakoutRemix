@@ -4,7 +4,7 @@ public class BlockManager : MonoBehaviour {
     public float maxHealth = 3;
     public bool isImmune = false;
 
-    [Range(-10, 10)]
+    [Range(10, 10000)]
     public int scoreOnDestroy;
     
     public int width;
