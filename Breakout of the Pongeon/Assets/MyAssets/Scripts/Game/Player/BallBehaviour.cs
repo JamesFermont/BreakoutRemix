@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class BallBehaviour : MonoBehaviour {
@@ -23,13 +24,25 @@ public class BallBehaviour : MonoBehaviour {
 	private AudioManager audioManager;
 
 	private void OnEnable() {
-		audioManager = (AudioManager)FindObjectOfType(typeof(AudioManager));
+		StartCoroutine(AudioManagerRef());
 		Mathf.Clamp(scoreForBallLost, -10000, -10);
 		Mathf.Clamp(scoreForPerfectGame, 10, 10000);
 	}
 
 	private void LateUpdate() {
 		hasBouncedThisFrame = false;
+	}
+
+	private IEnumerator AudioManagerRef() {
+		float timeElapsed = 0f;
+
+		while (timeElapsed < 0.1f) {
+			timeElapsed += Time.deltaTime;
+
+			yield return null;
+		}
+		
+		audioManager = FindObjectOfType<AudioManager>();
 	}
 
 	private void OnCollisionEnter2D(Collision2D other) {
@@ -46,12 +59,11 @@ public class BallBehaviour : MonoBehaviour {
 			// deflectionStrength will influence how far X can vary from 1 to create steeper deflection angles after normalization
 			Vector2 newDirection = new Vector2(newX * deflectionStrength, 1).normalized;
 			GetComponent<Rigidbody2D>().velocity = newDirection * (speed * Time.fixedDeltaTime);
-			
-			FindObjectOfType<AudioManager>().Play("paddle_bounce");
+
+			audioManager.Play("paddle_bounce");
 			GetComponent<ParticleSystem>().Play();
 		} else {
-			FindObjectOfType<AudioManager>().UpdatePitch("bounce", 1f + 0.005f * (speed - baseSpeed));
-			FindObjectOfType<AudioManager>().Play("bounce");
+			audioManager.Play("bounce");
 			GetComponent<ParticleSystem>().Play();
 		}
 	}
