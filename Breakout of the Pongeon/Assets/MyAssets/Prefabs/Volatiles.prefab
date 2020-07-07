@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 1836093080391337382}
   - component: {fileID: 1836093080391337377}
   - component: {fileID: 1836093080391337380}
+  - component: {fileID: 7540082920619138566}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Paddle
@@ -287,6 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMode: 1
   movementSpeed: 10
+  isHidden: 0
 --- !u!61 &1836093080391337380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -313,6 +315,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.92, y: 0.4}
   m_EdgeRadius: 0
+--- !u!114 &7540082920619138566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836093080391337376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ea132bc3c2db94a92f24f657c09d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btEnergyCost: 100
+  btDuration: 5
+  btTimeScale: 0.4
+  energy: 0
 --- !u!1 &1836093081007677559
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +455,10 @@ MonoBehaviour:
   baseSpeed: 200
   paddleSpeedIncreaseIncrement: 5
   deflectionStrength: 1.5
+  scoreForPerfectGame: 0
+  scoreForBallLost: 0
+  speedMod: 0
+  speed: 0
   hasBouncedThisFrame: 0
 --- !u!114 &1836093081007677561
 MonoBehaviour:
@@ -453,6 +475,7 @@ MonoBehaviour:
   paddle: {fileID: 0}
   ball: {fileID: 0}
   isBallStart: 0
+  isHidden: 0
 --- !u!61 &1836093081007677560
 BoxCollider2D:
   m_ObjectHideFlags: 0

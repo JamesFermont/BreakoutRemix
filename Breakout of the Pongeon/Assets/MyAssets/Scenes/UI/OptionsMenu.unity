@@ -5836,6 +5836,7 @@ MonoBehaviour:
   sfxVolumeSlider: {fileID: 462432045}
   ballSpeedSlider: {fileID: 38384833}
   valueText: {fileID: 1653313467}
+  resolutionDropdown: {fileID: 599260952}
 --- !u!114 &1647065210
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class Settings : MonoBehaviour {
     public Slider sfxVolumeSlider;
     public Slider ballSpeedSlider;
     public TMP_Text valueText;
+    public TMP_Dropdown resolutionDropdown;
     
     private void OnEnable() {
         if (PlayerPrefs.HasKey("masVolume")) {
@@ -36,6 +37,9 @@ public class Settings : MonoBehaviour {
         
         if (PlayerPrefs.HasKey("width") && PlayerPrefs.HasKey("height")) 
             Screen.SetResolution(PlayerPrefs.GetInt("width"), PlayerPrefs.GetInt("height"), Screen.fullScreen);
+        
+        if (PlayerPrefs.HasKey("screenSizeId"))
+            resolutionDropdown.value = PlayerPrefs.GetInt("screenSizeId");
     }
 
     public void UpdateBallSpeed(float mod) {
@@ -73,16 +77,19 @@ public class Settings : MonoBehaviour {
                 Screen.SetResolution(1920, 1080, Screen.fullScreen);
                 PlayerPrefs.SetInt("width", 1920);
                 PlayerPrefs.SetInt("height", 1080);
+                PlayerPrefs.SetInt("screenSizeId", 0);
                 break;
             case 1:
                 Screen.SetResolution(1600, 900, Screen.fullScreen);
                 PlayerPrefs.SetInt("width", 1600);
                 PlayerPrefs.SetInt("height", 900);
+                PlayerPrefs.SetInt("screenSizeId", 1);
                 break;
             case 2:
                 Screen.SetResolution(1280, 720, Screen.fullScreen);
                 PlayerPrefs.SetInt("width", 1280);
                 PlayerPrefs.SetInt("height", 720);
+                PlayerPrefs.SetInt("screenSizeId", 2);
                 break;
         }
     }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor.SceneManagement;
+using UnityEngine;
 
 public class BlockManager : MonoBehaviour {
     public float maxHealth = 3;
@@ -9,6 +10,8 @@ public class BlockManager : MonoBehaviour {
     
     public int width;
     public int height;
+
+    public GameObject dataPack;
 
     [HideInInspector]
     public float health;
@@ -42,6 +45,21 @@ public class BlockManager : MonoBehaviour {
             ToggleBlock(false);
             onDestroyed?.Invoke(); // onDestroyed has to be invoked AFTER the collider is disabled to avoid a StackOverflowError
             LevelStatistics.instance.AddScore(scoreOnDestroy);
+            Instantiate(dataPack, this.transform);
+        } else {
+            onDamaged?.Invoke();
+            UpdateVisuals();
+        }
+    }
+
+    public void ReceiveEffectDamage(int amount) {
+        if (isImmune) return;
+        health -= amount;
+        if (health <= 0) {
+            ToggleBlock(false);
+            onDestroyed?.Invoke();
+            LevelStatistics.instance.AddScore(scoreOnDestroy);
+            Instantiate(dataPack, this.transform);
         } else {
             onDamaged?.Invoke();
             UpdateVisuals();
@@ -64,18 +82,5 @@ public class BlockManager : MonoBehaviour {
     public void ToggleBlock(bool state) {
         gameObject.GetComponent<SpriteRenderer>().enabled = state;
         gameObject.GetComponent<BoxCollider2D>().enabled = state;
-    }
-
-    public void ReceiveEffectDamage(int amount) {
-        if (isImmune) return;
-        health -= amount;
-        if (health <= 0) {
-            ToggleBlock(false);
-            onDestroyed?.Invoke();
-            LevelStatistics.instance.AddScore(scoreOnDestroy);
-        } else {
-            onDamaged?.Invoke();
-            UpdateVisuals();
-        }
     }
 }
