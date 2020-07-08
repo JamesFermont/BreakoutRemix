@@ -50,7 +50,7 @@ public class LevelReader {
             }
         } catch (Exception ex)
         {
-            Debug.Log(ex.ToString());
+            Debug.LogError(ex.ToString());
         }
 
         return loadedLevel;

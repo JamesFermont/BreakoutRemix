@@ -3,7 +3,7 @@ using System.IO;
 using System;
 
 public static class LevelIO {
-    public static string levelFilesPath = "/";
+    public static string levelFilesPath = "/StreamingAssets/";
     public static string levelFilesEnding = ".bop";
 
     
@@ -56,6 +56,7 @@ public static class LevelIO {
             Debug.LogError(ex.ToString());
             return null;
         }
+        Debug.Log(level.name);
         return level;
     }
 

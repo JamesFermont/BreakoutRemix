@@ -95,10 +95,12 @@ public class Settings : MonoBehaviour {
     }
 
     public void ReturnToTitle() {
+        if (Time.timeScale <= Mathf.Epsilon) Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void ExitGame() {
+        if (Time.timeScale <= Mathf.Epsilon) Time.timeScale = 1;
         Application.Quit();
     }
 
