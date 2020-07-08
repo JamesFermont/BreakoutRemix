@@ -583,6 +583,8 @@ MonoBehaviour:
   scoreCount: {fileID: 1827695039}
   timeMod: {fileID: 411384440}
   finalScore: {fileID: 2125685230}
+  timeSpent: 0
+  blocksDestroyed: 0
 --- !u!1 &1381546110
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,7 +914,7 @@ MonoBehaviour:
       - m_RequirementType: 0
         m_GroupID: 
         m_Tooltip: 
-        m_Name: timeMod
+        m_Name: timeSpent
         m_Value:
           m_EditingCustomValue: 0
           m_PopupIndex: 0
@@ -922,11 +924,11 @@ MonoBehaviour:
           m_EnumTypeIsCustomizable: 0
           m_CanDisable: 0
           m_PropertyType: 2
-          m_ValueType: System.String
+          m_ValueType: System.Single
           m_Value: timeMod
           m_Target:
             m_Target: {fileID: 1011455692}
-            m_Path: timeMod.text
+            m_Path: timeSpent
             m_ValidTypeNames:
             - System.Int32
             - System.Boolean
@@ -937,7 +939,7 @@ MonoBehaviour:
             - System.Int16
             - System.String
             - enum
-            m_Type: System.String
+            m_Type: System.Single
             m_EnumType: 
       - m_RequirementType: 0
         m_GroupID: 

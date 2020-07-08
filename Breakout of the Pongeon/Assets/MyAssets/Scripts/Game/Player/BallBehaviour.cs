@@ -7,11 +7,6 @@ public class BallBehaviour : MonoBehaviour {
 	public float paddleSpeedIncreaseIncrement = 1.0f;
 	public float deflectionStrength = 1.0f;
 
-	[Range(10, 10000)]
-	public int scoreForPerfectGame;
-	[Range(-10000, -10)]
-	public int scoreForBallLost;
-	
 	[HideInInspector]
 	public float speedMod;
 	
@@ -25,8 +20,6 @@ public class BallBehaviour : MonoBehaviour {
 
 	private void OnEnable() {
 		StartCoroutine(AudioManagerRef());
-		Mathf.Clamp(scoreForBallLost, -10000, -10);
-		Mathf.Clamp(scoreForPerfectGame, 10, 10000);
 	}
 
 	private void LateUpdate() {

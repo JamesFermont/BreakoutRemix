@@ -16,6 +16,8 @@ public class LevelStatistics {
     public int ballsDropped;
     public int score;
 
+    public int dpDropStep;
+
     public void StartTracker() {
         if (time < 1f) time = Time.fixedTime;
     }
@@ -25,6 +27,7 @@ public class LevelStatistics {
         blocksDestroyed = 0;
         score = 0;
         ballsDropped = 0;
+        dpDropStep = 0;
     }
 
     public void EndTracker() {
@@ -58,7 +61,8 @@ public class LevelStatistics {
         score -= ballsDropped * scoreMods.penaltyForDroppedBall;
         
         // Time Mod = 1 + (+/- 0.1 for every secondsPerTimeModInterval seconds that the level time is below/above the target time, limited to between minTimeMod and maxTimeMod)
-        float timeMod = Mathf.Clamp(1 + (float)Math.Round(((int)levelTime-(int)targetTime)*(1f/scoreMods.secondsPerTimeModInterval))*0.1f, scoreMods.minTimeMod, scoreMods.maxTimeMod);
+        float timeMod = Mathf.Clamp(1 + (float)Math.Round(((int)levelTime-(int)targetTime)*(1f/scoreMods.secondsPerTimeModInterval))*0.1f, 
+                        scoreMods.minTimeMod, scoreMods.maxTimeMod);
         float finalScore = score * timeMod;
 
         result[0] = timeMod;

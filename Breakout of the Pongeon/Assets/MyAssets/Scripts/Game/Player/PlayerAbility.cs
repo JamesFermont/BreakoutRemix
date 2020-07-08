@@ -13,7 +13,7 @@ public class PlayerAbility : MonoBehaviour {
 	[Range (100, 100000)] 
 	public int energyCap;
 	
-	private bool btIsActive = false;
+	public bool btIsActive;
 	
 	private void OnTriggerEnter2D(Collider2D other) {
 		energy += other.GetComponent<DataPack>().energyGiven;

@@ -1,28 +1,32 @@
-﻿using UnityEditor.SceneManagement;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BlockManager : MonoBehaviour {
     public float maxHealth = 3;
     public bool isImmune = false;
 
-    [Range(10, 10000)]
+    [Range(10, 10000)] 
     public int scoreOnDestroy;
-    
+
     public int width;
     public int height;
 
     public GameObject dataPack;
+    [Range(1,100)]
+    public int dpBaseChance;
+    public int dpBaseChanceIncrement;
 
     [HideInInspector]
     public float health;
-
-    private AudioManager audioManager;
-    private SpriteRenderer spriteRenderer;
     
     public delegate void OnDamaged();
     public event OnDamaged onDamaged;
     public delegate void OnDestroyed();
     public event OnDestroyed onDestroyed;
+
+    private AudioManager audioManager;
+    private SpriteRenderer spriteRenderer;
+
+    private int dpDropChance;
 
     private void Awake() {
         health = maxHealth;
@@ -42,10 +46,17 @@ public class BlockManager : MonoBehaviour {
         audioManager.UpdatePitch("blockhit", Random.Range(0.3f, 1.5f));
 
         if (health <= 0) {
+            var dpChance = Random.Range(1, 100);
+            
             ToggleBlock(false);
             onDestroyed?.Invoke(); // onDestroyed has to be invoked AFTER the collider is disabled to avoid a StackOverflowError
             LevelStatistics.instance.AddScore(scoreOnDestroy);
-            Instantiate(dataPack, this.transform);
+            if (dpChance <= dpBaseChance + dpBaseChanceIncrement * LevelStatistics.instance.dpDropStep) {
+                Instantiate(dataPack, this.transform);
+                LevelStatistics.instance.dpDropStep = 0;
+            } else {
+                LevelStatistics.instance.dpDropStep += 1;
+            }
         } else {
             onDamaged?.Invoke();
             UpdateVisuals();
