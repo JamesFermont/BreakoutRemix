@@ -637,10 +637,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: c89f1b2c-f5ae-4631-95b6-7db924926834
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Breakout of the Pongeon
+  organizationId: lukesolas
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
