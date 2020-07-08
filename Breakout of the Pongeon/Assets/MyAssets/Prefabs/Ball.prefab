@@ -268,8 +268,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 200
-  paddleSpeedIncreaseIncrement: 1
-  deflectionStrength: 1.5
+  paddleSpeedIncreaseIncrement: 5
+  deflectionStrength: 2.9
+  scoreForPerfectGame: 0
+  scoreForBallLost: 0
+  speedMod: 0
+  speed: 0
   hasBouncedThisFrame: 0
 --- !u!114 &8702541150035155596
 MonoBehaviour:
@@ -286,6 +290,7 @@ MonoBehaviour:
   paddle: {fileID: 0}
   ball: {fileID: 0}
   isBallStart: 0
+  isHidden: 0
 --- !u!61 &8702541150035155597
 BoxCollider2D:
   m_ObjectHideFlags: 0
