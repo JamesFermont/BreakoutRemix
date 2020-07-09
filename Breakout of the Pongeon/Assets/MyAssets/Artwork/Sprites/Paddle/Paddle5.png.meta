@@ -1,0 +1,4142 @@
+fileFormatVersion: 2
+guid: 03ab2684c3dd71a41a73be37089ada85
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3273108782722383028
+    second: Paddle5_0
+  - first:
+      213: -706794241983256065
+    second: Paddle5_1
+  - first:
+      213: 2402784338711255798
+    second: Paddle5_2
+  - first:
+      213: -6943037219667748927
+    second: Paddle5_3
+  - first:
+      213: 6824540669379652402
+    second: Paddle5_4
+  - first:
+      213: 2814468564045899874
+    second: Paddle5_5
+  - first:
+      213: -3649726323537218212
+    second: Paddle5_6
+  - first:
+      213: -1421454102720533114
+    second: Paddle5_7
+  - first:
+      213: 2718311020973935409
+    second: Paddle5_8
+  - first:
+      213: 6261264342457413781
+    second: Paddle5_9
+  - first:
+      213: 8719889943724310243
+    second: Paddle5_10
+  - first:
+      213: -1728091136437463073
+    second: Paddle5_11
+  - first:
+      213: 2550022460660651775
+    second: Paddle5_12
+  - first:
+      213: -2016126026755893074
+    second: Paddle5_13
+  - first:
+      213: 6069740822994799563
+    second: Paddle5_14
+  - first:
+      213: -6026628445561158674
+    second: Paddle5_15
+  - first:
+      213: -5056554885300951891
+    second: Paddle5_16
+  - first:
+      213: -926257031253155865
+    second: Paddle5_17
+  - first:
+      213: -391084217582721219
+    second: Paddle5_18
+  - first:
+      213: 6884563819608917161
+    second: Paddle5_19
+  - first:
+      213: -7059623075106165089
+    second: Paddle5_20
+  - first:
+      213: -8513355292989390557
+    second: Paddle5_21
+  - first:
+      213: -489876358045801420
+    second: Paddle5_22
+  - first:
+      213: -8623088601904391759
+    second: Paddle5_23
+  - first:
+      213: -3136550118271490157
+    second: Paddle5_24
+  - first:
+      213: -7771885818616098711
+    second: Paddle5_25
+  - first:
+      213: 5928572451227482106
+    second: Paddle5_26
+  - first:
+      213: -1231042655270824494
+    second: Paddle5_27
+  - first:
+      213: -3172700686859967392
+    second: Paddle5_28
+  - first:
+      213: 6681410029576514473
+    second: Paddle5_29
+  - first:
+      213: -5807223020823267599
+    second: Paddle5_30
+  - first:
+      213: -8265892437837064373
+    second: Paddle5_31
+  - first:
+      213: 6331524593498490071
+    second: Paddle5_32
+  - first:
+      213: 6094200989388779223
+    second: Paddle5_33
+  - first:
+      213: -4534393164759354414
+    second: Paddle5_34
+  - first:
+      213: -539931104510583982
+    second: Paddle5_35
+  - first:
+      213: 3869962135002975521
+    second: Paddle5_36
+  - first:
+      213: -8965397234620206754
+    second: Paddle5_37
+  - first:
+      213: 6028894609329905868
+    second: Paddle5_38
+  - first:
+      213: -4460813848997206882
+    second: Paddle5_39
+  - first:
+      213: -1079334642799353907
+    second: Paddle5_40
+  - first:
+      213: 1513306978974875809
+    second: Paddle5_41
+  - first:
+      213: -4320826749621489187
+    second: Paddle5_42
+  - first:
+      213: -6843738280049702849
+    second: Paddle5_43
+  - first:
+      213: 2054985281700180247
+    second: Paddle5_44
+  - first:
+      213: 6194540875623729988
+    second: Paddle5_45
+  - first:
+      213: -8872732377902494262
+    second: Paddle5_46
+  - first:
+      213: -7091650077315802033
+    second: Paddle5_47
+  - first:
+      213: 3392784792784143831
+    second: Paddle5_48
+  - first:
+      213: 7228355486642274130
+    second: Paddle5_49
+  - first:
+      213: -6216353423080778374
+    second: Paddle5_50
+  - first:
+      213: -1549837513361731058
+    second: Paddle5_51
+  - first:
+      213: -6397521407944210561
+    second: Paddle5_52
+  - first:
+      213: 8813526773488141205
+    second: Paddle5_53
+  - first:
+      213: -8804027580483128799
+    second: Paddle5_54
+  - first:
+      213: 7326325380828923451
+    second: Paddle5_55
+  - first:
+      213: -3314882040177424676
+    second: Paddle5_56
+  - first:
+      213: 8628860014649878270
+    second: Paddle5_57
+  - first:
+      213: 5411826521309088235
+    second: Paddle5_58
+  - first:
+      213: -1168459075420354620
+    second: Paddle5_59
+  - first:
+      213: -8477644799669187739
+    second: Paddle5_60
+  - first:
+      213: -8461469969273237416
+    second: Paddle5_61
+  - first:
+      213: -6582509690208796497
+    second: Paddle5_62
+  - first:
+      213: 6211380245624529527
+    second: Paddle5_63
+  - first:
+      213: 6657001661762776162
+    second: Paddle5_64
+  - first:
+      213: -4336250000771392701
+    second: Paddle5_65
+  - first:
+      213: 2629902548506525565
+    second: Paddle5_66
+  - first:
+      213: 5870627027447740386
+    second: Paddle5_67
+  - first:
+      213: 1470334451847163491
+    second: Paddle5_68
+  - first:
+      213: -7223461895546075476
+    second: Paddle5_69
+  - first:
+      213: 784088824853195458
+    second: Paddle5_70
+  - first:
+      213: -1630583777283481080
+    second: Paddle5_71
+  - first:
+      213: 3460010799376151873
+    second: Paddle5_72
+  - first:
+      213: -5746464516614732052
+    second: Paddle5_73
+  - first:
+      213: -1986243679796527924
+    second: Paddle5_74
+  - first:
+      213: -889248137736512874
+    second: Paddle5_75
+  - first:
+      213: -571617877760081449
+    second: Paddle5_76
+  - first:
+      213: 3106578902913307828
+    second: Paddle5_77
+  - first:
+      213: -4325537592861046225
+    second: Paddle5_78
+  - first:
+      213: 8741877663335616025
+    second: Paddle5_79
+  - first:
+      213: -222125689899653962
+    second: Paddle5_80
+  - first:
+      213: -3891659583867220687
+    second: Paddle5_81
+  - first:
+      213: -7632763908632731959
+    second: Paddle5_82
+  - first:
+      213: -3573477238733551007
+    second: Paddle5_83
+  - first:
+      213: -783083709249594051
+    second: Paddle5_84
+  - first:
+      213: 8664532275940034211
+    second: Paddle5_85
+  - first:
+      213: 1272293072017057965
+    second: Paddle5_86
+  - first:
+      213: -6339294567106940745
+    second: Paddle5_87
+  - first:
+      213: 1845295991256227943
+    second: Paddle5_88
+  - first:
+      213: 6975216739313597796
+    second: Paddle5_89
+  - first:
+      213: -2461765616435211048
+    second: Paddle5_90
+  - first:
+      213: 7485040099770828090
+    second: Paddle5_91
+  - first:
+      213: -389144664318742866
+    second: Paddle5_92
+  - first:
+      213: -5945546385038601588
+    second: Paddle5_93
+  - first:
+      213: -8624303119584676317
+    second: Paddle5_94
+  - first:
+      213: -7000580692229830552
+    second: Paddle5_95
+  - first:
+      213: 4692350180003773635
+    second: Paddle5_96
+  - first:
+      213: 7224741661714716330
+    second: Paddle5_97
+  - first:
+      213: -5306826327340766639
+    second: Paddle5_98
+  - first:
+      213: -5260538632385260828
+    second: Paddle5_99
+  - first:
+      213: 1773093425888601887
+    second: Paddle5_100
+  - first:
+      213: -4954534973687782429
+    second: Paddle5_101
+  - first:
+      213: 749087284455920092
+    second: Paddle5_102
+  - first:
+      213: 9071329308964160138
+    second: Paddle5_103
+  - first:
+      213: 9183915361832302172
+    second: Paddle5_104
+  - first:
+      213: -2749477465399963591
+    second: Paddle5_105
+  - first:
+      213: 1725832052941129593
+    second: Paddle5_106
+  - first:
+      213: -5978032894100960593
+    second: Paddle5_107
+  - first:
+      213: -3505631236176295992
+    second: Paddle5_108
+  - first:
+      213: 6868103172023762465
+    second: Paddle5_109
+  - first:
+      213: -5433085644289179662
+    second: Paddle5_110
+  - first:
+      213: 2484495152968140710
+    second: Paddle5_111
+  - first:
+      213: 7277818479610771217
+    second: Paddle5_112
+  - first:
+      213: 4853455989728867910
+    second: Paddle5_113
+  - first:
+      213: -2173118652808059177
+    second: Paddle5_114
+  - first:
+      213: 7162715439402083535
+    second: Paddle5_115
+  - first:
+      213: -6465497381879265391
+    second: Paddle5_116
+  - first:
+      213: -140040843984680069
+    second: Paddle5_117
+  - first:
+      213: 2624772024075835767
+    second: Paddle5_118
+  - first:
+      213: -5545806483894712373
+    second: Paddle5_119
+  - first:
+      213: 8604849972008352814
+    second: Paddle5_120
+  - first:
+      213: 5651165146857726891
+    second: Paddle5_121
+  - first:
+      213: 8866216627229047054
+    second: Paddle5_122
+  - first:
+      213: -3694893687091055656
+    second: Paddle5_123
+  - first:
+      213: -6384943850548932103
+    second: Paddle5_124
+  - first:
+      213: -6341686509842229162
+    second: Paddle5_125
+  - first:
+      213: -6458299081868297706
+    second: Paddle5_126
+  - first:
+      213: 7950637247842489794
+    second: Paddle5_127
+  - first:
+      213: 4428586293721097520
+    second: Paddle5_128
+  - first:
+      213: -4884715350196745472
+    second: Paddle5_129
+  - first:
+      213: 599097207904197426
+    second: Paddle5_130
+  - first:
+      213: 8231822822356079537
+    second: Paddle5_131
+  - first:
+      213: -2401569751350987341
+    second: Paddle5_132
+  - first:
+      213: -129453430478397223
+    second: Paddle5_133
+  - first:
+      213: -5903035769936405522
+    second: Paddle5_134
+  - first:
+      213: 8751459185270214832
+    second: Paddle5_135
+  - first:
+      213: 1717135922586275617
+    second: Paddle5_136
+  - first:
+      213: 1289228834467006863
+    second: Paddle5_137
+  - first:
+      213: -5973403965785939861
+    second: Paddle5_138
+  - first:
+      213: -1444493773209125503
+    second: Paddle5_139
+  - first:
+      213: -8834746483253401800
+    second: Paddle5_140
+  - first:
+      213: -4447099007917877412
+    second: Paddle5_141
+  - first:
+      213: -6621585375173139796
+    second: Paddle5_142
+  - first:
+      213: -4693574316333599314
+    second: Paddle5_143
+  - first:
+      213: 7683910581600653186
+    second: Paddle5_144
+  - first:
+      213: -1099946074395204244
+    second: Paddle5_145
+  - first:
+      213: -7051579093883739621
+    second: Paddle5_146
+  - first:
+      213: 8161431594826208740
+    second: Paddle5_147
+  - first:
+      213: -3442153561931289298
+    second: Paddle5_148
+  - first:
+      213: 16503857333660456
+    second: Paddle5_149
+  - first:
+      213: -2294172122163185351
+    second: Paddle5_150
+  - first:
+      213: -3135585640309137148
+    second: Paddle5_151
+  - first:
+      213: 4368709549953931808
+    second: Paddle5_152
+  - first:
+      213: 5184380337887851215
+    second: Paddle5_153
+  - first:
+      213: -5933393304714340675
+    second: Paddle5_154
+  - first:
+      213: 1587069696648524809
+    second: Paddle5_155
+  - first:
+      213: -4960431465979208140
+    second: Paddle5_156
+  - first:
+      213: 7370321273977273926
+    second: Paddle5_157
+  - first:
+      213: -3771785000179359757
+    second: Paddle5_158
+  - first:
+      213: -5588582071472903340
+    second: Paddle5_159
+  - first:
+      213: -4459544118484955360
+    second: Paddle5_160
+  - first:
+      213: 3422828465967616143
+    second: Paddle5_161
+  - first:
+      213: -2977546611338601200
+    second: Paddle5_162
+  - first:
+      213: 2501798202597976591
+    second: Paddle5_163
+  - first:
+      213: 153901937895941537
+    second: Paddle5_164
+  - first:
+      213: 5249941647439880621
+    second: Paddle5_165
+  - first:
+      213: -8138704406220709908
+    second: Paddle5_166
+  - first:
+      213: 4202135865154550201
+    second: Paddle5_167
+  - first:
+      213: -8443963632239372046
+    second: Paddle5_168
+  - first:
+      213: -4383666875185136389
+    second: Paddle5_169
+  - first:
+      213: 7846540668009273657
+    second: Paddle5_170
+  - first:
+      213: 557721518649260616
+    second: Paddle5_171
+  - first:
+      213: 8299111024415128615
+    second: Paddle5_172
+  - first:
+      213: 1979125032677456585
+    second: Paddle5_173
+  - first:
+      213: -6522469863740590980
+    second: Paddle5_174
+  - first:
+      213: -2583442964700896477
+    second: Paddle5_175
+  - first:
+      213: -2483545234412939551
+    second: Paddle5_176
+  - first:
+      213: 6311532882853291217
+    second: Paddle5_177
+  - first:
+      213: -943466678990995478
+    second: Paddle5_178
+  - first:
+      213: 1491735048718609484
+    second: Paddle5_179
+  - first:
+      213: 816729297168464974
+    second: Paddle5_180
+  - first:
+      213: -8162408267320316389
+    second: Paddle5_181
+  - first:
+      213: 4990285116153555927
+    second: Paddle5_182
+  - first:
+      213: -5382921148836210968
+    second: Paddle5_183
+  - first:
+      213: -1096080067239733311
+    second: Paddle5_184
+  - first:
+      213: 6380799835914415139
+    second: Paddle5_185
+  - first:
+      213: 1648582080656676666
+    second: Paddle5_186
+  - first:
+      213: 3102923062078486230
+    second: Paddle5_187
+  - first:
+      213: -3308569461716154638
+    second: Paddle5_188
+  - first:
+      213: 860523675903917219
+    second: Paddle5_189
+  - first:
+      213: 6816340762526836598
+    second: Paddle5_190
+  - first:
+      213: -7234313589521902437
+    second: Paddle5_191
+  - first:
+      213: -2777013365017141972
+    second: Paddle5_192
+  - first:
+      213: -4663958578363429275
+    second: Paddle5_193
+  - first:
+      213: -1941660239886876953
+    second: Paddle5_194
+  - first:
+      213: -7319356529977860175
+    second: Paddle5_195
+  - first:
+      213: 4948497272305006798
+    second: Paddle5_196
+  - first:
+      213: -339755072130450713
+    second: Paddle5_197
+  - first:
+      213: 7977006185822882298
+    second: Paddle5_198
+  - first:
+      213: -623639492633044610
+    second: Paddle5_199
+  - first:
+      213: 8085172905383635595
+    second: Paddle5_200
+  - first:
+      213: 7786111923896464610
+    second: Paddle5_201
+  - first:
+      213: -6423075738479951332
+    second: Paddle5_202
+  - first:
+      213: -3954442552452626036
+    second: Paddle5_203
+  - first:
+      213: -339782792565644129
+    second: Paddle5_204
+  - first:
+      213: 5686753544162803608
+    second: Paddle5_205
+  - first:
+      213: -921607887409471986
+    second: Paddle5_206
+  - first:
+      213: -1967059665129275635
+    second: Paddle5_207
+  - first:
+      213: -6994208609976821013
+    second: Paddle5_208
+  - first:
+      213: 6509928185709795327
+    second: Paddle5_209
+  - first:
+      213: 3137655052608103031
+    second: Paddle5_210
+  - first:
+      213: -4040173452761113644
+    second: Paddle5_211
+  - first:
+      213: 5569505288589995650
+    second: Paddle5_212
+  - first:
+      213: 5847503920629488071
+    second: Paddle5_213
+  - first:
+      213: -2757518856367420026
+    second: Paddle5_214
+  - first:
+      213: -5924971229544287699
+    second: Paddle5_215
+  - first:
+      213: -3197028086405761413
+    second: Paddle5_216
+  - first:
+      213: -2916015387181447805
+    second: Paddle5_217
+  - first:
+      213: -4578181100388057197
+    second: Paddle5_218
+  - first:
+      213: 9084095279618473841
+    second: Paddle5_219
+  - first:
+      213: 6862969186590010840
+    second: Paddle5_220
+  - first:
+      213: 6687905605599062119
+    second: Paddle5_221
+  - first:
+      213: -482993453172541935
+    second: Paddle5_222
+  - first:
+      213: 1516674638216049192
+    second: Paddle5_223
+  - first:
+      213: 9096716039867621780
+    second: Paddle5_224
+  - first:
+      213: 2080212120699495271
+    second: Paddle5_225
+  - first:
+      213: 8705449089475194801
+    second: Paddle5_226
+  - first:
+      213: 391785044318523759
+    second: Paddle5_227
+  - first:
+      213: 3978433142810798965
+    second: Paddle5_228
+  - first:
+      213: -6084355828131627549
+    second: Paddle5_229
+  - first:
+      213: -2553136432131973567
+    second: Paddle5_230
+  - first:
+      213: 1648539360864617039
+    second: Paddle5_231
+  - first:
+      213: -4345321113460404687
+    second: Paddle5_232
+  - first:
+      213: 1801151676885701774
+    second: Paddle5_233
+  - first:
+      213: 1977891040470967350
+    second: Paddle5_234
+  - first:
+      213: -4133640985394742809
+    second: Paddle5_235
+  - first:
+      213: 866629456159371673
+    second: Paddle5_236
+  - first:
+      213: -6513327236513863351
+    second: Paddle5_237
+  - first:
+      213: -1018260477415379669
+    second: Paddle5_238
+  - first:
+      213: 4486680727959961912
+    second: Paddle5_239
+  - first:
+      213: -1957294243640012092
+    second: Paddle5_240
+  - first:
+      213: 8007603659278606798
+    second: Paddle5_241
+  - first:
+      213: 4822862765666286034
+    second: Paddle5_242
+  - first:
+      213: 258111562869810588
+    second: Paddle5_243
+  - first:
+      213: 3057854833450767253
+    second: Paddle5_244
+  - first:
+      213: 7629277823948801203
+    second: Paddle5_245
+  - first:
+      213: -8480990454913330154
+    second: Paddle5_246
+  - first:
+      213: -878903082778775132
+    second: Paddle5_247
+  - first:
+      213: -8676920681015547929
+    second: Paddle5_248
+  - first:
+      213: 5728772533983885155
+    second: Paddle5_249
+  - first:
+      213: 477460834032142792
+    second: Paddle5_250
+  - first:
+      213: -3509567473106613755
+    second: Paddle5_251
+  - first:
+      213: 3079883239205515849
+    second: Paddle5_252
+  - first:
+      213: -9205521487798185950
+    second: Paddle5_253
+  - first:
+      213: -5523290578141402009
+    second: Paddle5_254
+  - first:
+      213: -5320885850483822884
+    second: Paddle5_255
+  - first:
+      213: -3560999925497527190
+    second: Paddle5_256
+  - first:
+      213: 6204509385046838472
+    second: Paddle5_257
+  - first:
+      213: 9100795511605345147
+    second: Paddle5_258
+  - first:
+      213: -7182505766321708046
+    second: Paddle5_259
+  - first:
+      213: -6612265862775620265
+    second: Paddle5_260
+  - first:
+      213: -5716640573810138651
+    second: Paddle5_261
+  - first:
+      213: 6304827504993658580
+    second: Paddle5_262
+  - first:
+      213: 4072241190794510820
+    second: Paddle5_263
+  - first:
+      213: 1125989881953885370
+    second: Paddle5_264
+  - first:
+      213: 8640080092771324198
+    second: Paddle5_265
+  - first:
+      213: -9077192667789556756
+    second: Paddle5_266
+  - first:
+      213: -2942068327254906026
+    second: Paddle5_267
+  - first:
+      213: 2268706445418458400
+    second: Paddle5_268
+  - first:
+      213: -5892565361183443941
+    second: Paddle5_269
+  - first:
+      213: 4315596571436964132
+    second: Paddle5_270
+  - first:
+      213: 5503431958463566357
+    second: Paddle5_271
+  - first:
+      213: 2683120791345491561
+    second: Paddle5_272
+  - first:
+      213: 1435100086670805123
+    second: Paddle5_273
+  - first:
+      213: 1623203254701752349
+    second: Paddle5_274
+  - first:
+      213: 8944507318138897071
+    second: Paddle5_275
+  - first:
+      213: -1185937578981412852
+    second: Paddle5_276
+  - first:
+      213: -335008025839305760
+    second: Paddle5_277
+  - first:
+      213: -3180935246676882895
+    second: Paddle5_278
+  - first:
+      213: 2671979809964674656
+    second: Paddle5_279
+  - first:
+      213: -3860818022928539134
+    second: Paddle5_280
+  - first:
+      213: 3493938820391161170
+    second: Paddle5_281
+  - first:
+      213: 3291130255094495951
+    second: Paddle5_282
+  - first:
+      213: -747754808964730766
+    second: Paddle5_283
+  - first:
+      213: 5580691324454433720
+    second: Paddle5_284
+  - first:
+      213: 289433197318362887
+    second: Paddle5_285
+  - first:
+      213: 8704157670285298069
+    second: Paddle5_286
+  - first:
+      213: -681869068243878288
+    second: Paddle5_287
+  - first:
+      213: -7841707627631494120
+    second: Paddle5_288
+  - first:
+      213: 4213034285400431675
+    second: Paddle5_289
+  - first:
+      213: 3578005462936056364
+    second: Paddle5_290
+  - first:
+      213: 273000368189753740
+    second: Paddle5_291
+  - first:
+      213: -3713082764971147095
+    second: Paddle5_292
+  - first:
+      213: -5481276031244800608
+    second: Paddle5_293
+  - first:
+      213: 5974632645525155186
+    second: Paddle5_294
+  - first:
+      213: -3015333346533085010
+    second: Paddle5_295
+  - first:
+      213: 6058220627943606199
+    second: Paddle5_296
+  - first:
+      213: 6454516263474238534
+    second: Paddle5_297
+  - first:
+      213: 200935694602739506
+    second: Paddle5_298
+  - first:
+      213: -6198104103312849565
+    second: Paddle5_299
+  - first:
+      213: 5810286251077338364
+    second: Paddle5_300
+  - first:
+      213: -7763782536166862137
+    second: Paddle5_301
+  - first:
+      213: 7391931824617705966
+    second: Paddle5_302
+  - first:
+      213: 6890691902380885030
+    second: Paddle5_303
+  - first:
+      213: 8263362109681777950
+    second: Paddle5_304
+  - first:
+      213: -5038488867801323664
+    second: Paddle5_305
+  - first:
+      213: 21999943178323300
+    second: Paddle5_306
+  - first:
+      213: 5942821174018636992
+    second: Paddle5_307
+  - first:
+      213: 2415640653007974738
+    second: Paddle5_308
+  - first:
+      213: 1781693798086711379
+    second: Paddle5_309
+  - first:
+      213: 5778622822122480309
+    second: Paddle5_310
+  - first:
+      213: 8614106519668103803
+    second: Paddle5_311
+  - first:
+      213: 7305113858473414093
+    second: Paddle5_312
+  - first:
+      213: -739487752824253153
+    second: Paddle5_313
+  - first:
+      213: 7811040167618227040
+    second: Paddle5_314
+  - first:
+      213: -4633517356864307523
+    second: Paddle5_315
+  - first:
+      213: -5544976049276786595
+    second: Paddle5_316
+  - first:
+      213: 2191123844071161786
+    second: Paddle5_317
+  - first:
+      213: 4610156453883664514
+    second: Paddle5_318
+  - first:
+      213: 1976135557656408796
+    second: Paddle5_319
+  - first:
+      213: 6954914752850883719
+    second: Paddle5_320
+  - first:
+      213: 3478155302543778083
+    second: Paddle5_321
+  - first:
+      213: -5573494362101837885
+    second: Paddle5_322
+  - first:
+      213: 2666407669001958957
+    second: Paddle5_323
+  - first:
+      213: -405817535398120346
+    second: Paddle5_324
+  - first:
+      213: 7637903567817441877
+    second: Paddle5_325
+  - first:
+      213: 2434448622272101176
+    second: Paddle5_326
+  - first:
+      213: -320912570620582176
+    second: Paddle5_327
+  - first:
+      213: -5777862482778855180
+    second: Paddle5_328
+  - first:
+      213: 4454669280876069965
+    second: Paddle5_329
+  - first:
+      213: -2513748387822078112
+    second: Paddle5_330
+  - first:
+      213: 1287840719989017297
+    second: Paddle5_331
+  - first:
+      213: 2220874708185863323
+    second: Paddle5_332
+  - first:
+      213: 9222963013209600600
+    second: Paddle5_333
+  - first:
+      213: 8096817738502002029
+    second: Paddle5_334
+  - first:
+      213: 8983809713663007057
+    second: Paddle5_335
+  - first:
+      213: -531971942440127675
+    second: Paddle5_336
+  - first:
+      213: 5762213082156116676
+    second: Paddle5_337
+  - first:
+      213: 7736889165291585241
+    second: Paddle5_338
+  - first:
+      213: 7211956283058561340
+    second: Paddle5_339
+  - first:
+      213: -2232276229838613926
+    second: Paddle5_340
+  - first:
+      213: 106734658429506409
+    second: Paddle5_341
+  - first:
+      213: 9085797860987716322
+    second: Paddle5_342
+  - first:
+      213: -4847451283794801975
+    second: Paddle5_343
+  - first:
+      213: -9198018811243092553
+    second: Paddle5_344
+  - first:
+      213: -8426372221283545408
+    second: Paddle5_345
+  - first:
+      213: -8731545707504191257
+    second: Paddle5_346
+  - first:
+      213: -1670780805292728251
+    second: Paddle5_347
+  - first:
+      213: 3745844935401515848
+    second: Paddle5_348
+  - first:
+      213: 1455941428484237147
+    second: Paddle5_349
+  - first:
+      213: 8143729476830436237
+    second: Paddle5_350
+  - first:
+      213: 9044460569984066050
+    second: Paddle5_351
+  - first:
+      213: 5654620835076997045
+    second: Paddle5_352
+  - first:
+      213: -3938649442175301922
+    second: Paddle5_353
+  - first:
+      213: 3266666331910941806
+    second: Paddle5_354
+  - first:
+      213: -4752208780618340179
+    second: Paddle5_355
+  - first:
+      213: -1338456982272287214
+    second: Paddle5_356
+  - first:
+      213: 4259089293832786647
+    second: Paddle5_357
+  - first:
+      213: -1238982557566919860
+    second: Paddle5_358
+  - first:
+      213: -3262202538375043631
+    second: Paddle5_359
+  - first:
+      213: -2852388707368527911
+    second: Paddle5_360
+  - first:
+      213: 3519045596472416751
+    second: Paddle5_361
+  - first:
+      213: 4670276717906354214
+    second: Paddle5_362
+  - first:
+      213: -7347339068034287188
+    second: Paddle5_363
+  - first:
+      213: 7496878547099431863
+    second: Paddle5_364
+  - first:
+      213: 1238050438326924007
+    second: Paddle5_365
+  - first:
+      213: 7949736196890534121
+    second: Paddle5_366
+  - first:
+      213: 6898231686241689551
+    second: Paddle5_367
+  - first:
+      213: -6745334096039121395
+    second: Paddle5_368
+  - first:
+      213: -5832349699130975527
+    second: Paddle5_369
+  - first:
+      213: 7117799312994768148
+    second: Paddle5_370
+  - first:
+      213: 2153289230309193129
+    second: Paddle5_371
+  - first:
+      213: 7680301477936426994
+    second: Paddle5_372
+  - first:
+      213: 6716979588554346256
+    second: Paddle5_373
+  - first:
+      213: 5051085649381816441
+    second: Paddle5_374
+  - first:
+      213: 7581188588627770155
+    second: Paddle5_375
+  - first:
+      213: 7607209558963379544
+    second: Paddle5_376
+  - first:
+      213: -5788607184603327963
+    second: Paddle5_377
+  - first:
+      213: -3962374128041268729
+    second: Paddle5_378
+  - first:
+      213: -7542782774390258019
+    second: Paddle5_379
+  - first:
+      213: 5568338389337933394
+    second: Paddle5_380
+  - first:
+      213: -8813517122869673413
+    second: Paddle5_381
+  - first:
+      213: 6579398122803569301
+    second: Paddle5_382
+  - first:
+      213: 5352377626679768849
+    second: Paddle5_383
+  - first:
+      213: 2001939540354170841
+    second: Paddle5_384
+  - first:
+      213: -700275848440682077
+    second: Paddle5_385
+  - first:
+      213: 6743014190861344439
+    second: Paddle5_386
+  - first:
+      213: -1265826497975994512
+    second: Paddle5_387
+  - first:
+      213: 566932039167542837
+    second: Paddle5_388
+  - first:
+      213: -7381146162813339133
+    second: Paddle5_389
+  - first:
+      213: 4238735938542835210
+    second: Paddle5_390
+  - first:
+      213: 3282369547601745761
+    second: Paddle5_391
+  - first:
+      213: 196656982310030763
+    second: Paddle5_392
+  - first:
+      213: -7121216391495134726
+    second: Paddle5_393
+  - first:
+      213: -3640043990749525876
+    second: Paddle5_394
+  - first:
+      213: 2890160024736252039
+    second: Paddle5_395
+  - first:
+      213: 2261602000268584592
+    second: Paddle5_396
+  - first:
+      213: 6254714728542779013
+    second: Paddle5_397
+  - first:
+      213: -6693470513980778263
+    second: Paddle5_398
+  - first:
+      213: 81041789494535766
+    second: Paddle5_399
+  - first:
+      213: -2760934047978116560
+    second: Paddle5_400
+  - first:
+      213: -2083074351328015366
+    second: Paddle5_401
+  - first:
+      213: 4997290354943087425
+    second: Paddle5_402
+  - first:
+      213: 5760639738625229553
+    second: Paddle5_403
+  - first:
+      213: 641207366231891889
+    second: Paddle5_404
+  - first:
+      213: -7513047092510203112
+    second: Paddle5_405
+  - first:
+      213: 6976527387867196635
+    second: Paddle5_406
+  - first:
+      213: 1083204778719866114
+    second: Paddle5_407
+  - first:
+      213: 4619815603653528343
+    second: Paddle5_408
+  - first:
+      213: 7596043579631494969
+    second: Paddle5_409
+  - first:
+      213: -802456227098848950
+    second: Paddle5_410
+  - first:
+      213: 9076212232582397422
+    second: Paddle5_411
+  - first:
+      213: 3127580004489113973
+    second: Paddle5_412
+  - first:
+      213: 6309653504192102451
+    second: Paddle5_413
+  - first:
+      213: 5101343983737549054
+    second: Paddle5_414
+  - first:
+      213: -8630132634788378955
+    second: Paddle5_415
+  - first:
+      213: 5338714878153120321
+    second: Paddle5_416
+  - first:
+      213: 8896216095952469590
+    second: Paddle5_417
+  - first:
+      213: -7733459389019180402
+    second: Paddle5_418
+  - first:
+      213: 7768242352332364339
+    second: Paddle5_419
+  - first:
+      213: 8947260149069126686
+    second: Paddle5_420
+  - first:
+      213: -1910028532860627335
+    second: Paddle5_421
+  - first:
+      213: -5733560781137968876
+    second: Paddle5_422
+  - first:
+      213: 7868432203065636647
+    second: Paddle5_423
+  - first:
+      213: 954412083609583395
+    second: Paddle5_424
+  - first:
+      213: 8432231515540761122
+    second: Paddle5_425
+  - first:
+      213: 8099536467321689714
+    second: Paddle5_426
+  - first:
+      213: -3632439608350433237
+    second: Paddle5_427
+  - first:
+      213: 4282354821205811225
+    second: Paddle5_428
+  - first:
+      213: 5966192464192551722
+    second: Paddle5_429
+  - first:
+      213: -6159966011669471638
+    second: Paddle5_430
+  - first:
+      213: 6002768638005864030
+    second: Paddle5_431
+  - first:
+      213: 6734749833590294895
+    second: Paddle5_432
+  - first:
+      213: 8595728471967846289
+    second: Paddle5_433
+  - first:
+      213: -7570020928199417388
+    second: Paddle5_434
+  - first:
+      213: 3810680893378584355
+    second: Paddle5_435
+  - first:
+      213: 8582083737769839478
+    second: Paddle5_436
+  - first:
+      213: 6109808035277101404
+    second: Paddle5_437
+  - first:
+      213: -1643741334535788183
+    second: Paddle5_438
+  - first:
+      213: -5768964452170123957
+    second: Paddle5_439
+  - first:
+      213: -6145503645485833545
+    second: Paddle5_440
+  - first:
+      213: -5836786986631404348
+    second: Paddle5_441
+  - first:
+      213: 622571482455683944
+    second: Paddle5_442
+  - first:
+      213: 1516370809541544982
+    second: Paddle5_443
+  - first:
+      213: 8882418884171931602
+    second: Paddle5_444
+  - first:
+      213: -2948231139517103453
+    second: Paddle5_445
+  - first:
+      213: -7748708897578537900
+    second: Paddle5_446
+  - first:
+      213: -3666712773912979399
+    second: Paddle5_447
+  - first:
+      213: -852392582892221304
+    second: Paddle5_448
+  - first:
+      213: 625336552610735558
+    second: Paddle5_449
+  - first:
+      213: 445236703775377677
+    second: Paddle5_450
+  - first:
+      213: 2591993132495177133
+    second: Paddle5_451
+  - first:
+      213: -7239562601247268673
+    second: Paddle5_452
+  - first:
+      213: -6871236470574179536
+    second: Paddle5_453
+  - first:
+      213: -2895282417840352290
+    second: Paddle5_454
+  - first:
+      213: 8792161528736112802
+    second: Paddle5_455
+  - first:
+      213: 8350024702866330630
+    second: Paddle5_456
+  - first:
+      213: 8718706050284036126
+    second: Paddle5_457
+  - first:
+      213: -2338877912461621561
+    second: Paddle5_458
+  - first:
+      213: -8180336069441328722
+    second: Paddle5_459
+  - first:
+      213: 3694064899349562614
+    second: Paddle5_460
+  - first:
+      213: 410092291303073186
+    second: Paddle5_461
+  - first:
+      213: 5686146115701667212
+    second: Paddle5_462
+  - first:
+      213: 8527663051537380585
+    second: Paddle5_463
+  - first:
+      213: 2409614103358273545
+    second: Paddle5_464
+  - first:
+      213: -387358397974483235
+    second: Paddle5_465
+  - first:
+      213: -5434117277162527785
+    second: Paddle5_466
+  - first:
+      213: -1351882261449451454
+    second: Paddle5_467
+  - first:
+      213: 2761422478395807583
+    second: Paddle5_468
+  - first:
+      213: -3137323439138427897
+    second: Paddle5_469
+  - first:
+      213: -82548644451589028
+    second: Paddle5_470
+  - first:
+      213: -6536700336488828704
+    second: Paddle5_471
+  - first:
+      213: 174646125977252982
+    second: Paddle5_472
+  - first:
+      213: -9197349513353556606
+    second: Paddle5_473
+  - first:
+      213: 9117392551315402015
+    second: Paddle5_474
+  - first:
+      213: -1503987385997903413
+    second: Paddle5_475
+  - first:
+      213: 7906078371607616928
+    second: Paddle5_476
+  - first:
+      213: -7422555533168941390
+    second: Paddle5_477
+  - first:
+      213: 923439528128397715
+    second: Paddle5_478
+  - first:
+      213: -992993712671882260
+    second: Paddle5_479
+  - first:
+      213: -8870809314186435039
+    second: Paddle5_480
+  - first:
+      213: 6113771125235843626
+    second: Paddle5_481
+  - first:
+      213: 2402368434549315684
+    second: Paddle5_482
+  - first:
+      213: 4049641299228867486
+    second: Paddle5_483
+  - first:
+      213: 1739215599293280063
+    second: Paddle5_484
+  - first:
+      213: -7308147427266141023
+    second: Paddle5_485
+  - first:
+      213: -6518586579167635568
+    second: Paddle5_486
+  - first:
+      213: -4927745964977049960
+    second: Paddle5_487
+  - first:
+      213: 5071630217472853737
+    second: Paddle5_488
+  - first:
+      213: -8448079027104289981
+    second: Paddle5_489
+  - first:
+      213: 3371668143916692033
+    second: Paddle5_490
+  - first:
+      213: 1626970106468602002
+    second: Paddle5_491
+  - first:
+      213: -5019003305228850806
+    second: Paddle5_492
+  - first:
+      213: 6118610826682633251
+    second: Paddle5_493
+  - first:
+      213: -3865138366165047771
+    second: Paddle5_494
+  - first:
+      213: 6461948320515747488
+    second: Paddle5_495
+  - first:
+      213: 8092938959376781988
+    second: Paddle5_496
+  - first:
+      213: -3289418687289708034
+    second: Paddle5_497
+  - first:
+      213: -5513571547960996924
+    second: Paddle5_498
+  - first:
+      213: -5694176781041862501
+    second: Paddle5_499
+  - first:
+      213: 7504208465248271179
+    second: Paddle5_500
+  - first:
+      213: -2225323415139735972
+    second: Paddle5_501
+  - first:
+      213: -8207670742893716829
+    second: Paddle5_502
+  - first:
+      213: 4624856502062627277
+    second: Paddle5_503
+  - first:
+      213: -6292274358751806887
+    second: Paddle5_504
+  - first:
+      213: 2599439137404817867
+    second: Paddle5_505
+  - first:
+      213: 8728192239881800057
+    second: Paddle5_506
+  - first:
+      213: -7845283181870249726
+    second: Paddle5_507
+  - first:
+      213: 8264940553434277239
+    second: Paddle5_508
+  - first:
+      213: -3563917173354770507
+    second: Paddle5_509
+  - first:
+      213: 750566341757582692
+    second: Paddle5_510
+  - first:
+      213: -2910236774967731061
+    second: Paddle5_511
+  - first:
+      213: -6202861541331587589
+    second: Paddle5_512
+  - first:
+      213: 4592332249108812764
+    second: Paddle5_513
+  - first:
+      213: 328838138138607498
+    second: Paddle5_514
+  - first:
+      213: 6244142415120025213
+    second: Paddle5_515
+  - first:
+      213: 3316675917991991934
+    second: Paddle5_516
+  - first:
+      213: -811318145160862302
+    second: Paddle5_517
+  - first:
+      213: -6125572153643254650
+    second: Paddle5_518
+  - first:
+      213: -5924092766742879467
+    second: Paddle5_519
+  - first:
+      213: 4845994128744543079
+    second: Paddle5_520
+  - first:
+      213: 1120658682921826134
+    second: Paddle5_521
+  - first:
+      213: -1851199351926064006
+    second: Paddle5_522
+  - first:
+      213: 3852541592921034650
+    second: Paddle5_523
+  - first:
+      213: -1674336592139902995
+    second: Paddle5_524
+  - first:
+      213: -1310194727676539053
+    second: Paddle5_525
+  - first:
+      213: -8240017175775763863
+    second: Paddle5_526
+  - first:
+      213: 1466380306841880550
+    second: Paddle5_527
+  - first:
+      213: -6384445713077122194
+    second: Paddle5_528
+  - first:
+      213: -7996800205948271299
+    second: Paddle5_529
+  - first:
+      213: -4001421329337795365
+    second: Paddle5_530
+  - first:
+      213: -3719265922988316346
+    second: Paddle5_531
+  - first:
+      213: -8839871781057578047
+    second: Paddle5_532
+  - first:
+      213: 8393792371322786804
+    second: Paddle5_533
+  - first:
+      213: 8889819125759614211
+    second: Paddle5_534
+  - first:
+      213: 1451465075756571917
+    second: Paddle5_535
+  - first:
+      213: -4297821994691823594
+    second: Paddle5_536
+  - first:
+      213: 2646354247566975452
+    second: Paddle5_537
+  - first:
+      213: 9190100305450504322
+    second: Paddle5_538
+  - first:
+      213: -5216561359353973362
+    second: Paddle5_539
+  - first:
+      213: -6282985875247711982
+    second: Paddle5_540
+  - first:
+      213: 3223277450170285904
+    second: Paddle5_541
+  - first:
+      213: -112720758196349676
+    second: Paddle5_542
+  - first:
+      213: -7074229317403222194
+    second: Paddle5_543
+  - first:
+      213: 2983307921852788186
+    second: Paddle5_544
+  - first:
+      213: 1219844416635191211
+    second: Paddle5_545
+  - first:
+      213: -4205417598465551561
+    second: Paddle5_546
+  - first:
+      213: -982576761028251720
+    second: Paddle5_547
+  - first:
+      213: 5223394460754685272
+    second: Paddle5_548
+  - first:
+      213: -8951984441060756172
+    second: Paddle5_549
+  - first:
+      213: 4605576503988894377
+    second: Paddle5_550
+  - first:
+      213: 446229433156285152
+    second: Paddle5_551
+  - first:
+      213: 8506938365953253685
+    second: Paddle5_552
+  - first:
+      213: -7840648206466427290
+    second: Paddle5_553
+  - first:
+      213: 2840756209682396284
+    second: Paddle5_554
+  - first:
+      213: 3424442905777709680
+    second: Paddle5_555
+  - first:
+      213: 7949325378908005448
+    second: Paddle5_556
+  - first:
+      213: -7382986078447920127
+    second: Paddle5_557
+  - first:
+      213: -187604137264350878
+    second: Paddle5_558
+  - first:
+      213: 8484466850023321249
+    second: Paddle5_559
+  - first:
+      213: 7553048149932839849
+    second: Paddle5_560
+  - first:
+      213: -8240969090827747042
+    second: Paddle5_561
+  - first:
+      213: 7363538662552403807
+    second: Paddle5_562
+  - first:
+      213: 5840626695525403227
+    second: Paddle5_563
+  - first:
+      213: -193305368535316860
+    second: Paddle5_564
+  - first:
+      213: 7742797486162077654
+    second: Paddle5_565
+  - first:
+      213: 276834940766793024
+    second: Paddle5_566
+  - first:
+      213: 1899219872776238344
+    second: Paddle5_567
+  - first:
+      213: -7495651960717577099
+    second: Paddle5_568
+  - first:
+      213: -692805364989600276
+    second: Paddle5_569
+  - first:
+      213: -6993980203157657321
+    second: Paddle5_570
+  - first:
+      213: -7310872262809482548
+    second: Paddle5_571
+  - first:
+      213: -8033149442487029317
+    second: Paddle5_572
+  - first:
+      213: -125008975323134370
+    second: Paddle5_573
+  - first:
+      213: -3555498369594859160
+    second: Paddle5_574
+  - first:
+      213: 4525608629128034729
+    second: Paddle5_575
+  - first:
+      213: -4378688316359045643
+    second: Paddle5_576
+  - first:
+      213: 8986271643442265203
+    second: Paddle5_577
+  - first:
+      213: -6501392898719192540
+    second: Paddle5_578
+  - first:
+      213: 5988866151962191662
+    second: Paddle5_579
+  - first:
+      213: 3275589721717318810
+    second: Paddle5_580
+  - first:
+      213: 4509622767230852879
+    second: Paddle5_581
+  - first:
+      213: 4362675956854324212
+    second: Paddle5_582
+  - first:
+      213: -3450394222881455018
+    second: Paddle5_583
+  - first:
+      213: -4519152397674929511
+    second: Paddle5_584
+  - first:
+      213: -3199150637089668415
+    second: Paddle5_585
+  - first:
+      213: -1768079024611046396
+    second: Paddle5_586
+  - first:
+      213: 5816193698029460382
+    second: Paddle5_587
+  - first:
+      213: -6839207915281534500
+    second: Paddle5_588
+  - first:
+      213: 1217558682394559873
+    second: Paddle5_589
+  - first:
+      213: -8307057364314090059
+    second: Paddle5_590
+  - first:
+      213: 5865230773936583347
+    second: Paddle5_591
+  - first:
+      213: 8181772416575588108
+    second: Paddle5_592
+  - first:
+      213: -8666654334516756420
+    second: Paddle5_593
+  - first:
+      213: -6416568958412362836
+    second: Paddle5_594
+  - first:
+      213: 8882474081239117329
+    second: Paddle5_595
+  - first:
+      213: -2783908847966691630
+    second: Paddle5_596
+  - first:
+      213: -8373134630549637831
+    second: Paddle5_597
+  - first:
+      213: 8687866182939054981
+    second: Paddle5_598
+  - first:
+      213: 903412618398048240
+    second: Paddle5_599
+  - first:
+      213: 6732943707341620102
+    second: Paddle5_600
+  - first:
+      213: 4012720910832832279
+    second: Paddle5_601
+  - first:
+      213: -4184035199293874116
+    second: Paddle5_602
+  - first:
+      213: 7956572325777806913
+    second: Paddle5_603
+  - first:
+      213: 8644418721500477496
+    second: Paddle5_604
+  - first:
+      213: -6689274036382086417
+    second: Paddle5_605
+  - first:
+      213: 2138233068294116037
+    second: Paddle5_606
+  - first:
+      213: -8464647313580098242
+    second: Paddle5_607
+  - first:
+      213: 2705037833357931555
+    second: Paddle5_608
+  - first:
+      213: -3940735589355957820
+    second: Paddle5_609
+  - first:
+      213: 343425891067739198
+    second: Paddle5_610
+  - first:
+      213: 4503634637292091511
+    second: Paddle5_611
+  - first:
+      213: 5979894964789272663
+    second: Paddle5_612
+  - first:
+      213: 2390807403181369150
+    second: Paddle5_613
+  - first:
+      213: 4316314368432175300
+    second: Paddle5_614
+  - first:
+      213: 5786831537624970054
+    second: Paddle5_615
+  - first:
+      213: 4887338120740847604
+    second: Paddle5_616
+  - first:
+      213: -8496869839323013632
+    second: Paddle5_617
+  - first:
+      213: 1730308981024413374
+    second: Paddle5_618
+  - first:
+      213: 7923400183419405621
+    second: Paddle5_619
+  - first:
+      213: -8298673899277909871
+    second: Paddle5_620
+  - first:
+      213: 8266254712472290925
+    second: Paddle5_621
+  - first:
+      213: -5628898192746030021
+    second: Paddle5_622
+  - first:
+      213: -1864913585128091771
+    second: Paddle5_623
+  - first:
+      213: 7325951694805684554
+    second: Paddle5_624
+  - first:
+      213: 1879455548658307507
+    second: Paddle5_625
+  - first:
+      213: -4944935849536962676
+    second: Paddle5_626
+  - first:
+      213: 8899288897483377987
+    second: Paddle5_627
+  - first:
+      213: -6686118328196511649
+    second: Paddle5_628
+  - first:
+      213: 407455236898216608
+    second: Paddle5_629
+  - first:
+      213: -1695663596876897845
+    second: Paddle5_630
+  - first:
+      213: 7406125732430046525
+    second: Paddle5_631
+  - first:
+      213: 1229949950818882930
+    second: Paddle5_632
+  - first:
+      213: 2559858652318756692
+    second: Paddle5_633
+  - first:
+      213: -8365834758090970597
+    second: Paddle5_634
+  - first:
+      213: 4259094184155751391
+    second: Paddle5_635
+  - first:
+      213: 6039762196230969612
+    second: Paddle5_636
+  - first:
+      213: -8450535451958361221
+    second: Paddle5_637
+  - first:
+      213: -4273516249628892449
+    second: Paddle5_638
+  - first:
+      213: 5914282809746518831
+    second: Paddle5_639
+  - first:
+      213: 1776279065181675124
+    second: Paddle5_640
+  - first:
+      213: -3100759755432965288
+    second: Paddle5_641
+  - first:
+      213: -5089376807038753072
+    second: Paddle5_642
+  - first:
+      213: -1977552574463261023
+    second: Paddle5_643
+  - first:
+      213: 6355100942116419008
+    second: Paddle5_644
+  - first:
+      213: 23068301264751804
+    second: Paddle5_645
+  - first:
+      213: 6462809732950370133
+    second: Paddle5_646
+  - first:
+      213: 6421353309179287738
+    second: Paddle5_647
+  - first:
+      213: -5502345467578853992
+    second: Paddle5_648
+  - first:
+      213: 875755968099744723
+    second: Paddle5_649
+  - first:
+      213: -8291665664176752094
+    second: Paddle5_650
+  - first:
+      213: -3090387093228982539
+    second: Paddle5_651
+  - first:
+      213: -7801042880810459433
+    second: Paddle5_652
+  - first:
+      213: -8480392007200152445
+    second: Paddle5_653
+  - first:
+      213: -8268440771397157797
+    second: Paddle5_654
+  - first:
+      213: -8363594825467805448
+    second: Paddle5_655
+  - first:
+      213: -1066649403280589445
+    second: Paddle5_656
+  - first:
+      213: -3888051325036592144
+    second: Paddle5_657
+  - first:
+      213: -4732259040243450740
+    second: Paddle5_658
+  - first:
+      213: 1353509894229921294
+    second: Paddle5_659
+  - first:
+      213: -2637239604933319166
+    second: Paddle5_660
+  - first:
+      213: 3949820609269565735
+    second: Paddle5_661
+  - first:
+      213: 8699388319926578602
+    second: Paddle5_662
+  - first:
+      213: -5840114789888142368
+    second: Paddle5_663
+  - first:
+      213: -8009298687906251875
+    second: Paddle5_664
+  - first:
+      213: -4841698836683156603
+    second: Paddle5_665
+  - first:
+      213: -1395155676205257622
+    second: Paddle5_666
+  - first:
+      213: -3706405911619427000
+    second: Paddle5_667
+  - first:
+      213: 3592264137510590814
+    second: Paddle5_668
+  - first:
+      213: -3623400275650945314
+    second: Paddle5_669
+  - first:
+      213: -776171797294788109
+    second: Paddle5_670
+  - first:
+      213: 1141431812602460124
+    second: Paddle5_671
+  - first:
+      213: 832138284733188900
+    second: Paddle5_672
+  - first:
+      213: -4151111043955052493
+    second: Paddle5_673
+  - first:
+      213: -4920078986453347381
+    second: Paddle5_674
+  - first:
+      213: -4573624851618498041
+    second: Paddle5_675
+  - first:
+      213: 1546366518215113560
+    second: Paddle5_676
+  - first:
+      213: 432722661396015837
+    second: Paddle5_677
+  - first:
+      213: 3942026312786217396
+    second: Paddle5_678
+  - first:
+      213: 2764920501915716228
+    second: Paddle5_679
+  - first:
+      213: 5718782452449452815
+    second: Paddle5_680
+  - first:
+      213: -8914845067645996394
+    second: Paddle5_681
+  - first:
+      213: 6741104792706235616
+    second: Paddle5_682
+  - first:
+      213: -9060898674684577032
+    second: Paddle5_683
+  - first:
+      213: 4398221283334485039
+    second: Paddle5_684
+  - first:
+      213: 8070028978828232698
+    second: Paddle5_685
+  - first:
+      213: -5321518316490764323
+    second: Paddle5_686
+  - first:
+      213: -4977285890856530124
+    second: Paddle5_687
+  - first:
+      213: -1647751663676170429
+    second: Paddle5_688
+  - first:
+      213: 8269606221167482789
+    second: Paddle5_689
+  - first:
+      213: -789626044427033732
+    second: Paddle5_690
+  - first:
+      213: -4011590607633388917
+    second: Paddle5_691
+  - first:
+      213: -7304147340731684907
+    second: Paddle5_692
+  - first:
+      213: -7485773544779718729
+    second: Paddle5_693
+  - first:
+      213: 7762793010734295210
+    second: Paddle5_694
+  - first:
+      213: -7513280002035829709
+    second: Paddle5_695
+  - first:
+      213: -374923251595147281
+    second: Paddle5_696
+  - first:
+      213: 3024554057257996174
+    second: Paddle5_697
+  - first:
+      213: -1114114726108196192
+    second: Paddle5_698
+  - first:
+      213: -6215251022481451010
+    second: Paddle5_699
+  - first:
+      213: 2314521375606238198
+    second: Paddle5_700
+  - first:
+      213: -4200228903795452562
+    second: Paddle5_701
+  - first:
+      213: -825092450275578245
+    second: Paddle5_702
+  - first:
+      213: -6806911718387649456
+    second: Paddle5_703
+  - first:
+      213: 3237596114418893
+    second: Paddle5_704
+  - first:
+      213: 2064608290021536120
+    second: Paddle5_705
+  - first:
+      213: 344498630050979413
+    second: Paddle5_706
+  - first:
+      213: 7405111553069833349
+    second: Paddle5_707
+  - first:
+      213: 2118667609459091957
+    second: Paddle5_708
+  - first:
+      213: -7614464445602469212
+    second: Paddle5_709
+  - first:
+      213: -2115858242030929536
+    second: Paddle5_710
+  - first:
+      213: -7327101812137892997
+    second: Paddle5_711
+  - first:
+      213: -7420674722450693038
+    second: Paddle5_712
+  - first:
+      213: 738348162037705524
+    second: Paddle5_713
+  - first:
+      213: 4974903848163198948
+    second: Paddle5_714
+  - first:
+      213: -2764025497621101780
+    second: Paddle5_715
+  - first:
+      213: 2580286913238585073
+    second: Paddle5_716
+  - first:
+      213: 9149195562206080763
+    second: Paddle5_717
+  - first:
+      213: 6232787533180273779
+    second: Paddle5_718
+  - first:
+      213: 4846258900248059586
+    second: Paddle5_719
+  - first:
+      213: -1684561327415872890
+    second: Paddle5_720
+  - first:
+      213: -7013112200376029652
+    second: Paddle5_721
+  - first:
+      213: -6866602434236861808
+    second: Paddle5_722
+  - first:
+      213: 5662102511903320659
+    second: Paddle5_723
+  - first:
+      213: 2554020103362738153
+    second: Paddle5_724
+  - first:
+      213: 3366537867759542772
+    second: Paddle5_725
+  - first:
+      213: 6384294361790547014
+    second: Paddle5_726
+  - first:
+      213: 7211452257895781487
+    second: Paddle5_727
+  - first:
+      213: 4676061998037451403
+    second: Paddle5_728
+  - first:
+      213: 693976367895750337
+    second: Paddle5_729
+  - first:
+      213: -1076460400236539003
+    second: Paddle5_730
+  - first:
+      213: 2902415520141705399
+    second: Paddle5_731
+  - first:
+      213: -4812827639207321065
+    second: Paddle5_732
+  - first:
+      213: 2430812444839231254
+    second: Paddle5_733
+  - first:
+      213: -2733925998846945624
+    second: Paddle5_734
+  - first:
+      213: 2628648570007903807
+    second: Paddle5_735
+  - first:
+      213: -6398058270864882007
+    second: Paddle5_736
+  - first:
+      213: 9086480876260116142
+    second: Paddle5_737
+  - first:
+      213: 2833652489486176045
+    second: Paddle5_738
+  - first:
+      213: -5329143200273480302
+    second: Paddle5_739
+  - first:
+      213: -2142429976287963366
+    second: Paddle5_740
+  - first:
+      213: 6386911963946099471
+    second: Paddle5_741
+  - first:
+      213: 6774161481657825568
+    second: Paddle5_742
+  - first:
+      213: 1506016005186228003
+    second: Paddle5_743
+  - first:
+      213: 8250821230958167597
+    second: Paddle5_744
+  - first:
+      213: 3306269392759881846
+    second: Paddle5_745
+  - first:
+      213: 4251690991505810129
+    second: Paddle5_746
+  - first:
+      213: -9218839758307850329
+    second: Paddle5_747
+  - first:
+      213: -6225346918301796273
+    second: Paddle5_748
+  - first:
+      213: 3905767285269637313
+    second: Paddle5_749
+  - first:
+      213: 5452351697466248910
+    second: Paddle5_750
+  - first:
+      213: -7440785550742659105
+    second: Paddle5_751
+  - first:
+      213: -4493513227203139896
+    second: Paddle5_752
+  - first:
+      213: 3185465234227896954
+    second: Paddle5_753
+  - first:
+      213: 1088666654033589659
+    second: Paddle5_754
+  - first:
+      213: 4901796117373233910
+    second: Paddle5_755
+  - first:
+      213: -9064135376201140314
+    second: Paddle5_756
+  - first:
+      213: 7877561664600143760
+    second: Paddle5_757
+  - first:
+      213: 7550152761121775863
+    second: Paddle5_758
+  - first:
+      213: 5984369839668178748
+    second: Paddle5_759
+  - first:
+      213: 1836306580857368919
+    second: Paddle5_760
+  - first:
+      213: 3970482195498439340
+    second: Paddle5_761
+  - first:
+      213: -382533743298144616
+    second: Paddle5_762
+  - first:
+      213: -9072350255918439270
+    second: Paddle5_763
+  - first:
+      213: 588527893429023453
+    second: Paddle5_764
+  - first:
+      213: -766326266514600583
+    second: Paddle5_765
+  - first:
+      213: 1570636354972089163
+    second: Paddle5_766
+  - first:
+      213: 4781313293662177671
+    second: Paddle5_767
+  - first:
+      213: 3475737574214118690
+    second: Paddle5_768
+  - first:
+      213: 1079739949972519927
+    second: Paddle5_769
+  - first:
+      213: -5969569682085249849
+    second: Paddle5_770
+  - first:
+      213: -7950369524190183138
+    second: Paddle5_771
+  - first:
+      213: -7787471086702429
+    second: Paddle5_772
+  - first:
+      213: -2921504553510848326
+    second: Paddle5_773
+  - first:
+      213: 8070203650106302758
+    second: Paddle5_774
+  - first:
+      213: 1454975879130538295
+    second: Paddle5_775
+  - first:
+      213: -1218521950727427800
+    second: Paddle5_776
+  - first:
+      213: 3246405867130541355
+    second: Paddle5_777
+  - first:
+      213: 9125911148965413419
+    second: Paddle5_778
+  - first:
+      213: 2149552650017588325
+    second: Paddle5_779
+  - first:
+      213: -2252288592235215595
+    second: Paddle5_780
+  - first:
+      213: -3559530855149881166
+    second: Paddle5_781
+  - first:
+      213: -2671932132857653843
+    second: Paddle5_782
+  - first:
+      213: 2322360267835907952
+    second: Paddle5_783
+  - first:
+      213: -4281652680392912980
+    second: Paddle5_784
+  - first:
+      213: -723716689311556620
+    second: Paddle5_785
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paddle5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c430f9e57e49392d0800000000000000
+      internalID: -3273108782722383028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9eb45b166f036f0800000000000000
+      internalID: -706794241983256065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa91c420a7685120800000000000000
+      internalID: 2402784338711255798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7536b3f6065af90800000000000000
+      internalID: -6943037219667748927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ba491b493a5be50800000000000000
+      internalID: 6824540669379652402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268a57f4f300f0720800000000000000
+      internalID: 2814468564045899874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55fb2eee31995dc0800000000000000
+      internalID: -3649726323537218212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d22d6560bf54ce0800000000000000
+      internalID: -1421454102720533114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b4e2aa87169b520800000000000000
+      internalID: 2718311020973935409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5907ef0feba74e650800000000000000
+      internalID: 6261264342457413781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee303034b5430970800000000000000
+      internalID: 8719889943724310243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_11
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7d42964469408e0800000000000000
+      internalID: -1728091136437463073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff612f8daef736320800000000000000
+      internalID: 2550022460660651775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea89bc08f084504e0800000000000000
+      internalID: -2016126026755893074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_14
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbca41ae1d0c3450800000000000000
+      internalID: 6069740822994799563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_15
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee30015fb5d1d5ca0800000000000000
+      internalID: -6026628445561158674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4ee526f1283d9b0800000000000000
+      internalID: -5056554885300951891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef927933264523f0800000000000000
+      internalID: -926257031253155865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3768b5e9f6929af0800000000000000
+      internalID: -391084217582721219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_19
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4cb456152ea8f50800000000000000
+      internalID: 6884563819608917161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e6528773e270e90800000000000000
+      internalID: -7059623075106165089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_21
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3210daa777c7ad980800000000000000
+      internalID: -8513355292989390557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_22
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43461de3c0c9339f0800000000000000
+      internalID: -489876358045801420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_23
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9d4c88a92a45880800000000000000
+      internalID: -8623088601904391759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397e73c194cb874d0800000000000000
+      internalID: -3136550118271490157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960dd727607b42490800000000000000
+      internalID: -7771885818616098711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7b494cb35864250800000000000000
+      internalID: 5928572451227482106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d59a353a357aeee0800000000000000
+      internalID: -1231042655270824494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_28
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064e215f88d48f3d0800000000000000
+      internalID: -3172700686859967392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_29
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abe3a3b50329bc50800000000000000
+      internalID: 6681410029576514473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_30
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6bb583e69986fa0800000000000000
+      internalID: -5807223020823267599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_31
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4752235f96a94d80800000000000000
+      internalID: -8265892437837064373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4802a62181ed750800000000000000
+      internalID: 6331524593498490071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de2a5ae283f29450800000000000000
+      internalID: 6094200989388779223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_34
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d33f8ed0799211c0800000000000000
+      internalID: -4534393164759354414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_35
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b56786587c188f0800000000000000
+      internalID: -539931104510583982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_36
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d801fce0ed4b530800000000000000
+      internalID: 3869962135002975521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_37
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51713047b2849380800000000000000
+      internalID: -8965397234620206754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_38
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0606964bfeaa350800000000000000
+      internalID: 6028894609329905868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_39
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94e06150710812c0800000000000000
+      internalID: -4460813848997206882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfdb266cde6501f0800000000000000
+      internalID: -1079334642799353907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0cae5fda8500510800000000000000
+      internalID: 1513306978974875809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd13ec4c6f65904c0800000000000000
+      internalID: -4320826749621489187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_43
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3805e14b482601a0800000000000000
+      internalID: -6843738280049702849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_44
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7113566d936c48c10800000000000000
+      internalID: 2054985281700180247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_45
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b80363b1e67f550800000000000000
+      internalID: 6194540875623729988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_46
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdc30c79e8bdd480800000000000000
+      internalID: -8872732377902494262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_47
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c583ee3d5659d90800000000000000
+      internalID: -7091650077315802033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d50f351bc7951f20800000000000000
+      internalID: 3392784792784143831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ffe838407405460800000000000000
+      internalID: 7228355486642274130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a759cf25f731bb9a0800000000000000
+      internalID: -6216353423080778374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_51
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02df743efedd7ae0800000000000000
+      internalID: -1549837513361731058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_52
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77478ccc207737a0800000000000000
+      internalID: -6397521407944210561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_53
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593c72887efef4a70800000000000000
+      internalID: 8813526773488141205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_54
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122bf80bf8fc1d580800000000000000
+      internalID: -8804027580483128799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_55
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b368c390e165ca560800000000000000
+      internalID: 7326325380828923451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd607e2f85c2ff1d0800000000000000
+      internalID: -3314882040177424676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef627c5377edfb770800000000000000
+      internalID: 8628860014649878270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_58
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be98aac4c8baa1b40800000000000000
+      internalID: 5411826521309088235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_59
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c70df269acc8cfe0800000000000000
+      internalID: -1168459075420354620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_60
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bc7cf98fa595a80800000000000000
+      internalID: -8477644799669187739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_61
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85055dbc4e1d29a80800000000000000
+      internalID: -8461469969273237416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_62
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0c988ff4a36a4a0800000000000000
+      internalID: -6582509690208796497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_63
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77224519c61433650800000000000000
+      internalID: 6211380245624529527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c2e86bdbb626c50800000000000000
+      internalID: 6657001661762776162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_65
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bdbb6499b82d3c0800000000000000
+      internalID: -4336250000771392701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_66
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f30ad1f6a4f7420800000000000000
+      internalID: 2629902548506525565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_67
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e774d37d28a87150800000000000000
+      internalID: 5870627027447740386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_68
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e6e5fc46da76410800000000000000
+      internalID: 1470334451847163491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_69
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca608637dab11cb90800000000000000
+      internalID: -7223461895546075476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_70
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca6ab5c1a4a1ea00800000000000000
+      internalID: 784088824853195458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_71
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802e08a91b00f59e0800000000000000
+      internalID: -1630583777283481080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145b4d77d7d640030800000000000000
+      internalID: 3460010799376151873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_73
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6caccd7f47040b0800000000000000
+      internalID: -5746464516614732052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_74
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cccfc5495e17f64e0800000000000000
+      internalID: -1986243679796527924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_75
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a9909b781c8a3f0800000000000000
+      internalID: -889248137736512874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_76
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d109d891943118f0800000000000000
+      internalID: -571617877760081449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_77
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4ded68d09cc1b20800000000000000
+      internalID: 3106578902913307828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_78
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a4bea1a7a98f3c0800000000000000
+      internalID: -4325537592861046225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle5_79
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e8a091b63615970800000000000000
+      internalID: 8741877663335616025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

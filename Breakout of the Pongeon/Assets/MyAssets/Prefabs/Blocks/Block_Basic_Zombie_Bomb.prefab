@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: 3277229769800406532}
   - component: {fileID: 2763128735588564040}
   - component: {fileID: 2755249825972855053}
+  - component: {fileID: -1038614467398815731}
   m_Layer: 8
-  m_Name: Block_Basic_Combined_Test
+  m_Name: Block_Basic_Zombie_Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4968,6 +4969,25 @@ MonoBehaviour:
     blockTexture: {fileID: 21300000, guid: 3d00b49b077e91d4bab42f83c670f78d, type: 3}
   - maxHpPercentage: 100
     blockTexture: {fileID: 21300000, guid: 390e18f62e92961449768edec4eb928d, type: 3}
+--- !u!95 &-1038614467398815731
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960040785801160890}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 592ff5903b96d924387911feae296b0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2402238520777218582
 GameObject:
   m_ObjectHideFlags: 0
