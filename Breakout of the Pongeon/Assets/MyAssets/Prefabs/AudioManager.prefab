@@ -81,7 +81,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: testbgm
     type: {fileID: -2623996676782669458, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
-    clip: {fileID: 8300000, guid: 9dc48963830b6bf47a4b9de8cd9f09dd, type: 3}
+    clip: {fileID: 8300000, guid: d46062ab62c07be4c99da483ce4bf149, type: 3}
     volume: 0.03
     pitch: 1
     loop: 1
