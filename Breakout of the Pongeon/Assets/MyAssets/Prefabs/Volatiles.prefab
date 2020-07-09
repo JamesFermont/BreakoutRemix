@@ -203,8 +203,7 @@ GameObject:
   - component: {fileID: 1836093080391337377}
   - component: {fileID: 1836093080391337380}
   - component: {fileID: 7540082920619138566}
-  - component: {fileID: 6971312414049167065}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Paddle
   m_TagString: Paddle
   m_Icon: {fileID: 0}
@@ -332,27 +331,8 @@ MonoBehaviour:
   btDuration: 5
   btTimeScale: 0.4
   energy: 0
-  energyCap: 0
+  energyCap: 200
   btIsActive: 0
---- !u!95 &6971312414049167065
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836093080391337376}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c2cad453a91822642b82773b8ee57716, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1836093081007677559
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +457,8 @@ MonoBehaviour:
   baseSpeed: 200
   paddleSpeedIncreaseIncrement: 5
   deflectionStrength: 1.5
+  bTime: {fileID: 7540082920619138566}
+  rb: {fileID: 1836093081007677563}
   speedMod: 0
   speed: 0
   hasBouncedThisFrame: 0

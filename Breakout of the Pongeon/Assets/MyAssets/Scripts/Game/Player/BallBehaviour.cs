@@ -7,6 +7,9 @@ public class BallBehaviour : MonoBehaviour {
 	public float paddleSpeedIncreaseIncrement = 1.0f;
 	public float deflectionStrength = 1.0f;
 
+	public PlayerAbility bTime;
+	public Rigidbody2D rb;
+
 	[HideInInspector]
 	public float speedMod;
 	
@@ -24,6 +27,17 @@ public class BallBehaviour : MonoBehaviour {
 
 	private void LateUpdate() {
 		hasBouncedThisFrame = false;
+		if (bTime.btIsActive) {
+			Vector2 position = this.transform.position;
+			Debug.DrawRay(position, rb.velocity, Color.green);
+			RaycastHit2D dir = Physics2D.Raycast(position, rb.velocity, 20f, LayerMask.GetMask("Paddle"));
+			if (dir) {
+				Vector2 newDir;
+				newDir = new Vector2(GetDeflectedX(dir.point, dir.transform.position, dir.collider.bounds.size.x) * deflectionStrength, 1);
+				newDir = newDir.normalized * (speed * Time.fixedDeltaTime);
+				Debug.DrawRay(dir.point, newDir , Color.red);
+			}
+		}
 	}
 
 	private IEnumerator AudioManagerRef() {

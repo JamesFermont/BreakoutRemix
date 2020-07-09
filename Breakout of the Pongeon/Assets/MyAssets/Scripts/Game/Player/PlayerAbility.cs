@@ -23,13 +23,11 @@ public class PlayerAbility : MonoBehaviour {
 	}
 
 	private void Update() {
-		if (Input.GetMouseButtonDown(1)) {
-			if (energy >= btEnergyCost && !btIsActive) {
-				energy -= btEnergyCost;
-				ActivateBulletTime();
-				Debug.Log("Bullet Time activate!!!!");
-			}
-		}
+		if (!Input.GetMouseButtonDown(1)) return;
+		if (energy < btEnergyCost || btIsActive) return;
+		energy -= btEnergyCost;
+		ActivateBulletTime();
+		Debug.Log("Bullet Time activate!!!!");
 	}
 
 	private void ActivateBulletTime() {
