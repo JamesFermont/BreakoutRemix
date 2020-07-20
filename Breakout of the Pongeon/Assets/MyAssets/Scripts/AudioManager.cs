@@ -4,7 +4,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
     public Sound[] sounds;
 
-    void Awake()
+    private void Awake()
     {
         foreach (Sound sound in sounds) {
             sound.source = gameObject.AddComponent<AudioSource>();
@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour {
     }
 
     private void Start() {
-        Play("testbgm");
+        Play("bgm_menu");
     }
 
     public void Play(string soundName) {

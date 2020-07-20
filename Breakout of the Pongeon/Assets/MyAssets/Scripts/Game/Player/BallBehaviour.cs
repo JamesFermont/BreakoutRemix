@@ -29,8 +29,8 @@ public class BallBehaviour : MonoBehaviour {
 		hasBouncedThisFrame = false;
 		if (bTime.btIsActive) {
 			Vector2 position = this.transform.position;
-			Debug.DrawRay(position, rb.velocity, Color.green);
-			RaycastHit2D dir = Physics2D.Raycast(position, rb.velocity, 20f, LayerMask.GetMask("Paddle"));
+			Debug.DrawRay(position, rb.velocity.normalized*3f, Color.green);
+			RaycastHit2D dir = Physics2D.Raycast(position, rb.velocity, 3f, LayerMask.GetMask("Paddle"));
 			if (dir) {
 				Vector2 newDir;
 				newDir = new Vector2(GetDeflectedX(dir.point, dir.transform.position, dir.collider.bounds.size.x) * deflectionStrength, 1);

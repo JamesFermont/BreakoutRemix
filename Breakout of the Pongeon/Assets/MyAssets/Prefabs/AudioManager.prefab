@@ -46,8 +46,8 @@ MonoBehaviour:
   sounds:
   - name: blockhit
     type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
-    clip: {fileID: 8300000, guid: ed4c57b6752726b48a6f9cd98c5cc4ab, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 92cd8dedb3777aa4ab77790b16cb4f1c, type: 3}
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -58,16 +58,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: cbomb
-    type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
-    clip: {fileID: 8300000, guid: 2f0755788d0908944825a0a4cf0ae4e7, type: 3}
-    volume: 0.2
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: bounce
     type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
-    clip: {fileID: 8300000, guid: 5b84310302a491747875974fada3e722, type: 3}
+    clip: {fileID: 8300000, guid: 14c09954a444a744d9aaa98ae83fb2f4, type: 3}
     volume: 0.15
     pitch: 1
     loop: 0
@@ -79,9 +72,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: testbgm
+  - name: bgm_menu
     type: {fileID: -2623996676782669458, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
-    clip: {fileID: 8300000, guid: d46062ab62c07be4c99da483ce4bf149, type: 3}
+    clip: {fileID: 8300000, guid: 4164255be04ecc54a8be78b0296a9678, type: 3}
     volume: 0.03
     pitch: 1
     loop: 1
@@ -90,6 +83,55 @@ MonoBehaviour:
     type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
     clip: {fileID: 8300000, guid: 14c09954a444a744d9aaa98ae83fb2f4, type: 3}
     volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bgm_game_01
+    type: {fileID: -2623996676782669458, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
+    clip: {fileID: 8300000, guid: d46062ab62c07be4c99da483ce4bf149, type: 3}
+    volume: 0.03
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bomb_hit
+    type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
+    clip: {fileID: 8300000, guid: 26695ca9f0e2bc643bb1ba876d88b320, type: 3}
+    volume: 0.03
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bomb_detonate
+    type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
+    clip: {fileID: 8300000, guid: 1097658921afa674aaea26b51734ed84, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bt_activate
+    type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
+    clip: {fileID: 8300000, guid: bbf8ab41e0206864fbd9e951a2ffb0b6, type: 3}
+    volume: 0.03
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: target_hit
+    type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
+    clip: {fileID: 8300000, guid: 6d59afd6b55621545a183ce856b672ac, type: 3}
+    volume: 0.03
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: zombie_hit
+    type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
+    clip: {fileID: 8300000, guid: 904003dd65d65864f827b0233debe8c9, type: 3}
+    volume: 0.03
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: zombie_revive
+    type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
+    clip: {fileID: 8300000, guid: e6d9fe53c5d247347b4648ed9983d572, type: 3}
+    volume: 0.03
     pitch: 1
     loop: 0
     source: {fileID: 0}

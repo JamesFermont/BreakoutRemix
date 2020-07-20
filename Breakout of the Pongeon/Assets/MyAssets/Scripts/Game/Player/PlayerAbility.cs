@@ -15,7 +15,26 @@ public class PlayerAbility : MonoBehaviour {
 	
 	public bool btIsActive;
 	
+	private AudioManager audioManager;
+
+	private void OnEnable() {
+		StartCoroutine(AudioManagerRef());
+	}
+	
+	private IEnumerator AudioManagerRef() {
+		float timeElapsed = 0f;
+
+		while (timeElapsed < 0.1f) {
+			timeElapsed += Time.deltaTime;
+
+			yield return null;
+		}
+		
+		audioManager = FindObjectOfType<AudioManager>();
+	}
+	
 	private void OnTriggerEnter2D(Collider2D other) {
+		if (other.GetComponent<DataPack>() == null) return;
 		energy += other.GetComponent<DataPack>().energyGiven;
 		if (energy > energyCap) energy = energyCap;
 		Debug.Log(energy);
@@ -31,6 +50,7 @@ public class PlayerAbility : MonoBehaviour {
 	}
 
 	private void ActivateBulletTime() {
+		audioManager.Play("bt_activate");
 		StartCoroutine(BulletTime());
 	}
 

@@ -52,7 +52,7 @@ public static class LevelManager {
 
     public static void EndLevel() {
         LevelStatistics.instance.EndTracker();
-        SceneManager.LoadSceneAsync("UITest", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("ResultScreen", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
 }

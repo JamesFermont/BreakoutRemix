@@ -21,6 +21,12 @@ public class TargetArea : MonoBehaviour {
 	[HideInInspector]
 	public bool isActivated;
 
+	private AudioManager audioManager;
+
+	private void Awake() {
+		audioManager = FindObjectOfType<AudioManager>();
+	}
+	
 	private void OnEnable() {
 		ball = GameObject.FindWithTag("Ball").GetComponent<BallBehaviour>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
@@ -33,6 +39,7 @@ public class TargetArea : MonoBehaviour {
 		if (other.gameObject.CompareTag("Ball")) {
 			if (!isActivated) {
 				isActivated = true;
+				audioManager.Play("target_hit");
 				spriteRenderer.sprite = open;
 				LevelStatistics.instance.AddScore(scoreOnTag);
 				targetManager.CheckCompleted();

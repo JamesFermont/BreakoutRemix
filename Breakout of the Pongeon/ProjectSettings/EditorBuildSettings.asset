@@ -18,9 +18,9 @@ EditorBuildSettings:
     path: Assets/MyAssets/Scenes/Level/GameLevel.unity
     guid: 4184f9f32052f524689c4d37e590db0e
   - enabled: 1
-    path: Assets/MyAssets/Scenes/UI/UITest.unity
-    guid: 29ea1a39fd8e3c445a151303a1252256
-  - enabled: 1
     path: Assets/MyAssets/Scenes/Level/EditorLevel.unity
     guid: 81a3c205bde6cf544bcb9956c6d921bc
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/UI/ResultScreen.unity
+    guid: 29ea1a39fd8e3c445a151303a1252256
   m_configObjects: {}
