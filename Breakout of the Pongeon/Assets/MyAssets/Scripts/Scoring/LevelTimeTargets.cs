@@ -33,6 +33,7 @@ public static class LevelTimeTargets {
             writer.Write(target.level);
             writer.Write(target.target);
         }
+        writer.Close();
         return false;
     }
     private static void ReadLevels() {
@@ -41,6 +42,7 @@ public static class LevelTimeTargets {
         while (reader.BaseStream.Position != reader.BaseStream.Length) {
             targets.Add(new LevelTimeTarget(reader.ReadString(), reader.ReadInt32()));
         }
+        reader.Close();
     }
 
     public static List<LevelTimeTarget> allTargets() {

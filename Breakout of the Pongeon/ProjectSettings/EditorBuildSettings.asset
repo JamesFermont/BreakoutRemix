@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyAssets/Scenes/UI/ResultScreen.unity
     guid: 29ea1a39fd8e3c445a151303a1252256
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/UI/TimeTaken.unity
+    guid: 68d8be13061feeb4fb6365f87f53f9c7
   m_configObjects: {}

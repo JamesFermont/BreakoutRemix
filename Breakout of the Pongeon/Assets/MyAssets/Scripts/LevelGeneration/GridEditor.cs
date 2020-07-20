@@ -21,7 +21,6 @@ public static class GridEditor {
         } else if (!ObjectHasSpaceAt(position, objectID))
             return false;
 
-
         int newID = LevelManager.currentLevel.grid.levelObjects.Count + 1;
         LevelManager.currentLevel.grid.levelObjects.Add(newID, objectID);
         LevelGenerator.instance.AddSingleID(position, objectID);

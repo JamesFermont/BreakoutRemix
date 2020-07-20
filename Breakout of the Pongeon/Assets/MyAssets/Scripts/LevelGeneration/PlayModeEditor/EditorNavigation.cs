@@ -34,6 +34,7 @@ public class EditorNavigation : MonoBehaviour {
 
         playButton.onClick.AddListener(delegate { switchModes(); });
 
+        LevelManager.CreateNewLevel();
         SwitchToEdit();
     }
 
