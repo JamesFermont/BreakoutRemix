@@ -24,6 +24,6 @@ public class Score {
 
     public float timeMod() {
         // Time Mod = 1 + (+/- 0.1 for every secondsPerTimeModInterval seconds that the level time is below/above the target time, limited to between minTimeMod and maxTimeMod)
-        return Mathf.Clamp(1 + (float)Math.Round((timeTaken - LevelTimeTargets.getTarget(level)) * (1f / Constants.SECONDS_PER_TIMEMOD_INTERVAL)) * 0.1f, Constants.MIN_TIMEMOD, Constants.MAX_TIMEMOD);
+        return Mathf.Clamp(1 + (float)Math.Round((LevelTimeTargets.getTarget(level) - timeTaken) * (1f / Constants.SECONDS_PER_TIMEMOD_INTERVAL)) * 0.1f, Constants.MIN_TIMEMOD, Constants.MAX_TIMEMOD);
     }
 }

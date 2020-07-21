@@ -47,4 +47,9 @@ public class AudioManager : MonoBehaviour {
         Mathf.Clamp(pitch, 0.1f, 3f);
         soundToPlay.source.pitch = pitch;
     }
+
+    public AudioSource FetchVideoSource() {
+        Sound sourceToFetch = Array.Find(sounds, sound => sound.name == "video");
+        return sourceToFetch.source;
+    }
 }

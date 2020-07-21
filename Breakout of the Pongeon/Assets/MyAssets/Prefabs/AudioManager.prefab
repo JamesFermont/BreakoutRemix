@@ -142,3 +142,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: video
+    type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
+    clip: {fileID: 0}
+    volume: 0.03
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

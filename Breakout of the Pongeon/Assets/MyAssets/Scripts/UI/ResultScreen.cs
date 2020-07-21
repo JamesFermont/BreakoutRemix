@@ -17,7 +17,7 @@ public class ResultScreen : MonoBehaviour {
         blocksDestroyed = LevelStatistics.instance.blocksDestroyed;
         
         scoreCount.text = "Score: " + LevelStatistics.instance.score;
-        timeMod.text = "Time Mod: x" + results[0];
+        timeMod.text = "Time Mod: x" + results[0] + "(Time: " + timeSpent + " Target:" + LevelManager.targetTime + ")";
         finalScore.text = "Final Score: " + results[1];
     }
 }

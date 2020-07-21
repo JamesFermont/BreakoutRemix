@@ -1821,6 +1821,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePersistants
       objectReference: {fileID: 0}
+    - target: {fileID: 7509498972634131424, guid: 9ab1a385740e6d24e87c4905be6e6684,
+        type: 3}
+      propertyPath: sounds.Array.data[14].volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8330589115262871953, guid: 9ab1a385740e6d24e87c4905be6e6684,
         type: 3}
       propertyPath: m_LocalPosition.x

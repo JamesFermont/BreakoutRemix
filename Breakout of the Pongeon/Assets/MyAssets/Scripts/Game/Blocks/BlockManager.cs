@@ -39,17 +39,10 @@ public class BlockManager : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        PlaySounds();
+        
         if (isImmune) return;
         health -= 1;
-
-        if (this.gameObject.GetComponent<CircleExplosion>() != null) {
-            audioManager.Play("bomb_hit");
-        } else if (isImmune) {
-            Debug.Log("wawaOops");
-            audioManager.Play("immune_hit");
-        } else if (this.gameObject.GetComponent<TargetArea>() == null && this.gameObject.GetComponent<ReviveBlock>() == null) {
-            audioManager.Play("block_hit");
-        }
 
         if (health <= 0) {
             var dpChance = Random.Range(1, 100);
@@ -66,6 +59,22 @@ public class BlockManager : MonoBehaviour {
         } else {
             onDamaged?.Invoke();
             UpdateVisuals();
+        }
+    }
+
+    private void PlaySounds() {
+        if (isImmune && !this.gameObject.GetComponent<TargetArea>()) {
+            audioManager.Play("immune_hit");
+            return;
+        }
+
+        if (this.gameObject.GetComponent<CircleExplosion>() != null) {
+            audioManager.Play("bomb_hit");
+            return;
+        }
+        
+        if (this.gameObject.GetComponent<TargetArea>() == null && this.gameObject.GetComponent<ReviveBlock>() == null) {
+            audioManager.Play("block_hit");
         }
     }
 
