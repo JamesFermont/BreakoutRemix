@@ -42,8 +42,14 @@ public class BlockManager : MonoBehaviour {
         if (isImmune) return;
         health -= 1;
 
-        audioManager.Play("blockhit");
-        audioManager.UpdatePitch("blockhit", Random.Range(0.3f, 1.5f));
+        if (this.gameObject.GetComponent<CircleExplosion>() != null) {
+            audioManager.Play("bomb_hit");
+        } else if (isImmune) {
+            Debug.Log("wawaOops");
+            audioManager.Play("immune_hit");
+        } else if (this.gameObject.GetComponent<TargetArea>() == null && this.gameObject.GetComponent<ReviveBlock>() == null) {
+            audioManager.Play("block_hit");
+        }
 
         if (health <= 0) {
             var dpChance = Random.Range(1, 100);
