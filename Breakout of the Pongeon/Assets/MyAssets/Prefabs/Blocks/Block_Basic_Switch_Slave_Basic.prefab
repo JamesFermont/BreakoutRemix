@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 6206853446362889361}
   - component: {fileID: 1893505041977308224}
   - component: {fileID: 3639126349038944826}
+  - component: {fileID: 3111148978615764288}
   m_Layer: 8
-  m_Name: Block_Basic
+  m_Name: Block_Basic_Switch_Slave_Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,3 +172,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3111148978615764288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8186645009006404991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfc33fcf5c90b748a1ce6d5379cdebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
