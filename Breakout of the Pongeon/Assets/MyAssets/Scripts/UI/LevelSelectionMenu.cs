@@ -30,6 +30,7 @@ public class LevelSelectionMenu : MonoBehaviour
                 currentLevelButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = level;
                 currentLevelButton.transform.localPosition = new Vector3(0f, -30f - 60f * numberOfLevels++, 0f);
                 currentLevelButton.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(s); });
+                currentLevelButton.GetComponent<Button>().interactable = true;
             }
         }
 

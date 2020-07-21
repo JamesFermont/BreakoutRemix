@@ -45,5 +45,9 @@ public static class Scores {
         return returnScores;
     }
 
+    public static int GetHighscore(string levelName) {
+        return (GetSortedScoresFromLevel(levelName).Count == 0) ? 0 : (int)GetSortedScoresFromLevel(levelName)[0].finalScore();
+    }
+
 
 }
