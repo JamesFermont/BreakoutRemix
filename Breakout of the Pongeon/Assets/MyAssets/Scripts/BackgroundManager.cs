@@ -10,8 +10,23 @@ public class BackgroundManager : MonoBehaviour {
     private double duration;
 
     private void Awake() {
+        StartCoroutine(InitLibrary());
+    }
+
+    private IEnumerator InitLibrary() {
+        float timeElapsed = 0f;
+
+        while (timeElapsed <= 0.5f) {
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        BuildLibrary();
+    }
+
+    private void BuildLibrary() {
         audioSource = FindObjectOfType<AudioManager>().FetchVideoSource();
-        
+
         foreach (Background bg in tracks) {
             bg.source = gameObject.AddComponent<VideoPlayer>();
             bg.source.playOnAwake = false;
@@ -24,13 +39,12 @@ public class BackgroundManager : MonoBehaviour {
             bg.source.isLooping = bg.loop;
             bg.source.waitForFirstFrame = bg.waitForFirstFrame;
         }
-    }
 
-    private void Start() {
         Play("idle");
     }
 
     public void Play(string bgName) {
+        if (IsPlaying("idle")) return;
         Background bgToPlay = Array.Find(tracks, bg => bg.name == bgName);
         if (bgToPlay == null) {
             Debug.LogWarning("Background: " + bgName + " was not found!");
