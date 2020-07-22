@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour {
             if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt)) && Input.GetKey(KeyCode.L))
                 OpenTimeTargetMenu();
         }
-        
+
     }
 
     private void OpenTimeTargetMenu() {

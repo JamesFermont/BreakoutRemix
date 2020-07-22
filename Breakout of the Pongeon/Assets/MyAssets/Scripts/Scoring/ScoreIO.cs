@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public static class ScoreIO
-{
+public static class ScoreIO {
     public static string scoreFilePath = "/StreamingAssets/";
     public static string scoreFileName = "notquitehighscores";
     public static string scoreFileEnding = ".nqi";
-    
+
     private static BinaryReader reader;
     private static BinaryWriter writer;
 
@@ -20,7 +19,7 @@ public static class ScoreIO
     public static bool SaveScores(List<Score> scores) {
         writer = new BinaryWriter(File.Open(scoreFile(), FileMode.Create));
         try {
-            foreach(Score score in scores) {
+            foreach (Score score in scores) {
                 writer.Write(score.player);
                 writer.Write(score.level);
                 writer.Write(score.baseScore);
@@ -28,22 +27,13 @@ public static class ScoreIO
             }
 
 
-
+            writer.Close();
             return true;
         } catch (Exception ex) {
             Debug.Log(ex.ToString());
+            writer.Close();
             return false;
         }
-        return false;
-        /*LevelWriter writer = new LevelWriter(level, Application.dataPath + levelFilesPath + level.name + levelFilesEnding);
-        try {
-            writer.WriteLevel();
-
-        } catch (Exception ex) {
-            Debug.LogError(ex.ToString());
-            return false;
-        }
-        return true;*/
     }
 
     public static List<Score> LoadScores() {
@@ -53,9 +43,11 @@ public static class ScoreIO
             while (reader.BaseStream.Position != reader.BaseStream.Length) {
                 returnList.Add(new Score(reader.ReadString(), reader.ReadString(), reader.ReadInt32(), reader.ReadInt32()));
             }
+            reader.Close();
             return returnList;
         } catch (Exception ex) {
             Debug.Log(ex.ToString());
+            reader.Close();
             return null;
         }
     }

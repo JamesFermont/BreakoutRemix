@@ -10,7 +10,7 @@ public class LevelStatistics {
             return Instance;
         }
     }
-    
+
     public float time;
     public int blocksDestroyed;
     public int ballsDropped;
@@ -41,7 +41,7 @@ public class LevelStatistics {
         }
         blocksDestroyed = deadBlocks;
     }
-    
+
     public void AddScore(int delta) {
         score += delta;
     }
@@ -60,9 +60,9 @@ public class LevelStatistics {
         }
 
         score -= ballsDropped * scoreMods.penaltyForDroppedBall;
-        
+
         // Time Mod = 1 + (+/- 0.1 for every secondsPerTimeModInterval seconds that the level time is below/above the target time, limited to between minTimeMod and maxTimeMod)
-        float timeMod = Mathf.Clamp(1 + (float)Math.Round(((int)targetTime-(int)levelTime)*(1f/scoreMods.secondsPerTimeModInterval))*0.1f, 
+        float timeMod = Mathf.Clamp(1 + (float)Math.Round(((int)targetTime - (int)levelTime) * (1f / scoreMods.secondsPerTimeModInterval)) * 0.1f,
                         scoreMods.minTimeMod, scoreMods.maxTimeMod);
         float finalScore = score * timeMod;
 

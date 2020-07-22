@@ -49,5 +49,16 @@ public static class Scores {
         return (GetSortedScoresFromLevel(levelName).Count == 0) ? 0 : (int)GetSortedScoresFromLevel(levelName)[0].finalScore();
     }
 
+    public static bool isInHighScore(string level, int score) {
+        List<Score> levelScores = GetSortedScoresFromLevel(level);
+        if (levelScores.Count < 10)
+            return true;
+        foreach (Score highScore in levelScores) {
+            if (score >= highScore.finalScore())
+                return true;
+        }
+        return false;
+    }
+
 
 }

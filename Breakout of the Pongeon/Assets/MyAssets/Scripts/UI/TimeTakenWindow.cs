@@ -37,7 +37,7 @@ public class TimeTakenWindow : MonoBehaviour {
     private void SubmitTime(TMPro.TMP_InputField myField, string level) {
         int score = int.Parse(myField.text);
         LevelTimeTargets.setTarget(level, score);
-        Debug.Log(level +":" + myField.text);
+        Debug.Log(level + ":" + myField.text);
     }
 
     private void updateLists() {

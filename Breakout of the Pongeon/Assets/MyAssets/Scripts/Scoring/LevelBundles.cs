@@ -12,6 +12,9 @@ public class LevelBundles : MonoBehaviour
     private class Bundles {
         public LevelBundle[] bundles;
     }
+    private void Start() {
+        
+    }
 
     private void Awake() {
         if (instance == null)
