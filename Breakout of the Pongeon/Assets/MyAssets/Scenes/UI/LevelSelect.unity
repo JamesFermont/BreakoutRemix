@@ -389,9 +389,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoadButton: {fileID: 151782144}
-  sceneName: LevelSelect
+  sceneName: MainMenu
   isAdditive: 0
-  type: 1
+  type: 0
 --- !u!1 &277830469
 GameObject:
   m_ObjectHideFlags: 0

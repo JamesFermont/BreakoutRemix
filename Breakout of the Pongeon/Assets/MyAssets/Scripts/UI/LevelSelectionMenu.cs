@@ -12,6 +12,11 @@ public class LevelSelectionMenu : MonoBehaviour
 
     int numberOfLevels = 0;
 
+    private void Start() {
+        if (Time.timeScale != 1f)
+            Time.timeScale = 1f;
+    }
+
     private void OnEnable() {
         SceneManager.sceneLoaded += OnSceneLoaded;
 
