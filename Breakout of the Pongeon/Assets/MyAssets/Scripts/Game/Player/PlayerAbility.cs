@@ -17,6 +17,11 @@ public class PlayerAbility : MonoBehaviour {
 
     private AudioManager audioManager;
 
+    [SerializeField] private Sprite[] charges;
+    [SerializeField] private Sprite[] energyBar;
+    [SerializeField] private GameObject chargeSprite;
+    [SerializeField] private GameObject energySprite;
+
     private void OnEnable() {
         StartCoroutine(AudioManagerRef());
     }
@@ -38,7 +43,7 @@ public class PlayerAbility : MonoBehaviour {
         energy += other.GetComponent<DataPack>().energyGiven;
         LevelStatistics.instance.score += other.GetComponent<DataPack>().pointsGiven;
         if (energy > energyCap) energy = energyCap;
-        //Debug.Log(energy); Sorry. Hat mich im Log genervt <3 Janik
+        UpdateDisplay();
         Destroy(other.gameObject);
     }
 
@@ -46,6 +51,7 @@ public class PlayerAbility : MonoBehaviour {
         if (!Input.GetMouseButtonDown(1)) return;
         if (energy < btEnergyCost || btIsActive) return;
         energy -= btEnergyCost;
+        UpdateDisplay();
         ActivateBulletTime();
         Debug.Log("Bullet Time activate!!!!");
     }
@@ -53,6 +59,19 @@ public class PlayerAbility : MonoBehaviour {
     private void ActivateBulletTime() {
         audioManager.Play("bt_activate");
         StartCoroutine(BulletTime());
+    }
+
+    private void UpdateDisplay() {
+        var chargedBts = (int)(energy / 100f);
+        chargeSprite.GetComponent<SpriteRenderer>().sprite = charges[chargedBts];
+        if (energy >= 25 && energy < 200)
+            energySprite.GetComponent<SpriteRenderer>().sprite = energyBar[(int)((energy-chargedBts*100)/25f)];
+        else if (energy == 200) {
+            energySprite.GetComponent<SpriteRenderer>().sprite = energyBar[4];
+        }
+        else {
+            energySprite.GetComponent<SpriteRenderer>().sprite = energyBar[0];
+        }
     }
 
     private IEnumerator BulletTime() {

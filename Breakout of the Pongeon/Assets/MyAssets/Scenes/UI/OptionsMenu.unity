@@ -5837,6 +5837,8 @@ MonoBehaviour:
   ballSpeedSlider: {fileID: 38384833}
   valueText: {fileID: 1653313467}
   resolutionDropdown: {fileID: 599260952}
+  normalMode: {fileID: 943985448}
+  hardMode: {fileID: 775823315}
 --- !u!114 &1647065210
 MonoBehaviour:
   m_ObjectHideFlags: 0

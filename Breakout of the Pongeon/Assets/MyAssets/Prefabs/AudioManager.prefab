@@ -47,7 +47,7 @@ MonoBehaviour:
   - name: block_hit
     type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
     clip: {fileID: 8300000, guid: 92cd8dedb3777aa4ab77790b16cb4f1c, type: 3}
-    volume: 0.1
+    volume: 0.05
     pitch: 1
     loop: 0
     source: {fileID: 0}

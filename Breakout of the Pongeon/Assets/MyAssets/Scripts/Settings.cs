@@ -13,6 +13,8 @@ public class Settings : MonoBehaviour {
     public Slider ballSpeedSlider;
     public TMP_Text valueText;
     public TMP_Dropdown resolutionDropdown;
+    public Toggle normalMode;
+    public Toggle hardMode;
     
     private void OnEnable() {
         if (PlayerPrefs.HasKey("masVolume")) {
@@ -40,6 +42,18 @@ public class Settings : MonoBehaviour {
         
         if (PlayerPrefs.HasKey("screenSizeId"))
             resolutionDropdown.value = PlayerPrefs.GetInt("screenSizeId");
+        
+        if (PlayerPrefs.HasKey("playMode"))
+            switch (PlayerPrefs.GetInt("playMode")) {
+                case 0:
+                    normalMode.isOn = true;
+                    hardMode.isOn = false;
+                    break;
+                case 1:
+                    normalMode.isOn = false;
+                    hardMode.isOn = true;
+                    break;
+            }
     }
 
     public void UpdateBallSpeed(float mod) {
