@@ -51,11 +51,13 @@ public class ResultScreen : MonoBehaviour {
         if (!string.IsNullOrWhiteSpace(playerName)) {
             SingleScreen.transform.GetComponentInChildren<Button>().interactable = false;
             Scores.SubmitScore(new Score(playerName, LevelManager.currentLevel.name, LevelStatistics.instance.score, (int)LevelStatistics.instance.time));
+            onScoreSubmit(new Score(playerName, LevelManager.currentLevel.name, LevelStatistics.instance.score, (int)LevelStatistics.instance.time));
             navigationButtons.SetActive(true);
             SetupHighScoreScreen();
         }
     }
-
+    public delegate void OnScoreSubmitted(Score score);
+    public static event OnScoreSubmitted onScoreSubmit;
     private void SetupHighScoreScreen() {
         List<Score> levelScore = Scores.GetSortedScoresFromLevel(LevelManager.currentLevel.name);
         Debug.Log(levelScore.Count);
