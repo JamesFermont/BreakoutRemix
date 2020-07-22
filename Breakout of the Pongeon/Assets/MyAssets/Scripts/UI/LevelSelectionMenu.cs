@@ -51,6 +51,7 @@ public class LevelSelectionMenu : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+
     private void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
         if (scene.name != "GameLevel")
             return;

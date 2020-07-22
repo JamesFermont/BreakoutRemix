@@ -12,6 +12,7 @@ public class MouseMovement : MonoBehaviour
     private Vector3 newPosition;
     private Vector3 mousePositionInWorld;
     private Camera mainCamera;
+    public float bounds = 6.4f;
 
 
     public bool isHidden;
@@ -29,7 +30,7 @@ public class MouseMovement : MonoBehaviour
             switch (currentMode) {
                 case MovementMode.DIRECT:
                     if (Time.timeScale >= Mathf.Epsilon)
-                        newPosition.x = mainCamera.ScreenToWorldPoint(Input.mousePosition).x;
+                        newPosition.x = Mathf.Clamp(mainCamera.ScreenToWorldPoint(Input.mousePosition).x, bounds *-1f, bounds);
                     break;
                 case MovementMode.SMOOTH:
                     if (Mathf.Abs(mousePositionInWorld.x - transform.position.x) <= Time.deltaTime * movementSpeed) {
