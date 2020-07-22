@@ -1,0 +1,1976 @@
+fileFormatVersion: 2
+guid: fdd297097a3371846a9d151fe3b423f8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6279532935003205394
+    second: Paddle-Idle_0
+  - first:
+      213: -4727825422951834525
+    second: Paddle-Idle_1
+  - first:
+      213: -8773980302948453858
+    second: Paddle-Idle_2
+  - first:
+      213: 7244942997278556278
+    second: Paddle-Idle_3
+  - first:
+      213: 3964544621430037243
+    second: Paddle-Idle_4
+  - first:
+      213: -1048432055746721241
+    second: Paddle-Idle_5
+  - first:
+      213: -8071070710323387694
+    second: Paddle-Idle_6
+  - first:
+      213: -2312971491235056230
+    second: Paddle-Idle_7
+  - first:
+      213: -7936699625571386248
+    second: Paddle-Idle_8
+  - first:
+      213: -1879131282654207923
+    second: Paddle-Idle_9
+  - first:
+      213: -8454522590433927996
+    second: Paddle-Idle_10
+  - first:
+      213: 5773624466166390983
+    second: Paddle-Idle_11
+  - first:
+      213: -2206375843851268056
+    second: Paddle-Idle_12
+  - first:
+      213: 4451153086848842681
+    second: Paddle-Idle_13
+  - first:
+      213: -2276788229152191190
+    second: Paddle-Idle_14
+  - first:
+      213: -5531033469498684006
+    second: Paddle-Idle_15
+  - first:
+      213: -3468826343953749001
+    second: Paddle-Idle_16
+  - first:
+      213: -309496463355936039
+    second: Paddle-Idle_17
+  - first:
+      213: 6584045314793849536
+    second: Paddle-Idle_18
+  - first:
+      213: 1582407267283089404
+    second: Paddle-Idle_19
+  - first:
+      213: 1588283545561362291
+    second: Paddle-Idle_20
+  - first:
+      213: 8300719998081251792
+    second: Paddle-Idle_21
+  - first:
+      213: 3340302942699479981
+    second: Paddle-Idle_22
+  - first:
+      213: 6607626259024256527
+    second: Paddle-Idle_23
+  - first:
+      213: -1566670554050283532
+    second: Paddle-Idle_24
+  - first:
+      213: -2931037560458149271
+    second: Paddle-Idle_25
+  - first:
+      213: 8837542338277391286
+    second: Paddle-Idle_26
+  - first:
+      213: 6372393686663593713
+    second: Paddle-Idle_27
+  - first:
+      213: 7729867378078962443
+    second: Paddle-Idle_28
+  - first:
+      213: 3086537454541740545
+    second: Paddle-Idle_29
+  - first:
+      213: 1027348356054574184
+    second: Paddle-Idle_30
+  - first:
+      213: -5901099171748908098
+    second: Paddle-Idle_31
+  - first:
+      213: 3468750887997812378
+    second: Paddle-Idle_32
+  - first:
+      213: -2416200876181100168
+    second: Paddle-Idle_33
+  - first:
+      213: 4713713542418376459
+    second: Paddle-Idle_34
+  - first:
+      213: -7735826497694169591
+    second: Paddle-Idle_35
+  - first:
+      213: -5945093257544501098
+    second: Paddle-Idle_36
+  - first:
+      213: 5051559802670917714
+    second: Paddle-Idle_37
+  - first:
+      213: 744272773013631960
+    second: Paddle-Idle_38
+  - first:
+      213: 8085105088961565042
+    second: Paddle-Idle_39
+  - first:
+      213: -8129034088918421779
+    second: Paddle-Idle_40
+  - first:
+      213: -7206363496161425034
+    second: Paddle-Idle_41
+  - first:
+      213: 362365875022532054
+    second: Paddle-Idle_42
+  - first:
+      213: -3425128585454717909
+    second: Paddle-Idle_43
+  - first:
+      213: -7739295531714424970
+    second: Paddle-Idle_44
+  - first:
+      213: 4022667393810138655
+    second: Paddle-Idle_45
+  - first:
+      213: -46484680613233343
+    second: Paddle-Idle_46
+  - first:
+      213: 9063635354952136721
+    second: Paddle-Idle_47
+  - first:
+      213: 8842843610429786432
+    second: Paddle-Idle_48
+  - first:
+      213: 2530587582660924000
+    second: Paddle-Idle_49
+  - first:
+      213: 1359295392144846165
+    second: Paddle-Idle_50
+  - first:
+      213: -2264351653400198558
+    second: Paddle-Idle_51
+  - first:
+      213: 3772991865827421589
+    second: Paddle-Idle_52
+  - first:
+      213: 6466103321634604533
+    second: Paddle-Idle_53
+  - first:
+      213: -5044941137999169151
+    second: Paddle-Idle_54
+  - first:
+      213: 3306220247014843769
+    second: Paddle-Idle_55
+  - first:
+      213: 1607139772484243389
+    second: Paddle-Idle_56
+  - first:
+      213: 5819082403424927171
+    second: Paddle-Idle_57
+  - first:
+      213: 641711359308346507
+    second: Paddle-Idle_58
+  - first:
+      213: 6420040578229733333
+    second: Paddle-Idle_59
+  - first:
+      213: 7693972772801091857
+    second: Paddle-Idle_60
+  - first:
+      213: -7358156940351390425
+    second: Paddle-Idle_61
+  - first:
+      213: 3265613261742225573
+    second: Paddle-Idle_62
+  - first:
+      213: 8880244614434178350
+    second: Paddle-Idle_63
+  - first:
+      213: -7713500693340329108
+    second: Paddle-Idle_64
+  - first:
+      213: 1501179593988693689
+    second: Paddle-Idle_65
+  - first:
+      213: 5041248970406665480
+    second: Paddle-Idle_66
+  - first:
+      213: -8393931639960392080
+    second: Paddle-Idle_67
+  - first:
+      213: 6719972140955212184
+    second: Paddle-Idle_68
+  - first:
+      213: 216227882307264603
+    second: Paddle-Idle_69
+  - first:
+      213: 5076914128822039307
+    second: Paddle-Idle_70
+  - first:
+      213: -5172624059393396363
+    second: Paddle-Idle_71
+  - first:
+      213: -473821882196196946
+    second: Paddle-Idle_72
+  - first:
+      213: 4157042719317887569
+    second: Paddle-Idle_73
+  - first:
+      213: -2192885293182507311
+    second: Paddle-Idle_74
+  - first:
+      213: 4182611486325116295
+    second: Paddle-Idle_75
+  - first:
+      213: -5820850883648596839
+    second: Paddle-Idle_76
+  - first:
+      213: 984212899782925192
+    second: Paddle-Idle_77
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paddle-Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee094c5e01e9ad8a0800000000000000
+      internalID: -6279532935003205394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c15e0b3d3636eb0800000000000000
+      internalID: -4727825422951834525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12bb78a66f8c3680800000000000000
+      internalID: -8773980302948453858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6700eba45453b8460800000000000000
+      internalID: 7244942997278556278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfad5800454e40730800000000000000
+      internalID: 3964544621430037243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a8512a9983371f0800000000000000
+      internalID: -1048432055746721241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d26d1a83fbcdff80800000000000000
+      internalID: -8071070710323387694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 360
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a953451feaca6efd0800000000000000
+      internalID: -2312971491235056230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c77d0bdbd2bd190800000000000000
+      internalID: -7936699625571386248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d406213fd0cfbe5e0800000000000000
+      internalID: -1879131282654207923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc9bab7f708baa80800000000000000
+      internalID: -8454522590433927996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_11
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c02a5cacd8002050800000000000000
+      internalID: 5773624466166390983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8201e322cd06161e0800000000000000
+      internalID: -2206375843851268056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb3286362ca5cd30800000000000000
+      internalID: 4451153086848842681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_14
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2dc7942b293760e0800000000000000
+      internalID: -2276788229152191190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_15
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 320
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d0cb93d52dd33b0800000000000000
+      internalID: -5531033469498684006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fbae1d91d04cdfc0800000000000000
+      internalID: -3468826343953749001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d20e6a3b9274bbf0800000000000000
+      internalID: -309496463355936039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2cc5d745a3f5b50800000000000000
+      internalID: 6584045314793849536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_19
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7b7609607d5f510800000000000000
+      internalID: 1582407267283089404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f68c73877ba0610800000000000000
+      internalID: 1588283545561362291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_21
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d93d91fbd4123370800000000000000
+      internalID: 8300719998081251792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_22
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da36bc524d32b5e20800000000000000
+      internalID: 3340302942699479981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_23
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 280
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e1fa9e21103bb50800000000000000
+      internalID: 6607626259024256527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7b4c18e61124ae0800000000000000
+      internalID: -1566670554050283532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96280993edcd257d0800000000000000
+      internalID: -2931037560458149271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbbf70fee145aa70800000000000000
+      internalID: 8837542338277391286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe768eab4a4f6850800000000000000
+      internalID: 6372393686663593713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_28
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03d64ffc61064b60800000000000000
+      internalID: 7729867378078962443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_29
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a16e3367595da20800000000000000
+      internalID: 3086537454541740545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_30
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864e63ff2efd14e00800000000000000
+      internalID: 1027348356054574184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_31
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 240
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3fd8391951b1ea0800000000000000
+      internalID: -5901099171748908098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e2e6ded8a732030800000000000000
+      internalID: 3468750887997812378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879ec3dca1ee77ed0800000000000000
+      internalID: -2416200876181100168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_34
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07abc41e797a6140800000000000000
+      internalID: 4713713542418376459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_35
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90682e859c2d4a490800000000000000
+      internalID: -7735826497694169591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_36
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6987d734e29ce7da0800000000000000
+      internalID: -5945093257544501098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_37
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258a7df40eeba1640800000000000000
+      internalID: 5051559802670917714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_38
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3f87bc420345a00800000000000000
+      internalID: 744272773013631960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_39
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 200
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271d14fdd30143070800000000000000
+      internalID: 8085105088961565042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deee9fac09edf2f80800000000000000
+      internalID: -8129034088918421779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679c4f8c49addfb90800000000000000
+      internalID: -7206363496161425034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd017be7d1670500800000000000000
+      internalID: 362365875022532054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_43
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b247fe9d2bf7770d0800000000000000
+      internalID: -3425128585454717909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_44
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fc46ce7bf789490800000000000000
+      internalID: -7739295531714424970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_45
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1689918ea263d730800000000000000
+      internalID: 4022667393810138655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_46
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14dfc84ed6ada5ff0800000000000000
+      internalID: -46484680613233343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_47
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 160
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118f799855088cd70800000000000000
+      internalID: 9063635354952136721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049000c896718ba70800000000000000
+      internalID: 8842843610429786432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062d481bff37e1320800000000000000
+      internalID: 2530587582660924000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d6e9115ff2dd210800000000000000
+      internalID: 1359295392144846165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_51
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26243841b286390e0800000000000000
+      internalID: -2264351653400198558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_52
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59de41f9c1c5c5430800000000000000
+      internalID: 3772991865827421589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_53
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5010f46b63cb950800000000000000
+      internalID: 6466103321634604533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_54
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189fdc4a3c4ccf9b0800000000000000
+      internalID: -5044941137999169151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_55
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 120
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975268c2ccd02ed20800000000000000
+      internalID: 3306220247014843769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf435bab15bd4610800000000000000
+      internalID: 1607139772484243389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd7ed67d9881c050800000000000000
+      internalID: 5819082403424927171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_58
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8438e3d411d7e800800000000000000
+      internalID: 641711359308346507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_59
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d70afc14e0981950800000000000000
+      internalID: 6420040578229733333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_60
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1191652f87b76ca60800000000000000
+      internalID: 7693972772801091857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_61
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72db7c87f3392e990800000000000000
+      internalID: -7358156940351390425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_62
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a833f7a5f9c15d20800000000000000
+      internalID: 3265613261742225573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_63
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 80
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25cce16d67fc3b70800000000000000
+      internalID: 8880244614434178350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b68bebcf324f490800000000000000
+      internalID: -7713500693340329108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_65
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bed2cb13e245d410800000000000000
+      internalID: 1501179593988693689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_66
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d94699a3d16f540800000000000000
+      internalID: 5041248970406665480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_67
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07eaf3b75a3c28b80800000000000000
+      internalID: -8393931639960392080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_68
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899182aee03224d50800000000000000
+      internalID: 6719972140955212184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_69
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50a5730d12300300800000000000000
+      internalID: 216227882307264603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_70
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0379936082d47640800000000000000
+      internalID: 5076914128822039307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_71
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 40
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571b73fd2d52738b0800000000000000
+      internalID: -5172624059393396363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea183e03285ac69f0800000000000000
+      internalID: -473821882196196946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_73
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a01190458c0b930800000000000000
+      internalID: 4157042719317887569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_74
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6adaab17e4191e0800000000000000
+      internalID: -2192885293182507311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_75
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d80e38cfe9b0a30800000000000000
+      internalID: 4182611486325116295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_76
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9945b9526fe283fa0800000000000000
+      internalID: -5820850883648596839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle-Idle_77
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b1be2fa60a8ad00800000000000000
+      internalID: 984212899782925192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
