@@ -9,17 +9,14 @@ public class BallStart : MonoBehaviour {
     public bool isBallStart;
     public bool isHidden;
 
-    private AudioManager audioManager;
-
-    private void Awake() {
-        audioManager = FindObjectOfType<AudioManager>();
-    }
+    [SerializeField] private AudioManager audioManager;
 
     private void OnEnable() {
         if (!paddle) paddle = GameObject.FindWithTag("Paddle").transform;
         if (!ball) ball = GameObject.FindWithTag("Ball").transform;
         isBallStart = true;
-        StartCoroutine(AudioManagerRef());
+        if (!audioManager)
+            StartCoroutine(AudioManagerRef());
     }
 
     private IEnumerator AudioManagerRef() {
