@@ -9,7 +9,7 @@ public class ResultScreen : MonoBehaviour {
     public Button SingleScreenButton;
     public Button HighScoreButton;
     public GameObject navigationButtons;
-
+    public TMP_Text hiddenMenu;
     public float timeSpent;
     public int blocksDestroyed;
 
@@ -50,14 +50,16 @@ public class ResultScreen : MonoBehaviour {
         string playerName = SingleScreen.transform.GetChild(4).GetComponentInChildren<TMP_InputField>().text;
         if (!string.IsNullOrWhiteSpace(playerName)) {
             SingleScreen.transform.GetComponentInChildren<Button>().interactable = false;
-            Scores.SubmitScore(new Score(playerName, LevelManager.currentLevel.name, LevelStatistics.instance.score, (int)LevelStatistics.instance.time));
-            onScoreSubmit(new Score(playerName, LevelManager.currentLevel.name, LevelStatistics.instance.score, (int)LevelStatistics.instance.time));
+            Score score = new Score(playerName, LevelManager.currentLevel.name, LevelStatistics.instance.score, (int)LevelStatistics.instance.time);
+            hiddenMenu.text = LevelManager.currentLevel.name + ": " + playerName + " reached " + score.finalScore() + " (base: " + LevelStatistics.instance.score + " time: " + LevelStatistics.instance.time + ")";
+            Scores.SubmitScore(score);
+            
             navigationButtons.SetActive(true);
             SetupHighScoreScreen();
+        } else {
+            hiddenMenu.text = "Improper Submission";
         }
     }
-    public delegate void OnScoreSubmitted(Score score);
-    public static event OnScoreSubmitted onScoreSubmit;
     private void SetupHighScoreScreen() {
         List<Score> levelScore = Scores.GetSortedScoresFromLevel(LevelManager.currentLevel.name);
         Debug.Log(levelScore.Count);
