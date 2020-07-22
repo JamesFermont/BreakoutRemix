@@ -21,6 +21,14 @@ public class TargetArea : MonoBehaviour {
 	[HideInInspector]
 	public bool isActivated;
 
+	private AudioManager audioManager;
+	private BackgroundManager bgManager;
+
+	private void Awake() {
+		audioManager = FindObjectOfType<AudioManager>();
+		bgManager = FindObjectOfType<BackgroundManager>();
+	}
+	
 	private void OnEnable() {
 		ball = GameObject.FindWithTag("Ball").GetComponent<BallBehaviour>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
@@ -37,10 +45,32 @@ public class TargetArea : MonoBehaviour {
 				LevelStatistics.instance.AddScore(scoreOnTag);
 				targetManager.CheckCompleted();
 				if (!targetManager.isCompleted) {
+					audioManager.Play("target_hit");
+					PlayVideo();
 					if (unitType == UnitType.UNIT_TIME) drain = StartCoroutine(DrainEnergyOverTime(drainCount));
 					if (unitType == UnitType.UNIT_BOUNCE) drain = StartCoroutine(DrainEnergyOverBounces(drainCount));
 				}
 			}
+		}
+	}
+
+	private void PlayVideo() {
+		int rand = Random.Range(1, 3);
+		Debug.Log(rand);
+		switch (rand)
+		{
+			case 1:
+				bgManager.Stop("idle");
+				bgManager.Play("damnyou");
+				break;
+			case 2:
+				bgManager.Stop("idle");
+				bgManager.Play("futile");
+				break;
+			case 3:
+				bgManager.Stop("idle");
+				bgManager.Play("succeed");
+				break;
 		}
 	}
 	

@@ -6,6 +6,7 @@ public static class LevelManager {
 
     public static Level currentLevel;
     public static GameObject currentLevelGO;
+    public static int targetTime { get { return LevelTimeTargets.getTarget(currentLevel.name); } private set { targetTime = value; } }
 
     public static void CreateNewLevel() {
         CreateNewLevel("New Level");
@@ -52,7 +53,7 @@ public static class LevelManager {
 
     public static void EndLevel() {
         LevelStatistics.instance.EndTracker();
-        SceneManager.LoadSceneAsync("UITest", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("ResultScreen", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
 }

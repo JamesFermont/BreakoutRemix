@@ -7,7 +7,7 @@ using UnityEditor;
 public class LevelGenerator : MonoBehaviour {
 
 
-    
+
     public static LevelGenerator instance;
 
     public void Awake() {
@@ -42,7 +42,7 @@ public class LevelGenerator : MonoBehaviour {
 
     }
 
-    public void AddSingleID (Vector2Int position, string objectID) {
+    public void AddSingleID(Vector2Int position, string objectID) {
         Instantiate(BlockDictionary.instance.getBlock(objectID), LevelManager.currentLevelGO.transform).transform.position = LevelManager.currentLevel.grid.toWorldPosition(position);
     }
 

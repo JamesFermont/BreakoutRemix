@@ -405,6 +405,21 @@ MonoBehaviour:
   - key: BLOCK_BASIC_RESPAWN
     myGameObject: {fileID: 7538123818115473606, guid: 09b174cefa0043649a3140534f462cab,
       type: 3}
+  - key: BLOCK_SWITCH_MASTER
+    myGameObject: {fileID: 8186645009006404991, guid: 77baba797a7510940977e6db820423cc,
+      type: 3}
+  - key: BLOCK_SWITCH_SLAVE_BASIC
+    myGameObject: {fileID: 8186645009006404991, guid: c80fe1fb4c6c9ed4b9ca0314f9af1578,
+      type: 3}
+  - key: BLOCK_SWITCH_SLAVE_CBOMB
+    myGameObject: {fileID: 1960040785801160890, guid: 6adc13af80ae3c24eaa41616dea02f9d,
+      type: 3}
+  - key: BLOCK_SWITCH_SLAVE_IMMUNE
+    myGameObject: {fileID: 7562916164767934426, guid: 28f7cbc2ede68dd4a8270d70f8a0b95f,
+      type: 3}
+  - key: BLOCK_SWITCH_SLAVE_RESPAWN
+    myGameObject: {fileID: 7538123818115473606, guid: 7f434b590895e334e998d52a57cdaff7,
+      type: 3}
 --- !u!1 &5281650162940865993
 GameObject:
   m_ObjectHideFlags: 0

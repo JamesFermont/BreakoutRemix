@@ -39,11 +39,10 @@ public class BlockManager : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        PlaySounds();
+        
         if (isImmune) return;
         health -= 1;
-
-        audioManager.Play("blockhit");
-        audioManager.UpdatePitch("blockhit", Random.Range(0.3f, 1.5f));
 
         if (health <= 0) {
             var dpChance = Random.Range(1, 100);
@@ -60,6 +59,22 @@ public class BlockManager : MonoBehaviour {
         } else {
             onDamaged?.Invoke();
             UpdateVisuals();
+        }
+    }
+
+    private void PlaySounds() {
+        if (isImmune && !this.gameObject.GetComponent<TargetArea>()) {
+            audioManager.Play("immune_hit");
+            return;
+        }
+
+        if (this.gameObject.GetComponent<CircleExplosion>() != null) {
+            audioManager.Play("bomb_hit");
+            return;
+        }
+        
+        if (this.gameObject.GetComponent<TargetArea>() == null && this.gameObject.GetComponent<ReviveBlock>() == null) {
+            audioManager.Play("block_hit");
         }
     }
 

@@ -32,7 +32,7 @@ public class CircleExplosion : MonoBehaviour {
     }
 
     public void PerformEffect() {
-        audioManager.Play("cbomb");
+        audioManager.Play("bomb_detonate");
         GetComponent<ParticleSystem>().Play();
 
         Collider2D[] hit = Physics2D.OverlapCircleAll(gameObject.transform.position, explosionRadius, 1<<8);

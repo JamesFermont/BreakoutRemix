@@ -12,6 +12,14 @@ public class LevelSelectionMenu : MonoBehaviour
 
     int numberOfLevels = 0;
 
+    private void Start() {
+        if (Time.timeScale != 1f)
+            Time.timeScale = 1f;
+        AudioManager am = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        if (!am.IsPlaying("bgm_menu"))
+            am.Play("bgm_menu");
+    }
+
     private void OnEnable() {
         SceneManager.sceneLoaded += OnSceneLoaded;
 
@@ -30,6 +38,7 @@ public class LevelSelectionMenu : MonoBehaviour
                 currentLevelButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = level;
                 currentLevelButton.transform.localPosition = new Vector3(0f, -30f - 60f * numberOfLevels++, 0f);
                 currentLevelButton.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(s); });
+                currentLevelButton.GetComponent<Button>().interactable = true;
             }
         }
 

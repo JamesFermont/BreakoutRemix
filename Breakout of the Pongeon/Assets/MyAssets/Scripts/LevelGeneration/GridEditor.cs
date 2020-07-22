@@ -21,7 +21,6 @@ public static class GridEditor {
         } else if (!ObjectHasSpaceAt(position, objectID))
             return false;
 
-
         int newID = LevelManager.currentLevel.grid.levelObjects.Count + 1;
         LevelManager.currentLevel.grid.levelObjects.Add(newID, objectID);
         LevelGenerator.instance.AddSingleID(position, objectID);
@@ -55,7 +54,7 @@ public static class GridEditor {
         return ObjectHasSpaceAt(position, objectID, 0);
     }
 
-        private static bool ObjectHasSpaceAt(Vector2Int position, string objectID, int key) {
+    private static bool ObjectHasSpaceAt(Vector2Int position, string objectID, int key) {
         BlockManager obj = BlockDictionary.instance.getBlock(objectID).GetComponent<BlockManager>();
         Vector2Int currentPosition;
         if (obj == null) {
@@ -68,7 +67,7 @@ public static class GridEditor {
                 if (!Grid.isOnGrid(currentPosition))
                     return false;
                 if (LevelManager.currentLevel.grid.IDAtPosition(currentPosition) != 0)
-                    if(LevelManager.currentLevel.grid.IDAtPosition(currentPosition) != key)
+                    if (LevelManager.currentLevel.grid.IDAtPosition(currentPosition) != key)
                         return false;
             }
         }

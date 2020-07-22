@@ -9,6 +9,12 @@ public class ReviveBlock : MonoBehaviour {
 	
 	private BlockManager blockManager;
 	private BallBehaviour ball;
+	
+	private AudioManager audioManager;
+
+	private void Awake() {
+		audioManager = FindObjectOfType<AudioManager>();
+	}
 
 	private void OnEnable() {
 		if (!blockManager) blockManager = gameObject.GetComponent<BlockManager>();
@@ -22,6 +28,7 @@ public class ReviveBlock : MonoBehaviour {
 	}
 
 	public void PerformEffect() {
+		audioManager.Play("zombie_hit");
 		if (reviveCountMax < reviveCountMin) reviveCountMax = reviveCountMin;
 		if (unitType == UnitType.UNIT_TIME) StartCoroutine(ReviveOverTime(Random.Range(reviveCountMin, reviveCountMax)));
 		if (unitType == UnitType.UNIT_BOUNCE) StartCoroutine(ReviveOverBounces(Random.Range(reviveCountMin, reviveCountMax)));
@@ -40,6 +47,7 @@ public class ReviveBlock : MonoBehaviour {
 		blockManager.health = reviveHpAmount;
 		gameObject.GetComponent<SpriteRenderer>().enabled = true;
 		gameObject.GetComponent<BoxCollider2D>().enabled = true;
+		audioManager.Play("zombie_revive");
 	}
 
 	private IEnumerator ReviveOverBounces(int bounces) {

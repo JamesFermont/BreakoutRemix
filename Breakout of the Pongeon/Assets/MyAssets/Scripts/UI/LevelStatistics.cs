@@ -10,7 +10,7 @@ public class LevelStatistics {
             return Instance;
         }
     }
-    
+
     public float time;
     public int blocksDestroyed;
     public int ballsDropped;
@@ -41,7 +41,7 @@ public class LevelStatistics {
         }
         blocksDestroyed = deadBlocks;
     }
-    
+
     public void AddScore(int delta) {
         score += delta;
     }
@@ -52,16 +52,17 @@ public class LevelStatistics {
         var scoreMods = GameObject.FindWithTag("LevelManager").GetComponent<ScoreModifiers>();
         float ballSpeedMod = ball.speedMod;
         float levelTime = time * ballSpeedMod;
-        float targetTime = time * ballSpeedMod; // Example value until target time is implemented
+        float targetTime = LevelManager.targetTime * ballSpeedMod;
+        Debug.Log(LevelManager.targetTime);
 
         if (ballsDropped == 0) {
             score += scoreMods.scoreForPerfectGame;
         }
 
         score -= ballsDropped * scoreMods.penaltyForDroppedBall;
-        
+
         // Time Mod = 1 + (+/- 0.1 for every secondsPerTimeModInterval seconds that the level time is below/above the target time, limited to between minTimeMod and maxTimeMod)
-        float timeMod = Mathf.Clamp(1 + (float)Math.Round(((int)levelTime-(int)targetTime)*(1f/scoreMods.secondsPerTimeModInterval))*0.1f, 
+        float timeMod = Mathf.Clamp(1 + (float)Math.Round(((int)targetTime - (int)levelTime) * (1f / scoreMods.secondsPerTimeModInterval)) * 0.1f,
                         scoreMods.minTimeMod, scoreMods.maxTimeMod);
         float finalScore = score * timeMod;
 
