@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.U2D;
 
 public class MainMenu : MonoBehaviour {
     [SerializeField] private AudioMixer audioMixer;
@@ -21,9 +22,16 @@ public class MainMenu : MonoBehaviour {
         if (PlayerPrefs.HasKey("sfxVolume")) {
             audioMixer.SetFloat("sfxVolume", PlayerPrefs.GetFloat("sfxVolume"));
         }
-        if (PlayerPrefs.HasKey("width") && PlayerPrefs.HasKey("height")) 
+
+        if (PlayerPrefs.HasKey("width") && PlayerPrefs.HasKey("height")) {
             Screen.SetResolution(PlayerPrefs.GetInt("width"), PlayerPrefs.GetInt("height"), Screen.fullScreen);
-        
+            if (Camera.main != null) {
+                Camera.main.GetComponent<PixelPerfectCamera>().refResolutionX = PlayerPrefs.GetInt("width");
+                Camera.main.GetComponent<PixelPerfectCamera>().refResolutionY = PlayerPrefs.GetInt("height");
+                Camera.main.GetComponent<PixelPerfectCamera>().assetsPPU = (int)(PlayerPrefs.GetInt("height")/7.2f);
+            }
+        }
+
         if (!PlayerPrefs.HasKey("screenSizeId"))
             PlayerPrefs.SetInt("screenSizeId", 2);
         

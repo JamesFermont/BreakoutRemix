@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour {
@@ -92,18 +93,33 @@ public class Settings : MonoBehaviour {
                 PlayerPrefs.SetInt("width", 1920);
                 PlayerPrefs.SetInt("height", 1080);
                 PlayerPrefs.SetInt("screenSizeId", 0);
+                if (Camera.main != null) {
+                    Camera.main.GetComponent<PixelPerfectCamera>().refResolutionX = 1920;
+                    Camera.main.GetComponent<PixelPerfectCamera>().refResolutionY = 1080;
+                    Camera.main.GetComponent<PixelPerfectCamera>().assetsPPU = 150;
+                }
                 break;
             case 1:
                 Screen.SetResolution(1600, 900, Screen.fullScreen);
                 PlayerPrefs.SetInt("width", 1600);
                 PlayerPrefs.SetInt("height", 900);
                 PlayerPrefs.SetInt("screenSizeId", 1);
+                if (Camera.main != null) {
+                    Camera.main.GetComponent<PixelPerfectCamera>().refResolutionX = 1600;
+                    Camera.main.GetComponent<PixelPerfectCamera>().refResolutionY = 900;
+                    Camera.main.GetComponent<PixelPerfectCamera>().assetsPPU = 125;
+                }
                 break;
             case 2:
                 Screen.SetResolution(1280, 720, Screen.fullScreen);
                 PlayerPrefs.SetInt("width", 1280);
                 PlayerPrefs.SetInt("height", 720);
                 PlayerPrefs.SetInt("screenSizeId", 2);
+                if (Camera.main != null) {
+                    Camera.main.GetComponent<PixelPerfectCamera>().refResolutionX = 1280;
+                    Camera.main.GetComponent<PixelPerfectCamera>().refResolutionY = 720;
+                    Camera.main.GetComponent<PixelPerfectCamera>().assetsPPU = 100;
+                }
                 break;
         }
     }
