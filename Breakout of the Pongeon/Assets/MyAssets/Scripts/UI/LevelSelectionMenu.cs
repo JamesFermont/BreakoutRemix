@@ -16,8 +16,11 @@ public class LevelSelectionMenu : MonoBehaviour
         if (Time.timeScale != 1f)
             Time.timeScale = 1f;
         AudioManager am = GameObject.Find("AudioManager").GetComponent<AudioManager>();
-        if (!am.IsPlaying("bgm_menu"))
+        if (!am.IsPlaying("bgm_menu")) {
+            if (am.IsPlaying("bgm_game_01"))
+                am.Stop("bgm_game_01");
             am.Play("bgm_menu");
+        }
     }
 
     private void OnEnable() {
