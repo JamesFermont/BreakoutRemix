@@ -58,8 +58,9 @@ public class ResultScreen : MonoBehaviour {
 
     private void SetupHighScoreScreen() {
         List<Score> levelScore = Scores.GetSortedScoresFromLevel(LevelManager.currentLevel.name);
-        for (int i = 0; i < levelScore.Count; i++) {
-            HighScoreScreen.transform.GetChild(i).GetComponentInChildren<TMP_Text>().text = levelScore[i].player + string.Concat(System.Linq.Enumerable.Repeat(".", 24 - (levelScore[i].player.Length + ((int)levelScore[i].finalScore()).ToString().Length))) + (int)levelScore[i].finalScore();
+        Debug.Log(levelScore.Count);
+        for (int i = levelScore.Count-1; i >= 0; i--) {
+            HighScoreScreen.transform.GetChild(levelScore.Count - (i+1)).GetComponentInChildren<TMP_Text>().text = levelScore[i].player + string.Concat(System.Linq.Enumerable.Repeat(".", 24 - (levelScore[i].player.Length + ((int)levelScore[i].finalScore()).ToString().Length))) + (int)levelScore[i].finalScore();
         }
     }
     private void SwitchToHighScore() {

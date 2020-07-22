@@ -8,9 +8,6 @@ public class MainMenu : MonoBehaviour {
 
     public void CallQuit() {
         Application.Quit();
-        AudioManager am = GameObject.Find("AudioManager").GetComponent<AudioManager>();
-        if(!am.IsPlaying())
-            am.Play("bgm_menu");
     }
 
     public void FixedUpdate() {
