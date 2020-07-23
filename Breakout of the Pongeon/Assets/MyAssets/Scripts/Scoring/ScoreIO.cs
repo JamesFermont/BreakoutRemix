@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 public static class ScoreIO {
-    public static string scoreFilePath = "/StreamingAssets/";
+    public static string scoreFilePath = "/";
     public static string scoreFileName = "notquitehighscores";
     public static string scoreFileEnding = ".nqi";
 
@@ -13,7 +13,7 @@ public static class ScoreIO {
 
 
     private static string scoreFile() {
-        return Application.dataPath + scoreFilePath + scoreFileName + scoreFileEnding;
+        return Application.streamingAssetsPath + scoreFilePath + scoreFileName + scoreFileEnding;
     }
 
     public static bool SaveScores(List<Score> scores) {

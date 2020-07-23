@@ -23,7 +23,7 @@ public class LevelGenerator : MonoBehaviour {
     //Generate a Level
     public GameObject Generate(Level level) {
         GameObject levelObject = new GameObject(level.name);
-        Debug.Log(levelObject);
+        //Debug.Log(levelObject);
         Vector2Int currentPointerPosition;
         string currentLevelObject;
         GameObject currentLevelGameObject;

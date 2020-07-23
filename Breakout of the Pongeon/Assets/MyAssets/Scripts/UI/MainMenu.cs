@@ -9,6 +9,8 @@ using UnityEngine.U2D;
 
 public class MainMenu : MonoBehaviour {
     [SerializeField] private AudioMixer audioMixer;
+    public UnityEngine.UI.Image backgrounds;
+    public Sprite[] sprites;
     
     private void Start() {
         if (PlayerPrefs.HasKey("masVolume")) {

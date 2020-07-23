@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class LevelTimeTargets {
-    private static string path = "/StreamingAssets/";
+    private static string path = "/";
     private static string fileName = "notquitetimelytargets.nqi";
 
     public static List<LevelTimeTarget> targets;
@@ -28,7 +28,7 @@ public static class LevelTimeTargets {
     }
 
     public static bool SaveLevels() {
-        BinaryWriter writer = new BinaryWriter(File.Open(Application.dataPath + path + fileName, FileMode.Create));
+        BinaryWriter writer = new BinaryWriter(File.Open(Application.streamingAssetsPath + path + fileName, FileMode.Create));
         foreach (LevelTimeTarget target in targets) {
             writer.Write(target.level);
             writer.Write(target.target);
@@ -38,7 +38,7 @@ public static class LevelTimeTargets {
     }
     private static void ReadLevels() {
         targets = new List<LevelTimeTarget>();
-        BinaryReader reader = new BinaryReader(File.Open(Application.dataPath + path + fileName, FileMode.OpenOrCreate));
+        BinaryReader reader = new BinaryReader(File.Open(Application.streamingAssetsPath + path + fileName, FileMode.OpenOrCreate));
         while (reader.BaseStream.Position != reader.BaseStream.Length) {
             targets.Add(new LevelTimeTarget(reader.ReadString(), reader.ReadInt32()));
         }
