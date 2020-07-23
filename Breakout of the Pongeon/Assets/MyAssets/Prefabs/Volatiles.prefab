@@ -375,6 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMode: 1
   movementSpeed: 10
+  bounds: 6.4
   isHidden: 0
 --- !u!61 &1836093080391337380
 BoxCollider2D:
@@ -488,6 +489,7 @@ GameObject:
   - component: {fileID: 1836093081007677560}
   - component: {fileID: 1836093081007677567}
   - component: {fileID: 1836093081007677566}
+  - component: {fileID: 3661409703955642587}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -5428,6 +5430,25 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!95 &3661409703955642587
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836093081007677559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fa6e35546b2d324ca58eb4cdf9786b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1836093081595936878
 GameObject:
   m_ObjectHideFlags: 0
