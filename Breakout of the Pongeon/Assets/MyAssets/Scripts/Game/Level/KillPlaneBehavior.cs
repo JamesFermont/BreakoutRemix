@@ -7,6 +7,7 @@ public class KillPlaneBehavior : MonoBehaviour
             other.gameObject.GetComponent<BallStart>().isBallStart = true;
             FindObjectOfType<AudioManager>().Play("death");
             LevelStatistics.instance.ballsDropped += 1;
+            FindObjectOfType<TargetManager>().ApplyPenalty();
         } else {
             Destroy(other.gameObject);
         }

@@ -40,6 +40,7 @@ public class BallStart : MonoBehaviour {
                     audioManager.Stop("bgm_menu");
                     audioManager.Play("bgm_game_01");
                     ball.GetComponent<BallBehaviour>().Launch();
+                    FindObjectOfType<Timer>().hasStarted = true;
                     isBallStart = false;
                 }
             }

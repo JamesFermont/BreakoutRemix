@@ -95,14 +95,12 @@ public class BackgroundManager : MonoBehaviour {
 
     private IEnumerator ReturnToIdle() {
         float timeElapsed = 0f;
-        Debug.Log(duration);
 
         while (timeElapsed < duration) {
             timeElapsed += Time.deltaTime;
             yield return null;
         }
         
-        Debug.Log("returned to idle!");
         duration = 0f;
         Play("idle");
     }

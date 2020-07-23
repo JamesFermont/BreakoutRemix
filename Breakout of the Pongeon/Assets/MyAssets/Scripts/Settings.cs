@@ -7,15 +7,16 @@ using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour {
-    public AudioMixer audioMixer;
-    public Slider masterVolumeSlider;
-    public Slider bgmVolumeSlider;
-    public Slider sfxVolumeSlider;
-    public Slider ballSpeedSlider;
-    public TMP_Text valueText;
-    public TMP_Dropdown resolutionDropdown;
-    public Toggle normalMode;
-    public Toggle hardMode;
+    [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private Slider masterVolumeSlider;
+    [SerializeField] private Slider bgmVolumeSlider;
+    [SerializeField] private Slider sfxVolumeSlider;
+    [SerializeField] private Slider ballSpeedSlider;
+    [SerializeField] private TMP_Text valueText;
+    [SerializeField] private TMP_Dropdown resolutionDropdown;
+    [SerializeField] private Toggle normalMode;
+    [SerializeField] private Toggle hardMode;
+    [SerializeField] private Toggle fsToggle;
     
     private void OnEnable() {
         if (PlayerPrefs.HasKey("masVolume")) {
@@ -43,8 +44,8 @@ public class Settings : MonoBehaviour {
         
         if (PlayerPrefs.HasKey("screenSizeId"))
             resolutionDropdown.value = PlayerPrefs.GetInt("screenSizeId");
-        
-        if (PlayerPrefs.HasKey("playMode"))
+
+        if (PlayerPrefs.HasKey("playMode")) {
             switch (PlayerPrefs.GetInt("playMode")) {
                 case 0:
                     normalMode.isOn = true;
@@ -55,11 +56,21 @@ public class Settings : MonoBehaviour {
                     hardMode.isOn = true;
                     break;
             }
+        }
+
+        if (PlayerPrefs.HasKey("fullScreen")) {
+            if (PlayerPrefs.GetInt("fullScreen") == 1)
+                fsToggle.isOn = true;
+            else {
+                fsToggle.isOn = false;
+            }
+        }
     }
 
     public void UpdateBallSpeed(float mod) {
         PlayerPrefs.SetFloat("ballSpeed", (float) Math.Round(mod, 2));
         if (valueText) valueText.text = "x" + PlayerPrefs.GetFloat("ballSpeed");
+        if (ballSpeedSlider) ballSpeedSlider.value = PlayerPrefs.GetFloat("ballSpeed");
     }
 
     public void UpdatePlayMode(bool isNormal) {

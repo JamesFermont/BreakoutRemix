@@ -18,9 +18,9 @@ public class PlayerAbility : MonoBehaviour {
     private AudioManager audioManager;
 
     [SerializeField] private Sprite[] charges;
-    [SerializeField] private Sprite[] energyBar;
     [SerializeField] private GameObject chargeSprite;
-    [SerializeField] private GameObject energySprite;
+    [SerializeField] private GameObject energyBar;
+    [SerializeField] private SpriteRenderer energyDisplay;
 
     private void OnEnable() {
         StartCoroutine(AudioManagerRef());
@@ -53,7 +53,6 @@ public class PlayerAbility : MonoBehaviour {
         energy -= btEnergyCost;
         UpdateDisplay();
         ActivateBulletTime();
-        Debug.Log("Bullet Time activate!!!!");
     }
 
     private void ActivateBulletTime() {
@@ -64,28 +63,28 @@ public class PlayerAbility : MonoBehaviour {
     private void UpdateDisplay() {
         var chargedBts = (int)(energy / 100f);
         chargeSprite.GetComponent<SpriteRenderer>().sprite = charges[chargedBts];
-        if (energy >= 25 && energy < 200)
-            energySprite.GetComponent<SpriteRenderer>().sprite = energyBar[(int)((energy-chargedBts*100)/25f)];
-        else if (energy == 200) {
-            energySprite.GetComponent<SpriteRenderer>().sprite = energyBar[4];
-        }
-        else {
-            energySprite.GetComponent<SpriteRenderer>().sprite = energyBar[0];
-        }
+        if (energy != 200)
+            energyBar.transform.localScale = new Vector3(1-((energy - chargedBts * 100f) / 100), 1, 1);
+        else
+            energyBar.transform.localScale = new Vector3(0, 1, 1);;
     }
 
     private IEnumerator BulletTime() {
         float timeElapsed = 0f;
         Time.timeScale = btTimeScale;
         btIsActive = true;
+        energyDisplay.color = new Color(0, 1, 0.1f, 1);
+        audioManager.UpdatePitch(0.7f);
 
         while (timeElapsed < btDuration) {
             timeElapsed += Time.deltaTime;
+            energyBar.transform.localScale = new Vector3(timeElapsed/btDuration, 1, 1);
             yield return null;
         }
 
         Time.timeScale = 1f;
         btIsActive = false;
-        Debug.Log("Bullet Time over!!!!");
+        energyDisplay.color = Color.white;
+        audioManager.UpdatePitch(1f);
     }
 }

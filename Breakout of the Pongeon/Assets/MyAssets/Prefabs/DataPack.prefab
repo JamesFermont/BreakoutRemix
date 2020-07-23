@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallSpeed: 120
   energyGiven: 10
+  pointsGiven: 25
 --- !u!50 &6669487735546304729
 Rigidbody2D:
   serializedVersion: 4

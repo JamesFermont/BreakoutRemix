@@ -47,14 +47,11 @@ public class AudioManager : MonoBehaviour {
         return soundToCheck.source.isPlaying;
     }
 
-    public void UpdatePitch(string soundName, float pitch) {
-        Sound soundToPlay = Array.Find(sounds, sound => sound.name == soundName);
-        if (soundToPlay == null) {
-            Debug.LogWarning("Sound: " + soundName + " was not found!");
-            return;
+    public void UpdatePitch(float pitch) {
+        foreach (Sound sound in sounds) {
+            Mathf.Clamp(pitch, 0.1f, 3f);
+            sound.source.pitch = pitch;
         }
-        Mathf.Clamp(pitch, 0.1f, 3f);
-        soundToPlay.source.pitch = pitch;
     }
 
     public AudioSource FetchVideoSource() {
