@@ -270,8 +270,10 @@ MonoBehaviour:
   baseSpeed: 200
   paddleSpeedIncreaseIncrement: 5
   deflectionStrength: 2.9
-  scoreForPerfectGame: 0
-  scoreForBallLost: 0
+  bTime: {fileID: 0}
+  rb: {fileID: 0}
+  firstRay: {fileID: 0}
+  secondRay: {fileID: 0}
   speedMod: 0
   speed: 0
   hasBouncedThisFrame: 0
@@ -291,6 +293,7 @@ MonoBehaviour:
   ball: {fileID: 0}
   isBallStart: 0
   isHidden: 0
+  audioManager: {fileID: 0}
 --- !u!61 &8702541150035155597
 BoxCollider2D:
   m_ObjectHideFlags: 0
