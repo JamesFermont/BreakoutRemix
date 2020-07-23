@@ -27,8 +27,10 @@ public class OptionsMenu : MonoBehaviour {
         }
 	}
 
-	public void CloseMenu() {
-		if (Time.timeScale <= Mathf.Epsilon) Time.timeScale = 1;
+	public void OnDestroy() {
+		Debug.Log(SceneManager.GetSceneByName("ResultScreen").isLoaded);
+		if (SceneManager.GetSceneByName("ResultScreen").isLoaded == false)
+			if (Time.timeScale <= Mathf.Epsilon) Time.timeScale = 1;
 		SceneManager.UnloadSceneAsync("OptionsMenu");
 	}
 }

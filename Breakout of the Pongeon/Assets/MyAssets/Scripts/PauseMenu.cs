@@ -7,7 +7,6 @@ public class PauseMenu : MonoBehaviour {
         if (!Input.GetKeyDown(pauseKey)) return;
         if (SceneManager.GetSceneByName("OptionsMenu").isLoaded) {
             SceneManager.UnloadSceneAsync("OptionsMenu");
-            Time.timeScale = 1f;
         } else {
             Time.timeScale = 0f;
             SceneManager.LoadSceneAsync("OptionsMenu", LoadSceneMode.Additive);
