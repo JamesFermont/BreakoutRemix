@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.U2D;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
     [SerializeField] private AudioMixer audioMixer;
     public UnityEngine.UI.Image backgrounds;
     public Sprite[] sprites;
-    
+
     private void Start() {
         if (PlayerPrefs.HasKey("masVolume")) {
             audioMixer.SetFloat("masVolume", PlayerPrefs.GetFloat("masVolume"));
@@ -41,6 +38,10 @@ public class MainMenu : MonoBehaviour {
             PlayerPrefs.SetInt("playMode", 0);
     }
 
+    public void SetBackground(int index) {
+        backgrounds.sprite = sprites[index];
+    }
+
     public void CallQuit() {
         Application.Quit();
     }
@@ -55,7 +56,6 @@ public class MainMenu : MonoBehaviour {
 
     private void OpenTimeTargetMenu() {
         SceneManager.LoadSceneAsync("TimeTaken", LoadSceneMode.Additive);
-        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("TimeTaken"));
     }
 
     public void OpenOptionsMenu() {
