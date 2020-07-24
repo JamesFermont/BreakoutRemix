@@ -39,6 +39,8 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void SetBackground(int index) {
+        if (index != 3 && index != 0 && SceneManager.GetSceneByName("OptionsMenu").isLoaded)
+            SceneManager.UnloadSceneAsync("OptionsMenu");
         backgrounds.sprite = sprites[index];
     }
 
@@ -59,6 +61,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void OpenOptionsMenu() {
-        SceneManager.LoadSceneAsync("OptionsMenu", LoadSceneMode.Additive);
+        if (!SceneManager.GetSceneByName("OptionsMenu").isLoaded)
+            SceneManager.LoadSceneAsync("OptionsMenu", LoadSceneMode.Additive);
     }
 }

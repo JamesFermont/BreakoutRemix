@@ -16,7 +16,7 @@ public class Settings : MonoBehaviour {
     [SerializeField] private TMP_Dropdown resolutionDropdown;
     [SerializeField] private Toggle hardMode;
     [SerializeField] private Toggle fsToggle;
-    
+
     private void OnEnable() {
         if (PlayerPrefs.HasKey("masVolume")) {
             audioMixer.SetFloat("masVolume", PlayerPrefs.GetFloat("masVolume"));
