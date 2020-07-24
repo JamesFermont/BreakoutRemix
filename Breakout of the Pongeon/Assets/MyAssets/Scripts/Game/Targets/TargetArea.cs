@@ -48,7 +48,6 @@ public class TargetArea : MonoBehaviour {
 
 	private void PlayVideo() {
 		int rand = Random.Range(1, 3);
-		Debug.Log(rand);
 		switch (rand)
 		{
 			case 1:

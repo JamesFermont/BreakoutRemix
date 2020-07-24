@@ -35,6 +35,7 @@ TagManager:
   - GameMenu
   - VSMenu
   - AudioManager
+  - Environment
   layers:
   - Default
   - TransparentFX

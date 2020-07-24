@@ -14,7 +14,6 @@ public class Settings : MonoBehaviour {
     [SerializeField] private Slider ballSpeedSlider;
     [SerializeField] private TMP_Text valueText;
     [SerializeField] private TMP_Dropdown resolutionDropdown;
-    [SerializeField] private Toggle normalMode;
     [SerializeField] private Toggle hardMode;
     [SerializeField] private Toggle fsToggle;
     
@@ -48,11 +47,9 @@ public class Settings : MonoBehaviour {
         if (PlayerPrefs.HasKey("playMode")) {
             switch (PlayerPrefs.GetInt("playMode")) {
                 case 0:
-                    normalMode.isOn = true;
                     hardMode.isOn = false;
                     break;
                 case 1:
-                    normalMode.isOn = false;
                     hardMode.isOn = true;
                     break;
             }
@@ -73,8 +70,16 @@ public class Settings : MonoBehaviour {
         if (ballSpeedSlider) ballSpeedSlider.value = PlayerPrefs.GetFloat("ballSpeed");
     }
 
-    public void UpdatePlayMode(bool isNormal) {
-        PlayerPrefs.SetInt("playMode", isNormal ? 0 : 1);
+    public void RestoreDefaultsButton() {
+        PlayerPrefs.SetFloat("ballSpeed", 1f);
+        if (valueText) valueText.text = "x1.0";
+        if (ballSpeedSlider) ballSpeedSlider.value = 1f; 
+        PlayerPrefs.SetInt("playMode", 1);
+        hardMode.isOn = true;
+    }
+
+    public void UpdatePlayMode(bool isHard) {
+        PlayerPrefs.SetInt("playMode", isHard ? 1 : 0);
     }
 
     public void UpdateMasterVolume(float volume) {

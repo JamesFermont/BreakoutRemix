@@ -4,13 +4,11 @@ using UnityEngine.SceneManagement;
 public class OptionsMenu : MonoBehaviour {
 	private GameObject gameMenu;
 	private GameObject vsMenu;
-	public GameObject ingameMenu;
-	
+
 	private void OnEnable() {
 		gameMenu = GameObject.FindWithTag("GameMenu");
 		vsMenu = GameObject.FindWithTag("VSMenu");
 		vsMenu.SetActive(false);
-		ingameMenu.SetActive(SceneManager.GetSceneByName("GameLevel").isLoaded || SceneManager.GetSceneByName("EditorLevel").isLoaded);
 	}
 
 	public void DisplayGame() {
@@ -28,9 +26,6 @@ public class OptionsMenu : MonoBehaviour {
 	}
 
 	public void OnDestroy() {
-		Debug.Log(SceneManager.GetSceneByName("ResultScreen").isLoaded);
-		if (SceneManager.GetSceneByName("ResultScreen").isLoaded == false)
-			if (Time.timeScale <= Mathf.Epsilon) Time.timeScale = 1;
 		SceneManager.UnloadSceneAsync("OptionsMenu");
 	}
 }

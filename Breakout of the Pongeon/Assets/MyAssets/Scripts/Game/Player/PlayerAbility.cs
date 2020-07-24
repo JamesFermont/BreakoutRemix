@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerAbility : MonoBehaviour {
-    public int btEnergyCost;
-    public int btDuration;
+    [SerializeField] private int btEnergyCost;
+    [SerializeField] private int btDuration;
 
     [Range(0.1f, 1f)]
     public float btTimeScale;
@@ -16,9 +17,7 @@ public class PlayerAbility : MonoBehaviour {
     public bool btIsActive;
 
     private AudioManager audioManager;
-
-    [SerializeField] private Sprite[] charges;
-    [SerializeField] private GameObject chargeSprite;
+    
     [SerializeField] private GameObject energyBar;
     [SerializeField] private SpriteRenderer energyDisplay;
 
@@ -55,18 +54,23 @@ public class PlayerAbility : MonoBehaviour {
         ActivateBulletTime();
     }
 
+    private void FixedUpdate() {
+        if (energy == 100) {
+            DisplayFullCharge();
+        }
+    }
+
     private void ActivateBulletTime() {
-        audioManager.Play("bt_activate");
+        //audioManager.Play("bt_activate");
         StartCoroutine(BulletTime());
     }
 
     private void UpdateDisplay() {
-        var chargedBts = (int)(energy / 100f);
-        chargeSprite.GetComponent<SpriteRenderer>().sprite = charges[chargedBts];
-        if (energy != 200)
-            energyBar.transform.localScale = new Vector3(1-((energy - chargedBts * 100f) / 100), 1, 1);
-        else
-            energyBar.transform.localScale = new Vector3(0, 1, 1);;
+        energyBar.transform.localScale = new Vector3(1-energy/100f, 1, 1);
+    }
+
+    private void DisplayFullCharge() {
+        energyDisplay.color = new Color(1, 1, 1, (150f +Mathf.PingPong(Time.time*70, 80))/255f);
     }
 
     private IEnumerator BulletTime() {
@@ -84,7 +88,7 @@ public class PlayerAbility : MonoBehaviour {
 
         Time.timeScale = 1f;
         btIsActive = false;
-        energyDisplay.color = Color.white;
+        energyDisplay.color = new Color(1, 1, 1, 150f/255f);
         audioManager.UpdatePitch(1f);
     }
 }

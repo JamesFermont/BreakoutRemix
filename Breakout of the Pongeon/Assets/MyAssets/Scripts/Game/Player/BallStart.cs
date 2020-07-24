@@ -36,8 +36,11 @@ public class BallStart : MonoBehaviour {
             ball.position = paddle.position + new Vector3(0f, 0.5f, 0f);
             if (!isHidden) {
                 if (Input.GetMouseButtonDown(0)) {
-                    audioManager.Stop("bgm_menu");
-                    audioManager.Play("bgm_game_01");
+                    if (!audioManager.IsPlaying("bgm_game_01")) {
+                        audioManager.Stop("bgm_menu");
+                        audioManager.Play("bgm_game_01");
+                    }
+
                     ball.GetComponent<BallBehaviour>().Launch();
                     if(SceneManager.GetActiveScene().name == "GameLevel")
                         FindObjectOfType<Timer>().hasStarted = true;

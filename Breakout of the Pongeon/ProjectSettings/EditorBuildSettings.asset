@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyAssets/Scenes/UI/TimeTaken.unity
     guid: 68d8be13061feeb4fb6365f87f53f9c7
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/UI/PauseMenu.unity
+    guid: 48284315c9bf95a4b83b4c64c2b5ee6e
   m_configObjects: {}

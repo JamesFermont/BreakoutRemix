@@ -126,8 +126,10 @@ public class BallBehaviour : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity *= 1.5f;
             GetComponentInChildren<TrailRenderer>().startColor = Color.red;
             GetComponentInChildren<TrailRenderer>().endColor = Color.yellow;
-        } else {
+        } else if (other.gameObject.CompareTag("Environment")){
             audioManager.Play("bounce");
+            GetComponent<ParticleSystem>().Play();
+        } else {
             GetComponent<ParticleSystem>().Play();
         }
     }

@@ -46,8 +46,12 @@ public class BlockManager : MonoBehaviour {
 
         if (health <= 0) {
             var dpChance = Random.Range(1, 100);
-            
-            ToggleBlock(false);
+
+            if (gameObject.GetComponent<CircleExplosion>()) {
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            } else {
+                ToggleBlock(false);
+            }
             onDestroyed?.Invoke(); // onDestroyed has to be invoked AFTER the collider is disabled to avoid a StackOverflowError
             LevelStatistics.instance.AddScore(scoreOnDestroy);
             if (dpChance <= dpBaseChance + dpBaseChanceIncrement * LevelStatistics.instance.dpDropStep) {
@@ -82,10 +86,21 @@ public class BlockManager : MonoBehaviour {
         if (isImmune) return;
         health -= amount;
         if (health <= 0) {
-            ToggleBlock(false);
-            onDestroyed?.Invoke();
+            var dpChance = Random.Range(1, 100);
+
+            if (gameObject.GetComponent<CircleExplosion>()) {
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            } else {
+                ToggleBlock(false);
+            }
+            onDestroyed?.Invoke(); // onDestroyed has to be invoked AFTER the collider is disabled to avoid a StackOverflowError
             LevelStatistics.instance.AddScore(scoreOnDestroy);
-            Instantiate(dataPack, this.transform);
+            if (dpChance <= dpBaseChance + dpBaseChanceIncrement * LevelStatistics.instance.dpDropStep) {
+                Instantiate(dataPack, this.transform);
+                LevelStatistics.instance.dpDropStep = 0;
+            } else {
+                LevelStatistics.instance.dpDropStep += 1;
+            }
         } else {
             onDamaged?.Invoke();
             UpdateVisuals();
