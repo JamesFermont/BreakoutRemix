@@ -89,7 +89,7 @@ MonoBehaviour:
   - name: bgm_game_01
     type: {fileID: -2623996676782669458, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
     clip: {fileID: 8300000, guid: d46062ab62c07be4c99da483ce4bf149, type: 3}
-    volume: 0.03
+    volume: 0.31
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   - name: bomb_detonate
     type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
     clip: {fileID: 8300000, guid: 1097658921afa674aaea26b51734ed84, type: 3}
-    volume: 0.452
+    volume: 0.378
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   - name: video
     type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
     clip: {fileID: 0}
-    volume: 0.613
+    volume: 0.579
     pitch: 1.71
     loop: 0
     source: {fileID: 0}
