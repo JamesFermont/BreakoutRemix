@@ -131,7 +131,7 @@ MonoBehaviour:
   height: 1
   dataPack: {fileID: 32518073829433531, guid: 8095b7994a7e58d4b88231a1295dd190, type: 3}
   dpBaseChance: 40
-  dpBaseChanceIncrement: 20
+  dpBaseChanceIncrement: 5
   health: 0
 --- !u!114 &1893505041977308224
 MonoBehaviour:

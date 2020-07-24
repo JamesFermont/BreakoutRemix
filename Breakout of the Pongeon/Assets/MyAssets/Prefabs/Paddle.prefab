@@ -97,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMode: 1
   movementSpeed: 10
+  bounds: 6.4
+  isHidden: 0
 --- !u!61 &4878630315021986969
 BoxCollider2D:
   m_ObjectHideFlags: 0
