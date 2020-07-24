@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BallStart : MonoBehaviour {
     public Transform paddle;
@@ -40,7 +39,8 @@ public class BallStart : MonoBehaviour {
                     audioManager.Stop("bgm_menu");
                     audioManager.Play("bgm_game_01");
                     ball.GetComponent<BallBehaviour>().Launch();
-                    FindObjectOfType<Timer>().hasStarted = true;
+                    if(SceneManager.GetActiveScene().name == "GameLevel")
+                        FindObjectOfType<Timer>().hasStarted = true;
                     isBallStart = false;
                 }
             }
