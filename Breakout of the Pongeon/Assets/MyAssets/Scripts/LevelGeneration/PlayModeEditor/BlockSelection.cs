@@ -15,31 +15,33 @@ public class BlockSelection : MonoBehaviour {
     public void Start() {
         editorNavigation = transform.parent.GetComponent<EditorNavigation>();
 
-
-        //Create A Button for every Block in the Dictionary
-        GameObject currentBlockGameObject;
         ((RectTransform)ContentTransform).sizeDelta = new Vector2((BlockDictionary.instance.dict.Count - 2) * 170, 0);
 
+        CreateEraseButton();
 
-        currentBlockGameObject = (GameObject)Instantiate(ButtonPrefab, ContentTransform);
+
+        for (int i = 0; i < BlockDictionary.instance.dict.Count; i++) {
+            if (i < 3)
+                continue;
+            CreateBlockButton(BlockDictionary.instance.dict[i].key, i);
+        }
+    }
+    private void CreateEraseButton() {
+        GameObject currentBlockGameObject = (GameObject)Instantiate(ButtonPrefab, ContentTransform);
         currentBlockGameObject.name = "ERASE";
         currentBlockGameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = "ERASE";
         currentBlockGameObject.transform.localPosition = new Vector3(120, currentBlockGameObject.transform.position.y, currentBlockGameObject.transform.position.z);
         currentBlockGameObject.GetComponent<Button>().image.sprite = eraseSprite;
         myButtons.Add(currentBlockGameObject.GetComponent<Button>());
         currentBlockGameObject.GetComponent<Button>().onClick.AddListener(delegate { SelectButton("ERASE"); });
-
-        for (int i = 0; i < BlockDictionary.instance.dict.Count; i++) {
-            if (i < 3)
-                continue;
-            currentBlockGameObject = (GameObject)Instantiate(ButtonPrefab, ContentTransform);
-            currentBlockGameObject.name = BlockDictionary.instance.dict[i].key;
-            currentBlockGameObject.transform.localPosition = new Vector3(120 + 170 * (i - 2), currentBlockGameObject.transform.position.y, currentBlockGameObject.transform.position.z);
-            currentBlockGameObject.GetComponent<Button>().image.sprite = BlockDictionary.instance.dict[i].myGameObject.GetComponent<SpriteRenderer>().sprite;
-            myButtons.Add(currentBlockGameObject.GetComponent<Button>());
-            string nameCopy = currentBlockGameObject.name;
-            currentBlockGameObject.GetComponent<Button>().onClick.AddListener(delegate { SelectButton(nameCopy); });
-        }
+    }
+    private void CreateBlockButton(string buttonName, int yIndex) {
+        GameObject currentBlockGameObject = (GameObject)Instantiate(ButtonPrefab, ContentTransform);
+        currentBlockGameObject.name = BlockDictionary.instance.dict[yIndex].key;
+        currentBlockGameObject.transform.localPosition = new Vector3(120 + 170 * (yIndex - 2), currentBlockGameObject.transform.position.y, currentBlockGameObject.transform.position.z);
+        currentBlockGameObject.GetComponent<Button>().image.sprite = BlockDictionary.instance.dict[yIndex].myGameObject.GetComponent<SpriteRenderer>().sprite;
+        myButtons.Add(currentBlockGameObject.GetComponent<Button>());
+        currentBlockGameObject.GetComponent<Button>().onClick.AddListener(delegate { SelectButton(buttonName); });
     }
 
     private void SelectButton(string buttonName) {

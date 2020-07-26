@@ -14,16 +14,10 @@ public class LevelGenerator : MonoBehaviour {
         if (instance == null)
             instance = this;
     }
-#if UNITY_EDITOR
-    public void LateUpdate() {
-        if (instance == null)
-            instance = this;
-    }
-#endif
+
     //Generate a Level
     public GameObject Generate(Level level) {
         GameObject levelObject = new GameObject(level.name);
-        //Debug.Log(levelObject);
         Vector2Int currentPointerPosition;
         string currentLevelObject;
         GameObject currentLevelGameObject;

@@ -19,8 +19,8 @@ public static class LevelManager {
     }
 
     public static void ResetCurrentLevel() {
-        Object.Destroy(currentLevelGO);
-        currentLevelGO = LevelGenerator.instance.Generate(currentLevel);
+       Object.Destroy(currentLevelGO);
+       MakeLevel(currentLevel);
     }
 
     public static void LoadLevel(string levelName) {
@@ -43,7 +43,7 @@ public static class LevelManager {
 
     public static void UpdateGrid(Grid newGrid) {
         currentLevel.grid = newGrid;
-        currentLevelGO = LevelGenerator.instance.Generate(currentLevel);
+        MakeLevel(currentLevel);
     }
 
     public static void UpdateName(string newName) {

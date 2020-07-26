@@ -12,13 +12,13 @@ public static class LevelTimeTargets {
         if (targets == null)
             ReadLevels();
         foreach (LevelTimeTarget target in targets) {
-            Debug.Log(target.level + ":" + target.target);
             if (target.level == level)
                 return target.target;
         }
             
         return 0;
     }
+
     public static void setTarget(string level, int targetTime) {
         foreach (LevelTimeTarget target in targets) {
             if (target.level == level) {

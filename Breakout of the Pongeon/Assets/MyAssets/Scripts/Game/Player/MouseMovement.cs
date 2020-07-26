@@ -1,16 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-public class MouseMovement : MonoBehaviour
-{
+public class MouseMovement : MonoBehaviour {
     //Consts
-    public enum MovementMode {SMOOTH, DIRECT}
+    public enum MovementMode { SMOOTH, DIRECT }
 
     //Variables
     public MovementMode currentMode;
     public float movementSpeed; //only needed in MovementMode.Smooth
-    private Vector3 newPosition;
-    private Vector3 mousePositionInWorld;
     private Camera mainCamera;
     public float bounds = 6.4f;
 
@@ -21,29 +18,39 @@ public class MouseMovement : MonoBehaviour
     private void OnEnable() {
         if (!mainCamera) mainCamera = Camera.main;
     }
-    
-    private void Update() {
-        if(!isHidden) {
-            newPosition = transform.position;
-            mousePositionInWorld = mainCamera.ScreenToWorldPoint(Input.mousePosition);
 
+    private void Update() {
+        if (!isHidden) {
             switch (currentMode) {
                 case MovementMode.DIRECT:
-                    if (Time.timeScale >= Mathf.Epsilon)
-                        newPosition.x = Mathf.Clamp(mainCamera.ScreenToWorldPoint(Input.mousePosition).x, bounds *-1f, bounds);
+                    MoveDirect();
                     break;
                 case MovementMode.SMOOTH:
-                    if (Mathf.Abs(mousePositionInWorld.x - transform.position.x) <= Time.deltaTime * movementSpeed) {
-                        newPosition.x = mousePositionInWorld.x;
-                    } else {
-                        Vector3 position = transform.position;
-                        newPosition.x +=
-                            (mousePositionInWorld.x == position.x ? 0f : (mousePositionInWorld.x - position.x) / Mathf.Abs(mousePositionInWorld.x - position.x)) * Time.deltaTime * movementSpeed;
-                    }
+                    MoveSmooth();
                     break;
             }
-
-            transform.position = newPosition;
         }
+    }
+    private void MoveDirect() {
+        Vector3 newPosition = transform.position;
+        Vector3 mousePositionInWorld = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Time.timeScale >= Mathf.Epsilon)
+            newPosition.x = Mathf.Clamp(mousePositionInWorld.x, bounds * -1f, bounds);
+        transform.position = newPosition;
+    }
+    private void MoveSmooth() {
+        Vector3 newPosition = transform.position;
+        Vector3 mousePositionInWorld = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+
+
+        if (Mathf.Abs(mousePositionInWorld.x - transform.position.x) <= Time.deltaTime * movementSpeed) {
+            newPosition.x = Mathf.Clamp(mousePositionInWorld.x, bounds * -1f, bounds);
+        } else {
+            newPosition.x +=
+                (mousePositionInWorld.x == newPosition.x ? 0f : Mathf.Clamp(((mousePositionInWorld.x - newPosition.x) / Mathf.Abs(mousePositionInWorld.x - newPosition.x)) * Time.deltaTime * movementSpeed, bounds * -1f, bounds));
+        }
+
+        transform.position = newPosition;
     }
 }

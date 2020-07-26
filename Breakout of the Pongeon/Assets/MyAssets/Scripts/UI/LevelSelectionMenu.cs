@@ -3,15 +3,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class LevelSelectionMenu : MonoBehaviour
-{
+public class LevelSelectionMenu : MonoBehaviour {
     public Transform levelList;
     public Object levelListPrefab;
-    string []levels;
+    string[] levels;
     LevelBundles bundles;
     string currentLevel;
-
-    int numberOfLevels = 0;
 
     private void Start() {
         if (Time.timeScale != 1f)
@@ -23,31 +20,23 @@ public class LevelSelectionMenu : MonoBehaviour
             am.Play("bgm_menu");
         }
         bundles = FindObjectOfType<LevelBundles>();
-        levels = bundles.AllActiveLevels();
-        Debug.Log(levels.Length);
     }
 
     private void OnEnable() {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        int numberOfLevels = levelList.childCount;
 
-
-        if(levels == null) {
+        if (levels == null) {
             levels = LevelIO.getLevelsInDirectory();
-
-            GameObject currentLevelButton;
-            ((RectTransform)levelList).sizeDelta = new Vector2(0, levels.Length * 64);
+        }
+       
+        ((RectTransform)levelList).sizeDelta = new Vector2(0, levels.Length * 64);
             foreach (string level in levels) {
                 if (levelList.Find(level))
                     continue;
-                currentLevelButton = (GameObject)Instantiate(levelListPrefab, levelList);
-                string s = level;
-                currentLevelButton.name = level;
-                currentLevelButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = level;
-                currentLevelButton.transform.localPosition = new Vector3(0f, -30f - 60f * numberOfLevels++, 0f);
-                currentLevelButton.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(s); });
-                currentLevelButton.GetComponent<Button>().interactable = true;
+            CreateLevelButton(level, numberOfLevels++);
+                
             }
-        }
 
     }
 
@@ -56,25 +45,18 @@ public class LevelSelectionMenu : MonoBehaviour
     }
 
 
-    private void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         if (scene.name != "GameLevel")
             return;
-        StartCoroutine(myRoutine());
+        StartCoroutine(ChangeToPlayMode());
     }
 
     private void LoadLevel(string levelName) {
         currentLevel = levelName;
-        StartCoroutine(LoadLevelInScene(levelName));
-    }
-    private IEnumerator LoadLevelInScene (string levelName) {
-        AsyncOperation loadingScene = SceneManager.LoadSceneAsync("GameLevel", LoadSceneMode.Additive);
-        while (!loadingScene.isDone) {
-            yield return null;
-
-        }
+        SceneManager.LoadSceneAsync("GameLevel", LoadSceneMode.Additive);
     }
 
-    private IEnumerator myRoutine() {
+    private IEnumerator ChangeToPlayMode() {
         yield return new WaitForEndOfFrame();
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("GameLevel"));
         LevelManager.LoadLevel(currentLevel);
@@ -84,6 +66,16 @@ public class LevelSelectionMenu : MonoBehaviour
             SceneManager.UnloadSceneAsync("MainMenu");
     }
 
+    private void CreateLevelButton (string name, int yPosition) {
+        GameObject button = (GameObject)Instantiate(levelListPrefab, levelList);
+
+        button.name = name;
+        button.transform.localPosition = new Vector3(0f, -30f - 60f * yPosition, 0f);
+
+        button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = name;
+        button.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(name); });
+        button.GetComponent<Button>().interactable = true;
+    } 
 
 
 

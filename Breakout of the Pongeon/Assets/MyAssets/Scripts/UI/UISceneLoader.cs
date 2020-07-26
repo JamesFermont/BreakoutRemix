@@ -16,13 +16,18 @@ public class UISceneLoader : MonoBehaviour {
 
     // Update is called once per frame
     void LoadLevel() {
+
         if (type == LoadingType.LOAD) {
+            if (SceneManager.GetSceneByName(sceneName).isLoaded)
+                return;
             if (isAdditive)
                 SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             else
                 SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         }
         if (type == LoadingType.UNLOAD) {
+            if (!SceneManager.GetSceneByName(sceneName).isLoaded)
+                return;
             SceneManager.UnloadSceneAsync(sceneName);
         }
     }
