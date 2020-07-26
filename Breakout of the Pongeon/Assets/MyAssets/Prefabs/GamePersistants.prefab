@@ -81,6 +81,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1911378963424636208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2442308537573322510}
+  - component: {fileID: 5676908198850163995}
+  m_Layer: 0
+  m_Name: LevelBundles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2442308537573322510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911378963424636208}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8330589115262871953}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5676908198850163995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911378963424636208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d966a57af44c4f4c991c9f4271c3629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bundles:
+  - name: Bundle1
+    levels:
+    - Level_1-0
+    - Level_1-1
+    - Level_1-2
+    - Level_1-3
+    score: 0
+    unlocksEditor: 0
+  - name: Bundle2
+    levels:
+    - Level_2-0
+    - Level_2-1
+    - Level_2-2
+    - Level_2-3
+    score: 5000
+    unlocksEditor: 1
 --- !u!1 &2060939662121078509
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +277,7 @@ Transform:
   - {fileID: 3176528923701894123}
   - {fileID: 2462401276959815256}
   - {fileID: 3338936360558257281}
+  - {fileID: 2442308537573322510}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

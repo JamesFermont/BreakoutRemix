@@ -52,7 +52,8 @@ public class LevelStatistics {
         var scoreMods = GameObject.FindWithTag("LevelManager").GetComponent<ScoreModifiers>();
         float ballSpeedMod = ball.speedMod;
         float levelTime = time * ballSpeedMod;
-        float targetTime = LevelManager.targetTime * ballSpeedMod;
+        float targetTime = LevelManager.targetTime() * ballSpeedMod;
+        Debug.Log(LevelManager.targetTime());
 
         if (ballsDropped == 0) {
             score += scoreMods.scoreForPerfectGame;

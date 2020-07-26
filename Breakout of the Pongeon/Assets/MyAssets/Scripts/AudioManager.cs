@@ -4,8 +4,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
     public Sound[] sounds;
 
-    private void Awake()
-    {
+    private void Awake() {
         foreach (Sound sound in sounds) {
             sound.source = gameObject.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
@@ -37,7 +36,7 @@ public class AudioManager : MonoBehaviour {
         }
         soundToPlay.source.Stop();
     }
-    
+
     public bool IsPlaying(string soundName) {
         Sound soundToCheck = Array.Find(sounds, sound => sound.name == soundName);
         if (soundToCheck == null) {

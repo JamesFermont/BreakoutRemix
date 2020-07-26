@@ -25,7 +25,7 @@ public class ResultScreen : MonoBehaviour {
 
     private void SetupScreens(float[] results) {
         SingleScreen.transform.GetChild(0).GetComponentInChildren<TMP_Text>().text = "Score: " + LevelStatistics.instance.score;
-        SingleScreen.transform.GetChild(1).GetComponentInChildren<TMP_Text>().text = "Time Bonus: x" + results[0] + "(Time: " + (int)timeSpent + " Target:" + LevelManager.targetTime + ")";
+        SingleScreen.transform.GetChild(1).GetComponentInChildren<TMP_Text>().text = "Time Bonus: x" + results[0] + "(Time: " + (int)timeSpent + " Target:" + LevelManager.targetTime() + ")";
         SingleScreen.transform.GetChild(2).GetComponentInChildren<TMP_Text>().text = "Final Score: " + (int)results[1];
 
         if (Scores.isInHighScore(LevelManager.currentLevel.name, (int)results[1])) {

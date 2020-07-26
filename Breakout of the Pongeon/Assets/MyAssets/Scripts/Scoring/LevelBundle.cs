@@ -1,17 +1,16 @@
 ﻿[System.Serializable]
 public class LevelBundle {
 
-    string name;
-    string[] levels;
-    int score;
-    
+    public string name;
+    public string[] levels;
+    public int score;
+    public bool unlocksEditor = false;
 
-
-    public LevelBundle(string name, int score, string[] levels) {
+    public LevelBundle(string name, int score, string[] levels, bool unlocksEditor) {
         this.name = name;
         this.score = score;
         this.levels = levels;
-
+        this.unlocksEditor = unlocksEditor;
     }
 
     public int TotalScore() {
@@ -21,16 +20,4 @@ public class LevelBundle {
 
         return totalScore;
     }
-    
-    public string Name() {
-        return name;
-    }
-    public int RequiredScore() {
-        return score;
-    }
-
-    public bool isUnlocked(int score) {
-        return (score >= this.score);
-    }
-
 }

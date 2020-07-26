@@ -7,7 +7,8 @@ public class LevelSelectionMenu : MonoBehaviour
 {
     public Transform levelList;
     public Object levelListPrefab;
-    string[] levels;
+    string []levels;
+    LevelBundles bundles;
     string currentLevel;
 
     int numberOfLevels = 0;
@@ -21,6 +22,9 @@ public class LevelSelectionMenu : MonoBehaviour
                 am.Stop("bgm_game_01");
             am.Play("bgm_menu");
         }
+        bundles = FindObjectOfType<LevelBundles>();
+        levels = bundles.AllActiveLevels();
+        Debug.Log(levels.Length);
     }
 
     private void OnEnable() {

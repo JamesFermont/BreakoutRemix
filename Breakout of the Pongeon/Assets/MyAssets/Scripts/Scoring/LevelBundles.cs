@@ -1,28 +1,25 @@
 ﻿using UnityEngine;
-using System.IO;
+using System.Collections.Generic;
 
 public class LevelBundles : MonoBehaviour
 {
 
-    private static LevelBundles instance;
+    public LevelBundle[] bundles;
 
-    private Bundles bundles;
-
-    [System.Serializable]
-    private class Bundles {
-        public LevelBundle[] bundles;
+    public string[] AllActiveLevels (){
+        List<string> returnList = new List<string>();
+        LevelBundle previous = null;
+        foreach(LevelBundle bundle in bundles) {
+            if (previous == null|| previous.TotalScore() >= bundle.score ) {
+                foreach (string level in bundle.levels) {
+                    returnList.Add(level);
+                }
+                previous = bundle;
+                continue;
+            }
+            break;
+        }
+        return returnList.ToArray();
     }
-    private void Start() {
-        
-    }
-
-    private void Awake() {
-        if (instance == null)
-            instance = this;
-    }
-
-    private void LoadLevels() {
-        bundles = (Bundles)JsonUtility.FromJson(File.ReadAllText(Application.streamingAssetsPath + "/"), typeof(Bundles)); 
-    }
-
+    
 }

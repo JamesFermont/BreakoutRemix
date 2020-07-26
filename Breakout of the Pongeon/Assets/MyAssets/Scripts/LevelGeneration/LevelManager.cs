@@ -6,7 +6,7 @@ public static class LevelManager {
 
     public static Level currentLevel;
     public static GameObject currentLevelGO;
-    public static int targetTime { get { return LevelTimeTargets.getTarget(currentLevel.name); } private set { targetTime = value; } }
+    public static int targetTime() { Debug.Log("Looking for:" + currentLevel.name); return LevelTimeTargets.getTarget(currentLevel.name); }
 
     public static void CreateNewLevel() {
         CreateNewLevel("New Level");
