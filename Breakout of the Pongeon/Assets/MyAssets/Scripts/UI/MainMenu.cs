@@ -12,8 +12,8 @@ public class MainMenu : MonoBehaviour {
         CheckPlayerPrefs();
         backgrounds = transform.GetComponentInChildren<MainMenuImages>();
         Debug.Log(FindObjectOfType<LevelBundles>().AllActiveLevels().Length);
-        if (FindObjectOfType<LevelBundles>().AllActiveLevels().Length > 4) {
-            transform.Find("StartMenu").Find("LevelEditor").GetComponent<Button>().interactable = true;
+        if (FindObjectOfType<LevelBundles>().AllActiveLevels().Length >= 4) {
+            transform.Find("StartMenu").Find("Editor").GetComponent<Button>().interactable = true;
         }
             
     }
