@@ -44,6 +44,13 @@ public class PlayerAbility : MonoBehaviour {
         if (energy > energyCap) energy = energyCap;
         UpdateDisplay();
         Destroy(other.gameObject);
+        
+        if (!FindObjectOfType<TutorialManager>()) return;
+        TutorialManager tutorialManager = FindObjectOfType<TutorialManager>().GetComponent<TutorialManager>();
+        if (tutorialManager.stage != 2) {
+            tutorialManager.gameObject.transform.position = this.gameObject.transform.position;
+            tutorialManager.PlayTutorial(2);
+        }
     }
 
     private void Update() {
