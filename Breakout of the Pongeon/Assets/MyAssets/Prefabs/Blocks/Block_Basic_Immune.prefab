@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.4}
+  m_Size: {x: 0.63, y: 0.36}
   m_EdgeRadius: 0
 --- !u!114 &5713663020251364916
 MonoBehaviour:
@@ -129,6 +129,8 @@ MonoBehaviour:
   width: 1
   height: 1
   dataPack: {fileID: 32518073829433531, guid: 8095b7994a7e58d4b88231a1295dd190, type: 3}
+  dpBaseChance: 0
+  dpBaseChanceIncrement: 0
   health: 0
 --- !u!114 &229466573284816613
 MonoBehaviour:

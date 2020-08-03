@@ -111,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.4}
+  m_Size: {x: 0.63, y: 0.36}
   m_EdgeRadius: 0
 --- !u!114 &4363025577916494164
 MonoBehaviour:
@@ -168,7 +168,6 @@ MonoBehaviour:
   effectType: 1
   explosionRadius: 1
   explosionDamage: 2
-  subEmitter: {fileID: 0}
 --- !u!95 &-2075098020707060291
 Animator:
   serializedVersion: 3
