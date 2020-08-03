@@ -17,25 +17,39 @@ public class ResultScreen : MonoBehaviour {
         float[] results = LevelStatistics.instance.CalculateScore();
 
         timeSpent = LevelStatistics.instance.time;
-        blocksDestroyed = LevelStatistics.instance.blocksDestroyed;
+        //blocksDestroyed = LevelStatistics.instance.blocksDestroyed;
 
         SetupScreens(results);
         SetupButtons();
     }
 
     private void SetupScreens(float[] results) {
-        SingleScreen.transform.GetChild(0).GetComponentInChildren<TMP_Text>().text = "Score: " + LevelStatistics.instance.score;
-        SingleScreen.transform.GetChild(1).GetComponentInChildren<TMP_Text>().text = "Time Bonus: x" + results[0] + "(Time: " + (int)timeSpent + " Target:" + LevelManager.targetTime() + ")";
-        SingleScreen.transform.GetChild(2).GetComponentInChildren<TMP_Text>().text = "Final Score: " + (int)results[1];
+        SingleScreen.transform.GetChild(0).GetChild(2).GetComponent<TMP_Text>().text = "+" + results[4] + " points";
+        SingleScreen.transform.GetChild(1).GetChild(2).GetComponent<TMP_Text>().text = "+" + results[2] + " points";
+        SingleScreen.transform.GetChild(2).GetChild(2).GetComponent<TMP_Text>().text = "+" + results[3] + " points";
+        if ((int)results[5] == 0)
+            SingleScreen.transform.GetChild(3).GetChild(2).GetComponent<TMP_Text>().text = "+" + GameObject.FindWithTag("LevelManager").GetComponent<ScoreModifiers>().scoreForPerfectGame + " points";
+        else {
+            SingleScreen.transform.GetChild(3).GetChild(1).GetComponent<TMP_Text>().text = "Balls lost: ";
+            SingleScreen.transform.GetChild(3).GetChild(2).GetComponent<TMP_Text>().text =
+                "-" + GameObject.FindWithTag("LevelManager").GetComponent<ScoreModifiers>().penaltyForDroppedBall *
+                (int) results[5] + " points";
+        }
+        SingleScreen.transform.GetChild(4).GetChild(2).GetComponent<TMP_Text>().text =
+            "Time: " + (int) LevelStatistics.instance.time + " seconds";
+        SingleScreen.transform.GetChild(4).GetChild(3).GetComponent<TMP_Text>().text =
+            "Target: " + LevelManager.targetTime() + " seconds";
+        SingleScreen.transform.GetChild(5).GetChild(2).GetComponent<TMP_Text>().text = "x" + results[0];
+        SingleScreen.transform.GetChild(6).GetChild(2).GetComponent<TMP_Text>().text = (int)results[1] + " points";
 
         if (Scores.isInHighScore(LevelManager.currentLevel.name, (int)results[1])) {
-            SingleScreen.transform.GetChild(3).gameObject.SetActive(false);
-            SingleScreen.transform.GetChild(4).gameObject.SetActive(true);
+            SingleScreen.transform.GetChild(7).gameObject.SetActive(false);
+            SingleScreen.transform.GetChild(8).gameObject.SetActive(true);
             navigationButtons.SetActive(false);
 
         } else {
-            SingleScreen.transform.GetChild(3).gameObject.SetActive(true);
-            SingleScreen.transform.GetChild(4).gameObject.SetActive(false);
+            SingleScreen.transform.GetChild(7).gameObject.SetActive(true);
+            SingleScreen.transform.GetChild(8).gameObject.SetActive(false);
             navigationButtons.SetActive(true);
             SetupHighScoreScreen();
 
@@ -46,8 +60,9 @@ public class ResultScreen : MonoBehaviour {
         HighScoreButton.onClick.AddListener(delegate { SwitchToHighScore(); });
         SingleScreen.transform.GetComponentInChildren<Button>().onClick.AddListener(delegate { SubmitScore(); });
     }
+    
     private void SubmitScore() {
-        string playerName = SingleScreen.transform.GetChild(4).GetComponentInChildren<TMP_InputField>().text;
+        string playerName = SingleScreen.transform.GetChild(8).GetComponentInChildren<TMP_InputField>().text;
         if (!string.IsNullOrWhiteSpace(playerName)) {
             SingleScreen.transform.GetComponentInChildren<Button>().interactable = false;
             Score score = new Score(playerName, LevelManager.currentLevel.name, LevelStatistics.instance.score, (int)LevelStatistics.instance.time);

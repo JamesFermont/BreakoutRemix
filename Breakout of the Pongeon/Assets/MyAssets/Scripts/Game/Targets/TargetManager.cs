@@ -28,6 +28,7 @@ public class TargetManager : MonoBehaviour {
             if (target.isActivated) {
                 target.isActivated = false;
                 target.animator.SetBool(IsActive, false);
+                LevelStatistics.instance.AddLevelScore(-target.scoreOnTag);
                 break;
             }
         }

@@ -53,7 +53,7 @@ public class BlockManager : MonoBehaviour {
                 ToggleBlock(false);
             }
             onDestroyed?.Invoke(); // onDestroyed has to be invoked AFTER the collider is disabled to avoid a StackOverflowError
-            LevelStatistics.instance.AddScore(scoreOnDestroy);
+            LevelStatistics.instance.AddBlockScore(scoreOnDestroy);
             if (dpChance <= dpBaseChance + dpBaseChanceIncrement * LevelStatistics.instance.dpDropStep) {
                 Instantiate(dataPack, this.transform);
                 LevelStatistics.instance.dpDropStep = 0;
@@ -94,7 +94,7 @@ public class BlockManager : MonoBehaviour {
                 ToggleBlock(false);
             }
             onDestroyed?.Invoke(); // onDestroyed has to be invoked AFTER the collider is disabled to avoid a StackOverflowError
-            LevelStatistics.instance.AddScore(scoreOnDestroy);
+            LevelStatistics.instance.AddBlockScore(scoreOnDestroy);
             if (dpChance <= dpBaseChance + dpBaseChanceIncrement * LevelStatistics.instance.dpDropStep) {
                 Instantiate(dataPack, this.transform);
                 LevelStatistics.instance.dpDropStep = 0;

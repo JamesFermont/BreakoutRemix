@@ -40,7 +40,7 @@ public class PlayerAbility : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.GetComponent<DataPack>() == null) return;
         energy += other.GetComponent<DataPack>().energyGiven;
-        LevelStatistics.instance.score += other.GetComponent<DataPack>().pointsGiven;
+        LevelStatistics.instance.AddDataScore(other.GetComponent<DataPack>().pointsGiven);
         if (energy > energyCap) energy = energyCap;
         UpdateDisplay();
         Destroy(other.gameObject);

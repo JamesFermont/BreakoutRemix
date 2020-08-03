@@ -35,7 +35,7 @@ public class TargetArea : MonoBehaviour {
 		if (other.gameObject.CompareTag("Ball")) {
 			if (!isActivated) {
 				isActivated = true;
-				LevelStatistics.instance.AddScore(scoreOnTag);
+				LevelStatistics.instance.AddLevelScore(scoreOnTag);
 				animator.SetBool(IsActive, true);
 				targetManager.CheckCompleted();
 				if (!targetManager.isCompleted) {

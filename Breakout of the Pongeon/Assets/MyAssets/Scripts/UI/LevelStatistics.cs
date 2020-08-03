@@ -12,7 +12,9 @@ public class LevelStatistics {
     }
 
     public float time;
-    public int blocksDestroyed;
+    public int blockScore;
+    public int dataScore;
+    public int levelScore;
     public int ballsDropped;
     public int score;
 
@@ -24,36 +26,44 @@ public class LevelStatistics {
 
     public void ResetTracker() {
         time = 0;
-        blocksDestroyed = 0;
+        blockScore = 0;
         score = 0;
         ballsDropped = 0;
         dpDropStep = 0;
+        dataScore = 0;
     }
 
     public void EndTracker() {
         var oldTime = time;
         time = Time.fixedTime - oldTime;
-        var deadBlocks = 0;
-        foreach (BoxCollider2D col in LevelManager.currentLevelGO.GetComponentsInChildren<BoxCollider2D>()) {
-            if (col.enabled == false) {
-                deadBlocks += 1;
-            }
-        }
-        blocksDestroyed = deadBlocks;
     }
 
+    public void AddBlockScore(int delta) {
+        blockScore += delta;
+        AddScore(delta);
+    }
+
+    public void AddDataScore(int delta) {
+        dataScore += delta;
+        AddScore(delta);
+    }
+
+    public void AddLevelScore(int delta) {
+        levelScore += delta;
+        AddScore(delta);
+    }
+    
     public void AddScore(int delta) {
         score += delta;
     }
 
     public float[] CalculateScore() {
-        float[] result = new float[2];
+        float[] result = new float[6];
         var ball = GameObject.FindWithTag("Ball").GetComponent<BallBehaviour>();
         var scoreMods = GameObject.FindWithTag("LevelManager").GetComponent<ScoreModifiers>();
         float ballSpeedMod = ball.speedMod;
         float levelTime = time * ballSpeedMod;
         float targetTime = LevelManager.targetTime() * ballSpeedMod;
-        Debug.Log(LevelManager.targetTime());
 
         if (ballsDropped == 0) {
             score += scoreMods.scoreForPerfectGame;
@@ -68,6 +78,10 @@ public class LevelStatistics {
 
         result[0] = timeMod;
         result[1] = finalScore;
+        result[2] = blockScore;
+        result[3] = dataScore;
+        result[4] = levelScore;
+        result[5] = ballsDropped;
 
         return result;
     }
