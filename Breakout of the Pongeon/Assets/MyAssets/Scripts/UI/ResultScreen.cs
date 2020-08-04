@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,7 +33,7 @@ public class ResultScreen : MonoBehaviour {
         else {
             SingleScreen.transform.GetChild(3).GetChild(1).GetComponent<TMP_Text>().text = "Balls lost: ";
             SingleScreen.transform.GetChild(3).GetChild(2).GetComponent<TMP_Text>().text =
-                "-" + GameObject.FindWithTag("LevelManager").GetComponent<ScoreModifiers>().penaltyForDroppedBall *
+                GameObject.FindWithTag("LevelManager").GetComponent<ScoreModifiers>().penaltyForDroppedBall *
                 (int) results[5] + " points";
         }
         SingleScreen.transform.GetChild(4).GetChild(2).GetComponent<TMP_Text>().text =

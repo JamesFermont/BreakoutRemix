@@ -18,7 +18,6 @@ public class TargetManager : MonoBehaviour {
 
         if (targetsHit == targetAreas.Length) {
             isCompleted = true;
-
             LevelManager.EndLevel();
         }
     }

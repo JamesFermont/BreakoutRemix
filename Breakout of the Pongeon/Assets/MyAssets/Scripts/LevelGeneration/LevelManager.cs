@@ -57,6 +57,9 @@ public static class LevelManager {
         foreach (Transform child in currentLevelGO.transform) {
             if (child.GetComponent<SpriteRenderer>().enabled) {
                 child.GetComponent<BlockManager>().ToggleBlock(false);
+                if (child.transform.childCount > 0) {
+                    child.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
         }
         SceneManager.LoadSceneAsync("LvCompleteTransition", LoadSceneMode.Additive);

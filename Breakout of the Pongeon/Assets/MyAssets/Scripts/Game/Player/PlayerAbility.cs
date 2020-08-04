@@ -77,7 +77,7 @@ public class PlayerAbility : MonoBehaviour {
     }
 
     private void DisplayFullCharge() {
-        energyDisplay.color = new Color(1, 1, 1, (150f +Mathf.PingPong(Time.time*70, 80))/255f);
+        energyDisplay.color = new Color(1, 1, 1, (150f +Mathf.PingPong(Time.time*70, 105))/255f);
     }
 
     private IEnumerator BulletTime() {

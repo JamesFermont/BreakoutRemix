@@ -47,15 +47,12 @@ public class CircleExplosion : MonoBehaviour {
         switch (rand)
         {
             case 1:
-                bgManager.Stop("idle");
                 bgManager.Play("youagain");
                 break;
             case 2:
-                bgManager.Stop("idle");
-                bgManager.Play("theend");
+                bgManager.Play("futile");
                 break;
             case 3:
-                bgManager.Stop("idle");
                 bgManager.Play("getout");
                 break;
         }
