@@ -106,9 +106,8 @@ public class BallBehaviour : MonoBehaviour {
         hasBouncedThisFrame = true;
 
         if (other.gameObject.CompareTag("Paddle")) {
-            GetComponentInChildren<TrailRenderer>().startColor = Color.white;
-            GetComponentInChildren<TrailRenderer>().endColor = Color.white;
-            
+            ResetTrail();
+
             if (PlayerPrefs.HasKey("playMode") && PlayerPrefs.GetInt("playMode") == 1)
                 speed += paddleSpeedIncreaseIncrement;
 
@@ -132,6 +131,11 @@ public class BallBehaviour : MonoBehaviour {
         } else {
             GetComponent<ParticleSystem>().Play();
         }
+    }
+
+    public void ResetTrail() {
+        GetComponentInChildren<TrailRenderer>().startColor = Color.white;
+        GetComponentInChildren<TrailRenderer>().endColor = Color.white;
     }
 
     public void Launch() {

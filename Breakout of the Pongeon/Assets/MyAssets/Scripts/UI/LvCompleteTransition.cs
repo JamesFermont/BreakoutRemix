@@ -4,12 +4,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LvCompleteTransition : MonoBehaviour {
-
-	[SerializeField] private int frameCount = 1000;
-	
 	private Image image;
-	private int framesPassed;
-	
+
 	private void OnEnable() {
 		image = transform.GetChild(0).GetComponent<Image>();
 	}
@@ -19,21 +15,31 @@ public class LvCompleteTransition : MonoBehaviour {
 	}
 
 	private IEnumerator ShowText() {
-		framesPassed = 0;
 		FindObjectOfType<AudioManager>().UpdatePitch(1f);
+		StartCoroutine(FadeIn());
+		
+		yield return new WaitForSecondsRealtime(5f);
 
-		while (framesPassed < frameCount) {
-			if (frameCount - framesPassed >= frameCount - 300) {
-				image.color = new Color(1, 1, 1, Mathf.Min(framesPassed / 300f, 1f));
-			}
-
-			if (frameCount-framesPassed <= 300) {
-				image.color = new Color(1, 1, 1, Mathf.Max((frameCount-framesPassed) / 300f, 0f));
-			}
-			framesPassed++;
-			yield return null;
+		StartCoroutine(FadeOut());
+	}
+	
+	private IEnumerator FadeIn() {
+		for (float f = 0.05f; f <= 1; f += 0.1f) {
+			Color c = image.color;
+			c.a = f;
+			image.color = c;
+			yield return new WaitForSecondsRealtime(0.05f);
 		}
-
+	}
+	
+	private IEnumerator FadeOut() {
+		for (float f = 1f; f >= 0; f -= 0.1f) {
+			Color c = image.color;
+			c.a = f;
+			image.color = c;
+			yield return new WaitForSecondsRealtime(0.05f);
+		}
+		
 		SceneManager.UnloadSceneAsync("LvCompleteTransition");
 		SceneManager.LoadSceneAsync("ResultScreen", LoadSceneMode.Additive);
 	}
