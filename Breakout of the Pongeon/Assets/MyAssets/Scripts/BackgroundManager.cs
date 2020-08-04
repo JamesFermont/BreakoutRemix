@@ -8,6 +8,7 @@ public class BackgroundManager : MonoBehaviour {
 
     private AudioSource audioSource;
     private double duration;
+    private string currentAnim;
 
     private void Awake() {
         StartCoroutine(InitLibrary());
@@ -40,21 +41,37 @@ public class BackgroundManager : MonoBehaviour {
             bg.source.waitForFirstFrame = bg.waitForFirstFrame;
         }
 
-        Play("idle");
+        PlayIdle();
     }
 
     public void Play(string bgName) {
-        if (IsPlaying("idle")) return;
+        if (currentAnim == "idle")
+            Stop("idle");
+        else if (bgName == "theend")
+            Stop(currentAnim);
+        else
+            return;
+        
         Background bgToPlay = Array.Find(tracks, bg => bg.name == bgName);
         if (bgToPlay == null) {
             Debug.LogWarning("Background: " + bgName + " was not found!");
             return;
         }
         bgToPlay.source.Play();
+        currentAnim = bgName;
         duration = bgToPlay.source.length;
-        if (bgName != "idle") {
-            StartCoroutine(ReturnToIdle());
+        StartCoroutine(ReturnToIdle());
+    }
+
+    private void PlayIdle() {
+        Background bgToPlay = Array.Find(tracks, bg => bg.name == "idle");
+        if (bgToPlay == null) {
+            Debug.LogWarning("Background: idle was not found!");
+            return;
         }
+        bgToPlay.source.Play();
+        currentAnim = "idle";
+        duration = 0f;
     }
     
     public void Stop(string bgName) {
@@ -84,7 +101,7 @@ public class BackgroundManager : MonoBehaviour {
         return bgToPlay.source.isPrepared;
     }
 
-    public bool IsPlaying(string bgName) {
+    private bool IsPlaying(string bgName) {
         Background bgToPlay = Array.Find(tracks, bg => bg.name == bgName);
         if (bgToPlay == null) {
             Debug.LogWarning("Background: " + bgName + " was not found!");
@@ -102,6 +119,6 @@ public class BackgroundManager : MonoBehaviour {
         }
         
         duration = 0f;
-        Play("idle");
+        PlayIdle();
     }
 }

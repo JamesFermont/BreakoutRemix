@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -93,5 +94,9 @@ public class ResultScreen : MonoBehaviour {
         HighScoreScreen.SetActive(false);
         SingleScreen.SetActive(true);
         HighScoreButton.interactable = true;
+    }
+
+    private void OnDestroy() {
+        FindObjectOfType<AudioManager>()?.UpdatePitch(1f);
     }
 }

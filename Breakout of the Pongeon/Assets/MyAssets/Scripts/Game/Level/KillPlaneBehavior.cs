@@ -24,11 +24,9 @@ public class KillPlaneBehavior : MonoBehaviour {
         switch (rand)
         {
             case 1:
-                bgManager.Stop("idle");
                 bgManager.Play("laugh1");
                 break;
             case 2:
-                bgManager.Stop("idle");
                 bgManager.Play("laugh2");
                 break;
         }

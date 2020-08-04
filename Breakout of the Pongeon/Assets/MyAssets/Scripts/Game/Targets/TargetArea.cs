@@ -52,23 +52,19 @@ public class TargetArea : MonoBehaviour {
 		int rand = Random.Range(1, 4);
 		switch (rand)
 		{
-			case 1:
-				bgManager.Stop("idle");
+			case 1: 
 				bgManager.Play("damnyou");
 				break;
 			case 2:
-				bgManager.Stop("idle");
 				bgManager.Play("futile");
 				break;
 			case 3:
-				bgManager.Stop("idle");
 				bgManager.Play("succeed");
 				break;
 		}
 	}
 
 	private void PlayVideo2() {
-		bgManager.Stop("idle");
 		bgManager.Play("theend");
 	}
 	

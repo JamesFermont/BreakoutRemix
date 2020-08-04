@@ -373,4 +373,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff19681ea2d181a4594099e5bdf61ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frameCount: 2500
+  frameCount: 1600
