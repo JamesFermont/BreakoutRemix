@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyAssets/Scenes/UI/PauseMenu.unity
     guid: 48284315c9bf95a4b83b4c64c2b5ee6e
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/UI/LvCompleteTransition.unity
+    guid: 31b3463cd416541498481eb0e115da42
   m_configObjects: {}

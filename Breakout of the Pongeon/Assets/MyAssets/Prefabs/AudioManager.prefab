@@ -116,7 +116,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: target_hit
     type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
-    clip: {fileID: 8300000, guid: 6d59afd6b55621545a183ce856b672ac, type: 3}
+    clip: {fileID: 8300000, guid: 188b924887bcf2e4593ab8bd19fa93cb, type: 3}
     volume: 0.03
     pitch: 1
     loop: 0
@@ -145,7 +145,14 @@ MonoBehaviour:
   - name: video
     type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
     clip: {fileID: 0}
-    volume: 0.579
+    volume: 0.1
     pitch: 1.71
+    loop: 0
+    source: {fileID: 0}
+  - name: final_target_hit
+    type: {fileID: 3221663118925444661, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
+    clip: {fileID: 8300000, guid: 78e7b2bbe5835c04889c02bb9dbaafb1, type: 3}
+    volume: 0.1
+    pitch: 1
     loop: 0
     source: {fileID: 0}

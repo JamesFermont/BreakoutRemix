@@ -53,7 +53,12 @@ public static class LevelManager {
 
     public static void EndLevel() {
         LevelStatistics.instance.EndTracker();
-        SceneManager.LoadSceneAsync("ResultScreen", LoadSceneMode.Additive);
+        foreach (Transform child in currentLevelGO.transform) {
+            if (child.GetComponent<SpriteRenderer>().enabled) {
+                child.GetComponent<BlockManager>().ToggleBlock(false);
+            }
+        }
+        SceneManager.LoadSceneAsync("LvCompleteTransition", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
 }
