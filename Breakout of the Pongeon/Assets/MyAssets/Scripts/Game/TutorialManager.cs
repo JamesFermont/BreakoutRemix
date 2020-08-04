@@ -7,7 +7,6 @@ public class TutorialManager : MonoBehaviour {
 	public int stage;
 	
 	private int framesPassed;
-	private bool isPlaying;
 	private int frameCount = 2500;
 	
 	private void OnEnable() {
@@ -41,14 +40,7 @@ public class TutorialManager : MonoBehaviour {
 		stage = id;
 	}
 
-	private void FixedUpdate() {
-		if (isPlaying) {
-			framesPassed++;
-		}
-	}
-
 	private IEnumerator PlayTutorial() {
-		isPlaying = true;
 		framesPassed = 0;
 		Time.timeScale = 0f;
 		GetComponent<SpriteRenderer>().enabled = true;
@@ -61,8 +53,7 @@ public class TutorialManager : MonoBehaviour {
 			framesPassed++;
 			yield return null;
 		}
-
-		isPlaying = false;
+		
 		Time.timeScale = 1f;
 		GetComponent<SpriteRenderer>().enabled = false;
 		if (stage >= 2) {

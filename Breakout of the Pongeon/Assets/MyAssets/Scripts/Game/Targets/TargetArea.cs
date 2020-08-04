@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TargetArea : MonoBehaviour {
 	public TargetManager targetManager;
@@ -41,13 +40,16 @@ public class TargetArea : MonoBehaviour {
 				if (!targetManager.isCompleted) {
 					audioManager.Play("target_hit");
 					PlayVideo();
+				} else {
+					audioManager.Play("final_target_hit");
+					PlayVideo2();
 				}
 			}
 		}
 	}
 
 	private void PlayVideo() {
-		int rand = Random.Range(1, 3);
+		int rand = Random.Range(1, 4);
 		switch (rand)
 		{
 			case 1:
@@ -63,6 +65,11 @@ public class TargetArea : MonoBehaviour {
 				bgManager.Play("succeed");
 				break;
 		}
+	}
+
+	private void PlayVideo2() {
+		bgManager.Stop("idle");
+		bgManager.Play("theend");
 	}
 	
 	private void OnTriggerEnter2D(Collider2D other) {

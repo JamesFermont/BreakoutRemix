@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CircleExplosion : MonoBehaviour {
     public EffectType effectType = EffectType.ON_DAMAGED;
@@ -8,10 +6,12 @@ public class CircleExplosion : MonoBehaviour {
     public int explosionDamage = 3;
 
     private AudioManager audioManager;
+    private BackgroundManager bgManager;
     private static readonly int ToExplode = Animator.StringToHash("toExplode");
 
     private void Awake() {
         audioManager = FindObjectOfType<AudioManager>();
+        bgManager = FindObjectOfType<BackgroundManager>();
     }
 
     private void OnEnable() {
@@ -28,6 +28,7 @@ public class CircleExplosion : MonoBehaviour {
     private void PerformEffect() {
         audioManager.Play("bomb_detonate");
         this.gameObject.GetComponent<Animator>().SetBool(ToExplode, true);
+        PlayVideo();
 
         Collider2D[] hit = Physics2D.OverlapCircleAll(gameObject.transform.position, explosionRadius, 1<<8);
         foreach (Collider2D target in hit) {
@@ -39,5 +40,24 @@ public class CircleExplosion : MonoBehaviour {
     private void OnDrawGizmosSelected() {
         Gizmos.color = new Color(1,0,0,0.50f);
         Gizmos.DrawSphere(gameObject.transform.position, explosionRadius);
+    }
+    
+    private void PlayVideo() {
+        int rand = Random.Range(1, 4);
+        switch (rand)
+        {
+            case 1:
+                bgManager.Stop("idle");
+                bgManager.Play("youagain");
+                break;
+            case 2:
+                bgManager.Stop("idle");
+                bgManager.Play("theend");
+                break;
+            case 3:
+                bgManager.Stop("idle");
+                bgManager.Play("getout");
+                break;
+        }
     }
 }
