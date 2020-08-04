@@ -33,6 +33,7 @@ public static class LevelManager {
     private static void MakeLevel(Level level) {
         currentLevel = level;
         currentLevelGO = LevelGenerator.instance.Generate(currentLevel);
+        LevelStatistics.instance.ResetTracker();
     }
 
     public static void SaveCurrentLevel() {
