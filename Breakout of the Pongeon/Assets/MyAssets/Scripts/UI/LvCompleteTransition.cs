@@ -17,10 +17,10 @@ public class LvCompleteTransition : MonoBehaviour {
 	private void Start() {
 		StartCoroutine(ShowText());
 	}
-	
 
 	private IEnumerator ShowText() {
 		framesPassed = 0;
+		FindObjectOfType<AudioManager>().UpdatePitch(1f);
 
 		while (framesPassed < frameCount) {
 			if (frameCount - framesPassed >= frameCount - 300) {
