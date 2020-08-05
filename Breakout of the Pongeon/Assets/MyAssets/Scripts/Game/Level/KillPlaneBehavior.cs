@@ -1,10 +1,17 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class KillPlaneBehavior : MonoBehaviour {
     private BackgroundManager bgManager;
     private static readonly int IsBallLaunched = Animator.StringToHash("isBallLaunched");
 
-    private void Awake() {
+    private void Start() {
+        StartCoroutine(GetRefs());
+    }
+
+    private IEnumerator GetRefs() {
+        yield return new WaitForSecondsRealtime(0.1f);
+        
         bgManager = FindObjectOfType<BackgroundManager>();
     }
 
@@ -23,6 +30,7 @@ public class KillPlaneBehavior : MonoBehaviour {
     }
     
     private void PlayVideo() {
+        Debug.Log(bgManager);
         int rand = Random.Range(1, 3);
         switch (rand)
         {

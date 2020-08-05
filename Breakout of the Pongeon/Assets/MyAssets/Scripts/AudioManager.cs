@@ -23,6 +23,8 @@ public class AudioManager : MonoBehaviour {
 
     private void PlayBgm(Scene current, Scene next) {
         if (next == SceneManager.GetSceneByName("MainMenu")) {
+            if (IsPlaying("bgm_game_01"))
+                Stop("bgm_game_01");
             Play("bgm_menu");
         }
     }

@@ -48,39 +48,38 @@ public class BackgroundManager : MonoBehaviour {
             bg.source.targetCameraAlpha = bg.alpha;
             bg.source.isLooping = bg.loop;
             bg.source.waitForFirstFrame = bg.waitForFirstFrame;
+            bg.source.loopPointReached += PlayIdle;
         }
 
-        PlayIdle();
+        currentAnim = "idle";
+        Play("idle");
     }
 
     public void Play(string bgName) {
-        if (currentAnim == "idle")
-            Stop("idle");
-        else if (bgName == "theend")
-            Stop(currentAnim);
-        else
-            return;
+        Stop(currentAnim);
         
         Background bgToPlay = Array.Find(tracks, bg => bg.name == bgName);
         if (bgToPlay == null) {
             Debug.LogWarning("Background: " + bgName + " was not found!");
             return;
         }
-        bgToPlay.source.Play();
+
         currentAnim = bgName;
-        duration = bgToPlay.source.length;
-        StartCoroutine(ReturnToIdle());
+        bgToPlay.source.Play();
     }
 
-    private void PlayIdle() {
+    private void PlayIdle(VideoPlayer vp) {
+        vp.Stop();
+        vp.Prepare();
+        
         Background bgToPlay = Array.Find(tracks, bg => bg.name == "idle");
         if (bgToPlay == null) {
             Debug.LogWarning("Background: idle was not found!");
             return;
         }
-        bgToPlay.source.Play();
+
         currentAnim = "idle";
-        duration = 0f;
+        bgToPlay.source.Play();
     }
     
     public void Stop(string bgName) {
@@ -90,44 +89,6 @@ public class BackgroundManager : MonoBehaviour {
             return;
         }
         bgToPlay.source.Stop();
-    }
-
-    public void Prepare(string bgName) {
-        Background bgToPlay = Array.Find(tracks, bg => bg.name == bgName);
-        if (bgToPlay == null) {
-            Debug.LogWarning("Background: " + bgName + " was not found!");
-            return;
-        }
         bgToPlay.source.Prepare();
-    }
-
-    public bool IsPrepared(string bgName) {
-        Background bgToPlay = Array.Find(tracks, bg => bg.name == bgName);
-        if (bgToPlay == null) {
-            Debug.LogWarning("Background: " + bgName + " was not found!");
-            return false;
-        }
-        return bgToPlay.source.isPrepared;
-    }
-
-    private bool IsPlaying(string bgName) {
-        Background bgToPlay = Array.Find(tracks, bg => bg.name == bgName);
-        if (bgToPlay == null) {
-            Debug.LogWarning("Background: " + bgName + " was not found!");
-            return false;
-        }
-        return bgToPlay.source.isPlaying;
-    }
-
-    private IEnumerator ReturnToIdle() {
-        float timeElapsed = 0f;
-
-        while (timeElapsed < duration) {
-            timeElapsed += Time.deltaTime;
-            yield return null;
-        }
-        
-        duration = 0f;
-        PlayIdle();
     }
 }
