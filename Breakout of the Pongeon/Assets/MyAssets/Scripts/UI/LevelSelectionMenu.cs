@@ -23,7 +23,6 @@ public class LevelSelectionMenu : MonoBehaviour {
     }
 
     private void OnEnable() {
-        SceneManager.sceneLoaded += OnSceneLoaded;
         int numberOfLevels = levelList.childCount;
 
         if (bundles == null) {
@@ -48,33 +47,6 @@ public class LevelSelectionMenu : MonoBehaviour {
                 
 
     }
-
-    private void OnDisable() {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        if (scene.name != "GameLevel")
-            return;
-        StartCoroutine(ChangeToPlayMode());
-    }
-
-    public void LoadLevel(string levelName) {
-        currentLevel = levelName;
-        SceneManager.LoadSceneAsync("GameLevel", LoadSceneMode.Additive);
-    }
-
-    private IEnumerator ChangeToPlayMode() {
-        yield return new WaitForEndOfFrame();
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("GameLevel"));
-        LevelManager.LoadLevel(currentLevel);
-        FindObjectOfType<TargetManager>().FindTargetAreas();
-        SceneManager.UnloadSceneAsync("LevelSelect");
-        if (SceneManager.GetSceneByName("MainMenu").isLoaded)
-            SceneManager.UnloadSceneAsync("MainMenu");
-    }
-
     private void CreateBundle (LevelBundle bundle, int yPosition) {
         GameObject myBundle = (GameObject)Instantiate(levelBundlePrefab, levelList);
 

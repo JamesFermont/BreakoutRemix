@@ -30,14 +30,14 @@ public class Constants
     public static float LEVEL_HEIGHT = 7.2f;
 
     //Bonus for winning without losing a ball
-    public static int PERFECT_GAME_BONUS;
+    public static int PERFECT_GAME_BONUS = 1000;
     
-    public static int DROPPED_BALL_PENATLY;
+    public static int DROPPED_BALL_PENATLY = -200;
     
 
-    public static int SECONDS_PER_TIMEMOD_INTERVAL;
-    public static float MIN_TIMEMOD;
-    public static float MAX_TIMEMOD;
+    public static int SECONDS_PER_TIMEMOD_INTERVAL = 3;
+    public static float MIN_TIMEMOD = 0.5f;
+    public static float MAX_TIMEMOD = 1.5f;
 
 
 }

@@ -15,15 +15,11 @@ public class MainMenu : MonoBehaviour {
 
     public void SetMenu(int index) {
         backgrounds.SetMenu(index);
-        if (activeMenu == 0)
-            backgrounds.SetView(index);
+
     }
     public void SelectMenu(int index) {
         UnloadWrongScenes();
         activeMenu = index;
-        if (needsblankView(index))
-            index = 0;
-        backgrounds.SetViewAndSelection(index);
     }
     public void UnsetMenu() {
         backgrounds.SetMenu(activeMenu);

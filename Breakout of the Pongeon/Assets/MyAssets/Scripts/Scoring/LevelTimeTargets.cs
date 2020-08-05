@@ -11,15 +11,6 @@ public static class LevelTimeTargets {
     public static int getTarget(string level) {
         if (targets == null)
             ReadLevels();
-        int ssv = 0;
-        foreach (LevelTimeTarget target in targets) {
-
-            if (LevelIO.LoadLevel(target.level) != null && target.level != LevelIO.LoadLevel(target.level).name) {
-                Debug.Log(target.level);
-                ssv++;
-            }
-        }
-        Debug.Log(ssv + " broken Levels");
         foreach (LevelTimeTarget target in targets) {
             if (target.level == level)
                 return target.target;

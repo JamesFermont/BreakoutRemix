@@ -31,7 +31,7 @@ public static class Scores {
     }
 
     public static List<Score> GetSortedScoresFromLevel(string levelName) {
-        if (scores == null)
+        if (scores == null || scores.Count == 0)
             scores = ScoreIO.LoadScores();
 
         if (string.IsNullOrWhiteSpace(levelName))
@@ -46,7 +46,8 @@ public static class Scores {
     }
 
     public static int GetHighscore(string levelName) {
-        return (GetSortedScoresFromLevel(levelName).Count == 0) ? 0 : (int)GetSortedScoresFromLevel(levelName)[0].finalScore();
+        List<Score> myScores = GetSortedScoresFromLevel(levelName);
+        return (myScores.Count == 0) ? 0 : (int)myScores[myScores.Count-1].finalScore();
     }
 
     public static bool isInHighScore(string level, int score) {

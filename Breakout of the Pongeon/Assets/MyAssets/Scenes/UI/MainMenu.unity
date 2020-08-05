@@ -517,6 +517,7 @@ MonoBehaviour:
   sceneName: LevelSelect
   isAdditive: 1
   type: 0
+  forceReload: 0
 --- !u!114 &136949264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,7 +746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdca58e8e49f06459500ed21b828f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: bc7781d27ef038c4eb4f98c1b8d68ab7, type: 2}
 --- !u!1 &526615997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1382,7 @@ MonoBehaviour:
   sceneName: EditorLevel
   isAdditive: 0
   type: 0
+  forceReload: 0
 --- !u!114 &1520521039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,7 +1482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 31a1d0aa1c18c224ca3852e8ba77f64c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa23f8cfdf9b4fe4fb83633094b81ce8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2302,6 +2303,7 @@ MonoBehaviour:
   sceneName: OptionsMenu
   isAdditive: 1
   type: 0
+  forceReload: 0
 --- !u!1 &2016473557
 GameObject:
   m_ObjectHideFlags: 0

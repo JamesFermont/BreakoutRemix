@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 934203624183013115}
   m_Layer: 0
   m_Name: BG
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2442308537573322510}
   - component: {fileID: 5676908198850163995}
+  - component: {fileID: 4737210478076767888}
   m_Layer: 0
   m_Name: LevelBundles
   m_TagString: Untagged
@@ -177,6 +178,18 @@ MonoBehaviour:
     - Level_4-4
     score: 5000
     unlocksEditor: 1
+--- !u!114 &4737210478076767888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911378963424636208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f28e22f249d9d41a8b5ae6518d24c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2060939662121078509
 GameObject:
   m_ObjectHideFlags: 0

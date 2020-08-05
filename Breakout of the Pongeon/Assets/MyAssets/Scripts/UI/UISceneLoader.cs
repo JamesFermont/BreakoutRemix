@@ -9,6 +9,7 @@ public class UISceneLoader : MonoBehaviour {
     public string sceneName;
     public bool isAdditive;
     public LoadingType type;
+    public bool forceReload = false;
     // Start is called before the first frame update
     void Start() {
         levelLoadButton.onClick.AddListener(delegate { LoadLevel(); });
@@ -18,7 +19,7 @@ public class UISceneLoader : MonoBehaviour {
     void LoadLevel() {
 
         if (type == LoadingType.LOAD) {
-            if (SceneManager.GetSceneByName(sceneName).isLoaded)
+            if (SceneManager.GetSceneByName(sceneName).isLoaded && forceReload == false)
                 return;
             if (isAdditive)
                 SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
