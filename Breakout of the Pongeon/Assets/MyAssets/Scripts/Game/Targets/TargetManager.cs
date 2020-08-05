@@ -6,6 +6,7 @@ public class TargetManager : MonoBehaviour {
     private TargetArea[] targetAreas;
     public bool isCompleted;
     private static readonly int IsActive = Animator.StringToHash("isActive");
+    private static readonly int IsBallLaunched = Animator.StringToHash("isBallLaunched");
 
     private void OnEnable() {
         FindTargetAreas();
@@ -19,6 +20,7 @@ public class TargetManager : MonoBehaviour {
 
         if (targetsHit == targetAreas.Length) {
             isCompleted = true;
+            GameObject.FindWithTag("Background").GetComponent<Animator>().SetBool(IsBallLaunched, false);
             StartCoroutine(DespawnLevel());
             LevelManager.EndLevel();
         }
