@@ -54,7 +54,6 @@ public static class LevelIO {
             Debug.LogError(ex.ToString());
             return null;
         }
-        Debug.Log(level.name);
         return level;
     }
 

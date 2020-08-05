@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour {
     private void Start() {
         backgrounds = transform.GetComponentInChildren<MainMenuImages>();
         Debug.Log(FindObjectOfType<LevelBundles>().AllActiveLevels().Length);
-        if (FindObjectOfType<LevelBundles>().AllActiveLevels().Length >= 4) {
+        if (FindObjectOfType<LevelBundles>().AllActiveLevels().Length > 4) {
             transform.Find("StartMenu").Find("Editor").GetComponent<Button>().interactable = true;
         }
     }
@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour {
             backgrounds.SetView(index);
     }
     public void SelectMenu(int index) {
+        UnloadWrongScenes();
         activeMenu = index;
         if (needsblankView(index))
             index = 0;
@@ -31,7 +32,7 @@ public class MainMenu : MonoBehaviour {
         Application.Quit();
     }
 
-    public void FixedUpdate() {
+    public void Update() {
         if (CanOpenTargetMenu()) {
             if (TargetMenuKeysPressed())
                 OpenTimeTargetMenu();
@@ -49,13 +50,21 @@ public class MainMenu : MonoBehaviour {
     }
 
     private bool CanOpenTargetMenu() {
-        return (SceneManager.GetActiveScene().name == "MainMenu" && !SceneManager.GetSceneByName("TimeTaken").IsValid());
+        return (SceneManager.GetActiveScene().name == "MainMenu" && !SceneManager.GetSceneByName("TimeTaken").isLoaded);
     }
     private bool TargetMenuKeysPressed() {
-        return ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt)) && Input.GetKey(KeyCode.L));
+        return ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt)) && Input.GetKeyDown(KeyCode.L));
     }
     private bool needsblankView(int index) {
         return (index == 1 || index == 3 || index == 4);
+    }
+
+    private void UnloadWrongScenes() {
+        
+        for(int i = 0; i < SceneManager.sceneCount; i++) {
+            if (SceneManager.GetSceneAt(i).name != "MainMenu")
+                SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(i));
+        }
     }
 
 }

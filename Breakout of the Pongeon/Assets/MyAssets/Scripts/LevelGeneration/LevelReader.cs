@@ -47,6 +47,7 @@ public class LevelReader {
                 }
 
                 loadedLevel = new Level(name, new Grid(map, levelObjects));
+                reader.Close();
             }
         } catch (Exception ex)
         {

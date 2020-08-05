@@ -5,8 +5,8 @@ using System.Collections;
 
 public class LevelSelectionMenu : MonoBehaviour {
     public Transform levelList;
-    public Object levelListPrefab;
-    string[] levels;
+    public Object levelBundlePrefab;
+    public Object lockedBundlePrefab;
     LevelBundles bundles;
     string currentLevel;
 
@@ -26,17 +26,26 @@ public class LevelSelectionMenu : MonoBehaviour {
         SceneManager.sceneLoaded += OnSceneLoaded;
         int numberOfLevels = levelList.childCount;
 
-        if (levels == null) {
-            levels = LevelIO.getLevelsInDirectory();
+        if (bundles == null) {
+            bundles = FindObjectOfType<LevelBundles>();
         }
-       
-        ((RectTransform)levelList).sizeDelta = new Vector2(0, levels.Length * 64);
-            foreach (string level in levels) {
-                if (levelList.Find(level))
-                    continue;
-            CreateLevelButton(level, numberOfLevels++);
-                
+        ((RectTransform)levelList).sizeDelta = new Vector2(0, bundles.bundles.Length * 300);
+        int previousScore = 0;
+        for (int i = 0; i < bundles.bundles.Length; i++) {
+            if (i > 0) {
+                if(bundles.bundles[i].score <= previousScore)
+                    CreateBundle(bundles.bundles[i], numberOfLevels++); 
+
+            } else {
+                CreateBundle(bundles.bundles[i], numberOfLevels++);
             }
+
+            previousScore = bundles.bundles[i].TotalScore();
+        }
+            
+            
+                
+                
 
     }
 
@@ -51,7 +60,7 @@ public class LevelSelectionMenu : MonoBehaviour {
         StartCoroutine(ChangeToPlayMode());
     }
 
-    private void LoadLevel(string levelName) {
+    public void LoadLevel(string levelName) {
         currentLevel = levelName;
         SceneManager.LoadSceneAsync("GameLevel", LoadSceneMode.Additive);
     }
@@ -66,15 +75,12 @@ public class LevelSelectionMenu : MonoBehaviour {
             SceneManager.UnloadSceneAsync("MainMenu");
     }
 
-    private void CreateLevelButton (string name, int yPosition) {
-        GameObject button = (GameObject)Instantiate(levelListPrefab, levelList);
+    private void CreateBundle (LevelBundle bundle, int yPosition) {
+        GameObject myBundle = (GameObject)Instantiate(levelBundlePrefab, levelList);
 
-        button.name = name;
-        button.transform.localPosition = new Vector3(0f, -30f - 60f * yPosition, 0f);
-
-        button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = name;
-        button.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(name); });
-        button.GetComponent<Button>().interactable = true;
+        myBundle.name = bundle.name;
+        myBundle.transform.localPosition = new Vector3(0f, -150f - 300f * yPosition, 0f);
+        myBundle.GetComponent<BundleObject>().Init(bundle);
     } 
 
 
