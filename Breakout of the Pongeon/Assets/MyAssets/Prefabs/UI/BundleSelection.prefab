@@ -654,12 +654,12 @@ MonoBehaviour:
   highlightTextColor: {r: 0, g: 0, b: 0, a: 1}
   hightlightBackgroundColor: {r: 33, g: 231, b: 178, a: 1}
   highlightBackgroundColors:
-    m_NormalColor: {r: 0.12941177, g: 0.90588236, b: 0.69803923, a: 0}
-    m_HighlightedColor: {r: 0.29411766, g: 1, b: 0.84313726, a: 0}
-    m_PressedColor: {r: 0.11764706, g: 0.8039216, b: 0.5882353, a: 0}
-    m_SelectedColor: {r: 0.12941177, g: 0.90588236, b: 0.69803923, a: 0}
-    m_DisabledColor: {r: 0.90588236, g: 0.12941176, b: 0.7379236, a: 0}
-    m_ColorMultiplier: 0
+    m_NormalColor: {r: 0.12941177, g: 0.90588236, b: 0.69803923, a: 1}
+    m_HighlightedColor: {r: 0.29411766, g: 1, b: 0.84313726, a: 1}
+    m_PressedColor: {r: 0.11764706, g: 0.8039216, b: 0.5882353, a: 1}
+    m_SelectedColor: {r: 0.12941177, g: 0.90588236, b: 0.69803923, a: 1}
+    m_DisabledColor: {r: 0.90588236, g: 0.12941176, b: 0.7379236, a: 1}
+    m_ColorMultiplier: 2.77
     m_FadeDuration: 0
 --- !u!1 &6478998226614396993
 GameObject:
