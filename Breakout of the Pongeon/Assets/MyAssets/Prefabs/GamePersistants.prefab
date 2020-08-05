@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 50
-  m_Sprite: {fileID: 85512580335978857, guid: 008015ae560db5b4eadb17ff36ad0391, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 19.199999, y: 10.799999}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &934203624183013115
@@ -404,6 +404,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514288725349267478, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514288725349267478, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
+        type: 3}
+      propertyPath: sounds.Array.data[16].name
+      value: intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514288725349267478, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
+        type: 3}
+      propertyPath: sounds.Array.data[16].type
+      value: 
+      objectReference: {fileID: -2623996676782669458, guid: bc7781d27ef038c4eb4f98c1b8d68ab7,
+        type: 2}
+    - target: {fileID: 3514288725349267478, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
+        type: 3}
+      propertyPath: sounds.Array.data[16].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514288725349267478, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
+        type: 3}
+      propertyPath: sounds.Array.data[16].pitch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3514288725349267479, guid: 622598e5ecfd86c4c89b78a2f6a99ec7,
         type: 3}

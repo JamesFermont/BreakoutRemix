@@ -31,6 +31,7 @@ public class LevelStatistics {
         ballsDropped = 0;
         dpDropStep = 0;
         dataScore = 0;
+        levelScore = 0;
     }
 
     public void EndTracker() {

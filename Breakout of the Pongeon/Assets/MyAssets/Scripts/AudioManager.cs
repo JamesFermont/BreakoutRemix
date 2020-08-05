@@ -1,5 +1,7 @@
 ﻿using System;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour {
     public Sound[] sounds;
@@ -16,7 +18,13 @@ public class AudioManager : MonoBehaviour {
     }
 
     private void Start() {
-        Play("bgm_menu");
+        SceneManager.activeSceneChanged += PlayBgm;
+    }
+
+    private void PlayBgm(Scene current, Scene next) {
+        if (next == SceneManager.GetSceneByName("MainMenu")) {
+            Play("bgm_menu");
+        }
     }
 
     public void Play(string soundName) {
@@ -55,6 +63,11 @@ public class AudioManager : MonoBehaviour {
 
     public AudioSource FetchVideoSource() {
         Sound sourceToFetch = Array.Find(sounds, sound => sound.name == "video");
+        return sourceToFetch.source;
+    }
+    
+    public AudioSource FetchIntroSource() {
+        Sound sourceToFetch = Array.Find(sounds, sound => sound.name == "intro");
         return sourceToFetch.source;
     }
 }

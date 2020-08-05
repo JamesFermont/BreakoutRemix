@@ -21,6 +21,7 @@ public class PlayerAbility : MonoBehaviour {
     
     [SerializeField] private GameObject energyBar;
     [SerializeField] private SpriteRenderer energyDisplay;
+    private static readonly int IsBulletTime = Animator.StringToHash("isBulletTime");
 
     private void OnEnable() {
         StartCoroutine(GetRefs());
@@ -87,6 +88,7 @@ public class PlayerAbility : MonoBehaviour {
         Time.timeScale = btTimeScale;
         btIsActive = true;
         energyDisplay.color = new Color(0, 1, 0.1f, 1);
+        GameObject.FindWithTag("Background").GetComponent<Animator>().SetBool(IsBulletTime, true);
         audioManager.UpdatePitch(0.7f);
 
         while (timeElapsed < btDuration) {
@@ -103,6 +105,7 @@ public class PlayerAbility : MonoBehaviour {
             Time.timeScale = 1f;
         btIsActive = false;
         energyDisplay.color = new Color(1, 1, 1, 150f/255f);
+        GameObject.FindWithTag("Background").GetComponent<Animator>().SetBool(IsBulletTime, false);
         audioManager.UpdatePitch(1f);
         UpdateDisplay();
     }

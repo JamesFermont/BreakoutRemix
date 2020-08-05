@@ -2,6 +2,7 @@
 
 public class KillPlaneBehavior : MonoBehaviour {
     private BackgroundManager bgManager;
+    private static readonly int IsBallLaunched = Animator.StringToHash("isBallLaunched");
 
     private void Awake() {
         bgManager = FindObjectOfType<BackgroundManager>();
@@ -10,6 +11,7 @@ public class KillPlaneBehavior : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Ball")) {
             other.gameObject.GetComponent<BallStart>().isBallStart = true;
+            GameObject.FindWithTag("Background").GetComponent<Animator>().SetBool(IsBallLaunched, false);
             FindObjectOfType<AudioManager>().Play("death");
             LevelStatistics.instance.ballsDropped += 1;
             FindObjectOfType<TargetManager>().ApplyPenalty();

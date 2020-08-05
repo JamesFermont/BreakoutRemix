@@ -36,6 +36,7 @@ TagManager:
   - VSMenu
   - AudioManager
   - Environment
+  - Background
   layers:
   - Default
   - TransparentFX

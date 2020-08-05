@@ -1,21 +1,16 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
-using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
-    [SerializeField] private AudioMixer audioMixer;
     private MainMenuImages backgrounds;
     private int activeMenu = 0;
     private void Start() {
-        CheckPlayerPrefs();
         backgrounds = transform.GetComponentInChildren<MainMenuImages>();
         Debug.Log(FindObjectOfType<LevelBundles>().AllActiveLevels().Length);
         if (FindObjectOfType<LevelBundles>().AllActiveLevels().Length >= 4) {
             transform.Find("StartMenu").Find("Editor").GetComponent<Button>().interactable = true;
         }
-            
     }
 
     public void SetMenu(int index) {
@@ -52,43 +47,7 @@ public class MainMenu : MonoBehaviour {
         if (!SceneManager.GetSceneByName("OptionsMenu").isLoaded)
             SceneManager.LoadSceneAsync("OptionsMenu", LoadSceneMode.Additive);
     }
-    private void CheckPlayerPrefs() {
-        ReceiveVolumeFromPlayerPrefs();
-        ReceiveViewFromPlayerPrefs();
 
-
-        if (!PlayerPrefs.HasKey("playMode"))
-            PlayerPrefs.SetInt("playMode", 0);
-    }
-
-    private void ReceiveVolumeFromPlayerPrefs() {
-        if (PlayerPrefs.HasKey("masVolume")) {
-            audioMixer.SetFloat("masVolume", PlayerPrefs.GetFloat("masVolume"));
-        }
-
-        if (PlayerPrefs.HasKey("bgmVolume")) {
-            audioMixer.SetFloat("bgmVolume", PlayerPrefs.GetFloat("bgmVolume"));
-        }
-
-        if (PlayerPrefs.HasKey("sfxVolume")) {
-            audioMixer.SetFloat("sfxVolume", PlayerPrefs.GetFloat("sfxVolume"));
-        }
-    }
-    private void ReceiveViewFromPlayerPrefs() {
-        if (PlayerPrefs.HasKey("width") && PlayerPrefs.HasKey("height")) {
-            Screen.SetResolution(PlayerPrefs.GetInt("width"), PlayerPrefs.GetInt("height"), Screen.fullScreen);
-            PixelPerfectCamera mainCamera = Camera.main.GetComponent<PixelPerfectCamera>();
-            if (mainCamera != null) {
-                mainCamera.refResolutionX = PlayerPrefs.GetInt("width");
-                mainCamera.refResolutionY = PlayerPrefs.GetInt("height");
-                mainCamera.assetsPPU = (int)(PlayerPrefs.GetInt("height") / 7.2f);
-            }
-        }
-
-        if (!PlayerPrefs.HasKey("screenSizeId"))
-            PlayerPrefs.SetInt("screenSizeId", 2);
-
-    }
     private bool CanOpenTargetMenu() {
         return (SceneManager.GetActiveScene().name == "MainMenu" && !SceneManager.GetSceneByName("TimeTaken").IsValid());
     }

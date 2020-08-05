@@ -9,25 +9,22 @@ public class BallStart : MonoBehaviour {
     public bool isHidden;
 
     [SerializeField] private AudioManager audioManager;
+    private Animator animator;
+    private static readonly int IsBallLaunched = Animator.StringToHash("isBallLaunched");
 
     private void OnEnable() {
         if (!paddle) paddle = GameObject.FindWithTag("Paddle").transform;
         if (!ball) ball = GameObject.FindWithTag("Ball").transform;
         isBallStart = true;
         if (!audioManager)
-            StartCoroutine(AudioManagerRef());
+            StartCoroutine(GetRefs());
     }
 
-    private IEnumerator AudioManagerRef() {
-        float timeElapsed = 0f;
-
-        while (timeElapsed < 0.1f) {
-            timeElapsed += Time.deltaTime;
-
-            yield return null;
-        }
+    private IEnumerator GetRefs() {
+        yield return new WaitForSecondsRealtime(0.1f);
 		
         audioManager = FindObjectOfType<AudioManager>();
+        animator = GameObject.FindWithTag("Background").GetComponent<Animator>();
     }    
     
 
@@ -45,6 +42,7 @@ public class BallStart : MonoBehaviour {
                     if(SceneManager.GetActiveScene().name == "GameLevel")
                         FindObjectOfType<Timer>().hasStarted = true;
                     isBallStart = false;
+                    animator.SetBool(IsBallLaunched, true);
                 }
             }
         }

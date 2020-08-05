@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class BackgroundManager : MonoBehaviour {
@@ -9,9 +10,17 @@ public class BackgroundManager : MonoBehaviour {
     private AudioSource audioSource;
     private double duration;
     private string currentAnim;
+    private bool isInitialized;
 
-    private void Awake() {
-        StartCoroutine(InitLibrary());
+    private void Start() {
+        SceneManager.activeSceneChanged += Initialize;
+    }
+
+    private void Initialize(Scene current, Scene next) {
+        if (next == SceneManager.GetSceneByName("GameLevel") && !isInitialized) {
+            isInitialized = true;
+            StartCoroutine(InitLibrary());
+        }
     }
 
     private IEnumerator InitLibrary() {
