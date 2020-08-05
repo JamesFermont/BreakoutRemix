@@ -68,7 +68,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     private void OnDestroy() {
-        if (!SceneManager.GetSceneByName("GameScene").isLoaded) return;
+        if (!SceneManager.GetSceneByName("GameLevel").isLoaded) return;
         if (!SceneManager.GetSceneByName("ResultScreen").isLoaded) {
             if (GameObject.FindWithTag("Paddle").GetComponent<PlayerAbility>().btIsActive) {
                 Time.timeScale = GameObject.FindWithTag("Paddle").GetComponent<PlayerAbility>().btTimeScale;

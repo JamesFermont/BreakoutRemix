@@ -23,16 +23,18 @@ public class BallBehaviour : MonoBehaviour {
     public bool hasBouncedThisFrame = false;
 
     private AudioManager audioManager;
+    private TargetManager targetManager;
+    private BallStart ballStart;
 
     private void OnEnable() {
-        StartCoroutine(AudioManagerRef());
+        StartCoroutine(GetRefs());
     }
 
     private void LateUpdate() {
         hasBouncedThisFrame = false;
         firstRay.GetComponent<SpriteRenderer>().enabled = false;
         secondRay.GetComponent<SpriteRenderer>().enabled = false;
-        if (bTime.btIsActive) {
+        if (bTime.btIsActive && !ballStart.isBallStart) {
             Vector2 position = this.transform.position;
             Debug.DrawRay(position, rb.velocity.normalized * 3f, Color.green);
             RaycastHit2D dir = Physics2D.Raycast(position, rb.velocity, 3f, LayerMask.GetMask("Paddle"));
@@ -45,6 +47,9 @@ public class BallBehaviour : MonoBehaviour {
                 setSecondRay(dir.point, newDir);
             }
         }
+        
+        if (targetManager != null && targetManager.isCompleted)
+            GetComponent<ParticleSystem>().Clear();
     }
 
     private void setFirstRay(Vector2 velocity, RaycastHit2D hit) {
@@ -90,7 +95,7 @@ public class BallBehaviour : MonoBehaviour {
     */
 
 
-    private IEnumerator AudioManagerRef() {
+    private IEnumerator GetRefs() {
         float timeElapsed = 0f;
 
         while (timeElapsed < 0.1f) {
@@ -100,6 +105,8 @@ public class BallBehaviour : MonoBehaviour {
         }
 
         audioManager = FindObjectOfType<AudioManager>();
+        targetManager = FindObjectOfType<TargetManager>();
+        ballStart = GetComponent<BallStart>();
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

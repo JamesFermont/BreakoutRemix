@@ -17,15 +17,16 @@ public class PlayerAbility : MonoBehaviour {
     public bool btIsActive;
 
     private AudioManager audioManager;
+    private TargetManager targetManager;
     
     [SerializeField] private GameObject energyBar;
     [SerializeField] private SpriteRenderer energyDisplay;
 
     private void OnEnable() {
-        StartCoroutine(AudioManagerRef());
+        StartCoroutine(GetRefs());
     }
 
-    private IEnumerator AudioManagerRef() {
+    private IEnumerator GetRefs() {
         float timeElapsed = 0f;
 
         while (timeElapsed < 0.1f) {
@@ -35,6 +36,7 @@ public class PlayerAbility : MonoBehaviour {
         }
 
         audioManager = FindObjectOfType<AudioManager>();
+        targetManager = FindObjectOfType<TargetManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -90,10 +92,15 @@ public class PlayerAbility : MonoBehaviour {
         while (timeElapsed < btDuration) {
             timeElapsed += Time.deltaTime;
             energyBar.transform.localScale = new Vector3(timeElapsed/btDuration, 1, 1);
+            if (targetManager.isCompleted) {
+                break;
+            }
+
             yield return null;
         }
 
-        Time.timeScale = 1f;
+        if (!targetManager.isCompleted)
+            Time.timeScale = 1f;
         btIsActive = false;
         energyDisplay.color = new Color(1, 1, 1, 150f/255f);
         audioManager.UpdatePitch(1f);
