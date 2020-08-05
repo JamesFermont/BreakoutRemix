@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TargetManager : MonoBehaviour {
@@ -18,6 +19,7 @@ public class TargetManager : MonoBehaviour {
 
         if (targetsHit == targetAreas.Length) {
             isCompleted = true;
+            StartCoroutine(DespawnLevel());
             LevelManager.EndLevel();
         }
     }
@@ -35,5 +37,19 @@ public class TargetManager : MonoBehaviour {
 
     public void FindTargetAreas () {
         targetAreas = FindObjectsOfType<TargetArea>();
+    }
+    
+    static IEnumerator DespawnLevel() {
+        foreach (Transform child in LevelManager.currentLevelGO.transform) {
+            if (child.GetComponent<SpriteRenderer>().enabled) {
+                child.transform.GetComponent<BlockManager>().StartCoroutine(child.transform.GetComponent<BlockManager>().FadeOut());
+                yield return new WaitForSecondsRealtime(0.02f);
+            }
+        }
+
+        foreach (DataPack dp in FindObjectsOfType<DataPack>()) {
+            dp.StartCoroutine(dp.FadeOut());
+            yield return new WaitForSecondsRealtime(0.02f);
+        }
     }
 }

@@ -97,5 +97,6 @@ public class PlayerAbility : MonoBehaviour {
         btIsActive = false;
         energyDisplay.color = new Color(1, 1, 1, 150f/255f);
         audioManager.UpdatePitch(1f);
+        UpdateDisplay();
     }
 }

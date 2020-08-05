@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
 
@@ -54,14 +55,6 @@ public static class LevelManager {
 
     public static void EndLevel() {
         LevelStatistics.instance.EndTracker();
-        foreach (Transform child in currentLevelGO.transform) {
-            if (child.GetComponent<SpriteRenderer>().enabled) {
-                child.GetComponent<BlockManager>().ToggleBlock(false);
-                if (child.transform.childCount > 0) {
-                    child.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
-                }
-            }
-        }
         SceneManager.LoadSceneAsync("LvCompleteTransition", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }

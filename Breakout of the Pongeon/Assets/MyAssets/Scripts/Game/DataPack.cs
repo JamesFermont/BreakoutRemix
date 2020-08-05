@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class DataPack : MonoBehaviour {
 	public int fallSpeed;
@@ -19,5 +20,16 @@ public class DataPack : MonoBehaviour {
 			tutorialManager.gameObject.transform.position = this.gameObject.transform.position;
 			tutorialManager.PlayTutorial(1);
 		}
+	}
+	
+	public IEnumerator FadeOut() {
+		for (float f = 1f; f >= 0; f -= 0.1f) {
+			Color c = GetComponent<SpriteRenderer>().color;
+			c.a = f;
+			GetComponent<SpriteRenderer>().color = c;
+			yield return new WaitForSecondsRealtime(0.05f);
+		}
+
+		GetComponent<SpriteRenderer>().enabled = false;
 	}
 }

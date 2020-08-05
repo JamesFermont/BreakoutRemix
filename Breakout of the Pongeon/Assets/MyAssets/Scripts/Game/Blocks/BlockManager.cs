@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class BlockManager : MonoBehaviour {
     public float maxHealth = 3;
@@ -123,5 +124,16 @@ public class BlockManager : MonoBehaviour {
     public void ToggleBlock(bool state) {
         gameObject.GetComponent<SpriteRenderer>().enabled = state;
         gameObject.GetComponent<BoxCollider2D>().enabled = state;
+    }
+    
+    public IEnumerator FadeOut() {
+        for (float f = 1f; f >= 0; f -= 0.1f) {
+            Color c = GetComponent<SpriteRenderer>().color;
+            c.a = f;
+            GetComponent<SpriteRenderer>().color = c;
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 }
