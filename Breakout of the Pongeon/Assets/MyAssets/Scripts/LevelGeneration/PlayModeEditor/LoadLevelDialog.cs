@@ -26,7 +26,7 @@ public class LoadLevelDialog : MonoBehaviour
             currentLevelButton.name = level;
             currentLevelButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = level;
             currentLevelButton.transform.localPosition = new Vector3(450f, -32f - 64f * numberOfLevels++, 0f);
-            currentLevelButton.GetComponent<Button>().onClick.AddListener(delegate { LevelManager.LoadLevel(s); Hide(); });
+            currentLevelButton.GetComponent<Button>().onClick.AddListener(delegate { LevelManager.LoadLevel(s, true); Hide(); });
 
         }
 

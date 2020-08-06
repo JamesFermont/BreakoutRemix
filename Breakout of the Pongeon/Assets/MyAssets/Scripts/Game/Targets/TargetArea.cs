@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class TargetArea : MonoBehaviour {
 	public TargetManager targetManager;
 	public bool hasNoCollision = true;
@@ -42,7 +42,8 @@ public class TargetArea : MonoBehaviour {
 					PlayVideo();
 				} else {
 					audioManager.Play("final_target_hit");
-					PlayVideo2();
+                    if(SceneManager.GetActiveScene().name != "EditorLevel")
+                        PlayVideo2();
 				}
 			}
 		}

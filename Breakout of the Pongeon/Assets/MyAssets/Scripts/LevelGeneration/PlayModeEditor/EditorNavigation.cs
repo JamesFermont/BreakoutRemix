@@ -64,7 +64,7 @@ public class EditorNavigation : MonoBehaviour {
 
     }
 
-    private void SwitchToEdit() {
+    public void SwitchToEdit() {
         if (currentMode == EditorMode.EDIT)
             return;
         currentMode = EditorMode.EDIT;

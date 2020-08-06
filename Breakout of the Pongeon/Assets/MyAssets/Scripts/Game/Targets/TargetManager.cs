@@ -21,8 +21,13 @@ public class TargetManager : MonoBehaviour {
         if (targetsHit == targetAreas.Length) {
             isCompleted = true;
             GameObject.FindWithTag("Background").GetComponent<Animator>().SetBool(IsBallLaunched, false);
-            StartCoroutine(DespawnLevel());
-            LevelManager.EndLevel();
+            if(SceneManager.GetActiveScene().name == "GameLevel") {
+                StartCoroutine(DespawnLevel());
+                LevelManager.EndLevel();
+            } else {
+                FindObjectOfType<EditorNavigation>().SwitchToEdit();
+            }
+            
         }
     }
 
