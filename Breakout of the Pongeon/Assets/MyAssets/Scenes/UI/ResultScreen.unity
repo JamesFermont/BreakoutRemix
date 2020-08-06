@@ -5723,6 +5723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SingleScreen: {fileID: 1740384457}
   HighScoreScreen: {fileID: 2016151060}
+  title: {fileID: 1560960537}
   SingleScreenButton: {fileID: 551785095}
   HighScoreButton: {fileID: 1685779197}
   navigationButtons: {fileID: 855381956}

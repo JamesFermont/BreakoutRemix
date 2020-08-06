@@ -25,10 +25,13 @@ public static class LevelManager {
     }
 
     public static void LoadLevel(string levelName) {
+        LoadLevel(levelName, false);
+    }
+    public static void LoadLevel(string levelName, bool isUserLevel) {
         if (currentLevelGO != null) {
             Object.DestroyImmediate(currentLevelGO);
         }
-        MakeLevel(LevelIO.LoadLevel(levelName));
+        MakeLevel(LevelIO.LoadLevel(levelName, isUserLevel));
     }
 
     private static void MakeLevel(Level level) {
@@ -38,9 +41,12 @@ public static class LevelManager {
     }
 
     public static void SaveCurrentLevel() {
+        SaveCurrentLevel(false);
+    }
+    public static void SaveCurrentLevel(bool isUserLevel) {
         if (currentLevel.name.Contains(" "))
             currentLevel.name = currentLevel.name.Replace(' ', '_');
-        LevelIO.SaveLevel(currentLevel);
+        LevelIO.SaveLevel(currentLevel, isUserLevel);
     }
 
     public static void UpdateGrid(Grid newGrid) {

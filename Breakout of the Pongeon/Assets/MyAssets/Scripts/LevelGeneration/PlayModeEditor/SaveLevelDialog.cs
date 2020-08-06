@@ -15,7 +15,7 @@ public class SaveLevelDialog : MonoBehaviour
 
     private void Start() {
         exitButton.onClick.AddListener(delegate { Hide(); });
-        confirmButton.onClick.AddListener(delegate { if (LevelManager.currentLevel.name != input.text) LevelManager.currentLevel.name = input.text; LevelManager.SaveCurrentLevel();  Hide(); });
+        confirmButton.onClick.AddListener(delegate { if (LevelManager.currentLevel.name != input.text) LevelManager.currentLevel.name = input.text; LevelManager.SaveCurrentLevel(true);  Hide(); });
     }
 
     private void Hide() {

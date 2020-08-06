@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class ResultScreen : MonoBehaviour {
     public GameObject SingleScreen;
     public GameObject HighScoreScreen;
+    public TMP_Text title;
     public Button SingleScreenButton;
     public Button HighScoreButton;
     public GameObject navigationButtons;
@@ -26,6 +27,8 @@ public class ResultScreen : MonoBehaviour {
     }
 
     private void SetupScreens(float[] results) {
+        title.name = LevelManager.currentLevel.name + " completed!";
+        SingleScreen.transform.GetChild(8).GetComponentInChildren<TMP_InputField>().text = LevelBundles.playerName;
         SingleScreen.transform.GetChild(0).GetChild(2).GetComponent<TMP_Text>().text = "+" + results[4] + " points";
         SingleScreen.transform.GetChild(1).GetChild(2).GetComponent<TMP_Text>().text = "+" + results[2] + " points";
         SingleScreen.transform.GetChild(2).GetChild(2).GetComponent<TMP_Text>().text = "+" + results[3] + " points";
@@ -65,6 +68,7 @@ public class ResultScreen : MonoBehaviour {
     
     private void SubmitScore() {
         string playerName = SingleScreen.transform.GetChild(8).GetComponentInChildren<TMP_InputField>().text;
+        LevelBundles.playerName = SingleScreen.transform.GetChild(8).GetComponentInChildren<TMP_InputField>().text;
         if (!string.IsNullOrWhiteSpace(playerName)) {
             SingleScreen.transform.GetComponentInChildren<Button>().interactable = false;
             Score score = new Score(playerName, LevelManager.currentLevel.name, LevelStatistics.instance.score, (int)LevelStatistics.instance.time);
@@ -79,7 +83,7 @@ public class ResultScreen : MonoBehaviour {
     }
     private void SetupHighScoreScreen() {
         List<Score> levelScore = Scores.GetSortedScoresFromLevel(LevelManager.currentLevel.name);
-        for (int i = levelScore.Count-1; i >= 0; i--) {
+        for (int i = levelScore.Count-1; i >= Mathf.Max(levelScore.Count-10, 0); i--) {
             //HighScoreScreen.transform.GetChild(levelScore.Count - (i+1)).GetComponentInChildren<TMP_Text>().text = levelScore[i].player + string.Concat(System.Linq.Enumerable.Repeat(".", 24 - (levelScore[i].player.Length + ((int)levelScore[i].finalScore()).ToString().Length))) + (int)levelScore[i].finalScore();
             HighScoreScreen.transform.GetChild(levelScore.Count - (i + 1)).GetChild(1).GetComponent<TMP_Text>().text =
                 levelScore[i].player;

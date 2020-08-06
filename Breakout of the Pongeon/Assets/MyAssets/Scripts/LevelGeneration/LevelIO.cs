@@ -12,26 +12,35 @@ public static class LevelIO {
     }
 
     public static  string[] getLevelsInDirectory () {
+        return getLevelsInDirectory(false);
+    }
+    public static string[] getLevelsInDirectory (bool isUserPath) {
         try {
-            string[] allPaths = Directory.GetFiles(Application.streamingAssetsPath + levelFilesPath, "*.bop");
+            string directory = Application.streamingAssetsPath;
+            if (isUserPath)
+                directory += "/User";
+            directory += levelFilesPath;
+            string[] allPaths = Directory.GetFiles(directory, "*"+levelFilesEnding);
             string[] returnString = new string[allPaths.Length];
-            for(int i = 0; i < allPaths.Length; i++) {
-                returnString[i] = allPaths[i].Substring(Application.streamingAssetsPath.Length + levelFilesPath.Length, allPaths[i].Length - Application.streamingAssetsPath.Length - levelFilesPath.Length - ".bop".Length);
+            for (int i = 0; i < allPaths.Length; i++) {
+                returnString[i] = allPaths[i].Substring(directory.Length, allPaths[i].Length - directory.Length - levelFilesEnding.Length);
             }
-
-
-
-
             return returnString;
 
-        } catch (Exception ex){
+        } catch (Exception ex) {
             return null;
         }
-    }
-
+    } 
 
     public static bool SaveLevel(Level level) {
-        LevelWriter writer = new LevelWriter(level, Application.streamingAssetsPath + levelFilesPath + level.name + levelFilesEnding);
+        return SaveLevel(level, false);
+    }
+    public static bool SaveLevel(Level level, bool isUserPath) {
+        string directory = Application.streamingAssetsPath;
+        if (isUserPath)
+            directory += "/User";
+        directory += levelFilesPath;
+        LevelWriter writer = new LevelWriter(level, directory + level.name + levelFilesEnding);
         try {
             writer.WriteLevel();
 
@@ -41,11 +50,18 @@ public static class LevelIO {
         }
         return true;
     }
-
     public static Level LoadLevel(string name) {
-        LevelReader reader = new LevelReader(Application.streamingAssetsPath + levelFilesPath + name + levelFilesEnding);
+        return LoadLevel(name, false);
+    }
+    public static Level LoadLevel(string name, bool isUserPath) {
+        string directory = Application.streamingAssetsPath;
+        if (isUserPath)
+            directory += "/User";
+        directory += levelFilesPath;
+
+        LevelReader reader = new LevelReader(directory + name + levelFilesEnding);
         Level level;
-        if(!File.Exists(Application.streamingAssetsPath + levelFilesPath + name + levelFilesEnding)) {
+        if (!File.Exists(directory + name + levelFilesEnding)) {
             return null;
         }
         try {

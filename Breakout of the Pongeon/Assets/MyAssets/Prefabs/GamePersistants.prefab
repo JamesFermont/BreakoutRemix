@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bundles:
-  - name: Bundle1
+  - name: Bundle    1
     levels:
     - Level_1-1
     - Level_1-2
@@ -154,7 +154,7 @@ MonoBehaviour:
     - Level_1-4
     score: 0
     unlocksEditor: 0
-  - name: Bundle2
+  - name: Bundle    2
     levels:
     - Level_2-1
     - Level_2-2
@@ -162,7 +162,7 @@ MonoBehaviour:
     - Level_2-4
     score: 5000
     unlocksEditor: 1
-  - name: Bundle3
+  - name: Bundle    3
     levels:
     - Level_3-1
     - Level_3-2
@@ -170,12 +170,20 @@ MonoBehaviour:
     - Level_3-4
     score: 5000
     unlocksEditor: 1
-  - name: Bundle4
+  - name: Bundle    4
     levels:
     - Level_4-1
     - Level_4-2
     - Level_4-3
     - Level_4-4
+    score: 5000
+    unlocksEditor: 1
+  - name: Bundle    5
+    levels:
+    - Level_5-1
+    - Level_5-2
+    - Level_5-3
+    - Level_5-4
     score: 5000
     unlocksEditor: 1
 --- !u!114 &4737210478076767888

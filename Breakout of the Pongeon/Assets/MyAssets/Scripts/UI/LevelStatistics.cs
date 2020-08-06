@@ -71,7 +71,6 @@ public class LevelStatistics {
         }
 
         score -= ballsDropped * scoreMods.penaltyForDroppedBall;
-
         // Time Mod = 1 + (+/- 0.1 for every secondsPerTimeModInterval seconds that the level time is below/above the target time, limited to between minTimeMod and maxTimeMod)
         float timeMod = Mathf.Clamp(1 + (float)Math.Round(((int)targetTime - (int)levelTime) * (1f / scoreMods.secondsPerTimeModInterval)) * 0.1f,
                         scoreMods.minTimeMod, scoreMods.maxTimeMod);

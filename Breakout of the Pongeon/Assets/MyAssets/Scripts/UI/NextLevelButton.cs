@@ -9,6 +9,8 @@ public class NextLevelButton : MonoBehaviour
 
     private void Start() {
         bundles = FindObjectOfType<LevelBundles>();
+        if (!FindObjectOfType<LevelBundles>().hasNext(LevelManager.currentLevel.name))
+            button.gameObject.SetActive(false);
         button.onClick.AddListener(delegate { if (bundles.hasNext(LevelManager.currentLevel.name)) {GameLevelLoader.LoadLevel(bundles.nextLevel(LevelManager.currentLevel.name));button.interactable = false; } });
     }
 

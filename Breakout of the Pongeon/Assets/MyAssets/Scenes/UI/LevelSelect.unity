@@ -528,6 +528,10 @@ MonoBehaviour:
   levelBundlePrefab: {fileID: 5727079095550548912, guid: b0ddaec09592db64e966c88f54d6a457,
     type: 3}
   lockedBundlePrefab: {fileID: 0}
+  userLevelPrefab: {fileID: 6057222763099287960, guid: 8bc6d78639a9f9548b2a704237310d1a,
+    type: 3}
+  userLevelButtonPrefab: {fileID: 8517187514672018470, guid: c4c43b3cc7cb6084993ef19c3963be49,
+    type: 3}
 --- !u!1 &569212360
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +750,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 2d60ad5cdcd4a3f47b6e3a896a9be26c, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

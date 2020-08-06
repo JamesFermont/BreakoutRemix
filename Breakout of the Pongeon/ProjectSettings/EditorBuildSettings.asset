@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyAssets/Scenes/UI/LvCompleteTransition.unity
     guid: 31b3463cd416541498481eb0e115da42
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/UI/Credits.unity
+    guid: b95459f1af5f2dd4da5964692744cce8
   m_configObjects: {}

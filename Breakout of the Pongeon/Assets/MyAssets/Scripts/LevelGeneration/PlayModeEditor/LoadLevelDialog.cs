@@ -14,7 +14,7 @@ public class LoadLevelDialog : MonoBehaviour
     private void OnEnable() {
         editorNavigation.HidePreviewCursor(true);
 
-        string[] levels = LevelIO.getLevelsInDirectory();
+        string[] levels = LevelIO.getLevelsInDirectory(true);
 
         GameObject currentLevelButton;
         ((RectTransform)levelList).sizeDelta = new Vector2(0, levels.Length * 64);

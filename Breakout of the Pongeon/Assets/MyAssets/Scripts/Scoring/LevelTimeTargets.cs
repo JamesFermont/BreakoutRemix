@@ -16,7 +16,7 @@ public static class LevelTimeTargets {
                 return target.target;
         }
             
-        return 0;
+        return 74;
     }
 
     public static void setTarget(string level, int targetTime) {

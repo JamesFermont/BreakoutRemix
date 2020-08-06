@@ -4,12 +4,14 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
     private MainMenuImages backgrounds;
+    private LevelBundles bundles;
     private int activeMenu = 0;
     private void Start() {
+        bundles = FindObjectOfType<LevelBundles>();
         backgrounds = transform.GetComponentInChildren<MainMenuImages>();
-        Debug.Log(FindObjectOfType<LevelBundles>().AllActiveLevels().Length);
-        if (FindObjectOfType<LevelBundles>().AllActiveLevels().Length > 4) {
+        if (bundles.AllActiveLevels().Length > 4) {
             transform.Find("StartMenu").Find("Editor").GetComponent<Button>().interactable = true;
+            transform.Find("StartMenu").Find("Play").GetComponent<UISceneLoader>().enabled = true;
         }
     }
 
@@ -20,6 +22,9 @@ public class MainMenu : MonoBehaviour {
     public void SelectMenu(int index) {
         UnloadWrongScenes();
         activeMenu = index;
+        if(index == 1 && bundles.AllActiveLevels().Length < 5) {
+            GameLevelLoader.LoadLevel(bundles.bundles[0].levels[0]);
+        }
     }
     public void UnsetMenu() {
         backgrounds.SetMenu(activeMenu);
